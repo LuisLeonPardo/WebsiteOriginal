@@ -1,0 +1,29 @@
+nav {
+  background-color: rgba(255, 255, 255, 0);
+  width: 1183px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: auto;
+  padding-top: 65px;
+  .logo-container {
+    display: flex;
+    align-items: center;
+    .logo-vector {
+      height: 50px;
+    }
+    .logo-titulo {
+      height: 30px;
+    }
+  }
+  .menu_items {
+    display: flex;
+    list-style: none;
+    li {
+      border-radius: 3px;
+      margin: 0 40px;
+    }
+  }
+}
