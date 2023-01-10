@@ -1,13 +1,14 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
-import SideBar from "./components/SideBar/SideBar";
 import { Route, Routes, useLocation } from "react-router-dom";
+import SideBar from "./components/SideBar/SideBar";
+import NavBar from "./components/Landing/NavBar/NavBar";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <SideBar />
+      <NavBar />
+      {/*<SideBar /> */}
     </div>
   );
 }
