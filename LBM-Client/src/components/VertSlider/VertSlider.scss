@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+.container-vertslider {
+  position: absolute;
+  width: 733px;
+  height: 320px;
+  left: 45%;
+  top: 38%;
+  background: #f5f5f5;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 5px 3px 0px rgba(128, 128, 128, 0.7);
+
+  .top-vertslider {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 19px;
+    padding-left: 28px;
+    .title-vertslider {
+      h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+      }
+      h2 {
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #6f767e;
+      }
+    }
+    .icons-vertslider {
+      height: 41px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-top: 10px;
+      padding-right: 15px;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+  .market-table {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 51px;
+    margin-top: 20px;
+    /* padding-left: 28px; */
+    .coin-name {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .danger-status {
+      h4 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #f3458c;
+        margin: 0;
+      }
+    }
+    .last-payment {
+    }
+    .balance {
+    }
+    h5 {
+      margin: 0;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 19px;
+
+      /* color 1 */
+
+      color: #000000;
+    }
+    h6 {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      margin: 0;
+      margin-top: 4px;
+
+      /* color 2 */
+
+      color: #6f767e;
+    }
+  }
+}
