@@ -6,11 +6,12 @@
   height: 36px;
   padding-top: 66px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 
   .logo {
+    padding: 0px;
     height: 36px;
     cursor: pointer;
     z-index: 1;
@@ -119,6 +120,12 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .nav_items {
+    justify-content: space-around;
   }
 }
 
