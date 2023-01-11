@@ -13,6 +13,7 @@
   .logo {
     height: 36px;
     cursor: pointer;
+    z-index: 1;
   }
 
   .menu_items {
@@ -48,6 +49,7 @@
     border-radius: 10px;
     cursor: pointer;
     display: none;
+    transition: all 0.4s ease-out;
   }
 
   .btn_cross {
@@ -55,6 +57,7 @@
     border-radius: 10px;
     height: 16px;
     display: none;
+    transition: all 0.4s ease-out;
   }
 }
 
@@ -65,6 +68,9 @@
   position: absolute;
   height: -webkit-fill-available;
   width: -webkit-fill-available;
+  animation-name: inCopacity;
+  animation-duration: 1.3s;
+  animation-fill-mode: both;
   .responsive-menu_items {
     list-style: none;
     padding-left: 30px;
@@ -107,6 +113,15 @@
   }
 }
 
+@keyframes inCopacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 763px) {
   .nav_items {
     padding-top: 24px;
@@ -128,8 +143,11 @@
     .logo {
       height: 26px;
       padding: 0px;
-      margin-left: 50px;
+      margin-left: 21px;
     }
+  }
+  .responsive-nav_items {
+    margin-top: 10px;
   }
 }
 
