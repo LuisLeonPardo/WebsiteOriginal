@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Slider.scss";
 import Coin from "./assets/Coin.svg";
 import Growth from "./assets/Growth.svg";
 import Icons from "./assets/Icons.svg";
 import Icons2 from "./assets/Icons2.svg";
+import { motion } from "framer-motion";
 
 function Slider() {
+  const dragSlider = useRef();
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(dragSlider.current.scrollWidth - dragSlider.current.offsetWidth);
+  });
+
   return (
-    <div className="container-slider">
-        <h1>Your supply market</h1>
-      <div className="cards">
+    <motion.div className="container-slider">
+      <h1>Your supply market</h1>
+      <motion.div
+        className="cards"
+        ref={dragSlider}
+        drag="x"
+        dragConstraints={{ right: 0, left: -width }}
+      >
         {[...Array(7)].map(() => {
           return (
-            <div className="card">
+            <motion.div className="card">
               <div className="card__content">
                 <img src={Coin} className="coin" />
                 <div className="card__content-prize">
@@ -29,11 +42,11 @@ function Slider() {
                 </div>
               </div>
               <img src={Growth} className="growth" />
-            </div>
+            </motion.div>
           );
         })}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 
