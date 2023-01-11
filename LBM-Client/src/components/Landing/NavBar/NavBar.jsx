@@ -66,8 +66,13 @@ export default function NavBar() {
             </li>
           </ul>
           <div className="responsive-menu_networks">
-            <a className="responsive-menu-networks_a">
-              <img src={instagram} target="_blank" rel="noreferrer" />
+            <a
+              className="responsive-menu-networks_a"
+              href="https://www.instagram.com/libertum_project/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={instagram} />
             </a>
             <a
               className="responsive-menu-networks_a"

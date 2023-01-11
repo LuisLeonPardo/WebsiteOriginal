@@ -3,23 +3,23 @@
 .nav_items {
   font-family: "Inter";
   max-width: 1183px;
-  height: 80px;
-  padding: 10px;
-  padding-top: 65px;
+  height: 36px;
+  padding-top: 66px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: auto;
+  margin: 0 auto;
 
   .logo {
-    height: 90px;
+    height: 36px;
     cursor: pointer;
+    z-index: 1;
   }
 
   .menu_items {
     display: flex;
     list-style: none;
-
+    height: 22px;
     .menu-li_items {
       .menu-a_items {
         display: block;
@@ -35,32 +35,29 @@
       .menu-a_items:hover {
         color: #f88612;
         cursor: pointer;
-        text-decoration: underline 2px solid #f88612;
       }
     }
   }
 
   .btn_menu {
     color: #f88612;
-    font-weight: 600;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
     padding: 8px 16px;
     border: 2px solid aliceblue;
     border-radius: 10px;
-    margin: 5px 150px 0 0;
     cursor: pointer;
     display: none;
+    transition: all 0.4s ease-out;
   }
 
   .btn_cross {
     cursor: pointer;
     border-radius: 10px;
-    padding: 8px 16px;
-    height: 25px;
-    margin: 5px 150px 0 0;
+    height: 16px;
     display: none;
+    transition: all 0.4s ease-out;
   }
 }
 
@@ -69,20 +66,29 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  animation-name: example;
-  animation-duration: 4s;
   height: -webkit-fill-available;
   width: -webkit-fill-available;
+  animation-name: inCopacity;
+  animation-duration: 1.3s;
+  animation-fill-mode: both;
   .responsive-menu_items {
     list-style: none;
+    padding-left: 30px;
+    padding-top: 60px;
     .responsive-menu-li_items {
       cursor: pointer;
       display: flex;
       justify-content: flex-start;
       text-decoration: none;
       text-align: center;
-      padding: 20px;
-      padding-inline-start: 5px;
+      padding: 12px;
+      padding-left: 3px;
+      width: 250px;
+      border-radius: 10px;
+      margin-top: 12px;
+    }
+    .responsive-menu-li_items:hover {
+      background-color: #3a3a3a11;
     }
     .responsive-menu-a_items {
       color: #3a3a3a;
@@ -96,54 +102,69 @@
     display: flex;
     justify-content: center;
     position: relative;
-    top: 40%;
+    top: 30%;
     .responsive-menu-networks_a {
-      padding: 20px;
+      padding: 12px;
+      border-radius: 10px;
+    }
+    .responsive-menu-networks_a:hover {
+      background-color: #3a3a3a11;
     }
   }
 }
 
-@media screen and (max-width: 950px) {
+@keyframes inCopacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 763px) {
   .nav_items {
+    padding-top: 24px;
+    justify-content: space-between;
     .menu_items {
       display: none;
     }
     .btn_menu {
-      margin: 0 auto;
       display: flex;
+      margin-right: 50px;
     }
     .btn_cross {
-      margin: 0 auto;
       display: flex;
+      margin-right: 50px;
     }
     .hidden {
       display: flex;
     }
+    .logo {
+      height: 26px;
+      padding: 0px;
+      margin-left: 21px;
+    }
   }
   .responsive-nav_items {
-    margin: 50px 0 100px 50px;
-  }
-  .responsive-menu-networks {
-    top: 100%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .nav_items {
-    .btn_menu {
-      font-size: 15px;
-      padding: 4px 8px;
-    }
-    .logo {
-      height: 70px;
-    }
+    margin-top: 10px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .nav_items {
+    padding-top: 24px;
+    justify-content: space-between;
+    .btn_cross {
+      margin-right: 38px;
+    }
+    .btn_menu {
+      margin-right: 38px;
+    }
     .logo {
-      padding: 0;
+      margin-left: 21px;
+      width: 94px;
+      height: 26px;
     }
   }
 }
