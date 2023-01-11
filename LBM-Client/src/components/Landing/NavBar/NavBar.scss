@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 .nav_items {
+  font-family: "Inter";
   max-width: 1183px;
   height: 80px;
   padding: 10px;
@@ -62,6 +65,7 @@
 }
 
 .responsive-nav_items {
+  font-family: "Inter";
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -99,7 +103,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 950px) {
   .nav_items {
     .menu_items {
       display: none;
@@ -115,6 +119,12 @@
     .hidden {
       display: flex;
     }
+  }
+  .responsive-nav_items {
+    margin: 50px 0 100px 50px;
+  }
+  .responsive-menu-networks {
+    top: 100%;
   }
 }
 
