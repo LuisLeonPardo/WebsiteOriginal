@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="main_items">
       <NavBar />
-      <div></div>
+      <div>asddddddddddddddddddddddddd</div>
       <div></div>
     </main>
   );
