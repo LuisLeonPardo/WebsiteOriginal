@@ -12,7 +12,16 @@
   border-radius: 16px;
   box-shadow: 0 5px 3px 0px rgba(128, 128, 128, 0.7);
 
+  .overflow{
+    overflow: hidden;
+  }
+
+  .market-list{
+    margin-top: -15px;
+  }
+
   .top-vertslider {
+    background: #f5f5f5;
     display: flex;
     justify-content: space-between;
     padding-top: 19px;
@@ -50,7 +59,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 51px;
+    height: 55px;
     margin-top: 20px;
     /* padding-left: 28px; */
     .coin-name {

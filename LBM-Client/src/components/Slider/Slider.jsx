@@ -22,6 +22,7 @@ function Slider() {
         ref={dragSlider}
         drag="x"
         dragConstraints={{ right: 0, left: -width }}
+        dragElastic={0.1}
       >
         {[...Array(7)].map(() => {
           return (
