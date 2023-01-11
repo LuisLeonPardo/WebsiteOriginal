@@ -1,0 +1,10 @@
+.main_items {
+  background-image: url("./assets/background-home.svg");
+  min-height: 100vh;
+}
+@media screen and (max-width: 950px) {
+  .main_items {
+    background-image: url("./assets/background-responsive.svg");
+    background-size: cover;
+  }
+}
