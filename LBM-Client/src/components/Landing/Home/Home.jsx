@@ -20,12 +20,12 @@ export default function Home() {
             </p>
           </div>
           <div className="home_links">
-            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
               <a className="launchapp">
                 <span>Launch App</span> <img src={launchapp} />
               </a>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
               <a className="token">Add token libertum</a>
             </motion.div>
           </div>
