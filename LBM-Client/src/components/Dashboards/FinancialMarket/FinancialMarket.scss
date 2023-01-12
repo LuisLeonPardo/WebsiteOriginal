@@ -1,17 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 .container2 {
     background-color: white;
     width: 582px;
     height: 555px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 18px;
+    user-select: none
 }
 .header {
-    position: relative;
     margin: 0px;
     width: 157px;
     height: 24px;
-    left: 24px;
-    top: 24px;
+    
     
     font-family: Inter, sans-serif;
     font-style: normal;
@@ -42,11 +44,16 @@
 
 .table {
     position: relative;
-    top: 40px;
+    top: 28px;
     left: 24px;
     width: 534px;
-   
+    height: 480px;
+    overflow-y: scroll;
 }
+
+.table::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
 
 .innerRow {
     display: flex;
@@ -91,4 +98,29 @@
     width: 300px;
     align-items: center;
     cursor: pointer;
+}
+
+.searchDiv {
+    width: 534px;
+    position: relative;
+    left: 24px;
+    top: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    width: 288px;
+    
+    height: 40px;
+    background-image: url('./assets/search-normal.svg');
+    background-repeat: no-repeat;
+    background-position: 3%;
+    padding-left: 40px;
+    background-color: #F9F9F9;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
 }
