@@ -4,7 +4,7 @@ import cross from "./assets/cross.svg";
 import home from "./assets/home.svg";
 import whitepaper from "./assets/whitepaper.svg";
 import contacts from "./assets/contacts.svg";
-import iwantpart from "./assets/iwantpart.svg";
+import bepart from "./assets/bepart.svg";
 import instagram from "./assets/networks/instagram.svg";
 import twitter from "./assets/networks/twitter.svg";
 import github from "./assets/networks/github.svg";
@@ -15,6 +15,20 @@ import "./NavBar.scss";
 export default function NavBar() {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
+
+  const networks = [
+    {
+      net: instagram,
+      href: "https://www.instagram.com/libertum_project/",
+    },
+    { net: twitter, href: "https://twitter.com/liberumproject" },
+    { net: github, href: "https://github.com/Libertum-Project" },
+    {
+      net: linkedin,
+      href: "https://www.linkedin.com/company/libertum-project/",
+    },
+    { net: tiktok, href: "" },
+  ];
 
   return (
     <>
@@ -61,46 +75,22 @@ export default function NavBar() {
               <a className="responsive-menu-a_items">Contacts</a>
             </li>
             <li className="responsive-menu-li_items">
-              <img src={iwantpart} />
+              <img src={bepart} />
               <a className="responsive-menu-a_items">I want to be part</a>
             </li>
           </ul>
           <div className="responsive-menu_networks">
-            <a
-              className="responsive-menu-networks_a"
-              href="https://www.instagram.com/libertum_project/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={instagram} />
-            </a>
-            <a
-              className="responsive-menu-networks_a"
-              target="_blank"
-              rel="noreferrer"
-              href="https://twitter.com/liberumproject"
-            >
-              <img src={twitter} />
-            </a>
-            <a
-              className="responsive-menu-networks_a"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/Libertum-Project"
-            >
-              <img src={github} />
-            </a>
-            <a
-              className="responsive-menu-networks_a"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/company/libertum-project/"
-            >
-              <img src={linkedin} target="_blank" rel="noreferrer" />
-            </a>
-            <a className="responsive-menu-networks_a">
-              <img src={tiktok} target="_blank" rel="noreferrer" />
-            </a>
+            {networks.map(({ net, href }, index) => (
+              <a
+                key={index}
+                className="responsive-menu-networks_a"
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={net} />
+              </a>
+            ))}
           </div>
         </nav>
       ) : null}
