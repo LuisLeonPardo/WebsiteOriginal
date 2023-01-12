@@ -1,5 +1,6 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Landing from "./components/Landing/Landing";
+// import Dashboard from "./components/Dashboards/Dashboard";
 import "./App.css";
 import SideBar from "./components/SideBar/SideBar";
 import { Route, Routes, useLocation, Outlet } from "react-router-dom";
@@ -21,9 +22,9 @@ function App() {
     <div className="App">
       <div className="Page"> {walletPopUp ? <ConnectWallet /> : null}</div>
       <Routes>
-        <Route path="/" />
-        {/* Dentro de este Route van todas las cosas que tengan sidebar */}
+      <Route path="/" element={<Landing />} />
         <Route
+        {/* Dentro de este Route van todas las cosas que tengan sidebar */}
           element={
             <div className="SideBar">
               <AppLayout />
