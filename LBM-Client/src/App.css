@@ -18,6 +18,14 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.SideBar{
+  z-index: 5;
+  position: fixed;
+}
+.Page{
+  z-index: 1;
+  position: relative;
+}
 
 @keyframes logo-spin {
   from {

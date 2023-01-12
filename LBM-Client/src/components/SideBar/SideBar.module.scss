@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 .Container{
     width: 63px;
     height: 100vh ;
-    position: fixed;
     box-shadow: 3px 0px 98px -24px rgba(0,0,0,0.9);
     -webkit-box-shadow: 3px 0px 98px -24px rgba(0,0,0,0.9);
     -moz-box-shadow: 3px 0px 98px -24px rgba(0,0,0,0.9);
     transition: width 1s;
+    position: fixed;
+    z-index: 5;
 }
 
 .OpenContainer{
@@ -16,6 +17,8 @@
     -webkit-box-shadow: 3px 0px 98px -24px rgba(0,0,0,0.9);
     -moz-box-shadow: 3px 0px 98px -24px rgba(0,0,0,0.9);
     transition: width 1s;
+    position: fixed;
+    z-index: 5;
 }
 .FlexContainer{
     display: flex;
@@ -251,10 +254,18 @@ transition: font-size 1s;
     visibility: visible;
     width: 204px;
     height: 38px;
+    cursor: pointer;
     background-color: #F4911A;
     transition: color 3s, width 1s;
-
 }
+
+.popUp{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+}
+
 
 
 

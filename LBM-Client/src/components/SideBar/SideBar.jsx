@@ -8,11 +8,14 @@ import WalletIcon from "../../../public/icons/walletIcon";
 import ExitIcon from "../../../public/icons/exitIcon";
 import CollapseIcon from "../../../public/icons/collapseIcon";
 import { useSelector, useDispatch } from "react-redux";
-import { setSelectedIcon } from "../../../redux/reducer";
+import { setSelectedIcon, setWalletPopUp } from "../../../redux/reducer";
+import ConnectWallet from "../ConnectWallet/ConnectWallet";
 
 function SideBar() {
   const dispatch = useDispatch();
-  const { selectedIcon } = useSelector((state) => state.reducerCompleto);
+  const { selectedIcon, walletPopUp } = useSelector(
+    (state) => state.reducerCompleto
+  );
   const [container, setContainer] = useState(style.Container);
   const [Icons, setIcons] = useState(style.IconsNone);
   const [buttonsContainer, setButtonsContainer] = useState(
@@ -95,9 +98,9 @@ function SideBar() {
           }
         >
           {container === style.OpenContainer ? null : (
-            <WalletIcon
-              selected={selectedIcon === "WalletIcon" ? true : false}
-            />
+            <div onClick={() => dispatch(setWalletPopUp(true))}>
+              <WalletIcon />
+            </div>
           )}
           <div
             className={
@@ -106,7 +109,9 @@ function SideBar() {
                 : style.walletButton
             }
           >
-            <div>Connect Wallet</div>
+            <div onClick={() => dispatch(setWalletPopUp(true))}>
+              Connect Wallet
+            </div>
           </div>
           <div
             className={

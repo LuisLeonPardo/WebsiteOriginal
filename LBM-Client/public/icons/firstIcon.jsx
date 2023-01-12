@@ -8,7 +8,6 @@ function FirstIcon({ selected }) {
   var color1 = variables.color1;
   var color2 = variables.color2;
   selected ? ((color1 = variables.color3), (color2 = variables.color4)) : null;
-  console.log(color1, color2);
   return (
     <div>
       <svg

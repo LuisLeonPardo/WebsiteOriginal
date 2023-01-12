@@ -9,7 +9,7 @@ function WalletIcon({ selected }) {
   var color2 = variables.color2;
   selected ? ((color1 = variables.color3), (color2 = variables.color4)) : null;
   return (
-    <div onClick={() => dispatch(setSelectedIcon("WalletIcon"))}>
+    <div className={variables.iconSVG}>
       <svg
         width="18"
         height="18"
