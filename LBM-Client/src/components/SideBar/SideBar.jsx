@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import style from "./SideBar.module.scss";
 import FirstIcon from "../../../public/icons/firstIcon";
 import OrdersIcon from "../../../public/icons/ordersIcon";
@@ -17,10 +17,15 @@ function SideBar() {
     (state) => state.reducerCompleto
   );
   const [container, setContainer] = useState(style.Container);
+
   const [Icons, setIcons] = useState(style.IconsNone);
   const [buttonsContainer, setButtonsContainer] = useState(
     style.ButtonsContainer
   );
+  const OpenWallet = (e) => {
+    dispatch(setWalletPopUp(true));
+    e.preventDefault();
+  };
   return (
     <div className={container}>
       <div className={style.FlexContainer}>
@@ -98,7 +103,7 @@ function SideBar() {
           }
         >
           {container === style.OpenContainer ? null : (
-            <div onClick={() => dispatch(setWalletPopUp(true))}>
+            <div onClick={(e) => OpenWallet(e)}>
               <WalletIcon />
             </div>
           )}
@@ -109,9 +114,7 @@ function SideBar() {
                 : style.walletButton
             }
           >
-            <div onClick={() => dispatch(setWalletPopUp(true))}>
-              Connect Wallet
-            </div>
+            <div onClick={(e) => OpenWallet(e)}>Connect Wallet</div>
           </div>
           <div
             className={

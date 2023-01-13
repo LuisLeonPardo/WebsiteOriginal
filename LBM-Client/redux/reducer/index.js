@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   selectedIcon: "",
   walletPopUp: false,
-  container: false,
+  containerRedux: false,
 };
 
 export const appSlice = createSlice({
@@ -15,13 +15,13 @@ export const appSlice = createSlice({
     setWalletPopUp: (state, action) => {
       state.walletPopUp = action.payload;
     },
-    setContainer: (state, action) => {
-      state.container = action.payload;
+    setContainerRedux: (state, action) => {
+      state.containerRedux = action.payload;
     },
   },
 });
 
-export const { setSelectedIcon, setWalletPopUp, setContainer } =
+export const { setSelectedIcon, setWalletPopUp, setContainerRedux } =
   appSlice.actions;
 
 export default appSlice.reducer;

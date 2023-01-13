@@ -2,11 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
     position: fixed;
-    z-index: 1;
+    z-index: 9999;
+    
 }
 
 .FlexContainer{
@@ -16,12 +14,13 @@
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     border-radius:24PX;
-    z-index: 1;
+    z-index: 99;
     box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
     position: relative;
     align-items: center;
+
 }
 
 .Title{

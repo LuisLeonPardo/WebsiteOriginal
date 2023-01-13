@@ -3,15 +3,11 @@
   text-align: center;
 }
 .App {
+  display: flex;
   width: 100vw;
   height: 100vh;
   background-color: white;}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -25,6 +21,12 @@
 .Page{
   z-index: 1;
   position: relative;
+}
+.App .PopUps{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes logo-spin {
