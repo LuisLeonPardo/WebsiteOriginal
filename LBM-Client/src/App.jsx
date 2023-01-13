@@ -27,11 +27,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* {walletPopUp ? (
-        <div className="PopUps">
-          <ConnectWallet />
-        </div>
-      ) : null} */}
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route
