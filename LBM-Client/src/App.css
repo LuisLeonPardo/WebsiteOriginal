@@ -19,8 +19,12 @@
   position: fixed;
 }
 .Page{
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+    z-index: 1;
   position: relative;
+  overflow: scroll;
 }
 .App .PopUps{
   width: 100%;

@@ -7,6 +7,7 @@
     -moz-box-shadow: 3px 0px 98px -24px rgba(0,0,0,0.9);
     transition: width 1s;
     position: fixed;
+    background-color: white;
     z-index: 5;
 }
 
@@ -19,6 +20,7 @@
     transition: width 1s;
     position: fixed;
     z-index: 5;
+    background-color: white;
 }
 .FlexContainer{
     display: flex;
@@ -163,7 +165,7 @@ cursor: pointer;
     margin-left: auto;
 }
 
-.twoLastButtonsOpen div:nth-child(2n) svg{
+.twoLastButtonsOpen div:nth-child(1n) svg{
     transform: rotate(180deg);
 }
 
@@ -312,7 +314,6 @@ transition: font-size 1s;
     visibility: visible;
     height: 38px;
     gap: .5em;
-    color: white;
     transition:  width 1s;
 }
 
@@ -330,10 +331,15 @@ transition: font-size 1s;
     
 }
 
+.ConnectedModalClosed button{
+    color: #F4911A;
+} 
+
+
 .WalletIcon{
     display: flex;
     opacity: 1;
-    transition: opacity 3s;
+    transition: opacity 1.5s;
     pointer-events: all;
 }
 .WalletIconClosed{

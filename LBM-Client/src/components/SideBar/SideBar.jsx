@@ -243,15 +243,6 @@ function SideBar() {
             }
           >
             <div
-              className={
-                container === style.OpenContainer
-                  ? style.collapseOpen
-                  : style.collapse
-              }
-            >
-              {/* <ExitIcon selected={selectedIcon === "ExitIcon" ? true : false} /> */}
-            </div>
-            <div
               onClick={() =>
                 container === style.Container
                   ? (setContainer(style.OpenContainer),
