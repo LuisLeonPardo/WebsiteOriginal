@@ -28,7 +28,7 @@ export default function Row({img,name,change, amount, value}) {
                     <p>{name}</p>
                 </div>
                 {render && <div className="innerRow3" onClick={handleClick}>
-                    <p>{change}</p>
+                    <p style={(change[0]==='-')? {color: 'red'}:{color:'green'}}>{change}</p>
                     <p>{amount}</p>
                 </div>}
                 {!render &&<div className="innerRow">                      

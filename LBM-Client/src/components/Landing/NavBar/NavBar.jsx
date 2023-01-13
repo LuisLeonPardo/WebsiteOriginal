@@ -4,7 +4,7 @@ import cross from "./assets/cross.svg";
 import home from "./assets/home.svg";
 import whitepaper from "./assets/whitepaper.svg";
 import contacts from "./assets/contacts.svg";
-// import bepart from "./assets/bepart.svg";
+import bepart from "./assets/bepart.svg";
 import instagram from "./assets/networks/instagram.svg";
 import twitter from "./assets/networks/twitter.svg";
 import github from "./assets/networks/github.svg";
