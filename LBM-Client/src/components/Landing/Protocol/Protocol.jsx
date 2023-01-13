@@ -10,7 +10,6 @@ const secondParagraph =
   "The Libertum difference from other money markets protocols is the ability to use the collateral supplied to the market not only to borrow other assets, but also to mint stablecoins with over-collateralized positions that protect the protocol";
 
 export default function Protocol() {
-  const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(1);
   const [paragraph, setParagraph] = useState(firstParagraph);
 
@@ -24,30 +23,6 @@ export default function Protocol() {
     }
   };
 
-  const handleOpen = (e) => {
-    e.preventDefault();
-    setOpen(true);
-  };
-
-  const handleOnClose = () => setOpen(false);
-
-  const ModalImg = ({ visible, onClose }) => {
-    const handleOnClose = (e) => {
-      if (e.target.id === "container") onClose();
-    };
-    if (!visible) return null;
-    return (
-      <div className="modal_items" id="container" onClick={handleOnClose}>
-        <div className="modal_section">
-          <motion.button whileHover={{ scale: 1.1 }} onClick={onClose}>
-            x
-          </motion.button>
-          <img src={desktop} />
-        </div>
-      </div>
-    );
-  };
-
   return (
     <main className="protocol_items">
       <section className="protocol_section">
@@ -55,7 +30,7 @@ export default function Protocol() {
           <div>
             <div></div>
           </div>
-          <img onClick={handleOpen} alt="Launch App" src={desktop} />
+          <img alt="Launch App" src={desktop} />
         </div>
         <div className="protocol_text">
           <h2>
@@ -75,7 +50,6 @@ export default function Protocol() {
           </div>
         </div>
       </section>
-      <ModalImg onClose={handleOnClose} visible={open} />
     </main>
   );
 }
