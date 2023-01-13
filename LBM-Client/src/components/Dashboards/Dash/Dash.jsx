@@ -9,11 +9,13 @@ import style from "./Dash.module.scss";
 function Dash() {
   return (
     <div className={style.Container}>
-      <Slider />
-      <VertSlider />
-      <Mint />
-      <UserInfo />
-      <FinancialMarket />
+      <div className={style.Flex}>
+        <Slider />
+        <VertSlider />
+        <Mint />
+        <UserInfo />
+        <FinancialMarket />
+      </div>
     </div>
   );
 }

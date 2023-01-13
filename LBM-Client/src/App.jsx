@@ -45,7 +45,14 @@ function App() {
             </div>
           }
         >
-          <Route path="/dashboard" element={<Dash />} />
+          <Route
+            path="/dashboard"
+            element={
+              <div className="Page">
+                <Dash />
+              </div>
+            }
+          />
           <Route
             path="/realestate"
             element={
