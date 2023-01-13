@@ -48,7 +48,7 @@
     margin-top: 20px;
     width:107px ;
     height: 36px;
-    transition: opacity 3.5s;
+    transition: opacity 2.5s;
 }
 .LogoCherryswap2{
     position: absolute;
@@ -93,7 +93,7 @@ cursor: pointer;
     position: relative;
     opacity: 1;
     line-height: 1em ;
-    transition: all 3s;
+    transition: all 2s;
 }
 .IconsNone p{
     position: absolute;
@@ -236,7 +236,7 @@ transition: font-size 1s;
     border-radius: 6px;
     visibility: hidden;
     color: #F4911A;
-    transition: color 3s, width 1s;
+    transition: color 3s, width .5s;
     pointer-events: none;
 }
 .walletButton div, .walletButtonOpen div{
@@ -257,7 +257,8 @@ transition: font-size 1s;
     cursor: pointer;
     color: white;
     background-color: #F4911A;
-    transition: color 3s, width 1s;
+    line-height: 0;
+    transition: color 4s, width 1s;
 }
 
 .popUp{
@@ -267,6 +268,81 @@ transition: font-size 1s;
     z-index: 3;
 }
 
+.RainbowButton{
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+}
+
+.chainModal{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 38px;
+    background-color: #F4911A;
+    overflow: hidden;
+    width: 70%;
+}
+
+.balanceModal{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 38px;
+    background-color: #F4911A;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 30%;
+}
+
+.balanceModal::-webkit-scrollbar{
+    display: none;
+}
+
+.ConnectedModal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 6px;
+    width: 204px;
+    visibility: visible;
+    height: 38px;
+    gap: .5em;
+    color: white;
+    transition:  width 1s;
+}
+
+.ConnectedModalClosed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 6px;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    transition: width .6s,height .8s, visibility 1s;
+    
+}
+
+.WalletIcon{
+    display: flex;
+    opacity: 1;
+    transition: opacity 3s;
+    pointer-events: all;
+}
+.WalletIconClosed{
+    display: flex;
+    opacity: 0;
+    transition:opacity 0s;
+    cursor: none;
+    pointer-events: none
+}
 
 
 

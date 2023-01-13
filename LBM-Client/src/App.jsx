@@ -27,11 +27,11 @@ function App() {
 
   return (
     <div className="App">
-      {walletPopUp ? (
+      {/* {walletPopUp ? (
         <div className="PopUps">
           <ConnectWallet />
         </div>
-      ) : null}
+      ) : null} */}
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route

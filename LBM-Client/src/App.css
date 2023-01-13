@@ -6,7 +6,7 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: white;}
+  background-image: url('./icons/Background.svg');}
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);

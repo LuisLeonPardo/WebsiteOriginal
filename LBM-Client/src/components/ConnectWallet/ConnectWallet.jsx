@@ -14,6 +14,8 @@ import { setWalletPopUp } from "../../../redux/reducer";
 import { useDispatch } from "react-redux";
 import { setSelectedIcon } from "../../../redux/reducer";
 
+//wallet imports
+
 function ConnectWallet() {
   const dispatch = useDispatch();
   return (
