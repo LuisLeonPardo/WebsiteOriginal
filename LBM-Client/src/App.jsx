@@ -13,6 +13,7 @@ import ConnectWallet from "./components/ConnectWallet/ConnectWallet";
 import { useSelector } from "react-redux";
 import Home from "./components/Landing/Home/Home";
 import Dash from "./components/Dash/Dash";
+import RealEstates from "./components/RealEstates";
 import React from "react";
 function App() {
   const { selectedIcon, walletPopUp } = useSelector(
@@ -49,6 +50,14 @@ function App() {
             element={
               <div className="Page">
                 <Dash />
+              </div>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <div className="Page">
+                <RealEstates />
               </div>
             }
           />

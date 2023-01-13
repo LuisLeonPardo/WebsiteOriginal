@@ -26,7 +26,7 @@ export default function FinancialMarket() {
     }
 
     return (
-        <div className="container2" style={{position: 'absolute', top: '432px', left: '172px'}}>
+        <div className="container2" style={{position: 'absolute', top: '432px', left: '9%'}}>
             <div className="searchDiv">
                 <h1 className="header">Financial market</h1>
                 <input className="search" placeholder="Search" name="search" value={search} onChange={handleChange}/>

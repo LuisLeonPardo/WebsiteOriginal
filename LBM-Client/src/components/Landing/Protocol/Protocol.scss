@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 .protocol_items {
   margin-top: 178px;
   height: 424px;
@@ -21,12 +24,13 @@
         width: 100%;
       }
       div {
+        z-index: 2;
         position: absolute;
         width: 70px;
         height: 320px;
         left: 2%;
         top: 4%;
-        background-color: #f0b875;
+        background-color: #f0b975fb;
 
         div {
           position: absolute;
@@ -36,6 +40,18 @@
           top: 93.75%;
           left: 71.4%;
         }
+      }
+    }
+    .procotol_image:hover {
+      div {
+        transform: translate(-100px);
+        div {
+          display: none;
+        }
+      }
+      img {
+        cursor: pointer;
+        transform: scale(1.1);
       }
     }
     .protocol_text {
@@ -76,6 +92,38 @@
             width: 40px;
           }
         }
+      }
+    }
+  }
+  .modal_items {
+    z-index: 10;
+    position: fixed;
+    inset: 0;
+    background-color: #22222280;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: inOpacity;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    .modal_section {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      button {
+        background-color: #f88612;
+        border: 0px;
+        border-radius: 100%;
+        padding: 5px 10px;
+        color: #f6f6f6f6;
+        position: absolute;
+        width: max-content;
+        left: 97%;
+        bottom: 96%;
+      }
+      img {
+        width: 850px;
       }
     }
   }
@@ -140,6 +188,13 @@
       flex-direction: column-reverse;
       justify-content: space-around;
     }
+    .modal_items {
+      .modal_section {
+        img {
+          width: 500px;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 520px) {
@@ -149,7 +204,6 @@
         width: 315px;
         height: 240px;
         margin: 0 auto;
-
         div {
           width: 46.91px;
           height: 213.33px;
@@ -157,6 +211,13 @@
             top: 90.6%;
             left: 57.5%;
           }
+        }
+      }
+    }
+    .modal_items {
+      .modal_section {
+        img {
+          width: 300px;
         }
       }
     }

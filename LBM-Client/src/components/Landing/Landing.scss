@@ -1,0 +1,12 @@
+@media screen and (max-width: 1240px) {
+  .divider {
+    width: 800px;
+    filter: saturate(4);
+  }
+}
+@media screen and (max-width: 800px) {
+  .divider {
+    width: 350px;
+    filter: saturate(100);
+  }
+}
