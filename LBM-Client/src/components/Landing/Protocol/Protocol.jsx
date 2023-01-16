@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import desktop from "./assets/desktop.png";
 import arrow from "./assets/arrow.svg";
 import "./Protocol.scss";
@@ -29,7 +30,7 @@ export default function Protocol() {
           <div>
             <div></div>
           </div>
-          <img src={desktop} />
+          <img alt="Launch App" src={desktop} />
         </div>
         <div className="protocol_text">
           <h2>

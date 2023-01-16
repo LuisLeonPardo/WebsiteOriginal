@@ -1,14 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 .protocol_items {
   margin-top: 178px;
   height: 424px;
   position: relative;
-
+  margin-bottom: 60px;
   .protocol_section {
     display: flex;
-    text-align: right;
     justify-content: space-between;
     max-width: 1183px;
     margin: 0 auto;
+    text-align: right;
     animation-name: inOpacity;
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -26,7 +29,7 @@
         height: 320px;
         left: 2%;
         top: 4%;
-        background-color: #f0b875;
+        background-color: #f0b975fb;
 
         div {
           position: absolute;
@@ -36,6 +39,17 @@
           top: 93.75%;
           left: 71.4%;
         }
+      }
+    }
+    .procotol_image:hover {
+      div {
+        transform: translate(-100px);
+        div {
+          display: none;
+        }
+      }
+      img {
+        transform: scale(1.1);
       }
     }
     .protocol_text {
@@ -81,17 +95,6 @@
   }
 }
 
-@keyframes inOpacityDiv {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes inOpacity {
   0% {
     opacity: 0;
@@ -149,7 +152,6 @@
         width: 315px;
         height: 240px;
         margin: 0 auto;
-
         div {
           width: 46.91px;
           height: 213.33px;
