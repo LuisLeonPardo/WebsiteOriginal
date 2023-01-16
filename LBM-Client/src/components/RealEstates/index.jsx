@@ -8,10 +8,11 @@ function RealEstates() {
 	const [ascendant, setAscendant] = useState(true);
 	const [status, setStatus] = useState(false);
 	const [price, setPrice] = useState(false);
-	const [properties, setProperties] = useState(false)
+	const [properties, setProperties] = useState(false);
 	const handleOrder = () => {
 		setAscendant(!ascendant);
 	};
+
 	return (
 		<div className="realEstate">
 			<div className="containerEstate">
@@ -22,7 +23,11 @@ function RealEstates() {
 						<img src={relaod} alt="Reload" />
 					</button>
 					<div className="inputWrapper">
-						<input type="search" className="input" placeholder="Search pools" />
+						<input
+							type="search"
+							className="input"
+							placeholder="Search by NFTs"
+						/>
 
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -48,14 +53,23 @@ function RealEstates() {
 					{/* <Toggle /> */}
 				</nav>
 				<aside className="asideFilters">
-					<button onClick={() => setStatus(!status)}>
+					<button
+						className={`buttonAsideFilter ${status ? 'isActive' : null}`}
+						onClick={() => setStatus(!status)}
+					>
 						Status <img src={arrow} alt="Arrow" />
 					</button>
 					{status ? <Status /> : null}
-					<button>
+					<button
+						className={`buttonAsideFilter ${price ? 'isActive' : null}`}
+						onClick={() => setPrice(!price)}
+					>
 						Price <img src={arrow} alt="Arrow" />
 					</button>
-					<button>
+					<button
+						className={`buttonAsideFilter ${properties ? 'isActive' : null}`}
+						onClick={() => setProperties(!properties)}
+					>
 						Properties <img src={arrow} alt="Arrow" />
 					</button>
 				</aside>
