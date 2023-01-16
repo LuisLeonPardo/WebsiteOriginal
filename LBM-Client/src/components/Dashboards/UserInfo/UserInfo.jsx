@@ -22,7 +22,7 @@ export default function UserInfo() {
 
 
     return (
-        <div className="container" style={{position: 'absolute', top: '50px', left: '9%'}}>
+        <div className="container">
                 <h1 className="title">My account</h1>
                 <div className="toggle" style={{right: '92px',top: '40px'}}>APY with LBM</div>
                 <Switch 
