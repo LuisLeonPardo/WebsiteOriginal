@@ -1,17 +1,17 @@
-import React, { useState, useMemo } from 'react';
-import style from './SideBar.module.scss';
-import FirstIcon from '../../../public/icons/firstIcon';
-import OrdersIcon from '../../../public/icons/ordersIcon';
-import Layer1Icon from '../../../public/icons/layer1Icon';
-import HistoryIcon from '../../../public/icons/historyIcon';
-import WalletIcon from '../../../public/icons/walletIcon';
-import ExitIcon from '../../../public/icons/exitIcon';
-import CollapseIcon from '../../../public/icons/collapseIcon';
-import { useSelector, useDispatch } from 'react-redux';
-import { setSelectedIcon, setWalletPopUp } from '../../../redux/reducer';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { Link } from 'react-router-dom';
 
+import React, { useState, useMemo } from "react";
+import style from "./SideBar.module.scss";
+import FirstIcon from "../../../public/icons/firstIcon";
+import OrdersIcon from "../../../public/icons/ordersIcon";
+import Layer1Icon from "../../../public/icons/layer1Icon";
+import HistoryIcon from "../../../public/icons/historyIcon";
+import WalletIcon from "../../../public/icons/walletIcon";
+import ExitIcon from "../../../public/icons/exitIcon";
+import CollapseIcon from "../../../public/icons/collapseIcon";
+import { useSelector, useDispatch } from "react-redux";
+import { setSelectedIcon, setWalletPopUp } from "../../../redux/reducer";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { NavLink } from "react-router-dom";
 function SideBar() {
 	const dispatch = useDispatch();
 	const { selectedIcon, walletPopUp } = useSelector(
@@ -19,112 +19,112 @@ function SideBar() {
 	);
 	const [container, setContainer] = useState(style.Container);
 
-	const [Icons, setIcons] = useState(style.IconsNone);
-	const [buttonsContainer, setButtonsContainer] = useState(
-		style.ButtonsContainer
-	);
-	const OpenWallet = (e) => {
-		dispatch(setWalletPopUp(true));
-		e.preventDefault();
-	};
-	return (
-		<div className={container}>
-			<div className={style.FlexContainer}>
-				<div className={style.LogoContainer}>
-					<img src="./icons/Logo.svg" className={style.Logo} />
-					{container === style.OpenContainer ? (
-						<img
-							src="./icons/Logo Cherryswap.svg"
-							className={style.LogoCherryswap}
-						/>
-					) : (
-						<img
-							src="./icons/Logo Cherryswap.svg"
-							className={style.LogoCherryswap2}
-						/>
-					)}
-				</div>
-				<div className={buttonsContainer}>
-					<div
-						className={
-							selectedIcon === 'FirstIcon' && Icons === style.Icons
-								? style.IconSelected
-								: Icons
-						}
-						onClick={() => dispatch(setSelectedIcon('FirstIcon'))}
-					>
-						<FirstIcon selected={selectedIcon === 'FirstIcon' ? true : false} />
-						<p>Dashboard</p>
-					</div>
-					<div
-						className={
-							selectedIcon === 'OrdersIcon' && Icons === style.Icons
-								? style.IconSelected
-								: Icons
-						}
-						onClick={() => dispatch(setSelectedIcon('OrdersIcon'))}
-					>
-						<OrdersIcon
-							selected={selectedIcon === 'OrdersIcon' ? true : false}
-						/>
-						<p>Vaults</p>
-					</div>
-          <Link to='./realestate'>
-					<div
-						className={
-							selectedIcon === 'Layer1Icon' && Icons === style.Icons
-								? style.IconSelected
-								: Icons
-						}
-						onClick={() => dispatch(setSelectedIcon('Layer1Icon'))}
-					>
-							<Layer1Icon
-								selected={selectedIcon === 'Layer1Icon' ? true : false}
-							/>
-							<p>Real State</p>
-					</div>
-						</Link>
-					<div
-						className={
-							selectedIcon === 'HistoryIcon' && Icons === style.Icons
-								? style.IconSelected
-								: Icons
-						}
-						onClick={() => dispatch(setSelectedIcon('HistoryIcon'))}
-					>
-						<HistoryIcon
-							selected={selectedIcon === 'HistoryIcon' ? true : false}
-						/>
-						<p>Governance</p>
-					</div>
-				</div>
-				<div
-					className={
-						container === style.OpenContainer
-							? style.BottomOpenContainer
-							: style.BottomButtonsContainer
-					}
-				>
-					<ConnectButton.Custom>
-						{({
-							account,
-							chain,
-							openAccountModal,
-							openChainModal,
-							openConnectModal,
-							authenticationStatus,
-							mounted,
-						}) => {
-							// Note: If your app doesn't use authentication, you
-							// can remove all 'authenticationStatus' checks
-							const ready = mounted && authenticationStatus !== 'loading';
-							const connected =
-								ready &&
-								account &&
-								chain &&
-								(!authenticationStatus ||
-									authenticationStatus === 'authenticated');
-
+  const [Icons, setIcons] = useState(style.IconsNone);
+  const [buttonsContainer, setButtonsContainer] = useState(
+    style.ButtonsContainer
+  );
+  console.log(container);
+  return (
+    <div className={container}>
+      <div className={style.FlexContainer}>
+        <div className={style.LogoContainer}>
+          <img src="./icons/Logo.svg" className={style.Logo} />
+          {container === style.OpenContainer ? (
+            <img
+              src="./icons/Logo Cherryswap.svg"
+              className={style.LogoCherryswap}
+            />
+          ) : (
+            <img
+              src="./icons/Logo Cherryswap.svg"
+              className={style.LogoCherryswap2}
+            />
+          )}
+        </div>
+        <div className={buttonsContainer}>
+          <NavLink to={"./dashboard"}>
+            <div
+              className={
+                selectedIcon === "FirstIcon" && Icons === style.Icons
+                  ? style.IconSelected
+                  : Icons
+              }
+              onClick={() => dispatch(setSelectedIcon("FirstIcon"))}
+            >
+              <FirstIcon
+                selected={selectedIcon === "FirstIcon" ? true : false}
+              />
+              <p>Dashboard</p>
+            </div>
+          </NavLink>
+          <div
+            className={
+              selectedIcon === "OrdersIcon" && Icons === style.Icons
+                ? style.IconSelected
+                : Icons
+            }
+            onClick={() => dispatch(setSelectedIcon("OrdersIcon"))}
+          >
+            <OrdersIcon
+              selected={selectedIcon === "OrdersIcon" ? true : false}
+            />
+            <p>Vaults</p>
+          </div>
+          <NavLink to={"./realestate"}>
+            <div
+              className={
+                selectedIcon === "Layer1Icon" && Icons === style.Icons
+                  ? style.IconSelected
+                  : Icons
+              }
+              onClick={() => dispatch(setSelectedIcon("Layer1Icon"))}
+            >
+              <Layer1Icon
+                selected={selectedIcon === "Layer1Icon" ? true : false}
+              />
+              <p>Real State</p>
+            </div>
+          </NavLink>
+          <div
+            className={
+              selectedIcon === "HistoryIcon" && Icons === style.Icons
+                ? style.IconSelected
+                : Icons
+            }
+            onClick={() => dispatch(setSelectedIcon("HistoryIcon"))}
+          >
+            <HistoryIcon
+              selected={selectedIcon === "HistoryIcon" ? true : false}
+            />
+            <p>Governance</p>
+          </div>
+        </div>
+        <div
+          className={
+            container === style.OpenContainer
+              ? style.BottomOpenContainer
+              : style.BottomButtonsContainer
+          }
+        >
+          <ConnectButton.Custom>
+            {({
+              account,
+              chain,
+              openAccountModal,
+              openChainModal,
+              openConnectModal,
+              authenticationStatus,
+              mounted,
+            }) => {
+              // Note: If your app doesn't use authentication, you
+              // can remove all 'authenticationStatus' checks
+              const ready = mounted && authenticationStatus !== "loading";
+              const connected =
+                ready &&
+                account &&
+                chain &&
+                (!authenticationStatus ||
+                  authenticationStatus === "authenticated");
 							return (
 								<div
 									{...(!ready && {
