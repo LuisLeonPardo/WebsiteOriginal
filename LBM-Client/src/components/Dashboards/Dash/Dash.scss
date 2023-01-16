@@ -11,6 +11,9 @@ $breakpoints: (
 }
 
 .general {
+    position: absolute;
+    width: 100vw;
+    top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -23,13 +26,13 @@ $breakpoints: (
     justify-content: space-between;
     align-items: center;
     width: 1357px;
-    top: 50px;
-    position:absolute;
+    
     
     @include media-down(lg) {
         transform: scale(0.75);
         transform-origin: top;
     }
+    
 }
 
 .columnOne {

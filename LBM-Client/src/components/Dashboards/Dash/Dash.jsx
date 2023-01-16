@@ -20,7 +20,6 @@ function Dash() {
         <VertSlider />
         <Mint />
       </div>
-
       </div>
     </div>
   );

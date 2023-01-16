@@ -21,7 +21,14 @@ function App() {
   );
   const AppLayout = () => (
     <>
+    <div className="bgImage" >
+     <img src="./icons/Background.svg" />
+    </div>
+      
+    <div className="SideBar">
       <SideBar />
+    </div>
+      
       <Outlet />
     </>
   );
@@ -32,9 +39,9 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route
           element={
-            <div className="SideBar">
+
               <AppLayout />
-            </div>
+
           }
         >
           <Route
