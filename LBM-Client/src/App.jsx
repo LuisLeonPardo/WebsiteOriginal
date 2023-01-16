@@ -56,9 +56,7 @@ function App() {
           <Route
             path="/realestate"
             element={
-              <div className="Page">
                 <RealEstates />
-              </div>
             }
           />
           {/* Dentro de este Route van todas las cosas que tengan sidebar */}
