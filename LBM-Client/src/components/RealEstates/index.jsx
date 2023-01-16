@@ -45,7 +45,7 @@ function RealEstates() {
 						Price: {ascendant ? 'low to high' : 'high to low'}
 						<img src={arrow} alt="Arrow" />
 					</button>
-					<Toggle />
+					{/* <Toggle /> */}
 				</nav>
 				<aside className="asideFilters">
 					<button onClick={() => setStatus(!status)}>
