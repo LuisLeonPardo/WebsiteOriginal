@@ -21,14 +21,14 @@ function App() {
   );
   const AppLayout = () => (
     <>
-    <div className="bgImage" >
-     <img src="./icons/Background.svg" />
-    </div>
-      
-    <div className="SideBar">
-      <SideBar />
-    </div>
-      
+      <div className="bgImage">
+        <img src="./icons/Background.svg" />
+      </div>
+
+      <div className="SideBar">
+        <SideBar />
+      </div>
+
       <Outlet />
     </>
   );
@@ -37,13 +37,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route
-          element={
-
-              <AppLayout />
-
-          }
-        >
+        <Route element={<AppLayout />}>
           <Route
             path="/dashboard"
             element={
@@ -55,7 +49,9 @@ function App() {
           <Route
             path="/realestate"
             element={
+              <div className="Page">
                 <RealEstates />
+              </div>
             }
           />
           {/* Dentro de este Route van todas las cosas que tengan sidebar */}
