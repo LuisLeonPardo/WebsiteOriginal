@@ -16,49 +16,49 @@ import Dash from './components/Dashboards/Dash/Dash';
 import RealEstates from './components/RealEstates';
 import React from 'react';
 function App() {
-	const { selectedIcon, walletPopUp } = useSelector(
-		(state) => state.reducerCompleto
-	);
-	const AppLayout = () => (
-		<>
-			<div className="bgImage">
-				<img src="./icons/Background.svg" />
-			</div>
+  const { selectedIcon, walletPopUp } = useSelector(
+    (state) => state.reducerCompleto
+  );
+  const AppLayout = () => (
+    <>
+      <div className="bgImage">
+        <img src="./icons/Background.svg" />
+      </div>
 
-			<div className="SideBar">
-				<SideBar />
-			</div>
+      <div className="SideBar">
+        <SideBar />
+      </div>
 
-			<Outlet />
-		</>
-	);
+      <Outlet />
+    </>
+  );
 
-	return (
-		<div className="App">
-			<Routes>
-				<Route path="/" element={<Landing />} />
-				<Route element={<AppLayout />}>
-					<Route
-						path="/dashboard"
-						element={
-							<div className="Page">
-								<Dash />
-							</div>
-						}
-					/>
-					<Route
-						path="/realestate"
-						element={
-							<div className="Page">
-								<RealEstates />
-							</div>
-						}
-					/>
-					{/* Dentro de este Route van todas las cosas que tengan sidebar */}
-				</Route>
-			</Routes>
-		</div>
-	);
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route element={<AppLayout />}>
+          <Route
+            path="/dashboard"
+            element={
+              <div className="Page">
+                <Dash />
+              </div>
+            }
+          />
+          <Route
+            path="/realestate"
+            element={
+              <div className="Page">
+                <RealEstates />
+              </div>
+            }
+          />
+          {/* Dentro de este Route van todas las cosas que tengan sidebar */}
+        </Route>
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
