@@ -4,17 +4,22 @@ import VertSlider from "../VertSlider/VertSlider";
 import Mint from "../Mint/Mint";
 import UserInfo from "../UserInfo/UserInfo";
 import FinancialMarket from "../FinancialMarket/FinancialMarket";
-import style from "./Dash.module.scss";
+import "./Dash.scss";
 
 function Dash() {
   return (
-    <div className={style.Container}>
-      <div className={style.Flex}>
+
+    <div className="general">
+      <div className="dash">
+      <div className="columnOne">
+        <UserInfo/>
+        <FinancialMarket/>
+      </div>
+      <div className="columnOne">
         <Slider />
         <VertSlider />
         <Mint />
-        <UserInfo />
-        <FinancialMarket />
+      </div>
       </div>
     </div>
   );

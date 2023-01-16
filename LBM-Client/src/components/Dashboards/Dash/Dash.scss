@@ -1,0 +1,43 @@
+$breakpoints: (
+    sm: 540px,
+    md: 768px,
+    lg: 1600px
+);
+
+@mixin media-down($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)){
+        @content
+    }
+}
+
+.general {
+    position: absolute;
+    width: 100vw;
+    top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.dash {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1357px;
+    
+    
+    @include media-down(lg) {
+        transform: scale(0.75);
+        transform-origin: top;
+    }
+    
+}
+
+.columnOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 937px;
+}
