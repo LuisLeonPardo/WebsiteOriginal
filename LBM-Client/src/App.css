@@ -4,10 +4,9 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background-image: url("./icons/Background.svg");
 }
 
-.logo:hover {
+.logo:hover {z
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
@@ -23,7 +22,6 @@
   display: flex;
   z-index: 1;
   position: relative;
-  overflow: scroll;
 }
 .App .PopUps {
   width: 100%;
