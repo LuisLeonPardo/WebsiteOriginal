@@ -10,15 +10,9 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-<<<<<<< HEAD
-=======
-  z-index: 0;
-  top: 0;
-  left: 0;
->>>>>>> ee54913d43a9b81eaf3eadfc39c274937a680abc
 }
 
-.logo:hover {z
+.logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
