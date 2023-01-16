@@ -2,11 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 .container-vertslider {
-  position: absolute;
   width: 733px;
   height: 384px;
-  left: 40%;
-  top: 337px;
   background: white;
   overflow: hidden;
   border-radius: 16px;
@@ -81,10 +78,7 @@
         margin: 0;
       }
     }
-    .last-payment {
-    }
-    .balance {
-    }
+    
     h5 {
       margin: 0;
       font-family: "Inter";
