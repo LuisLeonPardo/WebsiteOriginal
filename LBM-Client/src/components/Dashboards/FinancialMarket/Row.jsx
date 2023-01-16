@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./FinancialMarket.scss";
+import BTC from "./assets/BTC.svg"
+import LTC from "./assets/LTC.svg"
+import ETH from "./assets/ETH.svg"
 
 export default function Row({img,name,change, amount, value}) {
 
@@ -8,6 +11,18 @@ export default function Row({img,name,change, amount, value}) {
         supply: false,
         borrow: false
     });
+
+   var urlImg
+
+    if(img === 'BTC') {
+        urlImg = BTC
+    }
+    else if(img ==='LTC') {
+        urlImg = LTC
+    }
+    else if(img==='ETH') {
+        urlImg = ETH
+    }
 
     const handleClick = () => {
         setRender(!render)
@@ -24,7 +39,7 @@ export default function Row({img,name,change, amount, value}) {
     return (
             <div className="row" >
                 <div className="innerRow2" onClick={handleClick}>
-                    <img src={img} />
+                    <img src={urlImg} />
                     <p>{name}</p>
                 </div>
                 {render && <div className="innerRow3" onClick={handleClick}>
