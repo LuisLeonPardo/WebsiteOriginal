@@ -8,10 +8,10 @@
   margin-bottom: 60px;
   .protocol_section {
     display: flex;
-    text-align: right;
     justify-content: space-between;
     max-width: 1183px;
     margin: 0 auto;
+    text-align: right;
     animation-name: inOpacity;
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -24,7 +24,6 @@
         width: 100%;
       }
       div {
-        z-index: 2;
         position: absolute;
         width: 70px;
         height: 320px;
@@ -96,17 +95,6 @@
   }
 }
 
-@keyframes inOpacityDiv {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes inOpacity {
   0% {
     opacity: 0;
