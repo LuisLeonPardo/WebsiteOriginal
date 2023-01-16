@@ -7,9 +7,8 @@ import FinancialMarket from "../FinancialMarket/FinancialMarket";
 import "./Dash.scss";
 
 function Dash() {
-
-
   return (
+
     <div className="general">
       <div className="dash">
       <div className="columnOne">
@@ -21,6 +20,7 @@ function Dash() {
         <VertSlider />
         <Mint />
       </div>
+
       </div>
     </div>
   );
