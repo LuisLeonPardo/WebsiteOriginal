@@ -5,10 +5,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	
 	.containerEstate {
-		width: 80%;
-		height: 90%;
+		min-width: 80%;
+		min-height: 90%;
 		max-width: 1520px;
 		max-height: 967px;
 		background-color: var(--white-color);
@@ -18,13 +18,13 @@
 		h3 {
 			font-size: 22px;
 			width: 120px;
-			margin-left: 47px;
+			margin: 27px 0 27px 47px;
 		}
 		nav {
 			width: calc(100% - 47px);
 			display: flex;
 			justify-content: center;
-			margin-bottom: 15px;
+			margin-bottom: 25px;
 			.isNotAButton {
 				width: 114px;
 				display: flex;
