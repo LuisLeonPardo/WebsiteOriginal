@@ -10,6 +10,7 @@ import CollapseIcon from "../../../public/icons/collapseIcon";
 import { useSelector, useDispatch } from "react-redux";
 import { setSelectedIcon, setWalletPopUp } from "../../../redux/reducer";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { NavLink } from "react-router-dom";
 
 function SideBar() {
   const dispatch = useDispatch();
@@ -22,10 +23,7 @@ function SideBar() {
   const [buttonsContainer, setButtonsContainer] = useState(
     style.ButtonsContainer
   );
-  const OpenWallet = (e) => {
-    dispatch(setWalletPopUp(true));
-    e.preventDefault();
-  };
+  console.log(container);
   return (
     <div className={container}>
       <div className={style.FlexContainer}>
@@ -44,17 +42,21 @@ function SideBar() {
           )}
         </div>
         <div className={buttonsContainer}>
-          <div
-            className={
-              selectedIcon === "FirstIcon" && Icons === style.Icons
-                ? style.IconSelected
-                : Icons
-            }
-            onClick={() => dispatch(setSelectedIcon("FirstIcon"))}
-          >
-            <FirstIcon selected={selectedIcon === "FirstIcon" ? true : false} />
-            <p>Dashboard</p>
-          </div>
+          <NavLink to={"./dashboard"}>
+            <div
+              className={
+                selectedIcon === "FirstIcon" && Icons === style.Icons
+                  ? style.IconSelected
+                  : Icons
+              }
+              onClick={() => dispatch(setSelectedIcon("FirstIcon"))}
+            >
+              <FirstIcon
+                selected={selectedIcon === "FirstIcon" ? true : false}
+              />
+              <p>Dashboard</p>
+            </div>
+          </NavLink>
           <div
             className={
               selectedIcon === "OrdersIcon" && Icons === style.Icons
@@ -68,19 +70,21 @@ function SideBar() {
             />
             <p>Vaults</p>
           </div>
-          <div
-            className={
-              selectedIcon === "Layer1Icon" && Icons === style.Icons
-                ? style.IconSelected
-                : Icons
-            }
-            onClick={() => dispatch(setSelectedIcon("Layer1Icon"))}
-          >
-            <Layer1Icon
-              selected={selectedIcon === "Layer1Icon" ? true : false}
-            />
-            <p>Real State</p>
-          </div>
+          <NavLink to={"./realestate"}>
+            <div
+              className={
+                selectedIcon === "Layer1Icon" && Icons === style.Icons
+                  ? style.IconSelected
+                  : Icons
+              }
+              onClick={() => dispatch(setSelectedIcon("Layer1Icon"))}
+            >
+              <Layer1Icon
+                selected={selectedIcon === "Layer1Icon" ? true : false}
+              />
+              <p>Real State</p>
+            </div>
+          </NavLink>
           <div
             className={
               selectedIcon === "HistoryIcon" && Icons === style.Icons
