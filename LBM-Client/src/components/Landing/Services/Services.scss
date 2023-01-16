@@ -98,14 +98,15 @@
   .services_items {
     height: 100vh;
     margin: 0 auto;
-    margin-bottom: 600px;
     .services_section {
       .services_text {
         margin: 0 auto;
         width: 500px;
       }
       .services_quad {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
         .services-quad_item {
           height: 300px;
@@ -125,12 +126,19 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 845px) {
   .services_items {
+    margin-bottom: 220px;
     .services_section {
       .services_text {
         width: 315px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .services_items {
+    margin-bottom: 520px;
   }
 }
