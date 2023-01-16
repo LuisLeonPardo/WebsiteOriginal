@@ -31,14 +31,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route
-          path="/home"
-          element={
-            <div className="Page">
-              <Home />
-            </div>
-          }
-        />
-        <Route
           element={
             <div className="SideBar">
               <AppLayout />
