@@ -13,9 +13,9 @@ import { useSelector } from "react-redux";
 import Home from "./components/Landing/Home/Home";
 import Dash from "./components/Dashboards/Dash/Dash";
 import RealEstates from "./components/RealEstates";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Modals from "./components/Dashboards/Modals/Modals";
 function App() {
-
   const [stateModal, setStateModal] = useState(false);
   const { selectedIcon, walletPopUp } = useSelector(
     (state) => state.reducerCompleto
