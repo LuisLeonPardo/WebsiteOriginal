@@ -87,3 +87,19 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .value_items {
+    margin-bottom: 10px;
+    .value_section {
+      .value_text {
+        h2 {
+          font-size: 28px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
