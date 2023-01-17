@@ -15,7 +15,6 @@ import {
   connectorsForWallets,
 } from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
-import { mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import {
@@ -30,7 +29,7 @@ import {
 const AstarNetworkChain = {
   id: 592,
   name: "Astar",
-  network: "Astar",
+  network: "Astar Network",
   iconUrl: "./icons/astar-logo.png",
   iconBackground: "#fff",
   nativeCurrency: {
@@ -56,7 +55,7 @@ const AstarNetworkChain = {
 const { chains, provider } = configureChains(
   [AstarNetworkChain],
   [
-    alchemyProvider({ apiKey: "ZdKUzk1Xh1lo38gMDxkEVNqfN4ilbVel" }),
+    alchemyProvider({ apiKey: import.meta.env.ALCHEMY_API_KEY }),
     publicProvider(),
   ]
 );
