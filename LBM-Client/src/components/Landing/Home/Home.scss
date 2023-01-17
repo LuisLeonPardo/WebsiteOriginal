@@ -4,6 +4,8 @@
 .home_items {
   background-image: url("./assets/background-home.svg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   height: 100vh;
   .home_section {
     text-align: start;
@@ -111,15 +113,10 @@
   }
 }
 
-@media screen and (max-width: 763px) {
+@media screen and (max-width: 570px) {
   .home_items {
     background-image: url("./assets/background-responsive.svg");
     height: 100vh;
-  }
-}
-
-@media screen and (max-width: 570px) {
-  .home_items {
     .home_section {
       .home_text {
         width: 315px;
