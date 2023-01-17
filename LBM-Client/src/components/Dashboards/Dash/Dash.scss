@@ -16,7 +16,6 @@ $breakpoints: (
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 50px;
 }
 
 .dash {
@@ -25,7 +24,7 @@ $breakpoints: (
     justify-content: space-between;
     align-items: center;
     width: 1357px;
-    margin-top: 150px;
+    
     
     
     @include media-down(lg) {
