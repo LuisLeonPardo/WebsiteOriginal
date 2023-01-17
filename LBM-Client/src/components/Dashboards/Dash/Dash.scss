@@ -1,6 +1,6 @@
 $breakpoints: (
-    sm: 540px,
-    md: 768px,
+    sm: 600px,
+    md: 1200px,
     lg: 1600px
 );
 
@@ -17,6 +17,7 @@ $breakpoints: (
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-bottom: 50px;
     
 }
 
@@ -29,8 +30,11 @@ $breakpoints: (
     
     
     @include media-down(lg) {
-        transform: scale(0.75);
-        transform-origin: top;
+        zoom: 75%;
+    }
+
+    @include media-down(md) {
+        zoom: 65%;
     }
     
 }
