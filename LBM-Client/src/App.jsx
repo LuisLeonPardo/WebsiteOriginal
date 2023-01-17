@@ -1,22 +1,20 @@
-import Landing from './components/Landing/Landing';
+import Landing from "./components/Landing/Landing";
 // import Dashboard from "./components/Dashboards/Dashboard";
-import './App.css';
-import SideBar from './components/SideBar/SideBar';
+import "./App.css";
+import SideBar from "./components/SideBar/SideBar";
 import {
-	Route,
-	Routes,
-	useLocation,
-	Outlet,
-	BrowserRouter,
-} from 'react-router-dom';
-import ConnectWallet from './components/ConnectWallet/ConnectWallet';
-import { useSelector } from 'react-redux';
-import Home from './components/Landing/Home/Home';
-import Dash from './components/Dashboards/Dash/Dash';
-import RealEstates from './components/RealEstates';
-import Modals from './components/Dashboards/Modals/Modals'
-import React from 'react';
-import { useState } from 'react';
+  Route,
+  Routes,
+  useLocation,
+  Outlet,
+  BrowserRouter,
+} from "react-router-dom";
+import ConnectWallet from "./components/ConnectWallet/ConnectWallet";
+import { useSelector } from "react-redux";
+import Home from "./components/Landing/Home/Home";
+import Dash from "./components/Dashboards/Dash/Dash";
+import RealEstates from "./components/RealEstates";
+import React, { useEffect } from "react";
 function App() {
 
   const [stateModal, setStateModal] = useState(false);
