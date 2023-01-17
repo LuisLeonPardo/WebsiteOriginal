@@ -6,7 +6,7 @@ import UserInfo from "../UserInfo/UserInfo";
 import FinancialMarket from "../FinancialMarket/FinancialMarket";
 import "./Dash.scss";
 
-function Dash() {
+function Dash({setStateModal}) {
   return (
 
     <div className="general">
@@ -17,7 +17,7 @@ function Dash() {
       </div>
       <div className="columnOne">
         <Slider />
-        <VertSlider />
+        <VertSlider setStateModal={setStateModal} />
         <Mint />
       </div>
       </div>
