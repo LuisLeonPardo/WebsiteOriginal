@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function ProgressBar(props) {
-  const { bgcolor, completed } = props;
+  const { bgcolor, completed, limit } = props;
 
   const containerStyles = {
     height: 8,
@@ -19,14 +19,19 @@ export default function ProgressBar(props) {
   }
 
   const labelStyles = {
-    padding: 5,
-    color: 'white',
-    fontWeight: 'bold'
+    height:'100%',
+    width: 3,
+    backgroundColor: 'red',
+    position: 'relative',
+    top: -8,
+    left: `${limit}%`
   }
 
   return (
     <div style={containerStyles}>
       <div style={fillerStyles}>
+      </div>
+      <div style={labelStyles}>
       </div>
     </div>
   );
