@@ -16,14 +16,45 @@ const countries = [
 	},
 	{
 		country: 'brazil',
-
+		value: 50,
 		states: [
-			{ state: 'New york', value: 83 },
-			{ state: 'Los Angeles', value: 83 },
-			{ state: 'Chicago', value: 84 },
-			{ state: 'Boston', value: 106 },
-			{ state: 'San Francisco', value: 106 },
-			{ state: 'Houston', value: 107 },
+			{ state: 'San Pablo', value: 90 },
+			{ state: 'Rio de Janeiro', value: 60 },
+			{ state: 'Goias', value: 94 },
+			{ state: 'Mato Grosso', value: 50 },
+			{ state: 'Salvador', value: 100 },
+		],
+	},
+	
+	{
+		country: 'hong kong',
+		value: 75,
+		states: [
+			{ state: 'Kowloon', value: 67 },
+			{ state: 'Hong Kong Island', value: 34 },
+			{ state: 'Kwai Tsing', value: 29 },
+			{ state: 'Sai Kung', value: 107 },
+			{ state: 'Tai Po', value: 90 },
+			{ state: 'Tsuen Wan', value: 83 },
+		],
+	},
+	{
+		country: 'italia',
+		value: 80,
+		states: [
+			{ state: 'Roma', value: 82 },
+			{ state: 'Milan', value: 46 },
+			{ state: 'Napoles', value: 91 },
+			{ state: 'Turin', value: 73 },
+			{ state: 'Génova', value: 50 },
+			{ state: 'Florencia', value: 92 },
+		],
+	},
+	{
+		country: 'dubai',
+		value: 100,
+		states: [
+			{ state: 'Dubai', value: 300 },
 		],
 	},
 ];

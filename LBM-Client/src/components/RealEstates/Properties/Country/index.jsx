@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import arrow from '../../../../assets/down.svg';
 import './index.scss';
-function Country({ country, states }) {
+function Country({ country, states, value }) {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div className="countryComponent">
 			<button onClick={() => setIsOpen(!isOpen)} className="countryButton">
 				{country}
 				<div className={`countryFirstDiv ${isOpen ? 'isOpen' : null}`}>
-					<span>41</span> <img src={arrow} alt="Arrow" />
+					<span>{value}</span> <img src={arrow} alt="Arrow" />
 				</div>
 			</button>
 			<div className={isOpen ? 'mapContainer': null}>
