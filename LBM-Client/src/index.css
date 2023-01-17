@@ -3,6 +3,7 @@
 	--white-color: #fff;
 	--modern-white: rgba(22, 22, 26, 0.04);
 	--gray-color: rgba(22, 22, 26, 0.4);
+	--gray-darker: rgba(22, 22, 26, 0.6);
 	--black-color: #16161a;
 	--orange-background: #fff1f2;
 	--orange-darker: #f7931a;
@@ -34,7 +35,7 @@ body {
 	min-width: 320px;
 	min-height: 100vh;
 }
-
+b
 h1 {
 	font-size: 3.2em;
 	line-height: 1.1;
@@ -56,10 +57,10 @@ button {
 button:hover {
 	border-color: #646cff;
 }
-button:focus,
+/* button:focus,
 button:focus-visible {
 	outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
 	:root {

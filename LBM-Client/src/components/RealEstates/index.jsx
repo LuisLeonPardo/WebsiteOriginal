@@ -5,6 +5,7 @@ import arrow from '../../assets/down.svg';
 import Toggle from './ToggleButton';
 import Status from './Status';
 import Price from './Price';
+import Properties from './Properties';
 function RealEstates() {
 	const [ascendant, setAscendant] = useState(true);
 	const [status, setStatus] = useState(false);
@@ -74,6 +75,7 @@ function RealEstates() {
 					>
 						Properties <img src={arrow} alt="Arrow" />
 					</button>
+					{properties ? <Properties /> : null}
 				</aside>
 				<section></section>
 			</div>

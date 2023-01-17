@@ -6,10 +6,9 @@
 	justify-content: center;
 	align-items: center;
 	margin-left: 63px;
-
 	.containerEstate {
-		min-width: 85%;
-		min-height: 90%;
+		min-width: 85vw;
+		min-height: 90vh;
 		max-width: 1520px;
 		max-height: 967px;
 		background-color: var(--white-color);
@@ -57,7 +56,7 @@
 
 			.input {
 				box-sizing: border-box;
-				color: #191919;
+				color: var(--black-color) !important;
 				padding: 15px 15px 15px 35px;
 				width: 100%;
 				background-color: var(--modern-white);
@@ -65,9 +64,10 @@
 				border-radius: 16px;
 				color: var(--gray-color);
 				height: 48px;
+				font-family: 'Inter';
 			}
 			.input:focus-visible {
-				outline: 1px solid var(--black-color);
+				outline: none;
 			}
 
 			.inputIcon {
@@ -110,15 +110,19 @@
 	.asideFilters {
 		display: flex;
 		width: 24%;
-		height: 57%;
 		flex-direction: column;
 		align-items: center;
 		border: 2px solid var(--modern-white);
 		border-radius: 16px;
 		margin-left: 33px;
+		height: 65vh;
+		overflow: auto;
+		scrollbar-color: var(--orange-darker) transparent;
+		scrollbar-width: thin;
+		
 		.buttonAsideFilter {
 			width: 85%;
-			height: 55px;
+			min-height: 8vh;
 			background-color: var(--white-color);
 			display: flex;
 			justify-content: space-between;
@@ -137,6 +141,20 @@
 			img {
 				rotate: 180deg;
 			}
+			
 		}
+	}
+	.asideFilters::-webkit-scrollbar {
+		width: 2px;
+		height: 5px;
+	}
+
+	.asideFilters::-webkit-scrollbar-track-piece {
+		background-color: transparent;
+	}
+
+	.asideFilters::-webkit-scrollbar-thumb:vertical {
+		height: 15px;
+		background-color: var(--orange-darker);
 	}
 }
