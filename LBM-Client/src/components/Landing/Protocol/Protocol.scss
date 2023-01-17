@@ -40,16 +40,16 @@
           left: 71.4%;
         }
       }
-    }
-    .procotol_image:hover {
-      div {
-        transform: translate(-100px);
+      &:hover {
         div {
-          display: none;
+          transform: translate(-100px);
+          div {
+            display: none;
+          }
         }
-      }
-      img {
-        transform: scale(1.1);
+        img {
+          transform: scale(1.1);
+        }
       }
     }
     .protocol_text {

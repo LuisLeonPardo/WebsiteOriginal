@@ -16,6 +16,8 @@ import Dash from "./components/Dashboards/Dash/Dash";
 import RealEstates from "./components/RealEstates";
 import React, { useEffect } from "react";
 function App() {
+
+  const [stateModal, setStateModal] = useState(false);
   const { selectedIcon, walletPopUp } = useSelector(
     (state) => state.reducerCompleto
   );
@@ -24,6 +26,8 @@ function App() {
       <div className="bgImage">
         <img src="./icons/Background.svg" />
       </div>
+
+      <Modals state={stateModal} setStateModal={setStateModal} />
 
       <div className="SideBar">
         <SideBar />
@@ -42,7 +46,7 @@ function App() {
             path="/dashboard"
             element={
               <div className="Page">
-                <Dash />
+                <Dash setStateModal={setStateModal} />
               </div>
             }
           />

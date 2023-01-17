@@ -10,7 +10,10 @@ export default function UserInfo() {
 
     const [apy , setApy] = useState('3.2%')
 
-    const [bar, setBar] = useState({completed: 35})
+    const [bar, setBar] = useState({
+        completed: 35,
+        limit: 75
+    })
 
     const handleToggleChange = () => {
         handleToggle(!toggle)
@@ -37,7 +40,6 @@ export default function UserInfo() {
                     handleDiameter={27}
                 />
                 <div className="toggle" style={{left: '27px',top: '80px'}}>Net APY</div>
-                <img src={Copy} className="copy" style={{position:'absolute', left: '91px',top: '84px'}}/>
                 <div className="apy">{apy}</div>
                 <div className="grid">
                     <div>
@@ -65,16 +67,14 @@ export default function UserInfo() {
                         </div>      
                     </div>
                     <div className='fillerBar'>
-                        <ProgressBar bgcolor={"#4CAF50"} completed={bar.completed} />
+                        <ProgressBar bgcolor={"#4CAF50"} completed={bar.completed} limit={bar.limit}/>
                     </div>
                     
                 </div>
-                <img src={Copy} className="copy" style={{position:'absolute',left: '167px',top: '271px'}}/>
                 <div className="safeLimit">
                     <img src={Shield} className="shield" />
                     <h3>Your safe limit:</h3>
                     <h4>{' $0.00'}</h4>
-                    <img src={Copy} className="copy" />
                 </div>
                 
         </div>
