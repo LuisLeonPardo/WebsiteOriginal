@@ -1,14 +1,22 @@
 $breakpoints: (
-    sm: 600px,
+    xs: 750px,
+    sm: 900px,
     md: 1200px,
-    lg: 1600px
+    lg: 1600px,
+    lgh: 750px
 );
 
 @mixin media-down($breakpoint) {
     @media screen and (max-width: map-get($breakpoints, $breakpoint)){
         @content
     }
-}
+};
+
+@mixin height-down($breakpoint) {
+    @media screen and (max-height: map-get($breakpoints, $breakpoint)){
+        @content
+    }
+};
 
 .general {
     width: 100vw;
@@ -24,6 +32,7 @@ $breakpoints: (
     justify-content: space-between;
     align-items: center;
     width: 1357px;
+    top: 50px;
     
     
     
@@ -31,8 +40,21 @@ $breakpoints: (
         zoom: 75%;
     }
 
+    @include height-down(lgh) {
+        zoom: 60%;
+    }
+
     @include media-down(md) {
-        zoom: 65%;
+        zoom: 55%;
+    }
+
+    @include media-down(sm) {
+        zoom: 45%;
+    }
+
+    @include media-down(xs) {
+        display: flex;
+        flex-direction: column;
     }
     
 }
