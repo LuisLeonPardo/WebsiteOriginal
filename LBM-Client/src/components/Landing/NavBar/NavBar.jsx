@@ -1,34 +1,16 @@
 import React, { useState } from "react";
-import logo from "./assets/logo-navbar.svg";
+import logo from "../assets/logo.svg";
 import cross from "./assets/cross.svg";
 import home from "./assets/home.svg";
 import whitepaper from "./assets/whitepaper.svg";
 import contacts from "./assets/contacts.svg";
 import bepart from "./assets/bepart.svg";
-import instagram from "./assets/networks/instagram.svg";
-import twitter from "./assets/networks/twitter.svg";
-import github from "./assets/networks/github.svg";
-import linkedin from "./assets/networks/linkedin.svg";
-import tiktok from "./assets/networks/tiktok.svg";
+import { networks } from "../networks";
 import "./NavBar.scss";
 
 export default function NavBar() {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
-
-  const networks = [
-    {
-      net: instagram,
-      href: "https://www.instagram.com/libertum_project/",
-    },
-    { net: twitter, href: "https://twitter.com/liberumproject" },
-    { net: github, href: "https://github.com/Libertum-Project" },
-    {
-      net: linkedin,
-      href: "https://www.linkedin.com/company/libertum-project/",
-    },
-    { net: tiktok, href: "" },
-  ];
 
   return (
     <>
