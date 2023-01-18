@@ -6,11 +6,39 @@ import Toggle from './ToggleButton';
 import Status from './Status';
 import Price from './Price';
 import Properties from './Properties';
+import CardPreview from './CardPreview';
+import firstEstate from '../../assets/firstEstate.svg';
+import secondEstate from '../../assets/secondEstate.svg';
+import thirdEstate from '../../assets/thirdEstate.svg';
+import forthEstate from '../../assets/forthEstate.svg';
+import fifthEstate from '../../assets/fifthEstate.svg';
+import noFoto from '../../assets/noFoto.svg';
+import { motion } from 'framer-motion';
+
+const variants = {
+	open: { opacity: 1 },
+	closed: { opacity: 0, display: 'none' },
+};
+const lands = [
+	{ image: firstEstate, land: '#4567' },
+	{ image: secondEstate, land: '#4269' },
+	{ image: thirdEstate, land: '#4106' },
+	{ image: forthEstate, land: '#3012' },
+	{ image: fifthEstate, land: '#7952' },
+	{ image: noFoto, land: '#2235' },
+	{ image: noFoto, land: '#3615' },
+	{ image: noFoto, land: '#6798' },
+	{ image: noFoto, land: '#8378' },
+	{ image: noFoto, land: '#3615' },
+	{ image: noFoto, land: '#6798' },
+	{ image: noFoto, land: '#8378' },
+];
 function RealEstates() {
 	const [ascendant, setAscendant] = useState(true);
 	const [status, setStatus] = useState(false);
 	const [price, setPrice] = useState(false);
 	const [properties, setProperties] = useState(false);
+	const [fiveColumn, setFiveColumn] = useState(false);
 	const handleOrder = () => {
 		setAscendant(!ascendant);
 	};
@@ -52,32 +80,59 @@ function RealEstates() {
 						Price: {ascendant ? 'low to high' : 'high to low'}
 						<img src={arrow} alt="Arrow" />
 					</button>
-					{/* <Toggle /> */}
+					<Toggle setFiveColumn={setFiveColumn} fiveColumn={fiveColumn} />
+
+					{/* <button onClick={() => setFiveColumn(!fiveColumn)}>grid</button> */}
 				</nav>
-				<aside className="asideFilters">
-					<button
-						className={`buttonAsideFilter ${status ? 'isActive' : null}`}
-						onClick={() => setStatus(!status)}
+				<div className="wrapperAsideSection">
+					<aside className="asideFilters">
+						<button
+							className={`buttonAsideFilter ${status ? 'isActive' : null}`}
+							onClick={() => setStatus(!status)}
+						>
+							Status <img src={arrow} alt="Arrow" />
+						</button>
+						<motion.nav
+							animate={status ? 'open' : 'closed'}
+							variants={variants}
+						>
+							{status ? <Status /> : null}
+						</motion.nav>
+						<button
+							className={`buttonAsideFilter ${price ? 'isActive' : null}`}
+							onClick={() => setPrice(!price)}
+						>
+							Price <img src={arrow} alt="Arrow" />
+						</button>
+						<motion.div animate={price ? 'open' : 'closed'} variants={variants}>
+							{price ? <Price /> : null}
+						</motion.div>
+						<button
+							className={`buttonAsideFilter ${properties ? 'isActive' : null}`}
+							onClick={() => setProperties(!properties)}
+						>
+							Properties <img src={arrow} alt="Arrow" />
+						</button>
+						<motion.div animate={properties ? 'open' : 'closed'} variants={variants}>
+							{properties ? <Properties /> : null}
+						</motion.div>
+					</aside>
+					<section
+						className={`${
+							fiveColumn
+								? 'previewEstatesFiveColums'
+								: 'previewEstatesFourColums'
+						}`}
 					>
-						Status <img src={arrow} alt="Arrow" />
-					</button>
-					{status ? <Status /> : null}
-					<button
-						className={`buttonAsideFilter ${price ? 'isActive' : null}`}
-						onClick={() => setPrice(!price)}
-					>
-						Price <img src={arrow} alt="Arrow" />
-					</button>
-					{price ? <Price /> : null}
-					<button
-						className={`buttonAsideFilter ${properties ? 'isActive' : null}`}
-						onClick={() => setProperties(!properties)}
-					>
-						Properties <img src={arrow} alt="Arrow" />
-					</button>
-					{properties ? <Properties /> : null}
-				</aside>
-				<section></section>
+						{lands.map((land) => (
+							<CardPreview
+								image={land.image}
+								land={land.land}
+								fiveColumn={fiveColumn}
+							/>
+						))}
+					</section>
+				</div>
 			</div>
 		</div>
 	);

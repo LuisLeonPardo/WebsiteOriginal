@@ -81,8 +81,8 @@ function Properties() {
 					/>
 				</svg>
 			</div>
-			{countries.map((country) => (
-				<Country country={country.country} value={country.value} states={country.states} />
+			{countries.map((country, index) => (
+				<Country key={index} country={country.country} value={country.value} states={country.states} />
 			))}
 		</div>
 	);
