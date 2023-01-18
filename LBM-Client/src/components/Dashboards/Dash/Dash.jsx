@@ -3,7 +3,7 @@ import Slider from "../Slider/Slider";
 import VertSlider from "../VertSlider/VertSlider";
 import Mint from "../Mint/Mint";
 import UserInfo from "../UserInfo/UserInfo";
-import FinancialMarket from "../FinancialMarket/FinancialMarket";
+import FinancialMarket from "../Deposit/Deposit";
 import "./Dash.scss";
 
 function Dash({setStateModal}) {
@@ -12,12 +12,21 @@ function Dash({setStateModal}) {
     <div className="general">
       <div className="dash">
       <div className="columnOne">
-        <UserInfo/>
-        <FinancialMarket/>
+        <div className="account">
+          <h1 className="show">Dashboard</h1>
+          <UserInfo/>
+        </div>
+        <div className="hidden">
+          <FinancialMarket/>
+        </div>
       </div>
       <div className="columnOne">
-        <Slider />
-        <VertSlider setStateModal={setStateModal} />
+        <div className="hidden">
+          <Slider />
+        </div>
+        <div className="hidden">
+          <VertSlider setStateModal={setStateModal} />
+        </div>
         <Mint />
       </div>
       </div>

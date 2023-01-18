@@ -12,6 +12,12 @@ $breakpoints: (
     }
 };
 
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)){
+        @content
+    }
+};
+
 @mixin height-down($breakpoint) {
     @media screen and (max-height: map-get($breakpoints, $breakpoint)){
         @content
@@ -53,8 +59,12 @@ $breakpoints: (
     }
 
     @include media-down(xs) {
+        zoom: 100%;
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 85%;
     }
     
 }
@@ -64,4 +74,41 @@ $breakpoints: (
     flex-direction: column;
     justify-content: space-between;
     height: 937px;
+
+    @include media-down(xs) {
+        height: fit-content;
+        width: 100%;
+    }
+}
+
+.hidden {
+    @include media-down(xs) {
+       display: none;
+    }
+}
+
+.show {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 36px;
+    /* identical to box height, or 164% */
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    color: #000000;
+
+    @include media-up(xs) {
+        display: none;
+     }
+}
+
+.account {
+    @include media-down(xs) {
+        height: fit-content;
+        width: 100%;
+    }
 }
