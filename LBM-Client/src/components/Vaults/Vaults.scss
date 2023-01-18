@@ -1,7 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-
-.containerUi {
+.vaults {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  top: 114px;
+  bottom: 114px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+}
+.vault-container {
+  position: relative;
   background-color: white;
   width: 582px;
   min-width: 480px;
@@ -9,8 +21,9 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 18px;
   user-select: none;
+  display: flex;
 }
-.title {
+.coin-name {
   position: relative;
   width: 115px;
   height: 24px;
@@ -28,47 +41,35 @@
 
   color: #000000;
 }
-
-.toggle {
+.coin-icon {
+  width: 52px;
+  height: 46.35px;
+  border-radius: 50%;
+}
+.staking {
   position: absolute;
   height: 18px;
-  width: 102px;
-  left: 391px;
-  top: 40px;
+  width: 109px;
+  left: 27px;
+  top: 80px;
 
   font-family: "Raleway";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 15px;
   line-height: 18px;
   /* identical to box height */
-
+  text-align: left;
   display: flex;
   align-items: center;
-
   color: #a3a3a3;
 }
-
-.copy {
-  width: 10px;
-  height: 10px;
-}
-
-.switch {
-  position: absolute;
-  width: 51px;
-  height: 31px;
-  left: 238px;
-  top: 33px;
-}
-
-.apy {
+.stake {
   position: absolute;
   width: 62px;
   height: 48px;
   left: 27px;
   top: 98px;
-
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -77,11 +78,9 @@
   display: flex;
   align-items: center;
   text-align: center;
-
   color: #4caf50;
 }
-
-.grid {
+.stakes-grid {
   position: absolute;
   width: 392px;
   height: 40px;
@@ -117,102 +116,33 @@
     color: #000000;
   }
 }
-
-.fillBar {
-  position: absolute;
+.vault-buttons {
+  position: relative;
   width: 528px;
-  height: 25px;
-  left: 27px;
-  top: 271px;
-  h3 {
-    margin: 0px;
-    font-family: "Raleway", sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 15px;
-    /* identical to box height */
-
-    display: flex;
-    align-items: center;
-
-    color: #a3a3a3;
-  }
-  h4 {
-    margin: 0px;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
-    /* identical to box height */
-
-    display: flex;
-    align-items: center;
-
-    color: #000000;
-  }
-}
-
-.borrowLimit {
+  height: 54px;
+  top: 276px;
+  bottom: 32px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 }
-
-.labelsFiller {
+.vault-button {
+  position: relative;
+  padding: 0px;
+  border: 0px;
+  width: 254px;
+  height: 54px;
+  background-color: white;
+  color: #707eae;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: #f7931a;
+    color: white;
+  }
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.fillerBar {
-  width: 528px;
-  height: 8px;
-  span {
-    color: #4caf50;
-  }
-}
-
-.safeLimit {
-  position: absolute;
-  width: 169px;
-  height: 16px;
-  left: 383px;
-  top: 313px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  h3 {
-    margin: 0;
-    font-family: "Raleway", sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 15px;
-    /* identical to box height */
-
-    display: flex;
-    align-items: center;
-    color: #a3a3a3;
-  }
-  h4 {
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 16px;
-    /* identical to box height */
-
-    display: flex;
-    align-items: center;
-
-    color: #000000;
-  }
-}
-
-.shield {
-  width: 16px;
-  height: 16px;
+  align-items: center;
+  justify-content: center;
 }
