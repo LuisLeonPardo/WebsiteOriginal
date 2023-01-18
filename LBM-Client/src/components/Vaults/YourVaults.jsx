@@ -21,8 +21,10 @@ function YourVaults({ shortName, img, stakingAPR, daily, total }) {
 
   return (
     <div className="vault-container">
-      <h1 className="coin-name">{shortName}</h1>
-      <img src={urlImg} alt="Coin Icon" className="coin-icon" />
+      <div className="stake-name">
+        <img src={urlImg} alt="Coin Icon" className="coin-icon" />
+        <h1 className="coin-name">{shortName}</h1>
+      </div>
       <div className="staking">You are staking</div>
       <div className="stake">{staking}</div>
       <div className="stakes-grid">

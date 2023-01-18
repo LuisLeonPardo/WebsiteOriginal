@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 .vaults {
-  position: absolute;
   width: 100vw;
   height: 100vw;
   top: 114px;
   bottom: 114px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 72px;
+  position: relative;
 }
 .vault-container {
   position: relative;
@@ -22,29 +22,39 @@
   border-radius: 18px;
   user-select: none;
   display: flex;
+  flex-direction: column;
 }
-.coin-name {
+.stake-name {
+  display: flex;
   position: relative;
-  width: 115px;
-  height: 24px;
+  width: 88px;
+  height: 30px;
   left: 27px;
   top: 37px;
   margin: 0px;
-
+  justify-content: start;
+  align-items: center;
+}
+.coin-name {
+  position: relative;
+  width: 43px;
+  height: 24px;
+  left: 15px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   display: flex;
-  align-items: center;
-
   color: #000000;
 }
 .coin-icon {
-  width: 52px;
-  height: 46.35px;
+  position: relative;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
+  display: flex;
+  margin: 0;
 }
 .staking {
   position: absolute;
@@ -117,13 +127,13 @@
   }
 }
 .vault-buttons {
-  position: relative;
+  position: absolute;
   width: 528px;
   height: 54px;
   top: 276px;
+  left: 27px;
   bottom: 32px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   gap: 20px;
 }
