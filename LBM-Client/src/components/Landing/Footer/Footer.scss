@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+.footer_items {
+  background: rgba(34, 34, 34, 0.03);
+  height: 150px;
+  animation-name: inOpacity;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  padding: 20px;
+  .footer_section {
+    display: flex;
+    justify-content: space-between;
+    .footer_company {
+      text-align: left;
+      width: 400px;
+      height: 100px;
+      div {
+        font-family: "Raleway";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #222222;
+        opacity: 0.7;
+      }
+      img {
+        height: 46.35px;
+        width: 156px;
+      }
+    }
+    .footer_menu {
+      display: flex;
+      flex-direction: column;
+      width: 585px;
+      gap: 30px;
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: #1a1a1a;
+        li {
+          padding-left: 27px;
+          &:hover {
+            color: #f88612;
+            cursor: pointer;
+          }
+        }
+      }
+      .footer_network {
+        align-self: flex-end;
+        .footer_network-item {
+          padding-left: 27px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes inOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .footer_items {
+    height: auto;
+    justify-self: center;
+    padding: 10px;
+    .footer_section {
+      width: 375px;
+      flex-direction: column-reverse;
+      margin: 0 auto;
+      position: relative;
+      .footer_company {
+        width: 375px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        div {
+          width: 315px;
+        }
+        img {
+          position: absolute;
+          top: -0%;
+        }
+      }
+      .footer_menu {
+        margin-top: 60px;
+        gap: 0px;
+        width: auto;
+        ul {
+          flex-wrap: wrap;
+          justify-content: space-around;
+          padding-left: 0px;
+          row-gap: 20px;
+          li {
+            padding-left: 15px;
+          }
+        }
+        .footer_network {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

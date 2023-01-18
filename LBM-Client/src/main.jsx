@@ -1,4 +1,3 @@
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -7,56 +6,43 @@ import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { Persistor } from "../redux/store/Store";
 import "./index.css";
+import { Web3ReactProvider } from "@web3-react/core";
+import { getLibrary } from "./config/web3";
 //wallet imports
-import "@rainbow-me/rainbowkit/styles.css";
 
-import {
-  getDefaultWallets,
-  RainbowKitProvider,
-  lightTheme,
-} from "@rainbow-me/rainbowkit";
-import { configureChains, createClient, WagmiConfig } from "wagmi";
-import { mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
-import { alchemyProvider } from "wagmi/providers/alchemy";
-import { publicProvider } from "wagmi/providers/public";
-
-const { chains, provider } = configureChains(
-  [mainnet, polygon, optimism, arbitrum],
-  [
-    alchemyProvider({ apiKey: "ZdKUzk1Xh1lo38gMDxkEVNqfN4ilbVel" }),
-    publicProvider(),
-  ]
-);
-
-const { connectors } = getDefaultWallets({
-  appName: "Libertum",
-  chains,
-});
-
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors,
-  provider,
-});
+const AstarNetworkChain = {
+  id: 592,
+  name: "Astar",
+  network: "Astar Network",
+  iconUrl: "./icons/astar-logo.png",
+  iconBackground: "#fff",
+  nativeCurrency: {
+    decimals: 18,
+    name: "ASTAR",
+    symbol: "ASTR",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://evm.astar.network", "https://astar.public.blastapi.io"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Subscan", url: "https://astar.subscan.io" },
+    etherscan: {
+      name: "PolkadotJs",
+      url: "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fastar.api.onfinality.io%2Fpublic-ws#/explorer",
+    },
+  },
+  testnet: false,
+};
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <BrowserRouter>
       <PersistGate loading={null} persistor={Persistor}>
-        <WagmiConfig client={wagmiClient}>
-          <RainbowKitProvider
-            chains={chains}
-            theme={lightTheme({
-              accentColor: "#F4911A",
-              accentColorForeground: "white",
-              borderRadius: "small",
-              fontStack: "system",
-              overlayBlur: "small",
-            })}
-          >
-            <App />
-          </RainbowKitProvider>
-        </WagmiConfig>
+        <Web3ReactProvider getLibrary={getLibrary}>
+          <App />
+        </Web3ReactProvider>
       </PersistGate>
     </BrowserRouter>
   </Provider>

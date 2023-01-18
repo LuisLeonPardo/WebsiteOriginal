@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { useState } from "react";
-import "./FinancialMarket.scss";
+import "./Deposit.scss";
 import data from "./data.json"
 import Row from "./Row";
 
-export default function FinancialMarket() {
+export default function Deposit() {
 
     const [info , setInfo] = useState()
     const [search, setSearch] = useState('')
@@ -28,8 +28,12 @@ export default function FinancialMarket() {
     return (
         <div className="container2">
             <div className="searchDiv">
-                <h1 className="header">Financial market</h1>
+                <h1 className="header">Deposit</h1>
                 <input className="search" placeholder="Search" name="search" value={search} onChange={handleChange}/>
+            </div>
+            <div className="asset">
+                <p>Asset</p>
+                <p>Wallet</p>
             </div>
             <div className="table">
             {info && info.data.map((el,index) => 

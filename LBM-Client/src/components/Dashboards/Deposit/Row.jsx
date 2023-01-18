@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./FinancialMarket.scss";
+import "./Deposit.scss";
 import BTC from "./assets/BTC.svg"
 import LTC from "./assets/LTC.svg"
 import ETH from "./assets/ETH.svg"
 
-export default function Row({img,name,change, amount, value}) {
+export default function Row({img,name, amount, value}) {
 
     const [render , setRender] = useState(value)
     const [active, setActive] =useState({
@@ -43,15 +43,14 @@ export default function Row({img,name,change, amount, value}) {
                     <p>{name}</p>
                 </div>
                 {render && <div className="innerRow3" onClick={handleClick}>
-                    <p style={(change[0]==='-')? {color: 'red'}:{color:'green'}}>{change}</p>
                     <p>{amount}</p>
                 </div>}
                 {!render &&<div className="innerRow">                      
                     <button onClick={handleButton}>
-                        Supply Market
+                        Supply
                     </button>
                     <button onClick={handleButton}>
-                        Borrow Market
+                       Withdraw
                     </button>
                 </div>}
             </div>

@@ -1,23 +1,35 @@
 $breakpoints: (
-    sm: 540px,
-    md: 768px,
-    lg: 1600px
+    xs: 750px,
+    sm: 900px,
+    md: 1200px,
+    lg: 1600px,
+    lgh: 750px
 );
 
 @mixin media-down($breakpoint) {
     @media screen and (max-width: map-get($breakpoints, $breakpoint)){
         @content
     }
-}
+};
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)){
+        @content
+    }
+};
+
+@mixin height-down($breakpoint) {
+    @media screen and (max-height: map-get($breakpoints, $breakpoint)){
+        @content
+    }
+};
 
 .general {
-    position: absolute;
     width: 100vw;
-    top: 50px;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
 }
 
 .dash {
@@ -26,11 +38,36 @@ $breakpoints: (
     justify-content: space-between;
     align-items: center;
     width: 1357px;
+    top: 50px;
+    
     
     
     @include media-down(lg) {
-        transform: scale(0.75);
-        transform-origin: top;
+        zoom: 75%;
+    }
+
+    @include height-down(lgh) {
+        zoom: 60%;
+    }
+
+    @include media-down(md) {
+        zoom: 55%;
+    }
+
+    @include media-down(sm) {
+        zoom: 45%;
+    }
+
+    @include media-down(xs) {
+        position: relative;
+        zoom: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 85%;
+        height: 89%;
+        top: 10%;
     }
     
 }
@@ -40,4 +77,52 @@ $breakpoints: (
     flex-direction: column;
     justify-content: space-between;
     height: 937px;
+
+    @include media-down(xs) {
+        width: 100%;
+    }
+}
+
+.columnTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 937px;
+
+    @include media-down(xs) {
+        width: 100%;
+    }
+}
+
+.hidden {
+    @include media-down(xs) {
+       display: none;
+    }
+}
+
+.show {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 36px;
+    margin-bottom: 18px;
+    /* identical to box height, or 164% */
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    color: #000000;
+
+    @include media-up(xs) {
+        display: none;
+     }
+}
+
+.account {
+    @include media-down(xs) {
+        height: fit-content;
+        width: 100%;
+    }
 }

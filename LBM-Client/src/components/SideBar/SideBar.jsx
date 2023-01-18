@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from "react";
 import style from "./SideBar.module.scss";
 import FirstIcon from "../../../public/icons/firstIcon";
@@ -12,12 +11,22 @@ import { useSelector, useDispatch } from "react-redux";
 import { setSelectedIcon, setWalletPopUp } from "../../../redux/reducer";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { NavLink } from "react-router-dom";
+import ConnectWallet from "../ConnectWallet/ConnectWallet";
+import { useWeb3React } from "@web3-react/core";
+import { connector } from "../../config/web3";
 function SideBar() {
-	const dispatch = useDispatch();
-	const { selectedIcon, walletPopUp } = useSelector(
-		(state) => state.reducerCompleto
-	);
-	const [container, setContainer] = useState(style.Container);
+  const WalletData = () => {
+    const { active, activate, account } = useWeb3React();
+  };
+
+  const connect = () => {
+    activate(connector);
+  };
+  const dispatch = useDispatch();
+  const { selectedIcon, walletPopUp } = useSelector(
+    (state) => state.reducerCompleto
+  );
+  const [container, setContainer] = useState(style.Container);
 
   const [Icons, setIcons] = useState(style.IconsNone);
   const [buttonsContainer, setButtonsContainer] = useState(
@@ -65,10 +74,21 @@ function SideBar() {
             }
             onClick={() => dispatch(setSelectedIcon("OrdersIcon"))}
           >
-            <OrdersIcon
-              selected={selectedIcon === "OrdersIcon" ? true : false}
-            />
-            <p>Vaults</p>
+            <NavLink to={"./vaults"}>
+              <div
+                className={
+                  selectedIcon === "OrdersIcon" && Icons === style.Icons
+                    ? style.IconSelected
+                    : Icons
+                }
+                onClick={() => dispatch(selectedIcon("OrdersIcon"))}
+              >
+                <OrdersIcon
+                  selected={selectedIcon === "OrdersIcon" ? true : false}
+                />
+                <p>Vaults</p>
+              </div>
+            </NavLink>
           </div>
           <NavLink to={"./realestate"}>
             <div
@@ -106,169 +126,47 @@ function SideBar() {
               : style.BottomButtonsContainer
           }
         >
-          <ConnectButton.Custom>
-            {({
-              account,
-              chain,
-              openAccountModal,
-              openChainModal,
-              openConnectModal,
-              authenticationStatus,
-              mounted,
-            }) => {
-              // Note: If your app doesn't use authentication, you
-              // can remove all 'authenticationStatus' checks
-              const ready = mounted && authenticationStatus !== "loading";
-              const connected =
-                ready &&
-                account &&
-                chain &&
-                (!authenticationStatus ||
-                  authenticationStatus === "authenticated");
-							return (
-								<div
-									{...(!ready && {
-										'aria-hidden': true,
-										style: {
-											opacity: 0,
-											pointerEvents: 'none',
-											userSelect: 'none',
-										},
-									})}
-								>
-									{(() => {
-										if (!connected) {
-											return (
-												<div>
-													<div
-														onClick={openConnectModal}
-														className={
-															container === style.OpenContainer
-																? style.WalletIconClosed
-																: style.WalletIcon
-														}
-													>
-														<WalletIcon />
-													</div>
-													<button
-														onClick={openConnectModal}
-														type="button"
-														className={
-															container === style.OpenContainer
-																? style.walletButtonOpen
-																: style.walletButton
-														}
-													>
-														Connect Wallet
-													</button>
-												</div>
-											);
-										}
-
-										if (chain.unsupported) {
-											return (
-												<button onClick={openChainModal} type="button">
-													Wrong network
-												</button>
-											);
-										}
-
-										return (
-											<div>
-												<div
-													onClick={openAccountModal}
-													className={
-														container === style.OpenContainer
-															? style.WalletIconClosed
-															: style.WalletIcon
-													}
-												>
-													<WalletIcon />
-												</div>
-												<div
-													className={
-														container === style.OpenContainer
-															? style.ConnectedModal
-															: style.ConnectedModalClosed
-													}
-												>
-													<button
-														onClick={openChainModal}
-														type="button"
-														className={style.chainModal}
-													>
-														{chain.hasIcon && (
-															<div
-																style={{
-																	background: chain.iconBackground,
-																	width: 12,
-																	height: 12,
-																	borderRadius: 999,
-																	overflow: 'hidden',
-																	marginRight: 4,
-																}}
-															>
-																{chain.iconUrl && (
-																	<img
-																		alt={chain.name ?? 'Chain icon'}
-																		src={chain.iconUrl}
-																		style={{ width: 12, height: 12 }}
-																	/>
-																)}
-															</div>
-														)}
-														{chain.name}
-													</button>
-
-													<button
-														onClick={openAccountModal}
-														type="button"
-														className={style.balanceModal}
-													>
-														{account.displayName}
-														{account.displayBalance
-															? ` (${account.displayBalance})`
-															: ''}
-													</button>
-												</div>
-											</div>
-										);
-									})()}
-								</div>
-							);
-						}}
-					</ConnectButton.Custom>
-					<div
-						className={
-							container === style.OpenContainer
-								? style.twoLastButtonsOpen
-								: style.twoLastButtons
-						}
-					>
-						<div
-							onClick={() =>
-								container === style.Container
-									? (setContainer(style.OpenContainer),
-									  setIcons(style.Icons),
-									  setButtonsContainer(style.OpenButtons))
-									: (setContainer(style.Container),
-									  setIcons(style.IconsNone),
-									  setButtonsContainer(style.ButtonsContainer))
-							}
-							className={
-								container === style.OpenContainer
-									? style.collapseOpen
-									: style.collapse
-							}
-						>
-							<CollapseIcon />
-							<p>Collapse</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+          <div
+            className={
+              container === style.OpenContainer
+                ? style.walletButtonOpen
+                : style.walletButton
+            }
+            onClick={() => <ConnectWallet />}
+          >
+            Connect Wallet
+          </div>
+          <div
+            className={
+              container === style.OpenContainer
+                ? style.twoLastButtonsOpen
+                : style.twoLastButtons
+            }
+          >
+            <div
+              onClick={() =>
+                container === style.Container
+                  ? (setContainer(style.OpenContainer),
+                    setIcons(style.Icons),
+                    setButtonsContainer(style.OpenButtons))
+                  : (setContainer(style.Container),
+                    setIcons(style.IconsNone),
+                    setButtonsContainer(style.ButtonsContainer))
+              }
+              className={
+                container === style.OpenContainer
+                  ? style.collapseOpen
+                  : style.collapse
+              }
+            >
+              <CollapseIcon />
+              <p>Collapse</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default SideBar;

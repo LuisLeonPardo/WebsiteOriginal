@@ -2,73 +2,61 @@
     {
         "img" : "BTC",
         "name" : "Bitcoin",
-        "change" : "0.79%",
-        "amount" : "+1545.00"
+        "amount" : "0 BTC"
     },
     {
         "img" : "LTC",
         "name" : "LTC",
-        "change" : "-0.31%",
-        "amount" : "-256.00"
+        "amount" : "0 BTC"
     },
     {
         "img" : "ETH",
         "name" : "Ethereum",
-        "change" : "5.61%",
-        "amount" : "+1578.00"
+        "amount" : "0 BTC"
     },
     {
         "img" : "BTC",
         "name" : "Bitcoin",
-        "change" : "0.79%",
-        "amount" : "+1545.00"
+        "amount" : "0 BTC"
     },
     {
         "img" : "LTC",
         "name" : "LTC",
-        "change" : "-0.31%",
-        "amount" : "-256.00"
+        "amount" : "0 BTC"
     },
     {
         "img" : "ETH",
         "name" : "Ethereum",
-        "change" : "5.61%",
-        "amount" : "+1578.00"
+        "amount" : "0 BTC"
     },
     {
         "img" : "BTC",
         "name" : "Bitcoin",
-        "change" : "0.79%",
-        "amount" : "+1545.00"
+        "amount" : "0 BTC"
     },
     {
         "img" : "LTC",
         "name" : "LTC",
-        "change" : "-0.31%",
-        "amount" : "-256.00"
+        "amount" : "0 BTC"
     },
     {
         "img" : "ETH",
         "name" : "Ethereum",
-        "change" : "5.61%",
-        "amount" : "+1578.00"
+        "amount" : "0 BTC"
     },
     {
         "img" : "BTC",
         "name" : "Bitcoin",
-        "change" : "0.79%",
-        "amount" : "+1545.00"
+        "amount" : "0 BTC"
     },
     {
         "img" : "LTC",
         "name" : "LTC",
-        "change" : "-0.31%",
-        "amount" : "-256.00"
+        "amount" : "0 BTC"
     },
     {
         "img" : "ETH",
         "name" : "Ethereum",
-        "change" : "5.61%",
-        "amount" : "+1578.00"
+        "amount" : "0 BTC"
     }
 ]}
