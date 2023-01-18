@@ -1,0 +1,13 @@
+import Web3 from "web3"
+import {InjectedConnector} from '@web3-react/injected-connector'
+const connector = InjectedConnector({
+    supportedChainIds:[
+        592
+    ]
+})
+
+const getLibrary = (provider) => {
+    return new Web3(provider);
+}
+
+export (getLibrary);
