@@ -113,7 +113,10 @@ function RealEstates() {
 						>
 							Properties <img src={arrow} alt="Arrow" />
 						</button>
-						<motion.div animate={properties ? 'open' : 'closed'} variants={variants}>
+						<motion.div
+							animate={properties ? 'open' : 'closed'}
+							variants={variants}
+						>
 							{properties ? <Properties /> : null}
 						</motion.div>
 					</aside>
