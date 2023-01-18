@@ -5,7 +5,7 @@ import refresh from "./assets/refresh.svg";
 import Coin from "../Slider/assets/Coin.svg";
 import { motion } from "framer-motion";
 
-function VertSlider() {
+function VertSlider({setStateModal}) {
   const dragSlider = useRef();
   /* const [height, setHeight] = useState(0); */
 
@@ -20,6 +20,10 @@ function VertSlider() {
     );
   }); */
 
+  function changeState(){
+    setStateModal(true)
+  }
+
   return (
     <div className="container-vertslider">
       <div className="top-vertslider">
@@ -29,7 +33,7 @@ function VertSlider() {
         </div>
         <div className="icons-vertslider">
           <img src={refresh} />
-          <img src={add} />
+          <img src={add} onClick={changeState} />
         </div>
       </div>
       <div className="overflow">

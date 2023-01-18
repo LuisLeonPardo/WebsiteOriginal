@@ -4,6 +4,8 @@ import relaod from '../../assets/reload.svg';
 import arrow from '../../assets/down.svg';
 import Toggle from './ToggleButton';
 import Status from './Status';
+import Price from './Price';
+import Properties from './Properties';
 function RealEstates() {
 	const [ascendant, setAscendant] = useState(true);
 	const [status, setStatus] = useState(false);
@@ -66,12 +68,14 @@ function RealEstates() {
 					>
 						Price <img src={arrow} alt="Arrow" />
 					</button>
+					{price ? <Price /> : null}
 					<button
 						className={`buttonAsideFilter ${properties ? 'isActive' : null}`}
 						onClick={() => setProperties(!properties)}
 					>
 						Properties <img src={arrow} alt="Arrow" />
 					</button>
+					{properties ? <Properties /> : null}
 				</aside>
 				<section></section>
 			</div>

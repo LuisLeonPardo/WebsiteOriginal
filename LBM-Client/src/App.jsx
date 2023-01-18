@@ -9,14 +9,17 @@ import {
   Outlet,
   BrowserRouter,
 } from "react-router-dom";
-import ConnectWallet from "./components/ConnectWallet/ConnectWallet";
 import { useSelector } from "react-redux";
 import Home from "./components/Landing/Home/Home";
 import Dash from "./components/Dashboards/Dash/Dash";
 import RealEstates from "./components/RealEstates";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Modals from "./components/Dashboards/Modals/Modals";
+import Web3 from "web3";
 import Vaults from "./components/Vaults/Vaults";
+
 function App() {
+  const [stateModal, setStateModal] = useState(false);
   const { selectedIcon, walletPopUp } = useSelector(
     (state) => state.reducerCompleto
   );
@@ -26,6 +29,8 @@ function App() {
         <img src="./icons/Background.svg" />
       </div>
 
+      <Modals state={stateModal} setStateModal={setStateModal} />
+
       <div className="SideBar">
         <SideBar />
       </div>
@@ -33,6 +38,10 @@ function App() {
       <Outlet />
     </>
   );
+  useEffect(() => {
+    if (window.ethereum) {
+    }
+  });
 
   return (
     <div className="App">
@@ -43,7 +52,7 @@ function App() {
             path="/dashboard"
             element={
               <div className="Page">
-                <Dash />
+                <Dash setStateModal={setStateModal} />
               </div>
             }
           />

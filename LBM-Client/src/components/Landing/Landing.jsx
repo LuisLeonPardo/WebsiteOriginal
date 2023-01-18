@@ -3,8 +3,9 @@ import Home from "./Home/Home";
 import Protocol from "./Protocol/Protocol";
 import Services from "./Services/Services";
 import Value from "./Value/Value";
-// import Subscribe from "./Subscribe/Subscribe";
-import divider from "./divider.png";
+import Subscribe from "./Subscribe/Subscribe";
+import Footer from "./Footer/Footer";
+import divider from "./assets/divider.png";
 import "./Landing.scss";
 
 export default function Landing() {
@@ -17,7 +18,8 @@ export default function Landing() {
       <img src={divider} className="divider" />
       <Value />
       <img src={divider} className="divider" />
-      {/* <Subscribe /> */}
+      <Subscribe />
+      <Footer />
     </>
   );
 }

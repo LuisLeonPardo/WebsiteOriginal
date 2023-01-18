@@ -284,7 +284,8 @@ transition: font-size 1s;
     height: 38px;
     background-color: #F4911A;
     overflow: hidden;
-    width: 70%;
+    width: 50%;
+    color: white;
 }
 
 .balanceModal{
@@ -297,7 +298,8 @@ transition: font-size 1s;
     overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    width: 30%;
+    width: 50%;
+    color: white;
 }
 
 .balanceModal::-webkit-scrollbar{

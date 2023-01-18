@@ -15,9 +15,29 @@ import { useDispatch } from "react-redux";
 import { setSelectedIcon } from "../../../redux/reducer";
 
 //wallet imports
+import { ApiPromise } from "@polkadot/api";
+import { WsProvider } from "@polkadot/rpc-provider";
+//import { options } from "@astar-network/astar-api";
+
+//wallet imports
+
+async function main() {
+  const provider = new WsProvider("wss://shiden.api.onfinality.io/public-ws");
+  // OR
+  // const provider = new WsProvider('wss://shiden.api.onfinality.io/public-ws');
+  const api = new ApiPromise(options({ provider }));
+  await api.isReady;
+
+  // Use the api
+  // For example:
+  console.log((await api.rpc.system.properties()).toHuman());
+
+  process.exit(0);
+}
 
 function ConnectWallet() {
   const dispatch = useDispatch();
+  main();
   return (
     <div className={style.Container}>
       <div className={style.FlexContainer}>
