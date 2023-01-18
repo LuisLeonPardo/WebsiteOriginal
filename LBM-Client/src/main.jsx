@@ -7,7 +7,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import store, { Persistor } from "../redux/store/Store";
 import "./index.css";
 import { Web3ReactProvider } from "@web3-react/core";
-import getLibrary from "./config/web3";
+import { getLibrary } from "./config/web3";
 //wallet imports
 
 const AstarNetworkChain = {
