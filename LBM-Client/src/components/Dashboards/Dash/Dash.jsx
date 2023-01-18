@@ -20,7 +20,7 @@ function Dash({setStateModal}) {
           <FinancialMarket/>
         </div>
       </div>
-      <div className="columnOne">
+      <div className="columnTwo">
         <div className="hidden">
           <Slider />
         </div>
