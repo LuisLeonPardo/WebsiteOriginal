@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+.vaults {
+  width: 100vw;
+  height: 100vw;
+  top: 114px;
+  bottom: 114px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 72px;
+  position: relative;
+}
+.vault-container {
+  position: relative;
+  background-color: white;
+  width: 582px;
+  min-width: 480px;
+  height: 362px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 18px;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+}
+.stake-name {
+  display: flex;
+  position: relative;
+  width: 88px;
+  height: 30px;
+  left: 27px;
+  top: 37px;
+  margin: 0px;
+  justify-content: start;
+  align-items: center;
+}
+.coin-name {
+  position: relative;
+  width: 43px;
+  height: 24px;
+  left: 15px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  color: #000000;
+}
+.coin-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  margin: 0;
+}
+.staking {
+  position: absolute;
+  height: 18px;
+  width: 109px;
+  left: 27px;
+  top: 80px;
+
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+  text-align: left;
+  display: flex;
+  align-items: center;
+  color: #a3a3a3;
+}
+.stake {
+  position: absolute;
+  width: 62px;
+  height: 48px;
+  left: 27px;
+  top: 98px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #4caf50;
+}
+.stakes-grid {
+  position: absolute;
+  width: 392px;
+  height: 40px;
+  left: 27px;
+  top: 171px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  h3 {
+    margin: 0px;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color: #a3a3a3;
+  }
+  h4 {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+  }
+}
+.vault-buttons {
+  position: absolute;
+  width: 528px;
+  height: 54px;
+  top: 276px;
+  left: 27px;
+  bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.vault-button {
+  position: relative;
+  padding: 0px;
+  border: 0px;
+  width: 254px;
+  height: 54px;
+  background-color: white;
+  color: #707eae;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: #f7931a;
+    color: white;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -16,6 +16,7 @@ import RealEstates from "./components/RealEstates";
 import React, { useEffect, useState } from "react";
 import Modals from "./components/Dashboards/Modals/Modals";
 import Web3 from "web3";
+import Vaults from "./components/Vaults/Vaults";
 
 function App() {
   const [stateModal, setStateModal] = useState(false);
@@ -52,6 +53,14 @@ function App() {
             element={
               <div className="Page">
                 <Dash setStateModal={setStateModal} />
+              </div>
+            }
+          />
+          <Route
+            path="/vaults"
+            element={
+              <div className="Page">
+                <Vaults />
               </div>
             }
           />

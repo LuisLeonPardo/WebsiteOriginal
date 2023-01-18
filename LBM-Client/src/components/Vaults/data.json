@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "img": "BTC",
+      "name": "Bitcoin",
+      "shortName": "BTC",
+      "stakingAPR": "15.3%",
+      "daily": "2,400",
+      "total": "5.72"
+    },
+    {
+      "img": "LTC",
+      "name": "LTC",
+      "shortName": "LTC",
+      "stakingAPR": "15.3%",
+      "daily": "2,400",
+      "total": "5.72"
+    },
+    {
+      "img": "ETH",
+      "name": "Ethereum",
+      "shortName": "ETH",
+      "stakingAPR": "15.3%",
+      "daily": "2,400",
+      "total": "5.72"
+    }
+  ]
+}
