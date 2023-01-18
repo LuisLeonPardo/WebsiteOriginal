@@ -15,6 +15,8 @@ import Dash from "./components/Dashboards/Dash/Dash";
 import RealEstates from "./components/RealEstates";
 import React, { useEffect, useState } from "react";
 import Modals from "./components/Dashboards/Modals/Modals";
+import Web3 from "web3";
+
 function App() {
   const [stateModal, setStateModal] = useState(false);
   const { selectedIcon, walletPopUp } = useSelector(
@@ -35,6 +37,10 @@ function App() {
       <Outlet />
     </>
   );
+  useEffect(() => {
+    if (window.ethereum) {
+    }
+  });
 
   return (
     <div className="App">
