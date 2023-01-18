@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { useState } from "react";
-import "./FinancialMarket.scss";
+import "./Deposit.scss";
 import data from "./data.json"
 import Row from "./Row";
 
-export default function FinancialMarket() {
+export default function Deposit() {
 
     const [info , setInfo] = useState()
     const [search, setSearch] = useState('')

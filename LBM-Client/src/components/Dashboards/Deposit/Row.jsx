@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./FinancialMarket.scss";
+import "./Deposit.scss";
 import BTC from "./assets/BTC.svg"
 import LTC from "./assets/LTC.svg"
 import ETH from "./assets/ETH.svg"
