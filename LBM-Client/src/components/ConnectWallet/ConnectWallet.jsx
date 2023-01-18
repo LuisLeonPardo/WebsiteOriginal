@@ -17,7 +17,7 @@ import { setSelectedIcon } from "../../../redux/reducer";
 //wallet imports
 import { ApiPromise } from "@polkadot/api";
 import { WsProvider } from "@polkadot/rpc-provider";
-//import { options } from "@astar-network/astar-api";
+import { options } from "@astar-network/astar-api";
 
 //wallet imports
 
