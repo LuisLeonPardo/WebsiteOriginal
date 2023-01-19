@@ -15,6 +15,7 @@ import Dash from "./components/Dashboards/Dash/Dash";
 import RealEstates from "./components/RealEstates";
 import React, { useEffect, useState } from "react";
 import Modals from "./components/Dashboards/Modals/Modals";
+import Governance from "./components/Governance/Governance";
 import Web3 from "web3";
 
 function App() {
@@ -60,6 +61,14 @@ function App() {
             element={
               <div className="Page">
                 <RealEstates />
+              </div>
+            }
+          />
+          <Route
+            path="/governance"
+            element={
+              <div className="Page">
+                <Governance />
               </div>
             }
           />
