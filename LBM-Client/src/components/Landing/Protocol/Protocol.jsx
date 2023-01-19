@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Slide } from "react-awesome-reveal";
 
 import desktop from "./assets/desktop.png";
 import arrow from "./assets/arrow.svg";
@@ -26,29 +27,33 @@ export default function Protocol() {
   return (
     <main className="protocol_items">
       <section className="protocol_section">
-        <div className="procotol_image">
-          <div>
-            <div></div>
-          </div>
-          <img alt="Launch App" src={desktop} />
-        </div>
-        <div className="protocol_text">
-          <h2>
-            What is Libertum <br></br>Protocol?
-          </h2>
-          <div className="protocol_slide">
-            <p>{paragraph}</p>
+        <Slide direction={"left"}>
+          <div className="procotol_image">
             <div>
-              <img
-                style={{ transform: "rotate(180deg)" }}
-                src={arrow}
-                onClick={nextParagraph}
-              />
-              <span>{index} / 2</span>
-              <img src={arrow} onClick={nextParagraph} />
+              <div></div>
+            </div>
+            <img alt="Launch App" src={desktop} />
+          </div>
+        </Slide>
+        <Slide direction={"right"}>
+          <div className="protocol_text">
+            <h2>
+              What is Libertum <br></br>Protocol?
+            </h2>
+            <div className="protocol_slide">
+              <p>{paragraph}</p>
+              <div>
+                <img
+                  style={{ transform: "rotate(180deg)" }}
+                  src={arrow}
+                  onClick={nextParagraph}
+                />
+                <span>{index} / 2</span>
+                <img src={arrow} onClick={nextParagraph} />
+              </div>
             </div>
           </div>
-        </div>
+        </Slide>
       </section>
     </main>
   );
