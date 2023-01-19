@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
 
 import desktop from "./assets/desktop.png";
 import arrow from "./assets/arrow.svg";
@@ -26,36 +24,32 @@ export default function Protocol() {
   };
 
   return (
-    <Zoom>
-      <main className="protocol_items">
-        <section className="protocol_section">
-          <div className="procotol_image">
+    <main className="protocol_items">
+      <section className="protocol_section">
+        <div className="procotol_image">
+          <div>
+            <div></div>
+          </div>
+          <img alt="Launch App" src={desktop} />
+        </div>
+        <div className="protocol_text">
+          <h2>
+            What is Libertum <br></br>Protocol?
+          </h2>
+          <div className="protocol_slide">
+            <p>{paragraph}</p>
             <div>
-              <div></div>
-            </div>
-            <img alt="Launch App" src={desktop} />
-          </div>
-          <div className="protocol_text">
-            <h2>
-              What is Libertum <br></br>Protocol?
-            </h2>
-            <div className="protocol_slide">
-              <Fade left>
-                <p>{paragraph}</p>
-              </Fade>
-              <div>
-                <img
-                  style={{ transform: "rotate(180deg)" }}
-                  src={arrow}
-                  onClick={nextParagraph}
-                />
-                <span>{index} / 2</span>
-                <img src={arrow} onClick={nextParagraph} />
-              </div>
+              <img
+                style={{ transform: "rotate(180deg)" }}
+                src={arrow}
+                onClick={nextParagraph}
+              />
+              <span>{index} / 2</span>
+              <img src={arrow} onClick={nextParagraph} />
             </div>
           </div>
-        </section>
-      </main>
-    </Zoom>
+        </div>
+      </section>
+    </main>
   );
 }

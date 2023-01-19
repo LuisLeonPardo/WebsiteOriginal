@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Fade from "react-reveal/Fade";
 
 import logo from "../assets/logo.svg";
 import cross from "./assets/cross.svg";
@@ -46,40 +45,36 @@ export default function NavBar() {
       {nav ? (
         <nav className="responsive-nav_items">
           <ul className="responsive-menu_items">
-            <Fade left cascade>
-              <li className="responsive-menu-li_items">
-                <img src={home} />
-                <a className="responsive-menu-a_items">Home</a>
-              </li>
-              <li className="responsive-menu-li_items">
-                <img src={whitepaper} />
-                <a className="responsive-menu-a_items">Whitepaper</a>
-              </li>
-              <li className="responsive-menu-li_items">
-                <img src={contacts} />
-                <a className="responsive-menu-a_items">Contacts</a>
-              </li>
-              <li className="responsive-menu-li_items">
-                <img src={bepart} />
-                <a className="responsive-menu-a_items">I want to be part</a>
-              </li>
-            </Fade>
+            <li className="responsive-menu-li_items">
+              <img src={home} />
+              <a className="responsive-menu-a_items">Home</a>
+            </li>
+            <li className="responsive-menu-li_items">
+              <img src={whitepaper} />
+              <a className="responsive-menu-a_items">Whitepaper</a>
+            </li>
+            <li className="responsive-menu-li_items">
+              <img src={contacts} />
+              <a className="responsive-menu-a_items">Contacts</a>
+            </li>
+            <li className="responsive-menu-li_items">
+              <img src={bepart} />
+              <a className="responsive-menu-a_items">I want to be part</a>
+            </li>
           </ul>
-          <Fade left>
-            <div className="responsive-menu_networks">
-              {networks.map(({ net, href }, index) => (
-                <a
-                  key={index}
-                  className="responsive-menu-networks_a"
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={net} />
-                </a>
-              ))}
-            </div>
-          </Fade>
+          <div className="responsive-menu_networks">
+            {networks.map(({ net, href }, index) => (
+              <a
+                key={index}
+                className="responsive-menu-networks_a"
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={net} />
+              </a>
+            ))}
+          </div>
         </nav>
       ) : null}
     </>
