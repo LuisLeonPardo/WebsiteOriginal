@@ -15,9 +15,11 @@ import Dash from './components/Dashboards/Dash/Dash';
 import RealEstates from './components/RealEstates';
 import React, { useEffect, useState } from 'react';
 import Modals from './components/Dashboards/Modals/Modals';
+import Governance from "./components/Governance/Governance";
 import Web3 from 'web3';
 import Vaults from './components/Vaults/Vaults';
 import RealEstateDetail from './components/RealEstateDetail';
+
 
 function App() {
 	const [stateModal, setStateModal] = useState(false);
@@ -43,7 +45,6 @@ function App() {
 		if (window.ethereum) {
 		}
 	});
-
 	return (
 		<div className="App">
 			<Routes>
@@ -81,6 +82,14 @@ function App() {
 							</div>
 						}
 					/>
+          <Route
+            path="/governance"
+            element={
+              <div className="Page">
+                <Governance />
+              </div>
+            }
+          />
 					{/* Dentro de este Route van todas las cosas que tengan sidebar */}
 				</Route>
 			</Routes>
