@@ -1,8 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+$breakpoints: (
+  mobile: 540px,
+  xs: 750px,
+  sm: 900px,
+  md: 1200px,
+  lg: 1600px,
+  lgh: 750px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
 .vaults {
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   top: 114px;
   bottom: 114px;
   display: flex;
@@ -16,13 +44,37 @@
   position: relative;
   background-color: white;
   width: 582px;
-  min-width: 480px;
   height: 362px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 18px;
   user-select: none;
   display: flex;
   flex-direction: column;
+
+  @include media-down(lg) {
+    zoom: 90%;
+  }
+
+  @include height-down(lgh) {
+    zoom: 80%;
+  }
+
+  @include media-down(md) {
+    zoom: 70%;
+  }
+
+  @include media-down(sm) {
+    zoom: 65%;
+  }
+
+  @include media-down(xs) {
+    zoom: 65%;
+  }
+
+  @include media-down(mobile) {
+    width: 358px;
+    height: 395px;
+  }
 }
 .stake-name {
   display: flex;
@@ -55,6 +107,10 @@
   border-radius: 50%;
   display: flex;
   margin: 0;
+  @include media-down(mobile) {
+    width: 20px;
+    height: 20px;
+  }
 }
 .staking {
   position: absolute;
@@ -62,7 +118,6 @@
   width: 109px;
   left: 27px;
   top: 80px;
-
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
@@ -73,6 +128,19 @@
   display: flex;
   align-items: center;
   color: #a3a3a3;
+}
+.icon2 {
+  display: none;
+  @include media-down(mobile) {
+    position: absolute;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    left: 24px;
+    top: 104px;
+    align-items: center;
+  }
 }
 .stake {
   position: absolute;
@@ -89,6 +157,15 @@
   align-items: center;
   text-align: center;
   color: #4caf50;
+  @include media-down(mobile) {
+    display: flex;
+    height: 47px;
+    width: 23px;
+    align-items: flex-end;
+    top: 93px;
+    left: 56px;
+    color: black;
+  }
 }
 .stakes-grid {
   position: absolute;
@@ -125,7 +202,45 @@
 
     color: #000000;
   }
+
+  @include media-down(mobile) {
+    flex-direction: column;
+    align-items: stretch;
+    width: 310px;
+    height: 79px;
+  }
 }
+.stakes-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  @include media-down(mobile) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.numbers {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.icon3 {
+  display: none;
+  width: 20px;
+  height: 20px;
+  @include media-down(mobile) {
+    position: relative;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    align-items: center;
+  }
+}
+
 .vault-buttons {
   position: absolute;
   width: 528px;
@@ -136,6 +251,13 @@
   display: flex;
   align-items: center;
   gap: 20px;
+
+  @include media-down(mobile) {
+    flex-direction: column;
+    width: 310px;
+    height: 112px;
+    gap: 12px;
+  }
 }
 .vault-button {
   position: relative;
@@ -143,7 +265,7 @@
   border: 0px;
   width: 254px;
   height: 54px;
-  background-color: white;
+  background-color: #fff1f2;
   color: #707eae;
   &:focus {
     outline: none;
@@ -155,4 +277,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include media-down(mobile) {
+    flex-direction: column;
+    width: 310px;
+    height: 50px;
+  }
 }
