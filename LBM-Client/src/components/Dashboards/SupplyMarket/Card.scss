@@ -1,0 +1,96 @@
+.cardSupplyMarket {
+    width: 100%;
+    height: 14vh;
+    min-height: 140px;
+    margin: 20px 0px; 
+    background: #F9FAFB;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+        margin-top: 3%;
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        justify-content: flex-start;
+        height: fit-content;
+        width: 94%;
+
+        img {
+            height: 20px;
+            width: 20px;
+            margin-right: 2%;
+        }
+
+        h1 {
+            width: 40px;
+            height: 24px;
+    
+            font-family: 'Arial';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+    
+            display: flex;
+            align-items: center;
+    
+            color: #000000;
+        }
+    }
+
+    .line {
+        box-sizing: border-box;
+        margin-top: 5px;
+        width: 90%;
+        height: 2px;
+
+        border: 1px solid #FFFFFF;
+    }
+
+    .body {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        width: 88%;
+
+        h4 {
+            font-family: 'Arial';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+            /* identical to box height, or 143% */
+
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.3px;
+
+            color: #9597A1;
+        }
+
+        h3 {
+            font-family: 'Arial';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+        }
+
+        .colSwitch {
+            margin-right: 5%;
+        }
+    }
+
+    
+}
+
