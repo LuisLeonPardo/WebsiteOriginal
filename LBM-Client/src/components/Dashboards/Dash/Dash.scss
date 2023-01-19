@@ -121,12 +121,67 @@ $breakpoints: (
 
     @include media-up(xs) {
         display: none;
-     }
+    }
 }
 
 .account {
     @include media-down(xs) {
         height: 100%;
         width: 100%;
+    }
+}
+
+.markets {
+    position: absolute;
+    top: 100vh;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+
+    @include media-up(xs) {
+        display: none;
+    }
+
+    h2 {
+        margin: 5px 0px;
+        width: 100%;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 30px;
+        color: #000000;
+
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: row;    
+        width: 100%;
+        justify-content: space-between;
+
+        .button {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+    
+            width: 175.2px;
+            height: 50px;
+            background-color: transparent;
+            color:#9597A1;
+            border-radius: 8px;
+
+            &:hover {
+                background-color: #FFF1F2;;
+                color: #F7931A;
+            }
+        }
     }
 }
