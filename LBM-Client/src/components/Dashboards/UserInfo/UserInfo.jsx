@@ -26,6 +26,7 @@ export default function UserInfo() {
 
     return (
         <div className="containerUi">
+            <div className="headerUI">
                 <h1 className="title">My account</h1>
                 <div className="toggle">APY with LBM</div>
                 <Switch 
@@ -39,18 +40,19 @@ export default function UserInfo() {
                     height={31}
                     handleDiameter={27}
                 />
-                <div className="toggle" style={{left: '27px',top: '80px'}}>Net APY</div>
+            </div>    
+                <div className="netApy" style={{left: '27px',top: '80px'}}>Net APY</div>
                 <div className="apy">{apy}</div>
                 <div className="grid">
-                    <div>
+                    <div className="gridRow">
                         <h3>Daily earnings</h3>
                         <h4>$0.00</h4>
                     </div>
-                    <div>
+                    <div className="gridRow">
                         <h3>Supply balance</h3>
                         <h4>$0.00</h4>
                     </div>
-                    <div>
+                    <div className="gridRow">
                         <h3>Borrow balance</h3>
                         <h4>$0.00</h4>
                     </div>

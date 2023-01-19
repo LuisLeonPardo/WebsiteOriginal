@@ -18,7 +18,7 @@
 		h3 {
 			font-size: 22px;
 			width: 120px;
-			margin: 27px 0 27px 47px;
+			margin: 27px 0 10px 47px;
 		}
 		nav {
 			width: calc(100% - 47px);
@@ -107,54 +107,97 @@
 			}
 		}
 	}
-	.asideFilters {
+	.wrapperAsideSection {
 		display: flex;
-		width: 24%;
-		flex-direction: column;
-		align-items: center;
-		border: 2px solid var(--modern-white);
-		border-radius: 16px;
-		margin-left: 33px;
-		height: 65vh;
-		overflow: auto;
-		scrollbar-color: var(--orange-darker) transparent;
-		scrollbar-width: thin;
-		
-		.buttonAsideFilter {
-			width: 85%;
-			min-height: 8vh;
-			background-color: var(--white-color);
+		max-width: 85vw;
+		.asideFilters {
 			display: flex;
-			justify-content: space-between;
+			width: 24%;
+			flex-direction: column;
 			align-items: center;
-			border: none;
-			border-radius: 0;
-			border-bottom: 1px solid;
-			padding-left: 14px;
-			font-weight: 600;
-			img {
-				width: 11px;
-				height: 11px;
+			border: 2px solid var(--modern-white);
+			border-radius: 16px;
+			margin-left: 33px;
+			height: 65vh;
+			overflow: auto;
+			scrollbar-color: var(--orange-darker) transparent;
+			scrollbar-width: thin;
+
+			.buttonAsideFilter {
+				width: 85%;
+				min-height: 8vh;
+				background-color: var(--white-color);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border: none;
+				border-radius: 0;
+				border-bottom: 1px solid;
+				padding-left: 14px;
+				font-weight: 600;
+				img {
+					width: 11px;
+					height: 11px;
+				}
+			}
+			.buttonAsideFilter.isActive {
+				img {
+					rotate: 180deg;
+				}
 			}
 		}
-		.buttonAsideFilter.isActive {
-			img {
-				rotate: 180deg;
-			}
-			
+		.asideFilters::-webkit-scrollbar {
+			width: 2px;
+			height: 5px;
 		}
-	}
-	.asideFilters::-webkit-scrollbar {
-		width: 2px;
-		height: 5px;
-	}
 
-	.asideFilters::-webkit-scrollbar-track-piece {
-		background-color: transparent;
-	}
+		.asideFilters::-webkit-scrollbar-track-piece {
+			background-color: transparent;
+		}
 
-	.asideFilters::-webkit-scrollbar-thumb:vertical {
-		height: 15px;
-		background-color: var(--orange-darker);
+		.asideFilters::-webkit-scrollbar-thumb:vertical {
+			height: 15px;
+			background-color: var(--orange-darker);
+		}
+		.previewEstatesFourColums {
+			width: 60vw;
+			margin-left: 15px;
+			max-height: 68vh;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			grid-column-gap: 0px;
+			grid-row-gap: 10px;
+			overflow: auto;
+			scrollbar-color: var(--orange-darker) transparent;
+			scrollbar-width: thin;
+		}
+		.previewEstatesFiveColums {
+			width: 60vw;
+			margin-left: 15px;
+			max-height: 68vh;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			grid-column-gap: 0px;
+			grid-row-gap: 10px;
+			overflow-y: auto;
+			scrollbar-color: var(--orange-darker) transparent;
+			scrollbar-width: thin;
+		}
+
+		.previewEstates::-webkit-scrollbar {
+			width: 2px;
+			height: 5px;
+		}
+
+		.previewEstates::-webkit-scrollbar-track-piece {
+			background-color: transparent;
+		}
+
+		.previewEstates::-webkit-scrollbar-thumb:vertical {
+			height: 15px;
+			background-color: var(--orange-darker);
+		}
 	}
 }

@@ -1,0 +1,103 @@
+.cardPreviewFourColumns {
+	display: flex;
+	border: 1px solid var(--gray-color);
+	border-radius: 5px;
+	width: 90%;
+	height: 18vw;
+	margin: auto;
+	flex-direction: column;
+	.imgCardPreview {
+		width: 11.5vw;
+		height: 11.5vw;
+		margin: 5px auto 0px auto;
+        border-radius: 7px;
+	}
+	.bottomCard {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: auto 0px;
+		h5 {
+			margin: 0px;
+			width: fit-content;
+			font-weight: 700;
+			font-size: 0.9vw;
+			margin-left: 7%;
+			margin-bottom: 2px;
+		}
+		table {
+			width: 90%;
+			background-color: var(--modern-white);
+			margin: auto;
+			border-radius: 5px;
+			tr {
+                height: 20px;  
+
+				th {
+					font-weight: 500;
+					font-size: 0.8vw;
+					color: var(--gray-color);  
+				}
+				td {
+					font-weight: 500;
+					font-size: 0.8vw;
+				}
+			}
+		}
+	}
+}
+.cardPreviewFiveColumns {
+	display: flex;
+	border: 1px solid var(--gray-color);
+	border-radius: 5px;
+	width: 95%;
+	height: 18vw;
+	margin: auto;
+	flex-direction: column;
+	.imgCardPreview {
+		width: 10vw;
+		height: 10vw;
+		margin: 5px auto 0px auto;
+        border-radius: 7px;
+	}
+	.bottomCard {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: auto 0px;
+		h5 {
+			margin: 0px;
+			width: fit-content;
+			font-weight: 700;
+			font-size: 0.9vw;
+			margin-left: 7%;
+			margin-bottom: 2px;
+		}
+		table {
+			width: 90%;
+			background-color: var(--modern-white);
+			margin: auto;
+			border-radius: 5px;
+			tr {
+                height: 20px;  
+
+				th {
+					font-weight: 500;
+					font-size: 0.8vw;
+					color: var(--gray-color);  
+				}
+				td {
+					font-weight: 500;
+					font-size: 0.8vw;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px){
+    .cardPreview{
+        height: 20vw;
+    }
+}
+
