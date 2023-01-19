@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Slide } from "react-awesome-reveal";
+
 import logo from "../assets/logo.svg";
 import cross from "./assets/cross.svg";
 import home from "./assets/home.svg";
@@ -14,33 +16,35 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="nav_items">
-        <img src={logo} className="logo" />
-        <ul className="menu_items">
-          <li className="menu-li_items">
-            <a className="menu-a_items">Home</a>
-          </li>
-          <li className="menu-li_items">
-            <a className="menu-a_items">Whitepaper</a>
-          </li>
-          <li className="menu-li_items">
-            <a className="menu-a_items">Contacts</a>
-          </li>
-          <li className="menu-li_items">
-            <a className="menu-a_items">I want to be part</a>
-          </li>
-        </ul>
+      <Slide direction={"down"} delay={-300}>
+        <nav className="nav_items">
+          <img src={logo} className="logo" />
+          <ul className="menu_items">
+            <li className="menu-li_items">
+              <a className="menu-a_items">Home</a>
+            </li>
+            <li className="menu-li_items">
+              <a className="menu-a_items">Whitepaper</a>
+            </li>
+            <li className="menu-li_items">
+              <a className="menu-a_items">Contacts</a>
+            </li>
+            <li className="menu-li_items">
+              <a className="menu-a_items">I want to be part</a>
+            </li>
+          </ul>
 
-        {!nav ? (
-          <div onClick={handleClick} className="btn_menu">
-            Menu
-          </div>
-        ) : (
-          <div onClick={handleClick} className="btn_cross">
-            <img src={cross} />
-          </div>
-        )}
-      </nav>
+          {!nav ? (
+            <div onClick={handleClick} className="btn_menu">
+              Menu
+            </div>
+          ) : (
+            <div onClick={handleClick} className="btn_cross">
+              <img src={cross} />
+            </div>
+          )}
+        </nav>
+      </Slide>
       {nav ? (
         <nav className="responsive-nav_items">
           <ul className="responsive-menu_items">
