@@ -41,7 +41,7 @@ export default function UserInfo() {
                     handleDiameter={27}
                 />
             </div>    
-                <div className="netApy" style={{left: '27px',top: '80px'}}>Net APY</div>
+                <div className="netApy">Net APY</div>
                 <div className="apy">{apy}</div>
                 <div className="grid">
                     <div className="gridRow">
