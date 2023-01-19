@@ -27,9 +27,9 @@ const lands = [
 	{ image: fifthEstate, land: '#7952' },
 	{ image: noFoto, land: '#2235' },
 	{ image: noFoto, land: '#3615' },
-	{ image: noFoto, land: '#6798' },
-	{ image: noFoto, land: '#8378' },
-	{ image: noFoto, land: '#3615' },
+	{ image: noFoto, land: '#6788' },
+	{ image: noFoto, land: '#8377' },
+	{ image: noFoto, land: '#3619' },
 	{ image: noFoto, land: '#6798' },
 	{ image: noFoto, land: '#8378' },
 ];
@@ -113,7 +113,10 @@ function RealEstates() {
 						>
 							Properties <img src={arrow} alt="Arrow" />
 						</button>
-						<motion.div animate={properties ? 'open' : 'closed'} variants={variants}>
+						<motion.div
+							animate={properties ? 'open' : 'closed'}
+							variants={variants}
+						>
 							{properties ? <Properties /> : null}
 						</motion.div>
 					</aside>
@@ -126,6 +129,7 @@ function RealEstates() {
 					>
 						{lands.map((land) => (
 							<CardPreview
+								key={land.land}
 								image={land.image}
 								land={land.land}
 								fiveColumn={fiveColumn}
