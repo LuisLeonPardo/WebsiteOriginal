@@ -15,10 +15,11 @@ import Dash from "./components/Dashboards/Dash/Dash";
 import RealEstates from "./components/RealEstates";
 import React, { useEffect, useState } from "react";
 import Modals from "./components/Dashboards/Modals/Modals";
-import Governance from "./components/Governance/Governance";
 import Web3 from "web3";
+import ConnectWallet from "./components/ConnectWallet/ConnectWallet";
+import Governance from "./components/Governance/Governance";
 import Vaults from "./components/Vaults/Vaults";
-import RealEstateDetail from "./components/RealEstateDetail";
+import RealEstateDetail from "./components/RealEstateDetail/index";
 
 function App() {
   const [stateModal, setStateModal] = useState(false);
@@ -40,15 +41,51 @@ function App() {
       <Outlet />
     </>
   );
-  useEffect(() => {
-    if (window.ethereum) {
+  const chainId = 592;
+  useEffect(async () => {
+    if (window.ethereum.networkVersion !== chainId) {
+      try {
+        await window.ethereum.request({
+          method: "wallet_switchEthereumChain",
+          params: [{ chainId: Web3.utils.toHex(chainId) }],
+        });
+      } catch (err) {
+        if (err.code === 4902) {
+          await window.ethereum.request({
+            method: "wallet_addEthereumChain",
+            params: [
+              {
+                chainName: "Astar Network Mainnet",
+                chainId: Web3.utils.toHex(chainId),
+                nativeCurrency: { name: "ASTAR", decimals: 18, symbol: "ASTR" },
+                rpcUrls: [
+                  "https://evm.astar.network",
+                  "https://astar.public.blastapi.io",
+                ],
+              },
+            ],
+          });
+        }
+      }
     }
   });
+
   return (
     <div className="App">
+      <div className="Modal">
+        <ConnectWallet />
+      </div>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route element={<AppLayout />}>
+          <Route
+            path="/governance"
+            element={
+              <div className="Page">
+                <Governance />
+              </div>
+            }
+          />
           <Route
             path="/dashboard"
             element={
@@ -78,14 +115,6 @@ function App() {
             element={
               <div className="Page">
                 <RealEstateDetail />
-              </div>
-            }
-          />
-          <Route
-            path="/governance"
-            element={
-              <div className="Page">
-                <Governance />
               </div>
             }
           />
