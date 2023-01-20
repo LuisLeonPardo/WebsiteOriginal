@@ -15,7 +15,7 @@ import ConnectWallet from "../ConnectWallet/ConnectWallet";
 import { useWeb3React } from "@web3-react/core";
 import { connector } from "../../config/web3";
 function SideBar() {
-  const { active, activate, account, library } = useWeb3React();
+  const { active, activate, deactivate, account, library } = useWeb3React();
 
   const dispatch = useDispatch();
   const { selectedIcon, walletPopUp } = useSelector(
@@ -27,15 +27,21 @@ function SideBar() {
   const [buttonsContainer, setButtonsContainer] = useState(
     style.ButtonsContainer
   );
-  console.log(walletPopUp);
-  const getBalance = useCallback(async () => {
-    const toSet = await library.eth.getBalance(account);
-    setbalance((toSet / 1e18).toFixed(2));
-  }, [library?.eth, account]);
 
-  useEffect(() => {
-    getBalance();
-  }, [getBalance]);
+  // const getBalance = useCallback(async () => {
+  //   const toSet = await library.eth.getBalance(account);
+  //   setbalance((toSet / 1e18).toFixed(2));
+  // }, [library?.eth, account]);
+
+  // useEffect(() => {
+  //   getBalance();
+  // }, [getBalance]);
+
+  const disconnect = () => {
+    deactivate();
+    localStorage.removeItem("previouslyConnected");
+  };
+
   return (
     <div className={container}>
       <div className={style.FlexContainer}>
@@ -178,6 +184,7 @@ function SideBar() {
               <CollapseIcon />
               <p>Collapse</p>
             </div>
+            <ExitIcon onClick={() => disconnect()} />
           </div>
         </div>
       </div>
