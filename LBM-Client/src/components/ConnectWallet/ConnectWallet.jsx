@@ -35,6 +35,9 @@ function ConnectWallet() {
 
   const { walletPopUp } = useSelector((state) => state.reducerCompleto);
   const dispatch = useDispatch();
+    {
+    active ? dispatch(setWalletPopUp(false)) : null;
+  }
   return (
     <div className={walletPopUp ? style.Container : style.ContainerClosed}>
       <div
