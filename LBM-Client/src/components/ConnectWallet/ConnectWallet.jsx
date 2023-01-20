@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import Binance from "../../../public/icons/Binance";
 import BitKeep from "../../../public/icons/BitKeep";
 import Brave from "../../../public/icons/Brave";
@@ -11,7 +11,7 @@ import WalletConnect from "../../../public/icons/WalletConnect";
 import Cancel from "../../../public/icons/x";
 import style from "./ConnectWallet.module.scss";
 import { setWalletPopUp } from "../../../redux/reducer";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setSelectedIcon } from "../../../redux/reducer";
 
 //wallet imports
@@ -20,27 +20,37 @@ import { WsProvider } from "@polkadot/rpc-provider";
 import { options } from "@astar-network/astar-api";
 
 //wallet imports
-
-async function main() {
-  const provider = new WsProvider("wss://shiden.api.onfinality.io/public-ws");
-  // OR
-  // const provider = new WsProvider('wss://shiden.api.onfinality.io/public-ws');
-  const api = new ApiPromise(options({ provider }));
-  await api.isReady;
-
-  // Use the api
-  // For example:
-  console.log((await api.rpc.system.properties()).toHuman());
-
-  process.exit(0);
-}
+import { useWeb3React } from "@web3-react/core";
+import { connector } from "../../config/web3";
+import { useState } from "react";
 
 function ConnectWallet() {
+  const { active, activate, account, deactivate, error, library } =
+    useWeb3React();
+
+  const connect = useCallback(() => {
+    activate(connector);
+    localStorage.setItem("previouslyConnected", "true");
+  });
+
+  const disconnect = () => {
+    deactivate();
+    localStorage.removeItem("previouslyConnected");
+  };
+
+  useEffect(() => {
+    if (localStorage.getItem("previouslyConnected") === "true") connect();
+  }, [connect]);
+
+  const { walletPopUp } = useSelector((state) => state.reducerCompleto);
   const dispatch = useDispatch();
-  main();
   return (
-    <div className={style.Container}>
-      <div className={style.FlexContainer}>
+    <div className={walletPopUp ? style.Container : style.ContainerClosed}>
+      <div
+        className={
+          walletPopUp ? style.FlexContainer : style.FlexContainerClosed
+        }
+      >
         <div className={style.Title}>
           <h1>Connect a wallet</h1>
           <div onClick={() => dispatch(setWalletPopUp(false))}>
@@ -48,7 +58,7 @@ function ConnectWallet() {
           </div>
         </div>
         <div className={style.WalletSelect}>
-          <div className={style.Button}>
+          <div className={style.Button} onClick={() => connect()}>
             <Metamask />
             <p>MetaMask</p>
           </div>

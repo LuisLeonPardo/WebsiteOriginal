@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback, useEffect } from "react";
 import style from "./SideBar.module.scss";
 import FirstIcon from "../../../public/icons/firstIcon";
 import OrdersIcon from "../../../public/icons/ordersIcon";
@@ -15,24 +15,33 @@ import ConnectWallet from "../ConnectWallet/ConnectWallet";
 import { useWeb3React } from "@web3-react/core";
 import { connector } from "../../config/web3";
 function SideBar() {
-  const WalletData = () => {
-    const { active, activate, account } = useWeb3React();
-  };
+  const { active, activate, deactivate, account, library } = useWeb3React();
 
-  const connect = () => {
-    activate(connector);
-  };
   const dispatch = useDispatch();
   const { selectedIcon, walletPopUp } = useSelector(
     (state) => state.reducerCompleto
   );
   const [container, setContainer] = useState(style.Container);
-
+  const [balance, setbalance] = useState(0);
   const [Icons, setIcons] = useState(style.IconsNone);
   const [buttonsContainer, setButtonsContainer] = useState(
     style.ButtonsContainer
   );
-  console.log(container);
+
+  // const getBalance = useCallback(async () => {
+  //   const toSet = await library.eth.getBalance(account);
+  //   setbalance((toSet / 1e18).toFixed(2));
+  // }, [library?.eth, account]);
+
+  // useEffect(() => {
+  //   getBalance();
+  // }, [getBalance]);
+
+  const disconnect = () => {
+    deactivate();
+    localStorage.removeItem("previouslyConnected");
+  };
+
   return (
     <div className={container}>
       <div className={style.FlexContainer}>
@@ -126,16 +135,29 @@ function SideBar() {
               : style.BottomButtonsContainer
           }
         >
-          <div
-            className={
-              container === style.OpenContainer
-                ? style.walletButtonOpen
-                : style.walletButton
-            }
-            onClick={() => <ConnectWallet />}
-          >
-            Connect Wallet
-          </div>
+          {active ? (
+            <div
+              className={
+                container === style.OpenContainer
+                  ? style.ConnectedModal
+                  : style.ConnectedModalClosed
+              }
+            >
+              <div className={style.chainModal}></div>
+              <div className={style.balanceModal}></div>
+            </div>
+          ) : (
+            <div
+              className={
+                container === style.OpenContainer
+                  ? style.walletButtonOpen
+                  : style.walletButton
+              }
+              onClick={() => dispatch(setWalletPopUp(true))}
+            >
+              Connect Wallet
+            </div>
+          )}
           <div
             className={
               container === style.OpenContainer
@@ -162,6 +184,7 @@ function SideBar() {
               <CollapseIcon />
               <p>Collapse</p>
             </div>
+            <ExitIcon onClick={() => disconnect()} />
           </div>
         </div>
       </div>

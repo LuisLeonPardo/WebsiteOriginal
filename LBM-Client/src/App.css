@@ -33,6 +33,12 @@
   z-index: 1;
   position: relative;
 }
+.Modal{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+}
 .App .PopUps {
   width: 100%;
   display: flex;

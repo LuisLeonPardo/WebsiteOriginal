@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astar-network/astar-api": "^0.1.12",
+    "@emotion/react": "^11.10.5",
     "@polkadot/api": "^9.11.3",
     "@polkadot/rpc-provider": "^9.11.3",
     "@rainbow-me/rainbowkit": "^0.8.1",
@@ -21,6 +22,7 @@
     "framer-motion": "^8.4.1",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
+    "react-awesome-reveal": "^4.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
