@@ -38,6 +38,7 @@
   justify-content: center;
   position: fixed;
   z-index: 99;
+}
 .App .PopUps {
   width: 100%;
   display: flex;
