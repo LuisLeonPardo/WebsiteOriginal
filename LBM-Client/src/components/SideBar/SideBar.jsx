@@ -28,14 +28,14 @@ function SideBar() {
     style.ButtonsContainer
   );
 
-  // const getBalance = useCallback(async () => {
-  //   const toSet = await library.eth.getBalance(account);
-  //   setbalance((toSet / 1e18).toFixed(2));
-  // }, [library?.eth, account]);
+  const getBalance = useCallback(async () => {
+    const toSet = await library.eth.getBalance(account);
+    setbalance((toSet / 1e18).toFixed(2));
+  }, [library?.eth, account]);
 
-  // useEffect(() => {
-  //   getBalance();
-  // }, [getBalance]);
+  useEffect(() => {
+    library ? getBalance() : null;
+  }, [getBalance]);
 
   const disconnect = () => {
     deactivate();
@@ -144,7 +144,7 @@ function SideBar() {
               }
             >
               <div className={style.chainModal}></div>
-              <div className={style.balanceModal}></div>
+              <div className={style.balanceModal}>{balance}</div>
             </div>
           ) : (
             <div
@@ -184,7 +184,9 @@ function SideBar() {
               <CollapseIcon />
               <p>Collapse</p>
             </div>
-            <ExitIcon onClick={() => disconnect()} />
+            <div onClick={() => disconnect()}>
+              <ExitIcon />
+            </div>
           </div>
         </div>
       </div>
@@ -193,3 +195,4 @@ function SideBar() {
 }
 
 export default SideBar;
+
