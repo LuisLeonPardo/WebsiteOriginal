@@ -27,6 +27,7 @@ function SideBar() {
   const [buttonsContainer, setButtonsContainer] = useState(
     style.ButtonsContainer
   );
+  console.log(walletPopUp);
   const getBalance = useCallback(async () => {
     const toSet = await library.eth.getBalance(account);
     setbalance((toSet / 1e18).toFixed(2));
