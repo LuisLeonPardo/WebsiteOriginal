@@ -42,7 +42,7 @@ function App() {
     </>
   );
   const chainId = 592;
-  useEffect(async () => {
+  useEffect(() => {
     const changeNetwork = async () => {
       if (window.ethereum.networkVersion !== chainId) {
         try {
@@ -98,6 +98,14 @@ function App() {
             element={
               <div className="Page">
                 <Dash setStateModal={setStateModal} />
+              </div>
+            }
+          />
+          <Route
+            path="/vaults"
+            element={
+              <div className="Page">
+                <Vaults />
               </div>
             }
           />
