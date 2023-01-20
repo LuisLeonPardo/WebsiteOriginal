@@ -1,0 +1,82 @@
+[
+	{
+		"id": "1",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674176327/my_assets/seventhEstate_pg8zti.svg",
+		"number": "4567"
+	},
+	{
+		"id": "2",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674176327/my_assets/sixthEstate_qr1lru.svg",
+		"number": "4269"
+	},
+	{
+		"id": "3",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674176326/my_assets/eigthEstate_lr27nu.svg",
+		"number": "4106"
+	},
+	{
+		"id": "4",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674176326/my_assets/ninthEstate_lptys5.svg",
+		"number": "3012"
+	},
+	{
+		"id": "5",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174969/my_assets/thirdEstate_gy5rmg.svg",
+		"number": "7952"
+	},
+	{
+		"id": "6",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174969/my_assets/firstEstate_cngn5o.svg",
+		"number": "2235"
+	},
+	{
+		"id": "7",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174969/my_assets/secondEstate_znusxi.svg",
+		"number": "3615"
+	},
+	{
+		"id": "8",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174969/my_assets/forthEstate_tuzouj.svg",
+		"number": "6788"
+	},
+	{
+		"id": "9",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674232136/patrick-robert-doyle-AH8zKXqFITA-unsplash_nskdvr.jpg",
+		"number": "8377"
+	},
+	{
+		"id": "10",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674232134/the-anam-_twiIcIsp2s-unsplash_ikei5h.jpg",
+		"number": "3619"
+	},
+	{
+		"id": "11",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674232130/christian-lambert-ycyXpdhCnp8-unsplash_santlm.jpg",
+		"number": "6798"
+	},
+	{
+		"id": "12",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674232124/anmol-seth-hDbCjHNdF48-unsplash_lsaawl.jpg",
+		"number": "8378"
+	},
+	{
+		"id": "13",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174968/my_assets/noFoto_eqfmgg.svg",
+		"number": "1023"
+	},
+	{
+		"id": "14",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174968/my_assets/noFoto_eqfmgg.svg",
+		"number": "8899"
+	},
+	{
+		"id": "15",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174968/my_assets/noFoto_eqfmgg.svg",
+		"number": "7001"
+	},
+	{
+		"id": "16",
+		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174968/my_assets/noFoto_eqfmgg.svg",
+		"number": "3290"
+	}
+]
