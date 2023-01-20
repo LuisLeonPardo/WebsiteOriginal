@@ -144,7 +144,7 @@ function SideBar() {
               }
             >
               <div className={style.chainModal}></div>
-              <div className={style.balanceModal}>{balance}</div>
+              <div className={style.balanceModal}></div>
             </div>
           ) : (
             <div
