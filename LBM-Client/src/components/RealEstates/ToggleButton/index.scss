@@ -7,6 +7,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	user-select: none;
 	.containerGridIcon {
 		width: 45%;
 		border-radius: 8px;
@@ -27,4 +28,7 @@
 		border: 0.5px solid var(--gray-color);
 		background-color: var(--white-color);
 	}
+}
+.toggle-switch:hover{
+	cursor: pointer;
 }

@@ -77,67 +77,49 @@ function App() {
     changeNetwork();
   });
 
-  return (
-    <div className="App">
-      <div className="Modal">
-        <ConnectWallet />
-      </div>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route element={<AppLayout />}>
-          <Route
-            path="/governance"
-            element={
-              <div className="Page">
-                <Governance />
-              </div>
-            }
-          />
-          <Route
-            path="/dashboard"
-            element={
-              <div className="Page">
-                <Dash setStateModal={setStateModal} />
-              </div>
-            }
-          />
-          <Route
-            path="/vaults"
-            element={
-              <div className="Page">
-                <Vaults />
-              </div>
-            }
-          />
-          <Route
-            path="/vaults"
-            element={
-              <div className="Page">
-                <Vaults />
-              </div>
-            }
-          />
-          <Route
-            path="/realestate"
-            element={
-              <div className="Page">
-                <RealEstates />
-              </div>
-            }
-          />
-          <Route
-            path="/realestate/:id"
-            element={
-              <div className="Page">
-                <RealEstateDetail />
-              </div>
-            }
-          />
-          {/* Dentro de este Route van todas las cosas que tengan sidebar */}
-        </Route>
-      </Routes>
-    </div>
-  );
+
+	return (
+		<div className="App">
+			<Routes>
+				<Route path="/" element={<Landing />} />
+				<Route   element={<AppLayout />}>
+					<Route
+						path="/dashboard"
+						element={
+							<div className="Page">
+								<Dash setStateModal={setStateModal} />
+							</div>
+						}
+					/>
+					<Route
+						path="/vaults"
+						element={
+							<div className="Page">
+								<Vaults />
+							</div>
+						}
+					/>
+					<Route
+						path={"/realestate"}
+						element={
+							<div className="Page">
+								<RealEstates />
+							</div>
+						}
+					/>
+					<Route
+						path={"/realestate/:id"}
+						element={
+							<div className="Page">
+								<RealEstates />
+							</div>
+						}
+					/>
+					{/* Dentro de este Route van todas las cosas que tengan sidebar */}
+				</Route>
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
