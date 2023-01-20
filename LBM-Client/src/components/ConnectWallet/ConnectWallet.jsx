@@ -33,15 +33,6 @@ function ConnectWallet() {
     localStorage.setItem("previouslyConnected", "true");
   });
 
-  const disconnect = () => {
-    deactivate();
-    localStorage.removeItem("previouslyConnected");
-  };
-
-  useEffect(() => {
-    if (localStorage.getItem("previouslyConnected") === "true") connect();
-  }, [connect]);
-
   const { walletPopUp } = useSelector((state) => state.reducerCompleto);
   const dispatch = useDispatch();
   return (
