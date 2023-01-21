@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss';
-function CardPreview({ image, land, fiveColumn }) {
+function CardPreview({ image, number, fiveColumn }) {
 	return (
 		<div
 			className={`${
@@ -9,7 +9,7 @@ function CardPreview({ image, land, fiveColumn }) {
 		>
 			<img src={image} alt="imagen preview" className="imgCardPreview" />
 			<div className="bottomCard">
-				<h5>Land {land}</h5>
+				<h5>Land #{number}</h5>
 				<div>
 					<table>
 						<tbody>

@@ -1,39 +1,25 @@
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './index.scss';
-import relaod from '../../assets/reload.svg';
+import { Link } from 'react-router-dom';
+import { SlRefresh } from 'react-icons/sl';
 import arrow from '../../assets/down.svg';
 import Toggle from './ToggleButton';
 import Status from './Status';
 import Price from './Price';
 import Properties from './Properties';
 import CardPreview from './CardPreview';
-import firstEstate from '../../assets/firstEstate.svg';
-import secondEstate from '../../assets/secondEstate.svg';
-import thirdEstate from '../../assets/thirdEstate.svg';
-import forthEstate from '../../assets/forthEstate.svg';
-import fifthEstate from '../../assets/fifthEstate.svg';
-import noFoto from '../../assets/noFoto.svg';
 import { motion } from 'framer-motion';
-
+import RealEstateDetail from '../RealEstateDetail';
+import db from '../RealEstates/fakedb/db.json'
 const variants = {
 	open: { opacity: 1 },
 	closed: { opacity: 0, display: 'none' },
 };
-const lands = [
-	{ image: firstEstate, land: '#4567' },
-	{ image: secondEstate, land: '#4269' },
-	{ image: thirdEstate, land: '#4106' },
-	{ image: forthEstate, land: '#3012' },
-	{ image: fifthEstate, land: '#7952' },
-	{ image: noFoto, land: '#2235' },
-	{ image: noFoto, land: '#3615' },
-	{ image: noFoto, land: '#6788' },
-	{ image: noFoto, land: '#8377' },
-	{ image: noFoto, land: '#3619' },
-	{ image: noFoto, land: '#6798' },
-	{ image: noFoto, land: '#8378' },
-];
+
 function RealEstates() {
+	const location = useLocation();
+	const navigate = useNavigate()
 	const [ascendant, setAscendant] = useState(true);
 	const [status, setStatus] = useState(false);
 	const [price, setPrice] = useState(false);
@@ -42,15 +28,21 @@ function RealEstates() {
 	const handleOrder = () => {
 		setAscendant(!ascendant);
 	};
-
 	return (
 		<div className="realEstate">
 			<div className="containerEstate">
 				<h3>Real Estate</h3>
 				<nav>
+					
+					{location.pathname === '/realestate' ? null : (
+							<button className="filters" onClick={() => navigate('/realestate')}>
+								<img src={arrow} alt="Back" className="goBack" />
+							</button>
+					)}
+					
 					<button className="isNotAButton">Filters</button>
 					<button className="filters">
-						<img src={relaod} alt="Reload" />
+						<SlRefresh />
 					</button>
 					<div className="inputWrapper">
 						<input
@@ -80,63 +72,76 @@ function RealEstates() {
 						Price: {ascendant ? 'low to high' : 'high to low'}
 						<img src={arrow} alt="Arrow" />
 					</button>
-					<Toggle setFiveColumn={setFiveColumn} fiveColumn={fiveColumn} />
+					{location.pathname === '/realestate' ? (
+						<Toggle setFiveColumn={setFiveColumn} fiveColumn={fiveColumn} />
+					) : null}
 
 					{/* <button onClick={() => setFiveColumn(!fiveColumn)}>grid</button> */}
 				</nav>
-				<div className="wrapperAsideSection">
-					<aside className="asideFilters">
-						<button
-							className={`buttonAsideFilter ${status ? 'isActive' : null}`}
-							onClick={() => setStatus(!status)}
+				{location.pathname === '/realestate' ? (
+					<div className="wrapperAsideSection">
+						<aside className="asideFilters">
+							<button
+								className={`buttonAsideFilter ${status ? 'isActive' : null}`}
+								onClick={() => setStatus(!status)}
+							>
+								Status <img src={arrow} alt="Arrow" />
+							</button>
+							<motion.nav
+								animate={status ? 'open' : 'closed'}
+								variants={variants}
+							>
+								{status ? <Status /> : null}
+							</motion.nav>
+							<button
+								className={`buttonAsideFilter ${price ? 'isActive' : null}`}
+								onClick={() => setPrice(!price)}
+							>
+								Price <img src={arrow} alt="Arrow" />
+							</button>
+							<motion.div
+								animate={price ? 'open' : 'closed'}
+								variants={variants}
+							>
+								{price ? <Price /> : null}
+							</motion.div>
+							<button
+								className={`buttonAsideFilter ${
+									properties ? 'isActive' : null
+								}`}
+								onClick={() => setProperties(!properties)}
+							>
+								Properties <img src={arrow} alt="Arrow" />
+							</button>
+							<motion.div
+								animate={properties ? 'open' : 'closed'}
+								variants={variants}
+							>
+								{properties ? <Properties /> : null}
+							</motion.div>
+						</aside>
+						<section
+							className={`${
+								fiveColumn
+									? 'previewEstatesFiveColums'
+									: 'previewEstatesFourColums'
+							}`}
 						>
-							Status <img src={arrow} alt="Arrow" />
-						</button>
-						<motion.nav
-							animate={status ? 'open' : 'closed'}
-							variants={variants}
-						>
-							{status ? <Status /> : null}
-						</motion.nav>
-						<button
-							className={`buttonAsideFilter ${price ? 'isActive' : null}`}
-							onClick={() => setPrice(!price)}
-						>
-							Price <img src={arrow} alt="Arrow" />
-						</button>
-						<motion.div animate={price ? 'open' : 'closed'} variants={variants}>
-							{price ? <Price /> : null}
-						</motion.div>
-						<button
-							className={`buttonAsideFilter ${properties ? 'isActive' : null}`}
-							onClick={() => setProperties(!properties)}
-						>
-							Properties <img src={arrow} alt="Arrow" />
-						</button>
-						<motion.div
-							animate={properties ? 'open' : 'closed'}
-							variants={variants}
-						>
-							{properties ? <Properties /> : null}
-						</motion.div>
-					</aside>
-					<section
-						className={`${
-							fiveColumn
-								? 'previewEstatesFiveColums'
-								: 'previewEstatesFourColums'
-						}`}
-					>
-						{lands.map((land) => (
-							<CardPreview
-								key={land.land}
-								image={land.image}
-								land={land.land}
-								fiveColumn={fiveColumn}
-							/>
-						))}
-					</section>
-				</div>
+							{db.map((land) => (
+								<Link to={`/realestate/${land.number}`} key={land.id}>
+									<CardPreview
+										
+										image={land.image}
+										number={land.number}
+										fiveColumn={fiveColumn}
+									/>
+								</Link>
+							))}
+						</section>
+					</div>
+				) : (
+					<RealEstateDetail />
+				)}
 			</div>
 		</div>
 	);

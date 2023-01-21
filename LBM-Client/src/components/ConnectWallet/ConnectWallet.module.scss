@@ -1,10 +1,27 @@
 .Container{
     display: flex;
-    align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 9999;
-    
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.443);
+    transition:opacity .5s, background-color 1s;
+}
+
+.ContainerClosed{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    z-index: 0;
+    background:none;
+    pointer-events: none;
+    transition: opacity .5s, background-color 0s;
 }
 
 .FlexContainer{
@@ -18,8 +35,27 @@
     box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
-    position: relative;
     align-items: center;
+    position: fixed;
+    bottom: 20%;
+    transition: bottom .5s;
+}
+
+.FlexContainerClosed{
+    display: flex;
+    width: 544px;
+    height: 523px;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius:24PX;
+    z-index: 99;
+    box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    transition: bottom .5s;
 
 }
 
