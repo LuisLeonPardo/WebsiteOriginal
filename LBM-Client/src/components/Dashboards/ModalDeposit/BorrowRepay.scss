@@ -3,20 +3,21 @@
 .brContainer {
     height: 80vh;
     width: 50vw;
-    max-width: 440px;
+    max-width: 400px;
+    max-height: 550px;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
 
     .header {
-        width: 100%;
+        width: 83%;
         height: 12.5%;
         background-color:white;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         img {
             width: 20px;
             height: 18px;
@@ -31,10 +32,16 @@
             margin: 0% 2%;
         }
 
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         .close {
             font-size: 12px;
             position: relative;
-            left: 20%;
             cursor: pointer;
         }
     }
@@ -179,6 +186,8 @@
         background-color: white;
 
         button {
+            width: 100%;
+            height: 55%;
             background: #FFF1F2;
             border-radius: 10px;
             color: #F7931A;
@@ -192,6 +201,81 @@
     }
 }
 
+.cContainer {
+    height: 65vh;
+    width: 50vw;
+    max-width: 400px;
+    max-height: 470px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    .exit {
+        width: 80%;
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+
+
+        h2 {
+            font-size: 16px;
+            margin: 0px;
+        }
+    }
+
+    .ready {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 20px;
+        line-height: 23px;
+        color: #374151;
+    }
+
+    .supply {
+        width: 50%;
+        h4 {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #374151;
+            margin: 0px;
+        }
+    }
+
+    .button3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 83%;
+        height: 20%;
+        background-color: white;
+
+        button {
+            width: 100%;
+            height: 55%;
+            background: #FFF1F2;
+            border-radius: 10px;
+            color: #F7931A;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+        }
+}
+}
+
 .modalB {
     height: 100%;
     width: 100%;
@@ -200,7 +284,7 @@
 }
 
 .modalHide {
-    visibility: hidden;
+    display: none;
     height: 0px;
     width: 0px;
 }

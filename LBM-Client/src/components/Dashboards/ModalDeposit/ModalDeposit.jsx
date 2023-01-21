@@ -7,6 +7,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import BorrowRepay from './BorrowRepay';
+import { useState } from "react";
+import "./BorrowRepay.scss";
 
 
 
@@ -50,6 +52,7 @@ BootstrapDialogTitle.propTypes = {
 
 export default function CustomizedDialogs(props) {
   const [open, setOpen] = React.useState(false);
+  const [confirm, setConfirm] = useState (false)
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -68,7 +71,7 @@ export default function CustomizedDialogs(props) {
         }}>
         {props.name}
       </Button>
-      <div>
+      <div className={confirm? null: 'modalHide'}>
       <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
@@ -79,7 +82,7 @@ export default function CustomizedDialogs(props) {
       >
         <div style={{height: 'fit-content' , width: 'fit-content'}}>
           {/* insert your component here */}
-          <BorrowRepay handleClose={handleClose} name={props.name}/>
+          <BorrowRepay handleClose={handleClose} name={props.name} confirm={confirm} setConfirm={setConfirm}/>
         </div>  
       </BootstrapDialog>
       </div>
