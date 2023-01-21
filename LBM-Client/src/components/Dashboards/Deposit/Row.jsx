@@ -3,6 +3,7 @@ import "./Deposit.scss";
 import BTC from "./assets/BTC.svg"
 import LTC from "./assets/LTC.svg"
 import ETH from "./assets/ETH.svg"
+import ModalDeposit from "../ModalDeposit/ModalDeposit";
 
 export default function Row({img,name, amount, value}) {
 
@@ -29,11 +30,7 @@ export default function Row({img,name, amount, value}) {
     };
 
     const handleButton = (e) => {
-        let changed = e.target.name
         e.preventDefault()
-        setActive({
-           
-        })
     };
 
     return (
@@ -46,12 +43,8 @@ export default function Row({img,name, amount, value}) {
                     <p>{amount}</p>
                 </div>}
                 {!render &&<div className="innerRow">                      
-                    <button onClick={handleButton}>
-                        Supply
-                    </button>
-                    <button onClick={handleButton}>
-                       Withdraw
-                    </button>
+                    <ModalDeposit name='Supply'/>
+                    <ModalDeposit name='Withdraw'/>
                 </div>}
             </div>
     )

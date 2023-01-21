@@ -3,6 +3,7 @@ $breakpoints: (
     sm: 900px,
     md: 1200px,
     lg: 1600px,
+    xlg: 1800px,
     lgh: 750px
 );
 
@@ -40,7 +41,9 @@ $breakpoints: (
     width: 1357px;
     top: 50px;
     
-    
+    @include media-down(xlg) {
+        zoom: 85%;
+    }
     
     @include media-down(lg) {
         zoom: 75%;
