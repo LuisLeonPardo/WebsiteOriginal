@@ -21,21 +21,57 @@ import { options } from "@astar-network/astar-api";
 
 //wallet imports
 import { useWeb3React } from "@web3-react/core";
+import Web3 from "web3";
 import { connector } from "../../config/web3";
 import { useState } from "react";
 
 function ConnectWallet() {
   const { active, activate, account, deactivate, error, library } =
     useWeb3React();
+  const chainId = 592;
+
+  const changeNetwork = async () => {
+    if (window.ethereum.networkVersion !== chainId) {
+      try {
+        await window.ethereum.request({
+          method: "wallet_switchEthereumChain",
+          params: [{ chainId: Web3.utils.toHex(chainId) }],
+        });
+      } catch (err) {
+        if (err.code === 4902) {
+          await window.ethereum.request({
+            method: "wallet_addEthereumChain",
+            params: [
+              {
+                chainName: "Astar Network Mainnet",
+                chainId: Web3.utils.toHex(chainId),
+                nativeCurrency: {
+                  name: "ASTAR",
+                  decimals: 18,
+                  symbol: "ASTR",
+                },
+                rpcUrls: [
+                  "https://evm.astar.network",
+                  "https://astar.public.blastapi.io",
+                ],
+              },
+            ],
+          });
+        }
+      }
+    }
+  };
 
   const connect = useCallback(() => {
+    changeNetwork();
     activate(connector);
     localStorage.setItem("previouslyConnected", "true");
   });
 
   const { walletPopUp } = useSelector((state) => state.reducerCompleto);
   const dispatch = useDispatch();
-    {
+
+  {
     active ? dispatch(setWalletPopUp(false)) : null;
   }
   return (
