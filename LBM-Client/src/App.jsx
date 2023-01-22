@@ -45,41 +45,6 @@ function App() {
 			<Outlet />
 		</>
 	);
-	const chainId = 592;
-	useEffect(() => {
-		const changeNetwork = async () => {
-			if (window.ethereum.networkVersion !== chainId) {
-				try {
-					await window.ethereum.request({
-						method: 'wallet_switchEthereumChain',
-						params: [{ chainId: Web3.utils.toHex(chainId) }],
-					});
-				} catch (err) {
-					if (err.code === 4902) {
-						await window.ethereum.request({
-							method: 'wallet_addEthereumChain',
-							params: [
-								{
-									chainName: 'Astar Network Mainnet',
-									chainId: Web3.utils.toHex(chainId),
-									nativeCurrency: {
-										name: 'ASTAR',
-										decimals: 18,
-										symbol: 'ASTR',
-									},
-									rpcUrls: [
-										'https://evm.astar.network',
-										'https://astar.public.blastapi.io',
-									],
-								},
-							],
-						});
-					}
-				}
-			}
-		};
-		changeNetwork();
-	});
 
 	return (
 		<div className="App">
