@@ -1,7 +1,7 @@
-import Landing from './components/Landing/Landing';
+import Landing from "./components/Landing/Landing";
 // import Dashboard from "./components/Dashboards/Dashboard";
-import './App.css';
-import SideBar from './components/SideBar/SideBar';
+import "./App.css";
+import SideBar from "./components/SideBar/SideBar";
 import {
 	Route,
 	Routes,
