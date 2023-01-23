@@ -27,7 +27,11 @@ function RealEstateDetail() {
 	};
 	return (
 		<div className="realEstateDetail">
-			<motion.div animate={isOpenModal ? 'open' : 'closed'} variants={variants} transition={{ duration: 0.1 }}>
+			<motion.div
+				animate={isOpenModal ? 'open' : 'closed'}
+				variants={variants}
+				transition={{ duration: 0.1 }}
+			>
 				<Modal
 					number={land.number}
 					isOpen={isOpenModal}
