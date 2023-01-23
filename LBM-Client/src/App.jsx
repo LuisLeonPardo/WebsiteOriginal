@@ -22,8 +22,8 @@ import Governance from "./components/Governance/Governance";
 import Vaults from "./components/Vaults/Vaults";
 import RealEstateDetail from "./components/RealEstateDetail/index";
 import WarningBuilding from "./components/WarningBuilding";
+import SideBarMobile from "./components/SideBar/mobile/SideBarMobile";
 import CoomingSoon from "./components/ComingSoon/ComingSoon";
-
 function App() {
   const [stateModal, setStateModal] = useState(false);
   const { selectedIcon, walletPopUp } = useSelector(
@@ -42,7 +42,7 @@ function App() {
       </div>
 
       <div className="SideBar">
-        <SideBar />
+        <SideBarMobile />
       </div>
       <Outlet />
     </>
