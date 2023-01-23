@@ -1,4 +1,5 @@
 import Landing from "./components/Landing/Landing";
+import NotFound from "./components/NotFound/NotFound";
 // import Dashboard from "./components/Dashboards/Dashboard";
 import "./App.css";
 import SideBar from "./components/SideBar/SideBar";
@@ -22,7 +23,7 @@ import Vaults from "./components/Vaults/Vaults";
 import RealEstateDetail from "./components/RealEstateDetail/index";
 import WarningBuilding from "./components/WarningBuilding";
 import SideBarMobile from "./components/SideBar/mobile/SideBarMobile";
-
+import CoomingSoon from "./components/ComingSoon/ComingSoon";
 function App() {
   const [stateModal, setStateModal] = useState(false);
   const { selectedIcon, walletPopUp } = useSelector(
@@ -86,6 +87,8 @@ function App() {
           />
           {/* Dentro de este Route van todas las cosas que tengan sidebar */}
         </Route>
+        <Route path="/swap" element={<CoomingSoon />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

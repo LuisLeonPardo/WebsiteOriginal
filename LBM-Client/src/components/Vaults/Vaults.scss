@@ -28,14 +28,20 @@ $breakpoints: (
   }
 }
 
+.general {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .vaults {
   width: 100vw;
   height: 100vh;
-  top: 114px;
-  bottom: 114px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 72px;
   position: relative;
@@ -266,7 +272,7 @@ $breakpoints: (
   width: 254px;
   height: 54px;
   background-color: #fff1f2;
-  color: #707eae;
+  color: #f7931a;
   &:focus {
     outline: none;
   }

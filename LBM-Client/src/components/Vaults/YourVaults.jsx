@@ -1,23 +1,29 @@
 import React from "react";
 import "./Vaults.scss";
-import BTC from "../Dashboards/Deposit/assets/BTC.svg";
-import LTC from "../Dashboards/Deposit/assets/LTC.svg";
-import ETH from "../Dashboards/Deposit/assets/ETH.svg";
+import LBM from "./assets/LBM-icon.svg";
+import LUSD from "./assets/LUSD-icon.svg";
 
-function YourVaults({ shortName, img, stakingAPR, daily, total }) {
+function YourVaults({
+  shortName,
+  img,
+  stakingAPR,
+  daily,
+  total,
+  setStateModal,
+}) {
   const staking = 0;
 
   var urlImg;
 
-  if (img === "BTC") {
-    urlImg = BTC;
-  } else if (img === "LTC") {
-    urlImg = LTC;
-  } else if (img === "ETH") {
-    urlImg = ETH;
+  if (img === "LBM") {
+    urlImg = LBM;
+  } else if (img === "LUSD") {
+    urlImg = LUSD;
   }
 
-  console.log(img);
+  function changeState() {
+    setStateModal(true);
+  }
 
   return (
     <div className="vault-container">
@@ -49,8 +55,12 @@ function YourVaults({ shortName, img, stakingAPR, daily, total }) {
         </div>
       </div>
       <div className="vault-buttons">
-        <button className="vault-button">Stake</button>
-        <button className="vault-button">Withdraw</button>
+        <button className="vault-button" onClick={changeState}>
+          Stake
+        </button>
+        <button className="vault-button" onClick={changeState}>
+          Withdraw
+        </button>
       </div>
     </div>
   );

@@ -1,17 +1,17 @@
 {
   "data": [
     {
-      "img": "BTC",
-      "name": "Bitcoin",
-      "shortName": "BTC",
+      "img": "LBM",
+      "name": "Libertum",
+      "shortName": "LBM",
       "stakingAPR": "15.3%",
       "daily": "2,400",
       "total": "5.72"
     },
     {
-      "img": "LTC",
-      "name": "LTC",
-      "shortName": "LTC",
+      "img": "LUSD",
+      "name": "LUSD",
+      "shortName": "LUSD",
       "stakingAPR": "15.3%",
       "daily": "2,400",
       "total": "5.72"

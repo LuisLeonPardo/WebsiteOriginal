@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/notfounds2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/notfounds2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+.notfound_items {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../../public/icons/Background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .notfound_section {
+    .notfound_text {
+      h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 300px;
+        line-height: 90.02%;
+        color: #f9fafb;
+      }
+      div {
+        h3 {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 48px;
+          margin: 0;
+        }
+        p {
+          font-family: "Raleway";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 21px;
+          text-align: center;
+          letter-spacing: 0.08em;
+        }
+      }
+    }
+    .notfound_button {
+      .go_home {
+        width: 146px;
+        height: 48px;
+        background: #f88612;
+        box-shadow: 0px 10px 30px rgba(56, 29, 219, 0.2);
+        border-radius: 15px;
+        padding: 14px 28px;
+        border: none;
+        a {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .notfound_items {
+    .notfound_section {
+      .notfound_text {
+        h1 {
+          font-size: 150px;
+        }
+        div {
+          h3 {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  .notfound_items {
+    .notfound_section {
+      .notfound_text {
+        div {
+          h3 {
+            font-size: 25px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .notfound_items {
+    .notfound_section {
+      .notfound_text {
+        h1 {
+          width: 350px;
+          font-size: 80px;
+        }
+        div {
+          width: 350px;
+          h3 {
+            font-size: 25px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
