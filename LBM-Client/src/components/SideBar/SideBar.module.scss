@@ -1,4 +1,5 @@
 
+
 .Container{
     width: 63px;
     height: 100vh ;
@@ -319,6 +320,12 @@ transition: font-size 1s;
     transition:  width 1s;
 }
 
+.button{
+    display: flex;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+}
 .ConnectedModalClosed{
     display: flex;
     align-items: center;
