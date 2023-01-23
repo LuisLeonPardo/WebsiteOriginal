@@ -10,7 +10,7 @@ export default function Services() {
   return (
     <main className="services_items">
       <section className="services_section">
-        <Slide direction={"down"}>
+        <Slide direction={"down"} triggerOnce={"true"}>
           <div className="services_text">
             <h2>Libertum Services</h2>
             <p>
@@ -24,7 +24,7 @@ export default function Services() {
           </div>
         </Slide>
         <div className="services_quad">
-          <Slide direction={"left"}>
+          <Slide direction={"left"} triggerOnce={"true"}>
             <div className="services-quad_item">
               <img src={loans} />
               <h3>Loans</h3>
@@ -32,7 +32,7 @@ export default function Services() {
               <div></div>
             </div>
           </Slide>
-          <Slide direction={"up"}>
+          <Slide direction={"up"} triggerOnce={"true"}>
             <div className="services-quad_item">
               <img src={mkt} />
               <h3>
@@ -45,7 +45,7 @@ export default function Services() {
               <div></div>
             </div>
           </Slide>
-          <Slide direction={"right"}>
+          <Slide direction={"right"} triggerOnce={"true"}>
             <div className="services-quad_item">
               <img src={launchpad} />
               <h3>Launchpad Crypto</h3>

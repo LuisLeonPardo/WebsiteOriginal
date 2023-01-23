@@ -1,0 +1,154 @@
+.modalRealEstate {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	color: var(--black-color);
+}
+.modalRealEstate.is-open {
+	display: flex;
+}
+.modalContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 20vw;
+	height: auto;
+	background: var(--white-color);
+	border-radius: 15px;
+	position: relative;
+	.closeButton {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		padding: 3px;
+		background-color: var(--white-color);
+		top: 10px;
+		right: 15px;
+		width: 20px;
+		height: 20px;
+		border-radius: 999px;
+		.icon {
+			width: 16px;
+			height: 16px;
+			transition: 0.25s;
+		}
+		transition: 0.25s;
+	}
+	.closeButton:hover {
+		background-color: var(--gray-color);
+		.icon {
+			color: var(--white-color);
+		}
+	}
+	&__h1 {
+		font-weight: 700;
+		font-size: 22px;
+		color: var(--black-color);
+		margin-left: 7.5%;
+		margin-top: 40px;
+	}
+	&__p {
+		text-align: start;
+		color: var(--gray-darker);
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 22px;
+		margin-left: 7.5%;
+	}
+	&__span {
+		font-weight: 700;
+		color: var(--black-color);
+	}
+	&__label {
+		margin-left: 7.5%;
+		font-weight: 700;
+		font-size: 15px;
+		color: var(--black-color);
+		margin-bottom: 10px;
+		margin-top: 15px;
+	}
+	&__hr {
+		width: 90%;
+		margin: 20px 0 20px 0;
+		align-self: center;
+	}
+	&__div {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&--margin {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-right: 7.5%;
+	}
+	.inputWrapper {
+		position: relative;
+		max-width: 913px;
+		width: 85%;
+		height: 48px;
+		margin: 0px auto;
+	}
+	.input {
+		box-sizing: border-box;
+		color: var(--black-color) !important;
+		padding: 15px 15px 15px 35px;
+		width: 100%;
+		background-color: var(--modern-white);
+		border: none;
+		border-radius: 16px;
+		color: var(--gray-color);
+		height: 48px;
+		font-family: 'Inter';
+	}
+	.input:focus-visible {
+		outline: none;
+	}
+	.input-coin {
+		position: absolute;
+		right: 12px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: var(--gray-color);
+	}
+	.inputIcon--smaller {
+		width: 15px !important;
+		height: 15px !important;
+		right: 5% !important;
+	}
+	.inputIcon {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		right: 15%;
+		top: 50%;
+		transform: translateY(-50%);
+		color: var(--gray-color);
+	}
+	.question {
+		width: 20px;
+		height: 20px;
+	}
+	.inputIcon--flex {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		width: fit-content;
+		right: 2%;
+	}
+	.button {
+		background-color: var(--orange-darker);
+		width: 85%;
+		margin: 20px auto;
+		color: var(--white-color);
+	}
+}

@@ -1,11 +1,11 @@
 .cardPreviewFourColumns {
 	display: flex;
-	border: 1px solid var(--gray-color);
 	border-radius: 5px;
 	width: 90%;
 	height: 18vw;
 	margin: auto;
 	flex-direction: column;
+	box-shadow: 1px 1px 3px 0 rgb(0 0 0 / 0.1), 1px 3px 2px -1px rgb(0 0 0 / 0.2);
 	.imgCardPreview {
 		width: 11.5vw;
 		height: 11.5vw;
@@ -46,9 +46,12 @@
 		}
 	}
 }
+.cardPreviewFourColumns:hover{
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+}
 .cardPreviewFiveColumns {
 	display: flex;
-	border: 1px solid var(--gray-color);
+	box-shadow: 1px 1px 3px 0 rgb(0 0 0 / 0.1), 1px 3px 2px -1px rgb(0 0 0 / 0.2);
 	border-radius: 5px;
 	width: 95%;
 	height: 18vw;
@@ -94,7 +97,9 @@
 		}
 	}
 }
-
+.cardPreviewFiveColumns:hover{
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+}
 @media only screen and (min-width: 1200px) and (max-width: 1400px){
     .cardPreview{
         height: 20vw;

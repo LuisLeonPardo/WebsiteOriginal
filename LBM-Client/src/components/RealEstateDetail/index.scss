@@ -15,11 +15,11 @@
 			justify-content: flex-start;
 			width: 40vw;
 			max-width: 690px;
-			margin-top: 0px;
-			margin-bottom: 0px;
+			margin: 0px 0px 0px 9%;
 		}
 		.section__image {
 			width: 30vw;
+			height: 30vw;
 			max-width: 690px;
 			border-radius: 16px;
 		}
@@ -189,14 +189,14 @@
 		display: flex;
 		justify-content: center;
 		gap: 1vw;
+		padding: 15px;
 	}
 	.link {
 		width: 15vw;
 	}
-	.h2{
+	.h2 {
 		margin: 55px;
 	}
-	
 }
 .realEstateDetail::-webkit-scrollbar {
 	width: 2px;

@@ -5,6 +5,8 @@
   height: 100vh;
   width: 100vw;
   background-image: url("../../../public/icons/Background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,7 +95,7 @@
       }
     }
     .cs_network {
-      width: 216px;
+      max-width: 300px;
       gap: 24px;
       display: flex;
       justify-content: space-around;
@@ -105,9 +107,16 @@
 @media screen and (max-width: 1380px) {
   .cs_items {
     .cs_section {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      .cs_back {
+        top: -7%;
+        left: 45%;
+      }
       .cs_text {
         h1 {
-          font-size: 200px;
+          font-size: 150px;
         }
         div {
           h3 {
@@ -124,6 +133,7 @@
       display: flex;
       flex-direction: column;
       gap: 100px;
+
       .cs_text {
         h1 {
           font-size: 150px;
@@ -144,6 +154,7 @@
 @media screen and (max-width: 720px) {
   .cs_items {
     .cs_section {
+      gap: 80px;
       .cs_text {
         h1 {
           width: 350px;

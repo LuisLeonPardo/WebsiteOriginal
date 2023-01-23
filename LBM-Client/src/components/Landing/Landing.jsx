@@ -1,5 +1,4 @@
 import React from "react";
-
 import Home from "./Home/Home";
 import Protocol from "./Protocol/Protocol";
 import Services from "./Services/Services";
@@ -8,7 +7,6 @@ import Subscribe from "./Subscribe/Subscribe";
 import Footer from "./Footer/Footer";
 import divider from "./assets/divider.png";
 import "./Landing.scss";
-import CoomingSoon from "../ComingSoon/ComingSoon";
 
 export default function Landing() {
   return (
@@ -22,7 +20,6 @@ export default function Landing() {
       <img src={divider} className="divider" />
       <Subscribe />
       <Footer />
-      <CoomingSoon />
     </div>
   );
 }

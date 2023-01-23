@@ -1,4 +1,5 @@
 import React from "react";
+import { JackInTheBox } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import { FaAngleLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -22,21 +23,23 @@ export default function CoomingSoon() {
           </div>
         </div>
         <div className="cs_form">
-          <form>
-            <input type="text" placeholder="Name" />
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 1 }}
-              onClick={() => navigate(-1)}
-            >
-              Subscribe
-            </motion.button>
-          </form>
+          <JackInTheBox direction={"top-left"} triggerOnce={"true"}>
+            <form>
+              <input type="text" placeholder="Name" />
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 1 }}
+              >
+                Subscribe
+              </motion.button>
+            </form>
+          </JackInTheBox>
         </div>
         <motion.button
           className="cs_back"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 1 }}
+          onClick={() => navigate(-1)}
         >
           <FaAngleLeft />
         </motion.button>
