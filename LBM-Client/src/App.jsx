@@ -17,7 +17,6 @@ import RealEstates from "./components/RealEstates";
 import React, { useEffect, useState } from "react";
 import Modals from "./components/Dashboards/Modals/Modals";
 import Web3 from "web3";
-import ConnectWallet from "./components/ConnectWallet/ConnectWallet";
 import Governance from "./components/Governance/Governance";
 import Vaults from "./components/Vaults/Vaults";
 import RealEstateDetail from "./components/RealEstateDetail/index";
@@ -37,9 +36,6 @@ function App() {
       </div>
 
       <Modals state={stateModal} setStateModal={setStateModal} />
-      <div className="Modal">
-        <ConnectWallet />
-      </div>
 
       <div className="SideBar">
         <SideBarMobile />
