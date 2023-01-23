@@ -10,17 +10,31 @@ import db from '../RealEstates/fakedb/db.json';
 import CardPreview from '../RealEstates/CardPreview';
 import { Link } from 'react-router-dom';
 import Selector from './Selector';
+import Modal from './Modal';
+import { useModal } from '../../helpers/useModal/useModal';
+import { motion } from 'framer-motion';
+
 function RealEstateDetail() {
 	const start = Math.floor(Math.random() * db.length);
 	const splicedb = db.slice(start > 11 ? 11 : start, start + 5);
 	const { id } = useParams();
 	const [showMore, setShowMore] = useState(false);
 	const land = db.find((e) => e.number === id);
-	
+	const [isOpenModal, openModal, closeModal] = useModal();
+	const variants = {
+		open: { opacity: 1 },
+		closed: { opacity: 0 },
+	};
 	return (
 		<div className="realEstateDetail">
+			<motion.div animate={isOpenModal ? 'open' : 'closed'} variants={variants} transition={{ duration: 0.1 }}>
+				<Modal
+					number={land.number}
+					isOpen={isOpenModal}
+					closeModal={closeModal}
+				/>
+			</motion.div>
 			<section className="section">
-				{console.log(window.scrollY)}
 				<figure className="section__figure">
 					<img src={land.image} alt="Land" className="section__image" />
 					<Selector />
@@ -124,11 +138,13 @@ function RealEstateDetail() {
 						<p className="aside__text aside__text--semibold">
 							There are no bids yet. Be the first!
 						</p>
-						<button className="cardBid__button">Place a bid</button>
+						<button className="cardBid__button" onClick={() => openModal()}>
+							Place a bid
+						</button>
 					</div>
 				</aside>
 			</section>
-			<h2 className='h2'>More from this collection</h2>
+			<h2 className="h2">More from this collection</h2>
 			<footer className="cards">
 				{splicedb.map((e) => (
 					<Link to={`/realestate/${e.number}`} className="link" key={e.id}>
