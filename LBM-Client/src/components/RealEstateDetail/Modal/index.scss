@@ -26,28 +26,28 @@
 	position: relative;
 	.closeButton {
 		position: absolute;
-        display: flex;
-        align-items: center;
-        padding: 3px;
+		display: flex;
+		align-items: center;
+		padding: 3px;
 		background-color: var(--white-color);
 		top: 10px;
 		right: 15px;
-        width: 20px;
-        height: 20px;
-        border-radius: 999px;
+		width: 20px;
+		height: 20px;
+		border-radius: 999px;
 		.icon {
 			width: 16px;
 			height: 16px;
-            transition: 0.25s;
+			transition: 0.25s;
 		}
-        transition: 0.25s;
+		transition: 0.25s;
 	}
-    .closeButton:hover{
-        background-color: var(--gray-color);
-        .icon{
-            color: var(--white-color);
-        }
-    }
+	.closeButton:hover {
+		background-color: var(--gray-color);
+		.icon {
+			color: var(--white-color);
+		}
+	}
 	&__h1 {
 		font-weight: 700;
 		font-size: 22px;
