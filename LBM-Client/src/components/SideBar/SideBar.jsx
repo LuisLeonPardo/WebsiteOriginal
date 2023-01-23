@@ -26,20 +26,22 @@ function SideBar() {
   return (
     <div className={container}>
       <div className={style.FlexContainer}>
-        <div className={style.LogoContainer}>
-          <img src="./icons/Logo.svg" className={style.Logo} />
-          {container === style.OpenContainer ? (
-            <img
-              src="./icons/Logo Cherryswap.svg"
-              className={style.LogoCherryswap}
-            />
-          ) : (
-            <img
-              src="./icons/Logo Cherryswap.svg"
-              className={style.LogoCherryswap2}
-            />
-          )}
-        </div>
+        <NavLink to={"./"}>
+          <div className={style.LogoContainer}>
+            <img src="./icons/Logo.svg" className={style.Logo} />
+            {container === style.OpenContainer ? (
+              <img
+                src="./icons/Logo Cherryswap.svg"
+                className={style.LogoCherryswap}
+              />
+            ) : (
+              <img
+                src="./icons/Logo Cherryswap.svg"
+                className={style.LogoCherryswap2}
+              />
+            )}
+          </div>
+        </NavLink>
         <div className={buttonsContainer}>
           <NavLink to={"./dashboard"}>
             <div
