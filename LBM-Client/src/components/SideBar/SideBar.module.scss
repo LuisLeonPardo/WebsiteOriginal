@@ -366,3 +366,9 @@ $color4: #f8630a;
     color3: $color3;
     color4: $color4;
 }
+
+@media(max-width: 600px) {
+    .Container{
+        width: 100px;
+    }
+}

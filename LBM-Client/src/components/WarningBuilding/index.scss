@@ -64,3 +64,9 @@
 		box-shadow: none;
 	}
 }
+
+@media(max-width: 700px) {
+	.bg-warning{
+	  display: none;
+	}
+  }
