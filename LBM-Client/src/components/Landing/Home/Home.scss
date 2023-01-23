@@ -14,11 +14,11 @@
     flex-direction: column;
     margin: 0 auto;
     margin-top: 70px;
+    animation-name: inOpacity;
+    animation-duration: 2s;
+    animation-fill-mode: both;
     .home_text {
       width: 570px;
-      animation-name: inOpacity;
-      animation-duration: 1s;
-      animation-fill-mode: both;
     }
     .home_text h1 {
       width: 100%;
@@ -45,9 +45,6 @@
       display: flex;
       gap: 18px;
       align-items: center;
-      animation-name: inOpacity;
-      animation-duration: 1s;
-      animation-fill-mode: both;
       .launchapp {
         cursor: pointer;
         background-color: #f88612;

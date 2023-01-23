@@ -9,6 +9,7 @@ import Footer from "./Footer/Footer";
 import divider from "./assets/divider.png";
 import "./Landing.scss";
 import CoomingSoon from "../ComingSoon/ComingSoon";
+import NotFound from "../NotFound/NotFound";
 
 export default function Landing() {
   return (
@@ -23,6 +24,7 @@ export default function Landing() {
       <Subscribe />
       <Footer />
       <CoomingSoon />
+      <NotFound />
     </div>
   );
 }
