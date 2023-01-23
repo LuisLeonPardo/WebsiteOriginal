@@ -9,7 +9,7 @@ export const networks = [
     net: instagram,
     href: "https://www.instagram.com/libertum_project/",
   },
-  { net: twitter, href: "https://twitter.com/liberumproject" },
+  { net: twitter, href: "https://twitter.com/libertumproject" },
   { net: github, href: "https://github.com/Libertum-Project" },
   {
     net: linkedin,

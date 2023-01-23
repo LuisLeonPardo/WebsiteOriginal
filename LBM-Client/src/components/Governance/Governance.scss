@@ -1,0 +1,216 @@
+.governance-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .gov {
+    padding-top: 40px;
+    display: flex;
+    width: 1288px;
+    justify-content: center;
+    gap: 33px;
+    overflow: hidden;
+    .first-column {
+      h1 {
+        text-align: left;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 36px;
+      }
+      .first-column-title {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+          margin-top: 18px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 25px;
+        }
+        .proposal {
+          display: flex;
+          gap: 10px;
+          h4 {
+            margin-top: 18px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: #9597a1;
+          }
+        }
+      }
+      .governance-list {
+        .sdadsa {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          width: 784px;
+          height: 620px;
+          overflow-y: scroll;
+          .governance-list-item {
+            h6 {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 13px;
+              line-height: 21px;
+              text-align: left;
+              padding-left: 36px;
+              margin: 0;
+            }
+            .governance-list-item-text {
+              display: flex;
+              justify-content: space-between;
+              h3 {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 25px;
+                width: 450px;
+                text-align: left;
+                padding-left: 24px;
+                margin: 0;
+                margin-top: 24px;
+              }
+              .executed {
+                display: flex;
+                flex-direction: column;
+                padding-right: 75px;
+                justify-content: center;
+                align-items: center;
+                img {
+                  width: 40px;
+                }
+                h5 {
+                  margin: 0;
+                  font-family: "Inter";
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 14px;
+                  line-height: 23px;
+                  margin-top: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .second-column {
+      h2 {
+        margin: 0;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: left;
+        margin-top: 54px;
+      }
+      .gov-deposit {
+        text-align: left;
+        padding: 24px;
+        h5 {
+          background: #f7931a;
+          padding: 15px 0;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 24px;
+          color: #ffffff;
+          text-align: center;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+        .voting-weight {
+          h4 {
+            margin: 0;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 23px;
+            color: #9597a1;
+          }
+          h3 {
+            margin: 0;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+          }
+        }
+        .total-locked {
+          h4 {
+            margin: 0;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 23px;
+            color: #9597a1;
+            margin-top: 35px;
+          }
+          .gov-coin {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            h3 {
+              margin: 0;
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+      .gov-recommendations {
+        text-align: left;
+        padding-left: 24px;
+        h4 {
+          margin: 0;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 23px;
+          margin-bottom: 20px;
+        }
+        h5 {
+          margin: 0;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 21px;
+          margin-top: 10px;
+          display: flex;
+          h6 {
+            margin: 0 3px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 21px;
+            color: #F7931A;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sdadsa::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}

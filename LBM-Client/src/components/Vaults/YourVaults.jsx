@@ -26,19 +26,26 @@ function YourVaults({ shortName, img, stakingAPR, daily, total }) {
         <h1 className="coin-name">{shortName}</h1>
       </div>
       <div className="staking">You are staking</div>
+      <img className="icon2" src={urlImg} alt="Coin Icon" />
       <div className="stake">{staking}</div>
       <div className="stakes-grid">
-        <div>
+        <div className="stakes-text">
           <h3>LBM Staking APR</h3>
           <h4>{stakingAPR}</h4>
         </div>
-        <div>
+        <div className="stakes-text">
           <h3>Daily Emission</h3>
-          <h4>{daily}</h4>
+          <div className="numbers">
+            <img src={urlImg} alt="Coin Icon" className="icon3" />
+            <h4>{daily}</h4>
+          </div>
         </div>
-        <div>
+        <div className="stakes-text">
           <h3>Total Staked</h3>
-          <h4>{total}M</h4>
+          <div className="numbers">
+            <img src={urlImg} alt="Coin Icon" className="icon3" />
+            <h4>{total}M</h4>
+          </div>
         </div>
       </div>
       <div className="vault-buttons">

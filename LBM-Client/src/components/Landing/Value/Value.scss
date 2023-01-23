@@ -74,6 +74,7 @@
 @media screen and (max-width: 870px) {
   .value_items {
     margin-top: 30px;
+    margin-bottom: 20px;
     .value_section {
       flex-direction: column-reverse;
       .value_text {
@@ -90,7 +91,6 @@
 
 @media screen and (max-width: 500px) {
   .value_items {
-    margin-bottom: 10px;
     .value_section {
       .value_text {
         h2 {
