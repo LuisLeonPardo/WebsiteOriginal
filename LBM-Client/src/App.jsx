@@ -37,9 +37,6 @@ function App() {
       </div>
 
       <Modals state={stateModal} setStateModal={setStateModal} />
-      <div className="Modal">
-        <ConnectWallet />
-      </div>
 
       <div className="SideBar">
         <SideBarMobile />
