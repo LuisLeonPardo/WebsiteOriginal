@@ -8,7 +8,7 @@ import "./Home.scss";
 
 export default function Home() {
   return (
-    <main className="home_items">
+    <main className="home_items" name="home">
       <NavBar />
       <section className="home_section">
         <div>
