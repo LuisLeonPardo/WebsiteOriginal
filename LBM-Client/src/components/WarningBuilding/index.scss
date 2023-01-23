@@ -1,54 +1,66 @@
-.bg-warning{
-    position: fixed;
-    width: 100vw;
-    z-index: 99;
+.bg-warning {
+	position: fixed;
+	width: 100vw;
+	z-index: 99;
 }
 .warning {
-    background-color: var(--white-color);
-    width: 90%;
-    margin: auto;
-    height: 4vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+	background-color: var(--white-color);
+	width: 90%;
+	margin: auto;
+	height: 4vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
-.bandas{
-    display: flex;
-    height: 70%;
-    gap: 5px;
+.bandas {
+	display: flex;
+	height: 70%;
+	gap: 5px;
 }
-.banda{
-    width: 20px;
-    height: 100%;
+.banda {
+	width: 20px;
+	height: 100%;
 }
-.inclinacion{
-    transform: skewY(45deg);
-    transform: skewx(45deg);
+.inclinacion {
+	transform: skewY(45deg);
+	transform: skewx(45deg);
 }
-.inclinacion__invertida{
-    transform: skewY(-45deg);
-    transform: skewx(-45deg);
+.inclinacion__invertida {
+	transform: skewY(-45deg);
+	transform: skewx(-45deg);
 }
-.banda__negra{
-    background: #363636;
-    animation: shadowBlack 2s infinite;
+.banda__negra {
+	background: #363636;
+	animation: shadowBlack 2s infinite;
 }
-.banda__amarilla{
-    background: #FFCC00;
-    animation: shadowYellow 2s infinite;
+.banda__amarilla {
+	background: #ffcc00;
+	animation: shadowYellow 2s infinite;
 }
-.titulo{
-    font-size: 25px;
-    font-weight: 700;
+.titulo {
+	font-size: 25px;
+	font-weight: 700;
 }
 
 @keyframes shadowBlack {
-    0%{box-shadow: 2px 2px 2px 2px rgb(54 54 54 / 0.25)}
-    50%{box-shadow: none}
-    100%{box-shadow: 2px 2px 2px 2px rgb(54 54 54 / 0.25)}
+	0% {
+		box-shadow: 2px 2px 2px 2px rgb(54 54 54 / 0.25);
+	}
+	50% {
+		box-shadow: none;
+	}
+	100% {
+		box-shadow: 2px 2px 2px 2px rgb(54 54 54 / 0.25);
+	}
 }
 @keyframes shadowYellow {
-    0%{box-shadow: none}
-    50%{box-shadow: 1px 1px 1px 1px rgb(255 204 0 / 0.25)}
-    100%{box-shadow: none}
+	0% {
+		box-shadow: none;
+	}
+	50% {
+		box-shadow: 1px 1px 1px 1px rgb(255 204 0 / 0.25);
+	}
+	100% {
+		box-shadow: none;
+	}
 }
