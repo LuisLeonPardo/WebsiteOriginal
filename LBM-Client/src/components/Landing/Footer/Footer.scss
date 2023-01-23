@@ -46,7 +46,7 @@
         color: #1a1a1a;
         li {
           padding-left: 27px;
-          &:hover {
+          .footer_li:hover {
             color: #f88612;
             cursor: pointer;
           }
