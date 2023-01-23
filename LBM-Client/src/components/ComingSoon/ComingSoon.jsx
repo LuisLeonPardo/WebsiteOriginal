@@ -29,7 +29,6 @@ export default function CoomingSoon() {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 1 }}
-                onClick={() => navigate(-1)}
               >
                 Subscribe
               </motion.button>
@@ -40,6 +39,7 @@ export default function CoomingSoon() {
           className="cs_back"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 1 }}
+          onClick={() => navigate(-1)}
         >
           <FaAngleLeft />
         </motion.button>

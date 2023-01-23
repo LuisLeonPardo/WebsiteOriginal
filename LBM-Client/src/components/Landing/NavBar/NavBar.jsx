@@ -16,7 +16,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Slide direction={"down"} delay={-300} triggerOnce={"true"}>
+      <Slide direction={"down"} delay={-300}>
         <nav className="nav_items">
           <img src={logo} className="logo" />
           <ul className="menu_items">
