@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 
     .header {
         margin-top: 3%;
@@ -88,6 +89,7 @@
 
         .colSwitch {
             margin-right: 5%;
+            z-index: 9999999;
         }
     }
 

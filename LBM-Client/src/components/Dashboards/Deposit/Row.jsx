@@ -5,13 +5,7 @@ import LTC from "./assets/LTC.svg"
 import ETH from "./assets/ETH.svg"
 import ModalDeposit from "../ModalDeposit/ModalDeposit";
 
-export default function Row({img,name, amount, value}) {
-
-    const [render , setRender] = useState(value)
-    const [active, setActive] =useState({
-        supply: false,
-        borrow: false
-    });
+export default function Row({img,name, amount, id, render, setRender}) {
 
    var urlImg
 
@@ -26,11 +20,10 @@ export default function Row({img,name, amount, value}) {
     }
 
     const handleClick = () => {
-        setRender(!render)
-    };
-
-    const handleButton = (e) => {
-        e.preventDefault()
+        if(render===id){
+            setRender(NaN)
+        }
+        else setRender(id)
     };
 
     return (
@@ -39,10 +32,10 @@ export default function Row({img,name, amount, value}) {
                     <img src={urlImg} />
                     <p>{name}</p>
                 </div>
-                {render && <div className="innerRow3" onClick={handleClick}>
+                {(render!==id) && <div className="innerRow3" onClick={handleClick}>
                     <p>{amount}</p>
                 </div>}
-                {!render &&<div className="innerRow">                      
+                {(render===id) &&<div className="innerRow">                      
                     <ModalDeposit name='Supply'/>
                     <ModalDeposit name='Withdraw'/>
                 </div>}
