@@ -21,6 +21,7 @@ import { mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
 import {
   AstarNetworkChain,
   BinanceSmartChain,
+  BinanceTestNet,
   avalancheChain,
 } from "./config/web3/chains/chains";
 import {
@@ -34,7 +35,7 @@ import {
 } from "@rainbow-me/rainbowkit/wallets";
 
 const { chains, provider } = configureChains(
-  [BinanceSmartChain, mainnet, polygon, optimism, arbitrum,avalancheChain, AstarNetworkChain],
+  [BinanceSmartChain,BinanceTestNet, mainnet, polygon, optimism, arbitrum,avalancheChain, AstarNetworkChain],
   [
     alchemyProvider({
       apiKey: "ePeu2ooFujhSUo_Pqf5NS2uVDnz6ZiOO",
