@@ -2,7 +2,7 @@
   display: none;
 }
 
-.modal-withdrawal-container {
+.modal-stake-form {
   position: absolute;
   display: flex;
   height: 100vh;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     width: 440px;
-    height: 400px;
+    height: 391px;
     background: #ffffff;
     border-radius: 25px;
     justify-content: space-around;
@@ -23,7 +23,7 @@
     .top-modal {
       display: flex;
       h4 {
-        padding-top: 5px;
+        padding-top: 15px;
         font-family: "Inter";
         font-style: normal;
         font-weight: 700;
@@ -36,45 +36,53 @@
         width: 7px;
         height: 7px;
         left: 110px;
-        top: 13px;
+        top: 15px;
         cursor: pointer;
       }
     }
     .mid-modal {
-      padding-top: 5px;
+      background-color: #f9f9f9;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 1px 8px;
+      width: 365px;
+      height: 48px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 279px;
-      height: 34px;
-      h3 {
-        display: flex;
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        width: 135px;
-        height: 34px;
-        justify-content: center;
-        align-items: center;
-        color: #000000;
+      img {
+        width: 24px;
+        height: 24px;
       }
-      .withdrawal-button {
+      .container {
+        display: flex;
+        align-items: center;
+      }
+      input {
+        padding-left: 6px;
+        border: none;
+        width: 101px;
+        height: 28px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 28.5px;
+        background-color: #f9f9f9;
+      }
+      .max-button {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 103px;
-        height: 34px;
-        font-size: 14px;
-        color: #f7931a;
-        background-color: #f9f9f9;
+        width: 75px;
+        height: 35px;
+        font-size: 12px;
+        color: #ffffff;
+        background-color: #f7931a;
         &:focus {
           outline: none;
         }
         &:hover {
-          background-color: #f7931a;
-          color: white;
+          background-color: white;
+          color: #f7931a;
         }
       }
     }

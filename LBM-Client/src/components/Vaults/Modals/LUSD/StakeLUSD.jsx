@@ -1,10 +1,9 @@
 import React from "react";
-import "./StakeLBM.scss";
-import LBM from "../assets/LBM-icon.svg";
-import LUSD from "../assets/LUSD-icon.svg";
-import close from "../assets/Close-icon.svg";
+import "./StakeLUSD.scss";
+import LUSD from "../../assets/LUSD-icon.svg";
+import close from "../../assets/Close-icon.svg";
 
-function LBMModals({ state, setStateModal }) {
+function StakeLUSD({ state, setStateModal }) {
   function changeState() {
     setStateModal(false);
   }
@@ -19,13 +18,13 @@ function LBMModals({ state, setStateModal }) {
             onClick={changeState}
             className="close"
           />
-          <img src={LBM} alt="LBM icon" />
+          <img src={LUSD} alt="LUSD icon" />
         </div>
-        <h3>To stake LBM to this vault, you need to enable it first</h3>
+        <h3>To stake LUSD to this vault, you need to enable it first</h3>
         <button onClick={changeState}>Enable</button>
       </div>
     </div>
   );
 }
 
-export default LBMModals;
+export default StakeLUSD;

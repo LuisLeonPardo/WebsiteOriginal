@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "../Slider/Slider";
 import VertSlider from "../VertSlider/VertSlider";
 import Mint from "../Mint/Mint";
@@ -8,6 +8,13 @@ import "./Dash.scss";
 import SupplyMarket from "../SupplyMarket/SupplyMarket";
 
 function Dash({setStateModal}) {
+  const [active, setActive] = useState('Supply')
+
+  const handleClick = (e) => {
+    setActive(e.target.name)
+  }
+
+
   return (
 
     <div className="general">
@@ -33,10 +40,10 @@ function Dash({setStateModal}) {
       <div className="markets">
         <h2>Markets</h2>
         <div className="buttons">
-          <button className="button">Supply</button>
-          <button className="button">Borrow</button>
+          <button className={(active==='Supply')? 'buttonOn' :'buttonOff'} name='Supply' onClick={handleClick}>Supply</button>
+          <button className={(active==='Withdraw')? 'buttonOn' :'buttonOff'} name='Withdraw' onClick={handleClick}>Borrow</button>
         </div>
-        <SupplyMarket/>
+        <SupplyMarket active={active}/>
       </div>
       </div>
     </div>

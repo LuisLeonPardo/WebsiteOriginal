@@ -1,7 +1,7 @@
 import React from "react";
 import "./WithdrawalLBM.scss";
-import LBM from "../assets/LBM-icon.svg";
-import close from "../assets/Close-icon.svg";
+import LBM from "../../assets/LBM-icon.svg";
+import close from "../../assets/Close-icon.svg";
 
 function WithdrawalLBM({ state, setStateModal }) {
   function changeState() {
@@ -17,7 +17,7 @@ function WithdrawalLBM({ state, setStateModal }) {
         </div>
         <div className="mid-modal">
           <button className="withdrawal-button">Withdrawal</button>
-          <h3>Request Withdrawal</h3>
+          <button className="request-button">Request Withdrawal</button>
         </div>
 
         <div className="bottom-modal">

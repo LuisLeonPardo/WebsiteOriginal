@@ -4,11 +4,13 @@ import BTC from "./assets/BTC.svg"
 import LTC from "./assets/LTC.svg"
 import ETH from "./assets/ETH.svg"
 import Switch from "react-switch"
+import ModalDeposit from "../ModalDeposit/ModalDeposit"
 
-export default function Card({img, name , amount}) {
+export default function Card({img, coin , amount}) {
     const [toggle , handleToggle] = useState(false);
 
-    const handleToggleChange = () => {
+    const handleToggleChange = (e) => {
+        e.stopPropagation();
         handleToggle(!toggle)
     }
 
@@ -28,7 +30,7 @@ export default function Card({img, name , amount}) {
         <div className="cardSupplyMarket">
             <div className="header">
                 <img src={urlImg} alt='img'></img>
-                <h1>{name}</h1>
+                <h1>{coin}</h1>
             </div>
             <div className="line"/>
             <div className="body">
@@ -38,16 +40,18 @@ export default function Card({img, name , amount}) {
                 </div>
                 <div className="colSwitch">
                     <h4>Colateral</h4>
-                    <Switch
-                    checked={toggle} 
-                    onChange={handleToggleChange}
-                    onColor="#F7931A"
-                    uncheckedIcon={false}
-                    checkedIcon={false}
-                    width={44}
-                    height={22}
-                    handleDiameter={18}
+                    <div onClick={(e) => handleToggleChange(e)}>
+                        <Switch
+                        checked={toggle} 
+                        onChange={() => {}}
+                        onColor="#F7931A"
+                        uncheckedIcon={false}
+                        checkedIcon={false}
+                        width={44}
+                        height={22}
+                        handleDiameter={18}
                     />
+                    </div>
                 </div>
             </div>
             
