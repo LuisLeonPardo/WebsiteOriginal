@@ -3,8 +3,9 @@ import { useState } from "react";
 import data from "./data.json"
 import Card from "./Card"
 import "./SupplyMarket.scss";
+import ModalDepositMobile from "../ModalDeposit/ModalDepositMobile"
 
-function SupplyMarket() {
+function SupplyMarket({active}) {
     const [info , setInfo] = useState()
 
     useEffect(()=> {
@@ -16,11 +17,12 @@ function SupplyMarket() {
             <div>
             {info && info.data.map((el,index) =>(
             
-             <Card
+             <ModalDepositMobile
              key={index}
              name = {el.name}
              img = {el.img}
              amount = {el.amount}
+             active = {active}
              />
             )
              )}

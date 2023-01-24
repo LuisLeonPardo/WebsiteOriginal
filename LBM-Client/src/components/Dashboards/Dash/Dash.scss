@@ -1,10 +1,12 @@
 $breakpoints: (
     xs: 750px,
     sm: 900px,
-    md: 1200px,
+    md: 1300px,
     lg: 1600px,
-    xlg: 1800px,
-    lgh: 750px
+    smh: 680px,
+    mdh: 780px,
+    lgh: 880px,
+    xlgh: 1020px
 );
 
 @mixin media-down($breakpoint) {
@@ -28,6 +30,7 @@ $breakpoints: (
 .general {
     width: 100vw;
     height: 100vh;
+    min-height: 550px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,20 +43,28 @@ $breakpoints: (
     align-items: center;
     width: 1357px;
     top: 50px;
-    
-    @include media-down(xlg) {
-        zoom: 85%;
-    }
-    
-    @include media-down(lg) {
-        zoom: 75%;
-    }
 
-    @include height-down(lgh) {
-        zoom: 60%;
+    @include media-down(lg) {
+        zoom: 85%;
     }
 
     @include media-down(md) {
+        zoom: 75%;
+    }
+
+    @include height-down(xlgh) {
+        zoom: 85%;
+    }
+
+    @include height-down(lgh) {
+        zoom: 75%;
+    }
+
+    @include height-down(mdh) {
+        zoom: 65%;
+    }
+
+    @include height-down(smh) {
         zoom: 55%;
     }
 
@@ -70,6 +81,7 @@ $breakpoints: (
         justify-content: space-evenly;
         width: 85%;
         height: 100%;
+        min-height: 650px;
         top: 0px;
     }
     
@@ -136,7 +148,7 @@ $breakpoints: (
 
 .markets {
     position: absolute;
-    top: 100vh;
+    top: max(650px,100vh);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -166,7 +178,7 @@ $breakpoints: (
         width: 100%;
         justify-content: space-between;
 
-        .button {
+        .buttonOff {
             display: flex;
             flex-direction: row;
             align-items: flex-start;
@@ -180,11 +192,22 @@ $breakpoints: (
             background-color: transparent;
             color:#9597A1;
             border-radius: 8px;
+        }
 
-            &:hover {
-                background-color: #FFF1F2;;
-                color: #F7931A;
-            }
+        .buttonOn {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            width: 175.2px;
+            height: 50px;
+            border-radius: 8px;
+            background-color: #FFF1F2;;
+            color: #F7931A;
+
         }
     }
 }
