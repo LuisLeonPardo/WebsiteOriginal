@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { JackInTheBox } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import { FaAngleLeft } from "react-icons/fa";
@@ -8,6 +8,27 @@ import { networks } from "../Landing/networks";
 
 export default function CoomingSoon() {
   const navigate = useNavigate();
+  const [input, setInput] = useState("");
+  const [error, setError] = useState(undefined);
+
+  const handleInput = (e) => {
+    setInput(e.target.value);
+    setError(emailValidation(input));
+  };
+
+  const emailValidation = (value) => {
+    return /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i.test(
+      value
+    )
+      ? true
+      : false;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Gracias");
+  };
+
   return (
     <main className="cs_items">
       <section className="cs_section">
@@ -24,11 +45,14 @@ export default function CoomingSoon() {
         </div>
         <div className="cs_form">
           <JackInTheBox direction={"top-left"} triggerOnce={"true"}>
-            <form>
-              <input type="text" placeholder="Name" />
+            <form onSubmit={handleSubmit}>
+              <input onChange={handleInput} type="text" placeholder="Email" />
+              {error == false && <span>*Direccion de email incorrecta</span>}
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 1 }}
+                type="submit"
+                disabled={!error}
               >
                 Subscribe
               </motion.button>

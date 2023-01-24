@@ -40,6 +40,7 @@
     .subscribe_form {
       margin: 0 auto;
       form {
+        position: relative;
         display: flex;
         gap: 10px;
         input {
@@ -50,10 +51,9 @@
           width: 260px;
           height: 48px;
           font-size: 16px;
-          color: #f88612;
           font-family: "Inter";
           font-style: normal;
-          padding-left: 10px;
+          padding-left: 20px;
           &:focus {
             border: none;
             outline: none;
@@ -72,6 +72,13 @@
             border: none;
             outline: none;
           }
+        }
+        span {
+          position: absolute;
+          top: 100%;
+          margin-left: 20px;
+          font-size: 10px;
+          color: red;
         }
       }
     }
