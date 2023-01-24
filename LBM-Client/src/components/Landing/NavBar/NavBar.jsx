@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Slide } from "react-awesome-reveal";
+import { Link } from "react-scroll";
 
 import logo from "../assets/logo.svg";
 import cross from "./assets/cross.svg";
@@ -7,6 +8,7 @@ import home from "./assets/home.svg";
 import whitepaper from "./assets/whitepaper.svg";
 import contacts from "./assets/contacts.svg";
 import bepart from "./assets/bepart.svg";
+import pdf from "../assets/LBM-whitepaper.pdf";
 import { networks } from "../networks";
 import "./NavBar.scss";
 
@@ -21,16 +23,45 @@ export default function NavBar() {
           <img src={logo} className="logo" />
           <ul className="menu_items">
             <li className="menu-li_items">
-              <a className="menu-a_items">Home</a>
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                className="menu-a_items"
+              >
+                Home
+              </Link>
             </li>
             <li className="menu-li_items">
-              <a className="menu-a_items">Whitepaper</a>
+              <a
+                href={pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="LBM-whitepaper.pdf"
+                className="menu-a_items"
+              >
+                Whitepaper
+              </a>
             </li>
             <li className="menu-li_items">
-              <a className="menu-a_items">Contacts</a>
+              <Link
+                to="subscribe"
+                smooth={true}
+                duration={1000}
+                className="menu-a_items"
+              >
+                Contacts
+              </Link>
             </li>
             <li className="menu-li_items">
-              <a className="menu-a_items">I want to be part</a>
+              <a
+                href="https://discord.com/invite/cAB2MKRw7b"
+                target="_blank"
+                rel="noreferrer"
+                className="menu-a_items"
+              >
+                I want to be part
+              </a>
             </li>
           </ul>
 

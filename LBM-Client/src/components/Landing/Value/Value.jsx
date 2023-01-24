@@ -8,12 +8,12 @@ export default function Value() {
   return (
     <main className="value_items">
       <section className="value_section">
-        <Slide direction={"left"}>
+        <Slide direction={"left"} triggerOnce={"true"}>
           <div className="value_image">
             <img src={mobile} />
           </div>
         </Slide>
-        <Slide direction={"right"}>
+        <Slide direction={"right"} triggerOnce={"true"}>
           <div className="value_text">
             <div className="value-text_item">
               <h2>Creativity & Technology</h2>

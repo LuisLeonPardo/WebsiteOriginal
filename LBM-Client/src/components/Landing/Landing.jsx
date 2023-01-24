@@ -1,5 +1,4 @@
 import React from "react";
-
 import Home from "./Home/Home";
 import Protocol from "./Protocol/Protocol";
 import Services from "./Services/Services";
@@ -11,7 +10,7 @@ import "./Landing.scss";
 
 export default function Landing() {
   return (
-    <>
+    <div>
       <Home />
       <Protocol />
       <img src={divider} className="divider" />
@@ -21,6 +20,6 @@ export default function Landing() {
       <img src={divider} className="divider" />
       <Subscribe />
       <Footer />
-    </>
+    </div>
   );
 }

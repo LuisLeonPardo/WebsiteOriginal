@@ -6,8 +6,8 @@ import "./Subscribe.scss";
 
 export default function Subscribe() {
   return (
-    <main className="subscribe_items">
-      <JackInTheBox direction={"top-left"}>
+    <main name="subscribe" className="subscribe_items">
+      <JackInTheBox direction={"top-left"} triggerOnce={"true"}>
         <section className="subscribe_section">
           <div className="subscribe_text">
             <h2>Creating opportunities where none existed</h2>

@@ -1,4 +1,5 @@
 import Landing from "./components/Landing/Landing";
+import NotFound from "./components/NotFound/NotFound";
 // import Dashboard from "./components/Dashboards/Dashboard";
 import "./App.css";
 import SideBar from "./components/SideBar/SideBar";
@@ -15,11 +16,13 @@ import Dash from "./components/Dashboards/Dash/Dash";
 import RealEstates from "./components/RealEstates";
 import React, { useEffect, useState } from "react";
 import Modals from "./components/Dashboards/Modals/Modals";
-import Governance from "./components/Governance/Governance";
 import Web3 from "web3";
+import Governance from "./components/Governance/Governance";
 import Vaults from "./components/Vaults/Vaults";
-import RealEstateDetail from "./components/RealEstateDetail";
-
+import RealEstateDetail from "./components/RealEstateDetail/index";
+import WarningBuilding from "./components/WarningBuilding";
+import SideBarMobile from "./components/SideBar/mobile/SideBarMobile";
+import CoomingSoon from "./components/ComingSoon/ComingSoon";
 function App() {
   const [stateModal, setStateModal] = useState(false);
   const { selectedIcon, walletPopUp } = useSelector(
@@ -27,6 +30,7 @@ function App() {
   );
   const AppLayout = () => (
     <>
+      <WarningBuilding />
       <div className="bgImage">
         <img src="./icons/Background.svg" />
       </div>
@@ -34,16 +38,12 @@ function App() {
       <Modals state={stateModal} setStateModal={setStateModal} />
 
       <div className="SideBar">
-        <SideBar />
+        <SideBarMobile />
       </div>
-
       <Outlet />
     </>
   );
-  useEffect(() => {
-    if (window.ethereum) {
-    }
-  });
+
   return (
     <div className="App">
       <Routes>
@@ -66,7 +66,7 @@ function App() {
             }
           />
           <Route
-            path="/realestate"
+            path={"/realestate"}
             element={
               <div className="Page">
                 <RealEstates />
@@ -74,23 +74,17 @@ function App() {
             }
           />
           <Route
-            path="/realestate/:id"
+            path={"/realestate/:id"}
             element={
               <div className="Page">
-                <RealEstateDetail />
-              </div>
-            }
-          />
-          <Route
-            path="/governance"
-            element={
-              <div className="Page">
-                <Governance />
+                <RealEstates />
               </div>
             }
           />
           {/* Dentro de este Route van todas las cosas que tengan sidebar */}
         </Route>
+        <Route path="/swap" element={<CoomingSoon />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

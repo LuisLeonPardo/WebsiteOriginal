@@ -8,34 +8,31 @@ import "./Home.scss";
 
 export default function Home() {
   return (
-    <main className="home_items">
+    <main className="home_items" name="home">
       <NavBar />
-      <Zoom>
-        <section className="home_section">
-          <div>
-            <div className="home_text">
-              <h1>
-                Borrow Assets, <span>Create Opportunities</span> and Earn
-                Interest
-              </h1>
-              <p>
-                DeFi protocol with a fluid and inclusive economy; at you
-                service, to help you on a daily basis
-              </p>
-            </div>
-            <div className="home_links">
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
-                <a href="/dashboard" className="launchapp">
-                  <span>Launch App</span> <img src={launchapp} />
-                </a>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
-                <a className="token">Add token libertum</a>
-              </motion.div>
-            </div>
+      <section className="home_section">
+        <div>
+          <div className="home_text">
+            <h1>
+              Borrow Assets, <span>Create Opportunities</span> and Earn Interest
+            </h1>
+            <p>
+              DeFi protocol with a fluid and inclusive economy; at you service,
+              to help you on a daily basis
+            </p>
           </div>
-        </section>
-      </Zoom>
+          <div className="home_links">
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+              <a href="/dashboard" className="launchapp">
+                <span>Launch App</span> <img src={launchapp} />
+              </a>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+              <a className="token">Add token libertum</a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

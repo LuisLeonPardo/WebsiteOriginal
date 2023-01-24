@@ -44,7 +44,8 @@
         gap: 10px;
         input {
           background: rgba(0, 0, 0, 0.1);
-          border: 1px solid #ffffff;
+          box-sizing: border-box;
+          border: none;
           border-radius: 15px;
           width: 260px;
           height: 48px;
