@@ -51,6 +51,28 @@ export const BinanceSmartChain = {
   testnet: false,
 };
 
+export const BinanceTestNet = {
+  id: 97,
+  name: "Binance Testnet",
+  network: "Smart Chain - Testnet",
+  iconUrl: "./icons/Binance_Logo.png",
+  iconBackground: "#fff",
+  nativeCurrency: {
+    decimals: 18,
+    name: "Binance Coin",
+    symbol: "BNB",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://data-seed-prebsc-1-s1.binance.org:8545/"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "BscScan", url: "https://testnet.bscscan.com" },
+  },
+  testnet: true,
+};
+
 export const avalancheChain = {
   id: 43_114,
   name: "Avalanche",
