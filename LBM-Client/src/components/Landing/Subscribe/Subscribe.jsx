@@ -28,31 +28,29 @@ export default function Subscribe() {
 
   return (
     <main name="subscribe" className="subscribe_items">
-      <JackInTheBox direction={"top-left"} triggerOnce={"true"}>
-        <section className="subscribe_section">
-          <div className="subscribe_text">
-            <h2>Creating opportunities where none existed</h2>
-            <p>
-              Subscribe to our newsletter to receive updates on the progress of
-              Libertum and can be part of this growth.
-            </p>
-          </div>
-          <div className="subscribe_form">
-            <form onSubmit={handleSubmit}>
-              <input onChange={handleInput} type="text" placeholder="Email" />
-              {error == false && <span>*Direccion de email incorrecta</span>}
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 1 }}
-                disabled={!error}
-              >
-                Subscribe
-              </motion.button>
-            </form>
-          </div>
-        </section>
-      </JackInTheBox>
+      <section className="subscribe_section">
+        <div className="subscribe_text">
+          <h2>Creating opportunities where none existed</h2>
+          <p>
+            Subscribe to our newsletter to receive updates on the progress of
+            Libertum and can be part of this growth.
+          </p>
+        </div>
+        <div className="subscribe_form">
+          <form onSubmit={handleSubmit}>
+            <input onChange={handleInput} type="text" placeholder="Email" />
+            {error == false && <span>*Direccion de email incorrecta</span>}
+            <motion.button
+              type="submit"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 1 }}
+              disabled={!error}
+            >
+              Subscribe
+            </motion.button>
+          </form>
+        </div>
+      </section>
     </main>
   );
 }
