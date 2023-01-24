@@ -66,10 +66,21 @@ function SideBar() {
             }
             onClick={() => dispatch(setSelectedIcon("OrdersIcon"))}
           >
-            <OrdersIcon
-              selected={selectedIcon === "OrdersIcon" ? true : false}
-            />
-            <p>Vaults</p>
+            <NavLink to={"./vaults"}>
+              <div
+                className={
+                  selectedIcon === "OrdersIcon" && Icons === style.Icons
+                    ? style.IconSelected
+                    : Icons
+                }
+                onClick={() => dispatch(selectedIcon("OrdersIcon"))}
+              >
+                <OrdersIcon
+                  selected={selectedIcon === "OrdersIcon" ? true : false}
+                />
+                <p>Vaults</p>
+              </div>
+            </NavLink>
           </div>
           <NavLink to={"./realestate"}>
             <div
@@ -142,4 +153,3 @@ function SideBar() {
 }
 
 export default SideBar;
-
