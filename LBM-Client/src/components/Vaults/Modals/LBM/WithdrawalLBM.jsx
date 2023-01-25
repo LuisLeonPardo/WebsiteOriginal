@@ -2,14 +2,51 @@ import React from "react";
 import "./WithdrawalLBM.scss";
 import LBM from "../../assets/LBM-icon.svg";
 import close from "../../assets/Close-icon.svg";
+import { useState } from "react";
 
-function WithdrawalLBM({ state, setStateModal }) {
+function WithdrawalLBM({ states, setStateModals }) {
+  const [buttonSelection, setButtonSelection] = useState({
+    withdraw: false,
+    request: false,
+  });
+
   function changeState() {
-    setStateModal(false);
+    setStateModals(false);
+  }
+
+  function openForm() {
+    setStateModals({
+      ...states,
+      withdrawallbm: false,
+      withdrawallbmrequest: true,
+    });
+  }
+
+  // function clicked(e) {
+  //   e.target.name === "withdraw"
+  //     ? setButtonSelection({
+  //         withdraw: true,
+  //         request: false,
+  //       })
+  //     : setButtonSelection({
+  //         withdraw: false,
+  //         request: true,
+  //       });
+  // }
+
+  function confirm() {
+    setStateModals({
+      ...states,
+      withdrawallbmsuccess: true,
+    });
   }
 
   return (
-    <div className={state ? "modal-withdrawal-container" : "modals-off"}>
+    <div
+      className={
+        states.withdrawallbm ? "modal-withdrawal-container" : "modals-off"
+      }
+    >
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LBM</h4>
@@ -17,7 +54,9 @@ function WithdrawalLBM({ state, setStateModal }) {
         </div>
         <div className="mid-modal">
           <button className="withdrawal-button">Withdrawal</button>
-          <button className="request-button">Request Withdrawal</button>
+          <button className="request-button" onClick={openForm}>
+            Request Withdrawal
+          </button>
         </div>
 
         <div className="bottom-modal">
@@ -27,7 +66,7 @@ function WithdrawalLBM({ state, setStateModal }) {
           </div>
           <h4 style={{ fontWeight: 700, color: "#000000" }}>100LBM</h4>
         </div>
-        <button onClick={changeState}>Confirm</button>
+        <button onClick={confirm}>Confirm</button>
       </div>
     </div>
   );

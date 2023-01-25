@@ -3,13 +3,20 @@ import "./WithdrawalLBMLocked.scss";
 import LBM from "../../assets/LBM-icon.svg";
 import close from "../../assets/Close-icon.svg";
 
-function WithdrawalLBMLocked({ state, setStateModal }) {
+function WithdrawalLBMLocked({ states, setStateModals }) {
   function changeState() {
-    setStateModal(false);
+    setStateModals(false);
   }
 
+  function confirm() {
+    setStateModals({
+      ...states,
+      withdrawallbmlocked: false,
+      withdrawallbmsuccess: true,
+    });
+  }
   return (
-    <div className={state ? "locked-modal" : "modals-off"}>
+    <div className={states.withdrawallbmlocked ? "locked-modal" : "modals-off"}>
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LBM</h4>
@@ -22,7 +29,7 @@ function WithdrawalLBMLocked({ state, setStateModal }) {
           </div>
           <h4>Locked until 26.09.22 4:18PM</h4>
         </div>
-        <button onClick={changeState}>Confirm</button>
+        <button onClick={confirm}>Confirm</button>
       </div>
     </div>
   );
