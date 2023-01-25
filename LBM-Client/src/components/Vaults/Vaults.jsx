@@ -17,26 +17,53 @@ import WithdrawalLUSDRequest from "./Modals/LUSD/WithdrawalLUSDRequest";
 import WithdrawalLUSDSuccess from "./Modals/LUSD/WithdrawalLUSDSuccess";
 import WithdrawalLUSDLocked from "./Modals/LUSD/WithdrawalLUSDLocked";
 
+//prueba-------------
+import { motion } from "framer-motion";
+import { useModal } from "../../helpers/useModal/useModal";
+//prueba-------------
+
 function Vaults() {
   const [yourInfo, setYourInfo] = useState(data.data);
-  const [stateModal, setStateModal] = useState(false);
+  const [stateModals, setStateModals] = useState({
+    stakelbm: false,
+    lbmform: false,
+    lbmsuccess: false,
+    withdrawallbm: false,
+    withdrawallbmrequest: false,
+    withdrawallbmlocked: false,
+    withdrawallbmsuccess: false,
+    stakelusd: false,
+    lusdform: false,
+    lusdsuccess: false,
+    withdrawallusd: false,
+  });
 
   return (
     <div className="general">
-      {/* <StakeLBM state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <StakeLBMForm state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <StakeLBMSuccess state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <WithdrawalLBM state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <WithdrawalLBMRequest state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <WithdrawalLBMSuccess state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <WithdrawalLBMLocked state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <StakeLUSD state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <StakeLUSDForm state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <StakeLUSDSuccess state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <WithdrawalLUSD state={stateModal} setStateModal={setStateModal} /> */}
+      <StakeLBM states={stateModals} setStateModals={setStateModals} />
+      <StakeLBMForm states={stateModals} setStateModals={setStateModals} />
+      <StakeLBMSuccess states={stateModals} setStateModals={setStateModals} />
+      <WithdrawalLBM states={stateModals} setStateModals={setStateModals} />
+      <WithdrawalLBMRequest
+        states={stateModals}
+        setStateModals={setStateModals}
+      />
+      <WithdrawalLBMSuccess
+        states={stateModals}
+        setStateModals={setStateModals}
+      />
+      <WithdrawalLBMLocked
+        states={stateModals}
+        setStateModals={setStateModals}
+      />
+      <StakeLUSD states={stateModals} setStateModals={setStateModals} />
+      <StakeLUSDForm states={stateModals} setStateModals={setStateModals} />
+      <StakeLUSDSuccess states={stateModals} setStateModals={setStateModals} />
+      <WithdrawalLUSD states={stateModals} setStateModals={setStateModals} />
       {/* <WithdrawalLUSDRequest state={stateModal} setStateModal={setStateModal} /> */}
       {/* <WithdrawalLUSDSuccess state={stateModal} setStateModal={setStateModal} /> */}
-      <WithdrawalLUSDLocked state={stateModal} setStateModal={setStateModal} />
+      {/* <WithdrawalLUSDLocked state={stateModal} setStateModal={setStateModal} /> */}
+      {/* <WithdrawalLUSD states={stateModals} setStateModals={setStateModals} /> */}
       <div className="vaults">
         {yourInfo.map((e) => (
           <YourVaults
@@ -46,7 +73,8 @@ function Vaults() {
             stakingAPR={e.stakingAPR}
             daily={e.daily}
             total={e.total}
-            setStateModal={setStateModal}
+            states={stateModals}
+            setStateModals={setStateModals}
           />
         ))}
       </div>

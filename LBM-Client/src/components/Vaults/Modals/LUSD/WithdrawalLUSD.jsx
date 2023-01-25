@@ -3,13 +3,17 @@ import "./WithdrawalLUSD.scss";
 import LUSD from "../../assets/LUSD-icon.svg";
 import close from "../../assets/Close-icon.svg";
 
-function WithdrawalLUSD({ state, setStateModal }) {
+function WithdrawalLUSD({ states, setStateModals }) {
   function changeState() {
-    setStateModal(false);
+    setStateModals(false);
   }
 
   return (
-    <div className={state ? "modal-withdrawal-container" : "modals-off"}>
+    <div
+      className={
+        states.withdrawallusd ? "modal-withdrawalLUSD-container" : "modals-off"
+      }
+    >
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LUSD</h4>

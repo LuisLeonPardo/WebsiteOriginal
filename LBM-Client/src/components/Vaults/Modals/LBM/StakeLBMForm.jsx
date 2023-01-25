@@ -3,13 +3,21 @@ import "./StakeLBMForm.scss";
 import LBM from "../../assets/LBM-icon.svg";
 import close from "../../assets/Close-icon.svg";
 
-function StakeLBMForm({ state, setStateModal }) {
+function StakeLBMForm({ states, setStateModals }) {
   function changeState() {
-    setStateModal(false);
+    setStateModals(false);
+  }
+
+  function confirm() {
+    setStateModals({
+      ...states,
+      lbmform: false,
+      lbmsuccess: true,
+    });
   }
 
   return (
-    <div className={state ? "modal-stake-form" : "modals-off"}>
+    <div className={states.lbmform ? "modal-stake-form" : "modals-off"}>
       <div className="modal">
         <div className="top-modal">
           <h4>Stake LBM</h4>
@@ -29,7 +37,7 @@ function StakeLBMForm({ state, setStateModal }) {
           </div>
           <h4 style={{ fontWeight: 700, color: "#000000" }}>100 LBM</h4>
         </div>
-        <button onClick={changeState}>Confirm</button>
+        <button onClick={confirm}>Confirm</button>
       </div>
     </div>
   );

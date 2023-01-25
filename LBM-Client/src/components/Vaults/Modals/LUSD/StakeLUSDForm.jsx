@@ -3,13 +3,20 @@ import "./StakeLUSDForm.scss";
 import LUSD from "../../assets/LUSD-icon.svg";
 import close from "../../assets/Close-icon.svg";
 
-function StakeLUSDForm({ state, setStateModal }) {
+function StakeLUSDForm({ states, setStateModals }) {
   function changeState() {
-    setStateModal(false);
+    setStateModals(false);
   }
 
+  function confirm() {
+    setStateModals({
+      ...states,
+      lusdform: false,
+      lusdsuccess: true,
+    });
+  }
   return (
-    <div className={state ? "modal-stake-form" : "modals-off"}>
+    <div className={states.lusdform ? "modal-stake-form" : "modals-off"}>
       <div className="modal">
         <div className="top-modal">
           <h4>Stake LUSD</h4>
@@ -29,7 +36,7 @@ function StakeLUSDForm({ state, setStateModal }) {
           </div>
           <h4 style={{ fontWeight: 700, color: "#000000" }}>100 LUSD</h4>
         </div>
-        <button onClick={changeState}>Confirm</button>
+        <button onClick={confirm}>Confirm</button>
       </div>
     </div>
   );

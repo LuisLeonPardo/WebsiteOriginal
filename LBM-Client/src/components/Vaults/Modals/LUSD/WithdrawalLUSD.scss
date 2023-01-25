@@ -2,15 +2,18 @@
   display: none;
 }
 
-.modal-withdrawal-container {
-  position: absolute;
+.modal-withdrawalLUSD-container {
+  position: fixed;
   display: flex;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  top: 0;
+  right: 0;
   justify-content: center;
   align-items: center;
   background-color: rgba($color: #000000, $alpha: 0.6);
-  z-index: 99999;
+  z-index: 999;
+  color: var(--black-color);
   .modal {
     display: flex;
     flex-direction: column;
@@ -20,6 +23,7 @@
     border-radius: 25px;
     justify-content: space-around;
     align-items: center;
+    position: relative;
     .top-modal {
       display: flex;
       h4 {

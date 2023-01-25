@@ -4,13 +4,13 @@ import LUSD from "../../assets/LUSD-icon.svg";
 import ok from "../../assets/Ok-tick.svg";
 import close from "../../assets/Close-icon.svg";
 
-function StakeLUSDSuccess({ state, setStateModal }) {
+function StakeLUSDSuccess({ states, setStateModals }) {
   function changeState() {
-    setStateModal(false);
+    setStateModals(false);
   }
 
   return (
-    <div className={state ? "success-modal" : "modals-off"}>
+    <div className={states.lusdsuccess ? "success-modal" : "modals-off"}>
       <div className="modal">
         <div className="top-modal">
           <img

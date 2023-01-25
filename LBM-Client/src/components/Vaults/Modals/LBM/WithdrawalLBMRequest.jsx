@@ -3,12 +3,31 @@ import "./WithdrawalLBMRequest.scss";
 import LBM from "../../assets/LBM-icon.svg";
 import close from "../../assets/Close-icon.svg";
 
-function WithdrawalLBMRequest({ state, setStateModal }) {
+function WithdrawalLBMRequest({ states, setStateModals }) {
   function changeState() {
-    setStateModal(false);
+    setStateModals(false);
   }
+
+  function withdrawBack() {
+    setStateModals({
+      ...states,
+      withdrawallbmrequest: false,
+      withdrawallbm: true,
+    });
+  }
+
+  function confirm() {
+    setStateModals({
+      ...states,
+      withdrawallbmrequest: false,
+      withdrawallbmlocked: true,
+    });
+  }
+
   return (
-    <div className={state ? "request-modal" : "modals-off"}>
+    <div
+      className={states.withdrawallbmrequest ? "request-modal" : "modals-off"}
+    >
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LBM</h4>
@@ -18,8 +37,10 @@ function WithdrawalLBMRequest({ state, setStateModal }) {
           <h3>Withdrawal request list</h3>
         </div>
         <div className="upper-buttons">
-          <button className="withdrawal-button">Withdrawal</button>
-          <button className="request-button">Request Withdrawal</button>
+          <button className="withdraw-button" onClick={withdrawBack}>
+            Withdrawal
+          </button>
+          <button className="request-button1">Request Withdrawal</button>
         </div>
         <div className="mid-modal">
           <div className="container">
@@ -43,7 +64,7 @@ function WithdrawalLBMRequest({ state, setStateModal }) {
             <h4 style={{ fontWeight: 700, color: "#000000" }}>7 days</h4>
           </div>
         </div>
-        <button className="confirm-button" onClick={changeState}>
+        <button className="confirm-button" onClick={confirm}>
           Confirm
         </button>
       </div>

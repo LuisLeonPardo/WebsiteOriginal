@@ -4,13 +4,13 @@ import LBM from "../../assets/LBM-icon.svg";
 import ok from "../../assets/Ok-tick.svg";
 import close from "../../assets/Close-icon.svg";
 
-function StakeLBMSuccess({ state, setStateModal }) {
+function StakeLBMSuccess({ states, setStateModals }) {
   function changeState() {
-    setStateModal(false);
+    setStateModals(false);
   }
 
   return (
-    <div className={state ? "success-modal" : "modals-off"}>
+    <div className={states.lbmsuccess ? "success-modal" : "modals-off"}>
       <div className="modal">
         <div className="top-modal">
           <img
