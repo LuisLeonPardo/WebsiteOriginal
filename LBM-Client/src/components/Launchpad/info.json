@@ -1,18 +1,40 @@
-{"data" : [
+{
+  "data": [
     {
-    "name" : "1",
-    "type": "IRO",
-    "state":"ended"
+      "state": "ended",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.00000"
     },
-    {"name" : "2"},
-    {"name" : "3"},
-    {"name" : "4"},
-    {"name" : "5"},
-    {"name" : "6"},
-    {"name" : "7"},
-    {"name" : "8"},
-    {"name" : "9"},
-    {"name" : "10"},
-    {"name" : "11"},
-    {"name" : "12"}
-]}
+    {
+      "state": "upcoming",
+      "type:": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type:": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.000000"
+    },
+    {
+      "state": "upcoming",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    }
+  ]
+}
