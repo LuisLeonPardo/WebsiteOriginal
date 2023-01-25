@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+.launchpad {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .mainPort {
+        height: 90%;
+        width: 78%;
+        background-color: #FFFFFF;;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        .header {
+            width: 96%;
+            height: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 2% 0%;
+
+            .title {
+                display: flex;
+                justify-content: flex-start;
+                h1 {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 22px;
+                    line-height: 20px;
+                    display: flex;
+                    align-items: center;
+                    color: #000000;
+                }
+
+            }
+
+            .interact {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+
+        }
+
+        .body {
+            height: 81%;
+            width: 75%;
+            overflow-y: scroll;
+
+            .rowLP {
+                display: flex;
+                flex-direction: row;
+                height: 75%;
+                width: 100%;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-bottom: 4%;
+            }
+        }
+
+        .body::-webkit-scrollbar {
+            display: none; /* for Chrome, Safari, and Opera */
+          }
+    }
+}
