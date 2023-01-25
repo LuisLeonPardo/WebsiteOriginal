@@ -98,6 +98,16 @@ cursor: pointer;
     line-height: 1em ;
     transition: all 2s;
 }
+.Icons:hover{
+    $color1: #e27625;
+    $color2: #f8630a;
+    color:#F4911A;
+    transition: all 0s;
+}
+.Icons:hover  p{
+ transition: all 0s;
+}
+
 .IconsNone p{
     position: absolute;
     opacity: 0;
