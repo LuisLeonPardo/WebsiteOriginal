@@ -8,11 +8,11 @@ function WithdrawalLBMLocked({ states, setStateModals }) {
     setStateModals(false);
   }
 
-  function confirm() {
+  function goBack() {
     setStateModals({
       ...states,
       withdrawallbmlocked: false,
-      withdrawallbmsuccess: true,
+      withdrawallbmrequest: true,
     });
   }
   return (
@@ -29,7 +29,7 @@ function WithdrawalLBMLocked({ states, setStateModals }) {
           </div>
           <h4>Locked until 26.09.22 4:18PM</h4>
         </div>
-        <button onClick={confirm}>Confirm</button>
+        <button onClick={goBack}>Confirm</button>
       </div>
     </div>
   );

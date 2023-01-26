@@ -8,6 +8,21 @@ function WithdrawalLUSD({ states, setStateModals }) {
     setStateModals(false);
   }
 
+  function openForm() {
+    setStateModals({
+      ...states,
+      withdrawallusd: false,
+      withdrawallusdrequest: true,
+    });
+  }
+
+  function confirm() {
+    setStateModals({
+      ...states,
+      withdrawallusdsuccess: true,
+    });
+  }
+
   return (
     <div
       className={
@@ -21,7 +36,9 @@ function WithdrawalLUSD({ states, setStateModals }) {
         </div>
         <div className="mid-modal">
           <button className="withdrawal-button">Withdrawal</button>
-          <button className="request-button">Request Withdrawal</button>
+          <button className="request-button" onClick={openForm}>
+            Request Withdrawal
+          </button>
         </div>
 
         <div className="bottom-modal">
@@ -31,7 +48,7 @@ function WithdrawalLUSD({ states, setStateModals }) {
           </div>
           <h4 style={{ fontWeight: 700, color: "#000000" }}>100LUSD</h4>
         </div>
-        <button onClick={changeState}>Confirm</button>
+        <button onClick={confirm}>Confirm</button>
       </div>
     </div>
   );

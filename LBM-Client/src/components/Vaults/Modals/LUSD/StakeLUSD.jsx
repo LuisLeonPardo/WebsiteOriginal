@@ -15,8 +15,9 @@ function StakeLUSD({ states, setStateModals }) {
     });
   }
   return (
-    <div className={states.stakelusd ? "modal-container" : "modals-off"}>
+    <div className={states.stakelusd ? "modal-container-lusd" : "modals-off"}>
       <div className="modal">
+        <h1>Stake LUSD</h1>
         <div className="top-modal">
           <img
             src={close}

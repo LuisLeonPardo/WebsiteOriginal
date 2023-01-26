@@ -17,8 +17,9 @@ function StakeLBM({ states, setStateModals }) {
   }
 
   return (
-    <div className={states.stakelbm ? "modal-container" : "modals-off"}>
+    <div className={states.stakelbm ? "modal-container-lbm" : "modals-off"}>
       <div className="modal">
+        <h1>Stake LBM</h1>
         <div className="top-modal">
           <img src={close} alt="cross" onClick={closeModal} className="close" />
           <img src={LBM} alt="LBM icon" />

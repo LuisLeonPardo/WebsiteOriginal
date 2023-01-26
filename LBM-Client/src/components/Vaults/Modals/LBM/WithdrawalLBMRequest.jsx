@@ -20,6 +20,14 @@ function WithdrawalLBMRequest({ states, setStateModals }) {
     setStateModals({
       ...states,
       withdrawallbmrequest: false,
+      withdrawallbmsuccess: true,
+    });
+  }
+
+  function openList() {
+    setStateModals({
+      ...states,
+      withdrawallbmrequest: false,
       withdrawallbmlocked: true,
     });
   }
@@ -34,7 +42,7 @@ function WithdrawalLBMRequest({ states, setStateModals }) {
           <img src={close} alt="cross" onClick={changeState} />
         </div>
         <div className="list">
-          <h3>Withdrawal request list</h3>
+          <h3 onClick={openList}>Withdrawal request list</h3>
         </div>
         <div className="upper-buttons">
           <button className="withdraw-button" onClick={withdrawBack}>
