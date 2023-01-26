@@ -47,6 +47,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className="Modal">
+        <ConnectWallet />
+      </div>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route element={<AppLayout />}>
@@ -86,7 +89,7 @@ function App() {
             path={"/launchpad"}
             element={
               <div className="Page">
-                <Launchpad/>
+                <Launchpad />
               </div>
             }
           />

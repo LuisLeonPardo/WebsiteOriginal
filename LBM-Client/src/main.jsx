@@ -20,6 +20,7 @@ import { publicProvider } from "wagmi/providers/public";
 import { mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
 import {
   AstarNetworkChain,
+  avalancheChain,
   BinanceSmartChain,
   BinanceTestNet,
   avalancheChain,
@@ -35,7 +36,16 @@ import {
 } from "@rainbow-me/rainbowkit/wallets";
 
 const { chains, provider } = configureChains(
-  [BinanceSmartChain,BinanceTestNet, mainnet, polygon, optimism, arbitrum,avalancheChain, AstarNetworkChain],
+  [
+    BinanceSmartChain,
+    BinanceTestNet,
+    mainnet,
+    polygon,
+    optimism,
+    arbitrum,
+    avalancheChain,
+    AstarNetworkChain,
+  ],
   [
     alchemyProvider({
       apiKey: "ePeu2ooFujhSUo_Pqf5NS2uVDnz6ZiOO",
