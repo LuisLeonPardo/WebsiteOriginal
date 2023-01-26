@@ -2,11 +2,6 @@ import React from "react";
 import "./Vaults.scss";
 import LBM from "./assets/LBM-icon.svg";
 import LUSD from "./assets/LUSD-icon.svg";
-//prueba-------------
-import { motion } from "framer-motion";
-import { useModal } from "../../helpers/useModal/useModal";
-import WithdrawalLUSD from "./Modals/LUSD/WithdrawalLUSD";
-//prueba-------------
 
 function YourVaults({
   shortName,
@@ -18,9 +13,7 @@ function YourVaults({
   setStateModals,
 }) {
   const staking = 0;
-  //prueba-------------
-  //const [isOpenModal, openModal, closeModal] = useModal();
-  //prueba--------------
+
   var urlImg;
 
   if (img === "LBM") {

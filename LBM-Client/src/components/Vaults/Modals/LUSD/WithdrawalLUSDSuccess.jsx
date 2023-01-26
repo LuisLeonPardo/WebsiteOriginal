@@ -4,13 +4,17 @@ import LUSD from "../../assets/LUSD-icon.svg";
 import ok from "../../assets/Ok-tick.svg";
 import close from "../../assets/Close-icon.svg";
 
-function WithdrawalLUSDSuccess({ state, setStateModal }) {
+function WithdrawalLUSDSuccess({ states, setStateModals }) {
   function changeState() {
-    setStateModal(false);
+    setStateModals(false);
   }
 
   return (
-    <div className={state ? "withdrawal-success-modal" : "modals-off"}>
+    <div
+      className={
+        states.withdrawallusdsuccess ? "withdrawal-success-modal" : "modals-off"
+      }
+    >
       <div className="modal">
         <div className="top-modal">
           <img

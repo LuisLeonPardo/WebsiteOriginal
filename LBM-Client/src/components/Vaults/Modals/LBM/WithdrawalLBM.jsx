@@ -5,11 +5,6 @@ import close from "../../assets/Close-icon.svg";
 import { useState } from "react";
 
 function WithdrawalLBM({ states, setStateModals }) {
-  const [buttonSelection, setButtonSelection] = useState({
-    withdraw: false,
-    request: false,
-  });
-
   function changeState() {
     setStateModals(false);
   }
@@ -21,18 +16,6 @@ function WithdrawalLBM({ states, setStateModals }) {
       withdrawallbmrequest: true,
     });
   }
-
-  // function clicked(e) {
-  //   e.target.name === "withdraw"
-  //     ? setButtonSelection({
-  //         withdraw: true,
-  //         request: false,
-  //       })
-  //     : setButtonSelection({
-  //         withdraw: false,
-  //         request: true,
-  //       });
-  // }
 
   function confirm() {
     setStateModals({
