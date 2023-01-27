@@ -24,11 +24,8 @@ import WarningBuilding from './components/WarningBuilding';
 import SideBarMobile from './components/SideBar/mobile/SideBarMobile';
 import CoomingSoon from './components/ComingSoon/ComingSoon';
 import Launchpad from './components/Launchpad/Launchpad';
-import CardPreview from './components/RealEstates/CardPreview';
-import db from './components/RealEstates/fakedb/db.json';
 function App() {
 	const [stateModal, setStateModal] = useState(false);
-	const splicedb = db.slice(8, 10);
 	const { selectedIcon, walletPopUp } = useSelector(
 		(state) => state.reducerCompleto
 	);
@@ -82,21 +79,6 @@ function App() {
 						element={
 							<div className="Page">
 								<RealEstates />
-							</div>
-						}
-					/>
-					<Route
-						path={'/realestate/d'}
-						element={
-							<div className="Page">
-								{splicedb.map((e) => (
-									<CardPreview
-										key={e.id}
-										image={e.image}
-										number={e.number}
-										fiveColumn={false}
-									/>
-								))}
 							</div>
 						}
 					/>
