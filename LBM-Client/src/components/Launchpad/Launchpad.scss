@@ -35,16 +35,7 @@ $breakpoints: (
       justify-content: space-between;
       margin: 2% 0%;
 
-      .title {
-        display: flex;
-        justify-content: flex-start;
-        .header {
-            width: 96%;
-            height: 10%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin: 2% 0%;
+      
 
             .title {
                 display: flex;
@@ -183,11 +174,11 @@ $breakpoints: (
                 }
 
 
-            }
+        
 
            
 
-        }
+        
       }
 
       .interact {
