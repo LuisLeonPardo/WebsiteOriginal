@@ -11,7 +11,7 @@
     },
     {
       "state": "upcoming",
-      "type:": "ICO",
+      "type": "ICO",
       "name": "Adanimals",
       "for": "826.94",
       "launched_on": "TBD",
@@ -20,7 +20,331 @@
     },
     {
       "state": "ended",
-      "type:": "IREO",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.000000"
+    },
+    {
+      "state": "upcoming",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.00000"
+    },
+    {
+      "state": "upcoming",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.000000"
+    },
+    {
+      "state": "upcoming",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    }
+    ,{
+      "state": "ended",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.00000"
+    },
+    {
+      "state": "upcoming",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.000000"
+    },
+    {
+      "state": "upcoming",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.00000"
+    },
+    {
+      "state": "upcoming",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.000000"
+    },
+    {
+      "state": "upcoming",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.00000"
+    },
+    {
+      "state": "upcoming",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.000000"
+    },
+    {
+      "state": "upcoming",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.00000"
+    },
+    {
+      "state": "upcoming",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.000000"
+    },
+    {
+      "state": "upcoming",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.00000"
+    },
+    {
+      "state": "upcoming",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.000000"
+    },
+    {
+      "state": "upcoming",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.00000"
+    },
+    {
+      "state": "upcoming",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.000000"
+    },
+    {
+      "state": "upcoming",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.00000"
+    },
+    {
+      "state": "upcoming",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.000000"
+    },
+    {
+      "state": "upcoming",
+      "type": "IREO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "Apr 28, 2022",
+      "total_raise": "400,000",
+      "token_price": "2.00000"
+    },
+    {
+      "state": "upcoming",
+      "type": "ICO",
+      "name": "Adanimals",
+      "for": "826.94",
+      "launched_on": "TBD",
+      "total_raise": "400,000",
+      "status": "TBD"
+    },
+    {
+      "state": "ended",
+      "type": "IREO",
       "name": "Adanimals",
       "for": "826.94",
       "launched_on": "Apr 28, 2022",

@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
+$breakpoints: (
+    smh: 680px
+);
+
+@mixin height-down($breakpoint) {
+    @media screen and (max-height: map-get($breakpoints, $breakpoint)){
+        @content
+    }
+};
+
 .launchpad {
     width: 100vw;
     height: 100vh;
@@ -39,16 +49,132 @@
                     color: #000000;
                 }
 
-            }
+            }   
 
             .interact {
                 width: 100%;
+                height: 78px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: center;
+
+                @include height-down(smh) {
+                    height: 50px ;
+                }
+
+                button {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 12px 15px;
+                    gap: 10px;
+                    border-radius: 14px;
+                    flex: none;
+                    order: 0;
+                    flex-grow: 0;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 0.875rem;
+                    line-height: 48px;
+                    width: 7.6%;
+                    height: 52%;
+                }
+    
+                .buttonOn {
+                    background:#F7931A;
+                    color: #FFFFFF;;
+    
+                }
+    
+                .buttonOff {
+                    background: #FFF1F2;
+                    color: #F7931A;
+                }
+
+                .dropDownOn {
+                    width: 100%;
+                    height: 100%;
+                    background: #F6F6F6;
+                    border-radius: 14px;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 14px;
+                    line-height: 48px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    color: #16161A;
+                    justify-content: space-between;
+                    cursor: pointer;
+                }
+    
+                .dropDownOff {
+                    width: 100%;
+                    height: 100%;
+                    margin-top: 1px;
+                    background: #F6F6F6;
+                    border-radius: 14px;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 14px;
+                    line-height: 48px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    color: #F7931A;;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    img {
+                        visibility: hidden;
+                    }
+                }
+    
+                .selectOn {
+                    width: 13%;
+                    height: 62%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+    
+                .selectOff {
+                    width: 13%;
+                    height: 62%;
+                    display: flex; 
+                    flex-direction: column-reverse;
+                    justify-content: flex-end;
+                }
+    
+                .search {
+                    width: 62%;
+                    height: 62%;
+                    background: rgba(22, 22, 26, 0.04);
+                    border-radius: 16px;
+                    background-image: url('./search.svg');
+                    background-repeat: no-repeat;
+                    background-position: 1.5%;
+                    padding-left: 40px;
+                }
+    
+                .refresh {
+                    width: 3.3%;
+                    height: 62%;
+                    background: rgba(22, 22, 26, 0.04);
+                    border-radius: 14px;
+                    background-image: url('./refresh.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+
             }
 
-
+           
         }
 
         .body {
