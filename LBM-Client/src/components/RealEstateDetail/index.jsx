@@ -139,14 +139,14 @@ function RealEstateDetail() {
 								src="https://res.cloudinary.com/dd7pglmrp/image/upload/v1674229299/Binance_zawmhn.svg"
 								alt="Binance"
 							/>{' '}
-							Binance (ERC-721)
+							Example ()
 						</li>
 						<li className="aside_text aside__text--semibold aside__text--gray-darker ul__li">
 							<img
 								src="https://res.cloudinary.com/dd7pglmrp/image/upload/v1674229299/BinanceFill_hbsntv.svg"
 								alt="Binance"
 							/>{' '}
-							View on Binancescan <BsArrowUpRight />{' '}
+							View on Example <BsArrowUpRight />{' '}
 						</li>
 						<li className="aside_text aside__text--semibold aside__text--gray-darker ul__li">
 							<FiEye /> Open original <BsArrowUpRight />
