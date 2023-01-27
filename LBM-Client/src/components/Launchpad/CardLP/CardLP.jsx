@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import icoBanner from "./assets/ico-banner.png";
 import icoLogo from "./assets/ico-logo.png";
 import ireoBanner from "./assets/ireo-banner.png";
@@ -124,7 +124,9 @@ export default function CardLP({
           </div>
         </section>
       </div>
-      <button className="button">See details</button>
+      <Link to="/product" className="button">
+        See details
+      </Link>
     </main>
   );
 }

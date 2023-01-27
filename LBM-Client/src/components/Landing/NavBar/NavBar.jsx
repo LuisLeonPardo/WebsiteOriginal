@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Slide } from "react-awesome-reveal";
-import { Link } from "react-scroll";
+import { Link as Scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 import logo from "../assets/logo.svg";
 import cross from "./assets/cross.svg";
@@ -23,35 +24,35 @@ export default function NavBar() {
           <img src={logo} className="logo" />
           <ul className="menu_items">
             <li className="menu-li_items">
-              <Link
+              <Scroll
                 to="home"
                 smooth={true}
                 duration={500}
                 className="menu-a_items"
               >
                 Home
-              </Link>
+              </Scroll>
             </li>
             <li className="menu-li_items">
-              <a
-                href={pdf}
+              <Link
+                to={pdf}
                 target="_blank"
                 rel="noopener noreferrer"
                 download="LBM-whitepaper.pdf"
                 className="menu-a_items"
               >
                 Whitepaper
-              </a>
+              </Link>
             </li>
             <li className="menu-li_items">
-              <Link
+              <Scroll
                 to="subscribe"
                 smooth={true}
                 duration={1000}
                 className="menu-a_items"
               >
                 Contacts
-              </Link>
+              </Scroll>
             </li>
             <li className="menu-li_items">
               <a
@@ -81,37 +82,37 @@ export default function NavBar() {
           <ul className="responsive-menu_items">
             <li className="responsive-menu-li_items">
               <img src={home} />
-              <Link
+              <Scroll
                 to="home"
                 smooth={true}
                 duration={500}
                 className="responsive-menu-a_items"
               >
                 Home
-              </Link>
+              </Scroll>
             </li>
             <li className="responsive-menu-li_items">
               <img src={whitepaper} />
-              <a
-                href={pdf}
+              <Link
+                to={pdf}
                 target="_blank"
                 rel="noopener noreferrer"
                 download="LBM-whitepaper.pdf"
                 className="responsive-menu-a_items"
               >
                 Whitepaper
-              </a>
+              </Link>
             </li>
             <li className="responsive-menu-li_items">
               <img src={contacts} />
-              <Link
+              <Scroll
                 to="subscribe"
                 smooth={true}
                 duration={1000}
                 className="responsive-menu-a_items"
               >
                 Contacts
-              </Link>
+              </Scroll>
             </li>
             <li className="responsive-menu-li_items">
               <img src={bepart} />
