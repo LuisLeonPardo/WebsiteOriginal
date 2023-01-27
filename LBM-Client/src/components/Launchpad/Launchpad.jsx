@@ -127,10 +127,6 @@ export default function Launchpad () {
                     {layout}
                 </div>
             </div>
-
-        </div>
-        <div className="body">{layout}</div>
-      </div>
     </div>
-  );
+  )
 }
