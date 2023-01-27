@@ -4,13 +4,12 @@
 .container {
   height: 605px;
   min-width: 370px;
-  box-shadow: 0px 8px 4px -1px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 16px 16px;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
   .button {
     display: flex;
     justify-content: center;
@@ -38,20 +37,19 @@
   }
   .banner {
     height: 145px;
-    border-radius: 16px 16px 0px 0px;
     position: relative;
     .logoD {
       height: 80px;
       width: 80px;
       position: absolute;
-      left: 10%;
+      left: 6%;
       bottom: -30%;
-      box-shadow: 0px 8px 4px -6px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 8px 4px -6px #00000060;
     }
   }
   .props {
     height: 251px;
-    padding: 12px 24px;
+    padding: 0px 24px;
     display: flex;
     flex-direction: column;
     .info {
@@ -60,9 +58,9 @@
         justify-content: space-between;
         font-size: 14px;
         line-height: 17px;
+        font-family: "Arial";
+        font-style: normal;
         .info_for {
-          font-family: "Arial";
-          font-style: normal;
           font-weight: 400;
           color: #9597a1;
         }
@@ -74,7 +72,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 15px;
         h3 {
+          margin-block-start: 0px;
+          margin-block-end: 0px;
           width: 84px;
           height: 26px;
           font-family: "Inter";
@@ -117,7 +118,7 @@
       .active {
         box-sizing: border-box;
         font-weight: bold;
-        border-bottom: 4px solid black;
+        border-bottom: 4px solid #000000;
       }
       .description {
         margin-top: 10px;
