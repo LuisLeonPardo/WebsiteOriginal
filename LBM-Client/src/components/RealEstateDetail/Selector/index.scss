@@ -2,11 +2,12 @@
 	display: flex;
     justify-content: space-between;
 	gap: 10px;
-    width: 50%;
+    width: 90%;
 	list-style: none;
 	padding: 5px 20px;
 	border-radius: 16px;
 	background-color: var(--modern-white);
+	margin: 20px auto;
 	.selector__li {
 		display: flex;
         align-items: center;
@@ -27,7 +28,8 @@
 }
 @media only screen and (min-width: 320px) and (max-width: 480px){
 	.selector{
-		width: 80%;
-
+		width: 100%;
+		padding: 0;
+		margin: 25px auto;
 	}
 }
