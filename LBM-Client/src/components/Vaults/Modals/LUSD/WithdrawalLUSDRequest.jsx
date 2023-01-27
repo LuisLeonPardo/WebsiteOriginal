@@ -34,7 +34,9 @@ function WithdrawalLUSDRequest({ states, setStateModals }) {
 
   return (
     <div
-      className={states.withdrawallusdrequest ? "request-modal" : "modals-off"}
+      className={
+        states.withdrawallusdrequest ? "requestlusd-modal" : "modals-off"
+      }
     >
       <div className="modal">
         <div className="top-modal">
@@ -74,6 +76,9 @@ function WithdrawalLUSDRequest({ states, setStateModals }) {
         </div>
         <button className="confirm-button" onClick={confirm}>
           Confirm
+        </button>
+        <button className="valid-button" onClick={confirm}>
+          Enter a valid amount to request
         </button>
       </div>
     </div>

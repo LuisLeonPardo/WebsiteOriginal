@@ -28,6 +28,8 @@ function WithdrawalLUSDLocked({ states, setStateModals }) {
           <div className="container">
             <img src={LUSD} alt="LUSD incon" />
             <h4 style={{ fontWeight: 700, color: "#000000" }}>100LUSD</h4>
+            <h4 className="mobile">Requestable LUSD</h4>
+            <h4 className="hidden-amount">100LUSD</h4>
           </div>
           <h4>Locked until 26.09.22 4:18PM</h4>
         </div>

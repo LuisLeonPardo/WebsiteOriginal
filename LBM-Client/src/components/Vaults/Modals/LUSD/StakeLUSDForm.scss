@@ -1,8 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+$breakpoints: (
+  mobile: 540px,
+  xs: 750px,
+  sm: 900px,
+  md: 1200px,
+  lg: 1600px,
+  lgh: 750px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
 .modals-off {
   display: none;
 }
 
-.modal-stake-form {
+.modal-stakelusd-form {
   position: absolute;
   display: flex;
   height: 100vh;
@@ -20,6 +50,11 @@
     border-radius: 25px;
     justify-content: space-around;
     align-items: center;
+    @include media-down(mobile) {
+      width: 358px;
+      height: 392px;
+      margin-top: 64px;
+    }
     .top-modal {
       display: flex;
       h4 {
@@ -30,6 +65,14 @@
         font-size: 16px;
         line-height: 24px;
         color: #000000;
+        @include media-down(mobile) {
+          height: 25px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 19px;
+          padding: 0px;
+        }
       }
       img {
         position: relative;
@@ -38,6 +81,12 @@
         left: 110px;
         top: 15px;
         cursor: pointer;
+        @include media-down(mobile) {
+          width: 16px;
+          height: 16px;
+          left: 95px;
+          top: 1px;
+        }
       }
     }
     .mid-modal {
@@ -50,6 +99,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include media-down(mobile) {
+        width: 326px;
+        height: 58px;
+        padding: 0;
+        background-color: #ffffff;
+      }
       img {
         width: 24px;
         height: 24px;
@@ -57,6 +112,9 @@
       .container {
         display: flex;
         align-items: center;
+        @include media-down(mobile) {
+          padding-left: 8px;
+        }
       }
       input {
         padding-left: 6px;
@@ -67,6 +125,9 @@
         font-weight: 700;
         line-height: 28.5px;
         background-color: #f9f9f9;
+        @include media-down(mobile) {
+          background-color: #ffffff;
+        }
       }
       .max-button {
         display: flex;
@@ -84,6 +145,9 @@
           background-color: white;
           color: #f7931a;
         }
+        @include media-down(mobile) {
+          margin-right: 8px;
+        }
       }
     }
     .bottom-modal {
@@ -92,13 +156,25 @@
       align-items: center;
       width: 366px;
       height: 73px;
+      @include media-down(mobile) {
+        width: 326px;
+        height: 24px;
+        padding-bottom: 15px;
+      }
       .container {
         display: flex;
         align-items: center;
+        @include media-down(mobile) {
+          padding-left: 8px;
+        }
       }
       img {
         width: 24px;
         height: 24px;
+        @include media-down(mobile) {
+          width: 20px;
+          height: 20px;
+        }
       }
       h4 {
         font-family: "Inter";
@@ -106,6 +182,10 @@
         font-weight: 400;
         font-size: 13px;
         margin-left: 5px;
+        @include media-down(mobile) {
+          padding-right: 11px;
+          font-size: 16px;
+        }
       }
     }
     h3 {
@@ -144,6 +224,10 @@
       &:hover {
         background-color: #f7931a;
         color: white;
+      }
+      @include media-down(mobile) {
+        width: 326px;
+        height: 50px;
       }
     }
   }

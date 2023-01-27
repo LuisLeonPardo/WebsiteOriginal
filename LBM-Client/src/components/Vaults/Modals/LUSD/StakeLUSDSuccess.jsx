@@ -10,7 +10,7 @@ function StakeLUSDSuccess({ states, setStateModals }) {
   }
 
   return (
-    <div className={states.lusdsuccess ? "success-modal" : "modals-off"}>
+    <div className={states.lusdsuccess ? "lusdsuccess-modal" : "modals-off"}>
       <div className="modal">
         <div className="top-modal">
           <img
@@ -25,8 +25,10 @@ function StakeLUSDSuccess({ states, setStateModals }) {
           <h3>Your stake was successful</h3>
           <div className="container">
             <h4>You successfully staked</h4>
-            <img src={LUSD} alt="LUSD incon" />
-            <h4>100 LUSD</h4>
+            <div className="mobile">
+              <img src={LUSD} alt="LUSD incon" />
+              <h4>100 LUSD</h4>
+            </div>
           </div>
         </div>
         <button onClick={changeState}>Confirm</button>

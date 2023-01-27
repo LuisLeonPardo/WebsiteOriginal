@@ -1,8 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+$breakpoints: (
+  mobile: 540px,
+  xs: 750px,
+  sm: 900px,
+  md: 1200px,
+  lg: 1600px,
+  lgh: 750px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
 .modals-off {
   display: none;
 }
 
-.request-modal {
+.requestlbm-modal {
   position: absolute;
   display: flex;
   height: 100vh;
@@ -20,6 +50,11 @@
     border-radius: 25px;
     justify-content: space-around;
     align-items: center;
+    @include media-down(mobile) {
+      width: 358px;
+      height: 571px;
+      margin-top: 64px;
+    }
     .top-modal {
       display: flex;
       h4 {
@@ -38,6 +73,11 @@
         left: 110px;
         top: 15px;
         cursor: pointer;
+        @include media-down(mobile) {
+          left: 85px;
+          width: 16px;
+          height: 16px;
+        }
       }
     }
     .list {
@@ -46,6 +86,10 @@
       justify-content: center;
       width: 212px;
       height: 15px;
+      @include media-down(mobile) {
+        position: relative;
+        top: 445px;
+      }
       h3 {
         display: flex;
         align-items: center;
@@ -69,15 +113,24 @@
       justify-content: center;
       width: 279px;
       height: 34px;
-      gap: 41px;
+      gap: 35px;
+      @include media-down(mobile) {
+        width: 326px;
+        height: 74px;
+        gap: 41px;
+      }
       .withdraw-button {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 103px;
         height: 34px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
         font-size: 14px;
         color: #000000;
+        margin: 0px 3px;
         padding: 0;
         background-color: white;
         &:focus {
@@ -87,14 +140,27 @@
           background-color: #f9f9f9;
           color: #f7931a;
         }
+        @include media-down(mobile) {
+          width: 159px;
+          height: 50px;
+          padding-left: 25px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 15px;
+          color: #9597a1;
+        }
       }
       .request-button1 {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 135px;
+        width: 144px;
         height: 34px;
+        font-family: "Inter";
+        font-style: normal;
         font-size: 14px;
+        font-weight: 500;
         color: #f7931a;
         padding: 0;
         background-color: #f9f9f9;
@@ -104,6 +170,12 @@
         &:hover {
           background-color: #f7931a;
           color: white;
+        }
+        @include media-down(mobile) {
+          width: 159px;
+          height: 74px;
+          padding: 0;
+          margin: 0px 3px;
         }
       }
     }
@@ -117,9 +189,18 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include media-down(mobile) {
+        width: 326px;
+        height: 58px;
+        padding: 0;
+        background: #ffffff;
+      }
       img {
         width: 24px;
         height: 24px;
+        @include media-down(mobile) {
+          padding-left: 16px;
+        }
       }
       .container {
         display: flex;
@@ -134,6 +215,9 @@
         font-weight: 700;
         line-height: 28.5px;
         background-color: #f9f9f9;
+        @include media-down(mobile) {
+          background: #ffffff;
+        }
       }
       .max-button {
         display: flex;
@@ -151,6 +235,9 @@
           background-color: white;
           color: #f7931a;
         }
+        @include media-down(mobile) {
+          margin-right: 13px;
+        }
       }
     }
     .requestable-container {
@@ -164,6 +251,15 @@
       border: 1px solid #e5e7eb;
       border-radius: 12px;
       padding: 20px 12px;
+      @include media-down(mobile) {
+        width: 326px;
+        height: 150px;
+        background: #ffffff;
+        border: none;
+        padding: 0;
+        margin: 0px 0px 45px 10px;
+        gap: 25px;
+      }
     }
     .bottom-modal {
       display: flex;
@@ -171,13 +267,27 @@
       align-items: center;
       width: 366px;
       height: 35px;
+      @include media-down(mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 326px;
+        height: 60px;
+      }
       .container {
         display: flex;
         align-items: center;
+        @include media-down(mobile) {
+          padding-left: 8px;
+        }
       }
       img {
         width: 24px;
         height: 24px;
+        @include media-down(mobile) {
+          width: 20px;
+          height: 20px;
+        }
       }
       h4 {
         font-family: "Inter";
@@ -185,6 +295,11 @@
         font-weight: 400;
         font-size: 13px;
         margin-left: 5px;
+        @include media-down(mobile) {
+          font-size: 16px;
+          margin: 0;
+          padding-left: 5px;
+        }
       }
     }
     h3 {
@@ -212,6 +327,9 @@
     }
 
     .confirm-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 20px;
       width: 366px;
       height: 64px;
@@ -224,6 +342,33 @@
       &:hover {
         background-color: #f7931a;
         color: white;
+      }
+      @include media-down(mobile) {
+        display: none;
+      }
+    }
+    .valid-button {
+      display: none;
+      @include media-down(mobile) {
+        display: flex;
+        position: relative;
+        bottom: 40px;
+        align-items: center;
+        justify-content: center;
+        width: 326px;
+        height: 50px;
+        color: #f7931a;
+        font-size: 14px;
+        font-weight: 700;
+        background-color: #fff1f2;
+        margin-bottom: 25px;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background-color: #f7931a;
+          color: white;
+        }
       }
     }
   }

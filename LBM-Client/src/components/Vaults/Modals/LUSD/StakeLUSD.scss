@@ -53,6 +53,7 @@ $breakpoints: (
     @include media-down(mobile) {
       width: 358px;
       height: 307px;
+      margin-top: 64px;
     }
     h1 {
       display: none;
