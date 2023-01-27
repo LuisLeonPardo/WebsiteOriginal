@@ -1,10 +1,11 @@
+import { useState } from "react";
+
 import icoBanner from "./assets/ico-banner.png";
 import icoLogo from "./assets/ico-logo.png";
 import ireoBanner from "./assets/ireo-banner.png";
 import ireoLogo from "./assets/ireo-logo.png";
 import builtOn from "./assets/built-on.svg";
 import "./CardLP.scss";
-import { useState } from "react";
 
 export default function CardLP({
   state,
@@ -18,15 +19,19 @@ export default function CardLP({
   description,
 }) {
   const [details, setDetails] = useState("offerings");
+  // Hardcodeo para diferenciar
   const banner = type === "ICO" ? icoBanner : ireoBanner;
   const logo = type === "ICO" ? icoLogo : ireoLogo;
+
+  const [progress, setProgress] = useState(70);
+
   return (
-    <div className="container">
-      <div className="banner" style={{ backgroundImage: `url(${banner})` }}>
+    <main className="container">
+      <header className="banner" style={{ backgroundImage: `url(${banner})` }}>
         <img src={logo} className="logoD" />
-      </div>
+      </header>
       <div className="props">
-        <div className="info">
+        <section className="info">
           <div className="info_title">
             <h3>{name}</h3>
             <span>
@@ -38,23 +43,36 @@ export default function CardLP({
             <span className="info_for">For</span>
             <span className="info_per">{per}K</span>
           </div>
-          <div>barra progreso</div>
-        </div>
-        <div className="details">
+          <div
+            style={{
+              marginTop: "15px",
+              width: "100%",
+              height: "8px",
+              background: "gray",
+              borderRadius: "12px",
+            }}
+          >
+            <div
+              style={{
+                width: `${progress}%`,
+                background: "#18DF8B",
+                height: "8px",
+                borderRadius: "12px",
+              }}
+            ></div>
+          </div>
+        </section>
+        <section className="details">
           <div>
             <span
               onClick={() => setDetails("offerings")}
-              className={`menu_item ${
-                details === "offerings" && `active menu_item`
-              }`}
+              className={`menu_item ${details === "offerings" && "active"}`}
             >
               Offerings
             </span>
             <span
               onClick={() => setDetails("description")}
-              className={`menu_item ${
-                details === "description" && `active menu_item`
-              }`}
+              className={`menu_item ${details === "description" && "active"}`}
             >
               Description
             </span>
@@ -104,9 +122,9 @@ export default function CardLP({
               </div>
             )}
           </div>
-        </div>
+        </section>
       </div>
-      <div className="button">See details</div>
-    </div>
+      <button className="button">See details</button>
+    </main>
   );
 }

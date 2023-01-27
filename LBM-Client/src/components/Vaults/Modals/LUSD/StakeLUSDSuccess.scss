@@ -1,8 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+$breakpoints: (
+  mobile: 540px,
+  xs: 750px,
+  sm: 900px,
+  md: 1200px,
+  lg: 1600px,
+  lgh: 750px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
 .modals-off {
   display: none;
 }
 
-.success-modal {
+.lusdsuccess-modal {
   position: absolute;
   display: flex;
   height: 100vh;
@@ -20,11 +50,19 @@
     border-radius: 25px;
     justify-content: space-between;
     align-items: center;
+    @include media-down(mobile) {
+      width: 358px;
+      height: 417px;
+      margin-top: 64px;
+    }
     .top-modal {
       display: flex;
       flex-direction: column;
       padding-top: 70px;
       align-items: center;
+      @include media-down(mobile) {
+        padding-top: 50px;
+      }
       .close {
         position: relative;
         width: 16px;
@@ -32,6 +70,10 @@
         left: 175px;
         bottom: 35px;
         cursor: pointer;
+        @include media-down(mobile) {
+          left: 145px;
+          bottom: 25px;
+        }
       }
       img {
         width: 78px;
@@ -42,13 +84,34 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      @include media-down(mobile) {
+        padding-bottom: 40px;
+      }
       .container {
         display: flex;
         align-items: center;
         gap: 4px;
+        @include media-down(mobile) {
+          flex-direction: column;
+          width: 319px;
+        }
+        .mobile {
+          display: flex;
+          align-items: center;
+          @include media-down(mobile) {
+            display: flex;
+            align-items: center;
+            height: 22px;
+          }
+        }
         img {
           width: 24px;
           height: 24px;
+          padding-right: 2px;
+          @include media-down(mobile) {
+            width: 16px;
+            height: 16px;
+          }
         }
         h4 {
           font-family: "Raleway";
@@ -57,6 +120,15 @@
           font-size: 18px;
           line-height: 23px;
           color: #828892;
+          @include media-down(mobile) {
+            font-family: "Inter";
+            font-style: normal;
+            line-height: 22px;
+            margin: 0;
+            font-weight: 400;
+            font-size: 20px;
+            color: #374151;
+          }
         }
       }
       h3 {
@@ -70,6 +142,11 @@
         color: #000000;
         width: 305px;
         height: 22px;
+        @include media-down(mobile) {
+          font-size: 22px;
+          font-weight: 700;
+          color: #374151;
+        }
       }
     }
     button {
@@ -84,6 +161,11 @@
       &:hover {
         background-color: #f7931a;
         color: white;
+      }
+      @include media-down(mobile) {
+        width: 326px;
+        height: 50px;
+        margin: 10px 0px 20px;
       }
     }
   }

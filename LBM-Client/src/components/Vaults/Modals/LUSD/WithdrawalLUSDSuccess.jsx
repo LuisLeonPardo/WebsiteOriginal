@@ -28,9 +28,13 @@ function WithdrawalLUSDSuccess({ states, setStateModals }) {
         <div className="mid-modal">
           <h3>Your withdrawal was successful</h3>
           <div className="container">
+            <h4 className="wth-mobile">You successfully withdrew</h4>
             <h4>You successful requested a withdrawal of</h4>
-            <img src={LUSD} alt="LUSD incon" />
-            <h4>100LUSD</h4>
+            <div className="mobile">
+              <img src={LUSD} alt="LUSD incon" />
+              <h4 className="wth-mobile">100 LBM</h4>
+              <h4>100LUSD</h4>
+            </div>
           </div>
         </div>
         <button onClick={changeState}>Confirm</button>

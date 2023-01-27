@@ -81,19 +81,48 @@ export default function NavBar() {
           <ul className="responsive-menu_items">
             <li className="responsive-menu-li_items">
               <img src={home} />
-              <a className="responsive-menu-a_items">Home</a>
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                className="responsive-menu-a_items"
+              >
+                Home
+              </Link>
             </li>
             <li className="responsive-menu-li_items">
               <img src={whitepaper} />
-              <a className="responsive-menu-a_items">Whitepaper</a>
+              <a
+                href={pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="LBM-whitepaper.pdf"
+                className="responsive-menu-a_items"
+              >
+                Whitepaper
+              </a>
             </li>
             <li className="responsive-menu-li_items">
               <img src={contacts} />
-              <a className="responsive-menu-a_items">Contacts</a>
+              <Link
+                to="subscribe"
+                smooth={true}
+                duration={1000}
+                className="responsive-menu-a_items"
+              >
+                Contacts
+              </Link>
             </li>
             <li className="responsive-menu-li_items">
               <img src={bepart} />
-              <a className="responsive-menu-a_items">I want to be part</a>
+              <a
+                href="https://discord.com/invite/cAB2MKRw7b"
+                target="_blank"
+                rel="noreferrer"
+                className="responsive-menu-a_items"
+              >
+                I want to be part
+              </a>
             </li>
           </ul>
           <div className="responsive-menu_networks">
