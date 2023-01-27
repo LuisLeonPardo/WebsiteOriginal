@@ -57,6 +57,7 @@ $breakpoints: (
     @include media-down(mobile) {
       width: 358px;
       height: 367px;
+      margin-top: 64px;
     }
     .top-modal {
       display: flex;
@@ -129,8 +130,9 @@ $breakpoints: (
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 135px;
+        width: 144px;
         height: 34px;
+        font-weight: 500;
         font-size: 14px;
         color: #000000;
         padding: 0;
@@ -214,6 +216,25 @@ $breakpoints: (
         color: white;
       }
       @include media-down(mobile) {
+        display: none;
+      }
+    }
+    .withdrawlusd-btn {
+      display: none;
+      @include media-down(mobile) {
+        display: block;
+        width: 366px;
+        height: 64px;
+        color: #f7931a;
+        font-size: 18px;
+        background-color: #fff1f2;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background-color: #f7931a;
+          color: white;
+        }
         width: 315px;
         height: 52px;
       }

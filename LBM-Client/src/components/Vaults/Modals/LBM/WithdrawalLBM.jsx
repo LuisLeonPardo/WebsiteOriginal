@@ -20,6 +20,7 @@ function WithdrawalLBM({ states, setStateModals }) {
   function confirm() {
     setStateModals({
       ...states,
+      withdrawallbm: false,
       withdrawallbmsuccess: true,
     });
   }
@@ -47,9 +48,20 @@ function WithdrawalLBM({ states, setStateModals }) {
             <img src={LBM} alt="LBM incon" />
             <h4>Available LBM</h4>
           </div>
-          <h4 style={{ fontWeight: 700, color: "#000000" }}>100LBM</h4>
+          <h4
+            style={{
+              fontWeight: 700,
+              color: "#000000",
+              margin: "0px 15px 0px",
+            }}
+          >
+            100 LBM
+          </h4>
         </div>
         <button onClick={confirm}>Confirm</button>
+        <button className="withdraw-btn" onClick={confirm}>
+          Withdraw
+        </button>
       </div>
     </div>
   );

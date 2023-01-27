@@ -19,6 +19,7 @@ function WithdrawalLUSD({ states, setStateModals }) {
   function confirm() {
     setStateModals({
       ...states,
+      withdrawallusd: false,
       withdrawallusdsuccess: true,
     });
   }
@@ -46,9 +47,20 @@ function WithdrawalLUSD({ states, setStateModals }) {
             <img src={LUSD} alt="LUSD incon" />
             <h4>Available LUSD</h4>
           </div>
-          <h4 style={{ fontWeight: 700, color: "#000000" }}>100LUSD</h4>
+          <h4
+            style={{
+              fontWeight: 700,
+              color: "#000000",
+              margin: "0px 15px 0px",
+            }}
+          >
+            100LUSD
+          </h4>
         </div>
         <button onClick={confirm}>Confirm</button>
+        <button className="withdrawlusd-btn" onClick={confirm}>
+          Withdraw
+        </button>
       </div>
     </div>
   );
