@@ -1,10 +1,11 @@
+import { useState } from "react";
+
 import icoBanner from "./assets/ico-banner.png";
 import icoLogo from "./assets/ico-logo.png";
 import ireoBanner from "./assets/ireo-banner.png";
 import ireoLogo from "./assets/ireo-logo.png";
 import builtOn from "./assets/built-on.svg";
 import "./CardLP.scss";
-import { useState } from "react";
 
 export default function CardLP({
   state,
@@ -38,7 +39,7 @@ export default function CardLP({
             <span className="info_for">For</span>
             <span className="info_per">{per}K</span>
           </div>
-          <div>barra progreso</div>
+          <div></div>
         </div>
         <div className="details">
           <div>
