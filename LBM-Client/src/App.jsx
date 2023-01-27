@@ -20,7 +20,6 @@ import Web3 from "web3";
 import Governance from "./components/Governance/Governance";
 import Vaults from "./components/Vaults/Vaults";
 import RealEstateDetail from "./components/RealEstateDetail/index";
-import WarningBuilding from "./components/WarningBuilding";
 import SideBarMobile from "./components/SideBar/mobile/SideBarMobile";
 import CoomingSoon from "./components/ComingSoon/ComingSoon";
 import Launchpad from "./components/Launchpad/Launchpad";
@@ -32,7 +31,6 @@ function App() {
 	);
 	const AppLayout = () => (
 		<>
-			<WarningBuilding />
 			<div className="bgImage">
 				<img src="./icons/Background.svg" />
 			</div>
