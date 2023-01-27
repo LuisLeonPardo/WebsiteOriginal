@@ -23,7 +23,6 @@ import {
   avalancheChain,
   BinanceSmartChain,
   BinanceTestNet,
-  avalancheChain,
 } from "./config/web3/chains/chains";
 import {
   braveWallet,
