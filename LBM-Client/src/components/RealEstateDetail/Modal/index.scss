@@ -5,14 +5,22 @@
 	right: 0;
 	width: 100%;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.3);
-	display: none;
+	background: rgba(0, 0, 0, 0.3);
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--black-color);
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.443);
+	transition: opacity 0.25s, background-color 1s;
+	background-color: rgba(0, 0, 0, 0.261);
+	backdrop-filter: blur(5px);
 }
-.modalRealEstate.is-open {
-	display: flex;
+.modalRealEstate.is-close {
+	opacity: 0;
+	z-index: 0;
+	background: none;
+	pointer-events: none;
+	transition: opacity 0.25s, background-color 0s;
 }
 .modalContainer {
 	display: flex;
@@ -24,6 +32,13 @@
 	background: var(--white-color);
 	border-radius: 15px;
 	position: relative;
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 48px -18px rgba(0,0,0,0.75);
+	bottom: 1%;
+	transition: bottom 0.25s;
 	.closeButton {
 		position: absolute;
 		display: flex;
@@ -152,3 +167,9 @@
 		color: var(--white-color);
 	}
 }
+.modalContainer.is-close {
+	bottom: -10%;
+	align-items: center;
+	transition: bottom 0.25s;
+}
+

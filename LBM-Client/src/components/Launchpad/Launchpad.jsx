@@ -45,20 +45,53 @@ export default function Launchpad () {
     const filter = info.data.filter(el => el.state ===state &&  el.type == type)
 
     const itemsRow = 3
-    const grid = filter.map((el,index) => <CardLP key={index} name={el.name} state={el.state} type={el.type}/>)
 
-    const layout = []
+  const grid = filter.map(
+    (
+      {
+        state,
+        type,
+        name,
+        per,
+        launched_on,
+        total_raise,
+        token_price,
+        description,
+        status,
+      },
+      index
+    ) => (
+      <CardLP
+        key={index}
+        state={state}
+        name={name}
+        type={type}
+        per={per}
+        launched_on={launched_on}
+        total_raise={total_raise}
+        token_price={token_price}
+        status={status}
+        description={description}
+      />
+    )
+  );
 
-    for(let i=0;i<grid.length;i++){
-        let row = []
-        for(let j=0; j<itemsRow; j++){
-            row.push(grid[i])
-            i++
-        }
-        i = i-1
-      layout.push(<div key={i} className='rowLP'>{row}</div>)
+
+  const layout = [];
+
+  for (let i = 0; i < grid.length; i++) {
+    let row = [];
+    for (let j = 0; j < itemsRow; j++) {
+      row.push(grid[i]);
+      i++;
     }
-
+    i = i - 1;
+    layout.push(
+      <div key={i} className="rowLP">
+        {row}
+      </div>
+    );
+  }
 
     return (
         <div className="launchpad">
@@ -94,6 +127,10 @@ export default function Launchpad () {
                     {layout}
                 </div>
             </div>
+
         </div>
-    )
+        <div className="body">{layout}</div>
+      </div>
+    </div>
+  );
 }

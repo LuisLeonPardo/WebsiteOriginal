@@ -20,13 +20,23 @@ function WithdrawalLBMRequest({ states, setStateModals }) {
     setStateModals({
       ...states,
       withdrawallbmrequest: false,
+      withdrawallbmsuccess: true,
+    });
+  }
+
+  function openList() {
+    setStateModals({
+      ...states,
+      withdrawallbmrequest: false,
       withdrawallbmlocked: true,
     });
   }
 
   return (
     <div
-      className={states.withdrawallbmrequest ? "request-modal" : "modals-off"}
+      className={
+        states.withdrawallbmrequest ? "requestlbm-modal" : "modals-off"
+      }
     >
       <div className="modal">
         <div className="top-modal">
@@ -34,7 +44,7 @@ function WithdrawalLBMRequest({ states, setStateModals }) {
           <img src={close} alt="cross" onClick={changeState} />
         </div>
         <div className="list">
-          <h3>Withdrawal request list</h3>
+          <h3 onClick={openList}>Withdrawal request list</h3>
         </div>
         <div className="upper-buttons">
           <button className="withdraw-button" onClick={withdrawBack}>
@@ -55,17 +65,24 @@ function WithdrawalLBMRequest({ states, setStateModals }) {
               <img src={LBM} alt="LBM incon" />
               <h4>Requestable LBM</h4>
             </div>
-            <h4 style={{ fontWeight: 700, color: "#000000" }}>100LBM</h4>
+            <h4 style={{ fontWeight: 700, color: "#000000", marginLeft: 5 }}>
+              100LBM
+            </h4>
           </div>
           <div className="bottom-modal">
             <div className="container">
               <h4>Locking period</h4>
             </div>
-            <h4 style={{ fontWeight: 700, color: "#000000" }}>7 days</h4>
+            <h4 style={{ fontWeight: 700, color: "#000000", marginLeft: 5 }}>
+              7 days
+            </h4>
           </div>
         </div>
         <button className="confirm-button" onClick={confirm}>
           Confirm
+        </button>
+        <button className="valid-button" onClick={confirm}>
+          Enter a valid amount to request
         </button>
       </div>
     </div>

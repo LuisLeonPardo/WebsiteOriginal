@@ -10,7 +10,7 @@ function StakeLBMSuccess({ states, setStateModals }) {
   }
 
   return (
-    <div className={states.lbmsuccess ? "success-modal" : "modals-off"}>
+    <div className={states.lbmsuccess ? "lbmsuccess-modal" : "modals-off"}>
       <div className="modal">
         <div className="top-modal">
           <img
@@ -25,8 +25,10 @@ function StakeLBMSuccess({ states, setStateModals }) {
           <h3>Your stake was successful</h3>
           <div className="container">
             <h4>You successfully staked</h4>
-            <img src={LBM} alt="LBM incon" />
-            <h4>100 LBM</h4>
+            <div className="mobile">
+              <img src={LBM} alt="LBM incon" />
+              <h4>100 LBM</h4>
+            </div>
           </div>
         </div>
         <button onClick={changeState}>Confirm</button>

@@ -3,22 +3,53 @@ import "./WithdrawalLUSDRequest.scss";
 import LUSD from "../../assets/LUSD-icon.svg";
 import close from "../../assets/Close-icon.svg";
 
-function WithdrawalLUSDRequest({ state, setStateModal }) {
+function WithdrawalLUSDRequest({ states, setStateModals }) {
   function changeState() {
-    setStateModal(false);
+    setStateModals(false);
   }
+
+  function withdrawBack() {
+    setStateModals({
+      ...states,
+      withdrawallusdrequest: false,
+      withdrawallusd: true,
+    });
+  }
+
+  function confirm() {
+    setStateModals({
+      ...states,
+      withdrawallusdrequest: false,
+      withdrawallusdsuccess: true,
+    });
+  }
+
+  function openList() {
+    setStateModals({
+      ...states,
+      withdrawallusdrequest: false,
+      withdrawallusdlocked: true,
+    });
+  }
+
   return (
-    <div className={state ? "request-modal" : "modals-off"}>
+    <div
+      className={
+        states.withdrawallusdrequest ? "requestlusd-modal" : "modals-off"
+      }
+    >
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LUSD</h4>
           <img src={close} alt="cross" onClick={changeState} />
         </div>
         <div className="list">
-          <h3>Withdrawal request list</h3>
+          <h3 onClick={openList}>Withdrawal request list</h3>
         </div>
         <div className="upper-buttons">
-          <button className="withdrawal-button">Withdrawal</button>
+          <button className="withdrawal-button" onClick={withdrawBack}>
+            Withdrawal
+          </button>
           <button className="request-button">Request Withdrawal</button>
         </div>
         <div className="mid-modal">
@@ -43,8 +74,11 @@ function WithdrawalLUSDRequest({ state, setStateModal }) {
             <h4 style={{ fontWeight: 700, color: "#000000" }}>7 days</h4>
           </div>
         </div>
-        <button className="confirm-button" onClick={changeState}>
+        <button className="confirm-button" onClick={confirm}>
           Confirm
+        </button>
+        <button className="valid-button" onClick={confirm}>
+          Enter a valid amount to request
         </button>
       </div>
     </div>

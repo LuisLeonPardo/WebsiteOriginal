@@ -1,3 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+$breakpoints: (
+  mobile: 540px,
+  xs: 750px,
+  sm: 900px,
+  md: 1200px,
+  lg: 1600px,
+  lgh: 750px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
 .modals-off {
   display: none;
 }
@@ -23,6 +53,12 @@
     border-radius: 25px;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    @include media-down(mobile) {
+      width: 358px;
+      height: 367px;
+      margin-top: 64px;
+    }
     .top-modal {
       display: flex;
       h4 {
@@ -33,6 +69,13 @@
         font-size: 16px;
         line-height: 24px;
         color: #000000;
+        @include media-down(mobile) {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 19px;
+          line-height: 30px;
+        }
       }
       img {
         position: relative;
@@ -41,6 +84,12 @@
         left: 110px;
         top: 13px;
         cursor: pointer;
+        @include media-down(mobile) {
+          width: 16px;
+          height: 16px;
+          top: 7px;
+          left: 75px;
+        }
       }
     }
     .mid-modal {
@@ -51,6 +100,10 @@
       width: 279px;
       height: 34px;
       gap: 41px;
+      @include media-down(mobile) {
+        width: 326px;
+        height: 74px;
+      }
       .withdrawal-button {
         display: flex;
         align-items: center;
@@ -68,31 +121,22 @@
           background-color: #f7931a;
           color: white;
         }
-      }
-      .withdrawal-button.unclicked {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 103px;
-        height: 34px;
-        font-size: 14px;
-        color: #000000;
-        padding: 0;
-        background-color: white;
-        &:focus {
-          outline: none;
-        }
-        &:hover {
-          background-color: #f9f9f9;
-          color: #f7931a;
+        @include media-down(mobile) {
+          width: 159px;
+          height: 50px;
+          font-size: 15px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
         }
       }
       .request-button {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 135px;
+        width: 144px;
         height: 34px;
+        font-weight: 500;
         font-size: 14px;
         color: #000000;
         padding: 0;
@@ -104,23 +148,13 @@
           background-color: #f9f9f9;
           color: #f7931a;
         }
-      }
-      .request-button.clicked {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 135px;
-        height: 34px;
-        font-size: 14px;
-        color: #f7931a;
-        padding: 0;
-        background-color: #f9f9f9;
-        &:focus {
-          outline: none;
-        }
-        &:hover {
-          background-color: #f7931a;
-          color: white;
+        @include media-down(mobile) {
+          width: 142px;
+          height: 50px;
+          font-size: 15px;
+          font-family: "Inter";
+          font-style: normal;
+          color: #9597a1;
         }
       }
     }
@@ -130,6 +164,12 @@
       align-items: center;
       width: 366px;
       height: 73px;
+      @include media-down(mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 315px;
+        height: 52px;
+      }
       .container {
         display: flex;
         align-items: center;
@@ -182,6 +222,30 @@
       &:hover {
         background-color: #f7931a;
         color: white;
+      }
+      @include media-down(mobile) {
+        display: none;
+      }
+    }
+
+    .withdraw-btn {
+      display: none;
+      @include media-down(mobile) {
+        display: block;
+        width: 366px;
+        height: 64px;
+        color: #f7931a;
+        font-size: 18px;
+        background-color: #fff1f2;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background-color: #f7931a;
+          color: white;
+        }
+        width: 315px;
+        height: 52px;
       }
     }
   }

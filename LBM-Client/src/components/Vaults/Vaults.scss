@@ -31,10 +31,11 @@ $breakpoints: (
 .general {
   width: 100vw;
   height: 100vh;
+  min-height: 550px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  position: relative;
+  //position: relative;
 }
 
 .vaults {
@@ -46,6 +47,35 @@ $breakpoints: (
   align-items: center;
   gap: 72px;
   position: relative;
+  @include media-down(xs) {
+    position: relative;
+    zoom: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 100%;
+    min-height: 650px;
+    top: 0px;
+    gap: 40px;
+  }
+  .vaults-title {
+    display: none;
+    @include media-down(mobile) {
+      display: flex;
+      width: 358px;
+      zoom: 65%;
+      top: 30px;
+      position: relative;
+    }
+    h1 {
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 36px;
+    }
+  }
 }
 .vault-container {
   position: relative;
@@ -81,6 +111,7 @@ $breakpoints: (
   @include media-down(mobile) {
     width: 358px;
     height: 395px;
+    padding-bottom: 10px;
   }
 }
 .stake-name {

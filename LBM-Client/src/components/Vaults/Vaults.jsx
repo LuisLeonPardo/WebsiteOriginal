@@ -36,6 +36,9 @@ function Vaults() {
     lusdform: false,
     lusdsuccess: false,
     withdrawallusd: false,
+    withdrawallusdrequest: false,
+    withdrawallusdlocked: false,
+    withdrawallusdsuccess: false,
   });
 
   return (
@@ -60,11 +63,23 @@ function Vaults() {
       <StakeLUSDForm states={stateModals} setStateModals={setStateModals} />
       <StakeLUSDSuccess states={stateModals} setStateModals={setStateModals} />
       <WithdrawalLUSD states={stateModals} setStateModals={setStateModals} />
-      {/* <WithdrawalLUSDRequest state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <WithdrawalLUSDSuccess state={stateModal} setStateModal={setStateModal} /> */}
-      {/* <WithdrawalLUSDLocked state={stateModal} setStateModal={setStateModal} /> */}
+      <WithdrawalLUSDRequest
+        states={stateModals}
+        setStateModals={setStateModals}
+      />
+      <WithdrawalLUSDLocked
+        states={stateModals}
+        setStateModals={setStateModals}
+      />
+      <WithdrawalLUSDSuccess
+        states={stateModals}
+        setStateModals={setStateModals}
+      />
       {/* <WithdrawalLUSD states={stateModals} setStateModals={setStateModals} /> */}
       <div className="vaults">
+        <div className="vaults-title">
+          <h1>Vaults</h1>
+        </div>
         {yourInfo.map((e) => (
           <YourVaults
             key={e.name}

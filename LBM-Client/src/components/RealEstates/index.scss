@@ -15,42 +15,32 @@
 		border-radius: 16px;
 		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
 			0 4px 6px -4px rgb(0 0 0 / 0.1);
+		.button__realEstate {
+			border-radius: 14px;
+			width: fit-content;
+			background-color: var(--modern-white);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 25px;
+			font-style: normal;
+			font-weight: 900;
+			font-size: 14px;
+		}
 		h3 {
 			font-size: 22px;
 			width: 120px;
 			margin: 27px 0 10px 47px;
 		}
+		.display {
+			display: none;
+		}
 		nav {
-			width: calc(100% - 47px);
+			width: 100%;
 			display: flex;
-			justify-content: center;
-			margin-bottom: 25px;
-			.goBack{
-				transform: rotate(90deg);
-			}
-			
-			.isNotAButton {
-				width: 114px;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				border-radius: 14px;
-				background-color: var(--modern-white);
-				font-style: normal;
-				font-weight: 900;
-				font-size: 14px;
-				color: var(--black-color);
-				cursor: auto;
-			}
-			.filters {
-				margin-left: 16px;
-				margin-right: 16px;
-				display: flex;
-				background-color: var(--modern-white);
-				justify-content: center;
-				align-items: center;
-				border-radius: 14px;
-			}
+			justify-content: space-around;
+			margin: 0 auto 25px auto;
+
 			.inputWrapper {
 				position: relative;
 				max-width: 913px;
@@ -75,7 +65,7 @@
 			.input:focus-visible {
 				outline: none;
 			}
-			
+
 			.inputIcon {
 				position: absolute;
 				width: 20px;
@@ -85,31 +75,9 @@
 				transform: translateY(-50%);
 				color: var(--gray-color);
 			}
-			#order {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				width: 187px;
-				height: 48px;
-				align-items: center;
-				margin-right: 16px;
-				border-radius: 14px;
-				padding: 0 15px 0 15px;
-				border-radius: 14px;
-				background-color: var(--modern-white);
-				font-style: normal;
-				font-weight: 900;
-				font-size: 14px;
-				img {
-					width: 11px;
-					height: 11px;
-					margin-left: 13px;
-				}
-			}
-			.highToLow {
-				img {
-					transform: rotate(180deg);
-				}
+			.icon {
+				width: 18px;
+				height: 18px;
 			}
 		}
 	}
@@ -144,11 +112,6 @@
 				img {
 					width: 11px;
 					height: 11px;
-				}
-			}
-			.buttonAsideFilter.isActive {
-				img {
-					rotate: 180deg;
 				}
 			}
 		}
@@ -192,18 +155,84 @@
 			scrollbar-width: thin;
 		}
 
-		.previewEstates::-webkit-scrollbar {
+		.previewEstatesFourColums::-webkit-scrollbar {
 			width: 2px;
 			height: 5px;
 		}
 
-		.previewEstates::-webkit-scrollbar-track-piece {
+		.previewEstatesFourColums::-webkit-scrollbar-track-piece {
 			background-color: transparent;
 		}
 
-		.previewEstates::-webkit-scrollbar-thumb:vertical {
+		.previewEstatesFourColums::-webkit-scrollbar-thumb:vertical {
 			height: 15px;
 			background-color: var(--orange-darker);
+		}
+		.previewEstatesFiveColums::-webkit-scrollbar {
+			width: 2px;
+			height: 5px;
+		}
+
+		.previewEstatesFiveColums::-webkit-scrollbar-track-piece {
+			background-color: transparent;
+		}
+
+		.previewEstatesFiveColums::-webkit-scrollbar-thumb:vertical {
+			height: 15px;
+			background-color: var(--orange-darker);
+		}
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.realEstate {
+		width: 100vw;
+		margin: 0;
+		.containerEstate {
+			width: 100%;
+			height: 100%;
+			background: url('../../assets/background.jpg');
+			margin-top: 7em;
+			nav {
+				width: 90%;
+				position: relative;
+				display: grid;
+				grid-template-columns: repeat(6, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				grid-column-gap: 10px;
+				.display {
+					display: flex;
+					font-weight: 900;
+				}
+				.inputWrapper{
+					width: 100%;
+					grid-column-start: 1;
+					grid-column-end: 7;
+					grid-row-start: 1;
+					grid-row-end: 2;
+					margin: 10px auto;
+					
+				}
+				#order{
+					display: none;
+				}
+				#goBack{
+					position: absolute;
+					top: -40px;
+					background-color: transparent;
+					left: -15px;
+				}
+				#filters{
+					width: 100%;
+					grid-column-start: 1;
+					grid-column-end: 5;
+					display: flex;
+					justify-content: center;
+					margin: 7px auto;
+				}
+				#refresh, #menu{
+					margin: 7px auto;
+				}
+			}
 		}
 	}
 }
