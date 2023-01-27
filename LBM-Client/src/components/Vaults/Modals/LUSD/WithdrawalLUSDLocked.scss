@@ -1,3 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+$breakpoints: (
+  mobile: 540px,
+  xs: 750px,
+  sm: 900px,
+  md: 1200px,
+  lg: 1600px,
+  lgh: 750px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
 .modals-off {
   display: none;
 }
@@ -20,6 +50,11 @@
     border-radius: 25px;
     justify-content: space-around;
     align-items: center;
+    @include media-down(mobile) {
+      width: 358px;
+      height: 227px;
+      margin-top: 64px;
+    }
     .top-modal {
       display: flex;
       h4 {
@@ -30,6 +65,10 @@
         font-size: 16px;
         line-height: 24px;
         color: #000000;
+        @include media-down(mobile) {
+          font-size: 19px;
+          line-height: 30px;
+        }
       }
       img {
         position: relative;
@@ -38,6 +77,12 @@
         left: 110px;
         top: 13px;
         cursor: pointer;
+        @include media-down(mobile) {
+          top: 16px;
+          left: 70px;
+          width: 16px;
+          height: 16px;
+        }
       }
     }
 
@@ -47,13 +92,25 @@
       align-items: center;
       width: 366px;
       height: 73px;
+      @include media-down(mobile) {
+        width: 302px;
+        height: 24px;
+      }
       .container {
         display: flex;
         align-items: center;
+        @include media-down(mobile) {
+          width: 300px;
+          justify-content: space-around;
+        }
       }
       img {
         width: 24px;
         height: 24px;
+        @include media-down(mobile) {
+          width: 20px;
+          height: 20px;
+        }
       }
       h4 {
         font-family: "Inter";
@@ -61,6 +118,35 @@
         font-weight: 400;
         font-size: 13px;
         margin-left: 5px;
+        @include media-down(mobile) {
+          display: none;
+        }
+      }
+      .mobile {
+        display: none;
+        @include media-down(mobile) {
+          margin: 0px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          display: flex;
+          color: #9597a1;
+          padding-left: 5px;
+          padding-right: 45px;
+        }
+      }
+      .hidden-amount {
+        display: none;
+        @include media-down(mobile) {
+          display: block;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          color: #000000;
+        }
       }
     }
     h4 {
@@ -73,7 +159,19 @@
       display: flex;
       color: #a3a3a3;
     }
-
+    .locked-mobile {
+      margin: 0px;
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 28.5px;
+      display: flex;
+      color: #a3a3a3;
+      @include media-down(mobile) {
+        display: none;
+      }
+    }
     button {
       width: 366px;
       height: 48px;
@@ -87,6 +185,10 @@
       &:hover {
         background-color: #f7931a;
         color: white;
+      }
+      @include media-down(mobile) {
+        width: 302px;
+        height: 54px;
       }
     }
   }

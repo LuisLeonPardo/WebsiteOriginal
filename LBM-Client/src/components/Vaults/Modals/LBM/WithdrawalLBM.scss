@@ -53,9 +53,11 @@ $breakpoints: (
     border-radius: 25px;
     justify-content: space-around;
     align-items: center;
+    position: relative;
     @include media-down(mobile) {
       width: 358px;
       height: 367px;
+      margin-top: 64px;
     }
     .top-modal {
       display: flex;
@@ -122,14 +124,19 @@ $breakpoints: (
         @include media-down(mobile) {
           width: 159px;
           height: 50px;
+          font-size: 15px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
         }
       }
       .request-button {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 135px;
+        width: 144px;
         height: 34px;
+        font-weight: 500;
         font-size: 14px;
         color: #000000;
         padding: 0;
@@ -144,6 +151,10 @@ $breakpoints: (
         @include media-down(mobile) {
           width: 142px;
           height: 50px;
+          font-size: 15px;
+          font-family: "Inter";
+          font-style: normal;
+          color: #9597a1;
         }
       }
     }
@@ -213,6 +224,26 @@ $breakpoints: (
         color: white;
       }
       @include media-down(mobile) {
+        display: none;
+      }
+    }
+
+    .withdraw-btn {
+      display: none;
+      @include media-down(mobile) {
+        display: block;
+        width: 366px;
+        height: 64px;
+        color: #f7931a;
+        font-size: 18px;
+        background-color: #fff1f2;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background-color: #f7931a;
+          color: white;
+        }
         width: 315px;
         height: 52px;
       }
