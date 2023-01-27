@@ -12,6 +12,7 @@ import { setSelectedIcon, setWalletPopUp } from "../../../redux/reducer";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { NavLink } from "react-router-dom";
 import CustomConnectButtom from "./CustomConnectButtom";
+import LaunchpadIcon from "../../../public/icons/LaunchpadIcon";
 function SideBar() {
   const dispatch = useDispatch();
   const { selectedIcon, walletPopUp } = useSelector(
@@ -98,7 +99,7 @@ function SideBar() {
               }
               onClick={() => dispatch(setSelectedIcon("Launchpad"))}
             >
-              <Layer1Icon
+              <LaunchpadIcon
                 selected={selectedIcon === "Launchpad" ? true : false}
               />
               <p>Launchpad</p>

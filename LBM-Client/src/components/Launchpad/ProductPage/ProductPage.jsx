@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./ProductPage.module.scss";
+import { NavLink } from "react-router-dom";
 
 function ProductPage() {
   return (
@@ -10,8 +11,12 @@ function ProductPage() {
             <h1>Launchpad</h1>
           </div>
           <div className={style.interact}>
-            <button>Refresh</button>
-            <input></input>
+            <NavLink to={"/launchpad"} className={style.back}></NavLink>
+            <button className={style.refresh}></button>
+            <input
+              className={style.search}
+              placeholder="Search by NFT's"
+            ></input>
           </div>
         </div>
         <div className={style.object}>
@@ -31,7 +36,9 @@ function ProductPage() {
               </div>
             </div>
           </div>
-          <div className={style.RightSide}></div>
+          <div className={style.RightSide}>
+            <h1> Raise details</h1>
+          </div>
         </div>
       </div>
     </div>
