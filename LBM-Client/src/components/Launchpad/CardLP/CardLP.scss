@@ -10,6 +10,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 0.07s all ease-in-out;
+  &:hover {
+    transform: scale(1.01);
+  }
   .button {
     display: flex;
     justify-content: center;
@@ -107,18 +111,17 @@
       .menu_item {
         cursor: pointer;
         margin-right: 10px;
-        font-family: "Inter";
-        font-style: normal;
+        padding-bottom: 2px;
         font-weight: 500;
         font-size: 13px;
         line-height: 22px;
-        color: #000000;
         transition: 0.1s ease-in-out;
+        color: #767a85;
       }
       .active {
-        box-sizing: border-box;
         font-weight: bold;
         border-bottom: 4px solid #000000;
+        color: #000000;
       }
       .description {
         margin-top: 10px;
