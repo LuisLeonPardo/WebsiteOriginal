@@ -25,7 +25,7 @@ function WarningBuilding({ isOpen, closeModal }) {
 					of our available sections.
 				</p>
 				<button onClick={() => closeModal()} className="information button__modal">More information</button>
-				<button onClick={() => closeModal()} className="understood button__modal">Undertood</button>
+				<button onClick={() => closeModal()} className="understood button__modal">Understood</button>
 			</div>
 		</article>
 	);
