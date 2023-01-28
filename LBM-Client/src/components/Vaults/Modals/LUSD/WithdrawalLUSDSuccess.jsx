@@ -2,7 +2,7 @@ import React from "react";
 import "./WithdrawalLUSDSuccess.scss";
 import LUSD from "../../assets/LUSD-icon.svg";
 import ok from "../../assets/Ok-tick.svg";
-import close from "../../assets/Close-icon.svg";
+import { BsX } from "react-icons/bs";
 
 function WithdrawalLUSDSuccess({ states, setStateModals }) {
   function changeState() {
@@ -17,20 +17,17 @@ function WithdrawalLUSDSuccess({ states, setStateModals }) {
     >
       <div className="modal">
         <div className="top-modal">
-          <img
-            src={close}
-            alt="cross"
-            onClick={changeState}
-            className="close"
-          />
+          <div onClick={changeState}>
+            <BsX className="close" />
+          </div>
           <img src={ok} alt="ok icon" />
         </div>
         <div className="mid-modal">
           <h3>Your withdrawal was successful</h3>
-          <div className="container">
+          <div className="container-lusdconf">
             <h4 className="wth-mobile">You successfully withdrew</h4>
             <h4>You successful requested a withdrawal of</h4>
-            <div className="mobile">
+            <div className="mobile-lusdconf">
               <img src={LUSD} alt="LUSD incon" />
               <h4 className="wth-mobile">100 LBM</h4>
               <h4>100LUSD</h4>

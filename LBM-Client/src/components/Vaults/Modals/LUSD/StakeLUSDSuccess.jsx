@@ -2,7 +2,7 @@ import React from "react";
 import "./StakeLUSDSuccess.scss";
 import LUSD from "../../assets/LUSD-icon.svg";
 import ok from "../../assets/Ok-tick.svg";
-import close from "../../assets/Close-icon.svg";
+import { BsX } from "react-icons/bs";
 
 function StakeLUSDSuccess({ states, setStateModals }) {
   function changeState() {
@@ -13,19 +13,16 @@ function StakeLUSDSuccess({ states, setStateModals }) {
     <div className={states.lusdsuccess ? "lusdsuccess-modal" : "modals-off"}>
       <div className="modal">
         <div className="top-modal">
-          <img
-            src={close}
-            alt="cross"
-            onClick={changeState}
-            className="close"
-          />
+          <div onClick={changeState}>
+            <BsX className="close" />
+          </div>
           <img src={ok} alt="ok icon" />
         </div>
         <div className="mid-modal">
           <h3>Your stake was successful</h3>
-          <div className="container">
+          <div className="container-lusuc">
             <h4>You successfully staked</h4>
-            <div className="mobile">
+            <div className="mobile-lusuc">
               <img src={LUSD} alt="LUSD incon" />
               <h4>100 LUSD</h4>
             </div>

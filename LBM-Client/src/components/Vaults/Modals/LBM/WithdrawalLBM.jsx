@@ -1,8 +1,7 @@
 import React from "react";
 import "./WithdrawalLBM.scss";
 import LBM from "../../assets/LBM-icon.svg";
-import close from "../../assets/Close-icon.svg";
-import { useState } from "react";
+import { BsX } from "react-icons/bs";
 
 function WithdrawalLBM({ states, setStateModals }) {
   function changeState() {
@@ -34,7 +33,9 @@ function WithdrawalLBM({ states, setStateModals }) {
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LBM</h4>
-          <img src={close} alt="cross" onClick={changeState} />
+          <div onClick={changeState}>
+            <BsX className="close" />
+          </div>
         </div>
         <div className="mid-modal">
           <button className="withdrawal-button">Withdrawal</button>
@@ -44,7 +45,7 @@ function WithdrawalLBM({ states, setStateModals }) {
         </div>
 
         <div className="bottom-modal">
-          <div className="container">
+          <div className="containerlbm">
             <img src={LBM} alt="LBM incon" />
             <h4>Available LBM</h4>
           </div>

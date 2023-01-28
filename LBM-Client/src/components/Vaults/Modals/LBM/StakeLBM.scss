@@ -33,14 +33,19 @@ $breakpoints: (
 }
 
 .modal-container-lbm {
-  position: absolute;
+  position: fixed;
   display: flex;
   height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
-  background-color: rgba($color: #000000, $alpha: 0.6);
-  z-index: 99999;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.443);
+  transition: opacity 0.5s, background-color 1s;
+  z-index: 999;
+  backdrop-filter: blur(4px);
   .modal {
     display: flex;
     flex-direction: column;
@@ -48,6 +53,11 @@ $breakpoints: (
     height: 469px;
     background: #ffffff;
     border-radius: 25px;
+    box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    transition: bottom 0.5s;
     justify-content: space-between;
     align-items: center;
     @include media-down(mobile) {
@@ -78,11 +88,21 @@ $breakpoints: (
       }
       .close {
         position: relative;
-        width: 16px;
-        height: 16px;
+        width: 28px;
+        height: 28px;
         left: 175px;
         bottom: 35px;
+        border-radius: 9999px;
+        border-width: 1px;
+        border-style: solid;
+        background-color: rgba(0, 0, 0, 0.06);
+        color: rgba(60, 66, 66, 0.8);
+        border-color: rgba(0, 0, 0, 0.04);
+        transition: 0.125s ease;
         cursor: pointer;
+        &:hover {
+          transform: scale(1.125);
+        }
         @include media-down(mobile) {
           left: 148px;
           bottom: 50px;
