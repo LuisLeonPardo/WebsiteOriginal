@@ -38,6 +38,15 @@ function ProductPage() {
           </div>
           <div className={style.RightSide}>
             <h1> Raise details</h1>
+            <div className={style.data}>
+              <div className={style.fundRaise}>
+                <h2>Fundraise goal</h2>
+                <p>$400.000</p>
+              </div>
+              <div className={style.builtOn}>
+                <h2>Project built on</h2>
+              </div>
+            </div>
           </div>
         </div>
       </div>

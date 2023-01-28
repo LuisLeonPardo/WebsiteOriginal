@@ -265,6 +265,7 @@ $breakpoints: (
     width: 40%;
     height: 90%;
     display: flex;
+    gap: 30px;
     background: #FFFFFF;
 box-shadow: 0px 4px 24px rgba(85, 85, 176, 0.08);
 border-radius: 8px;
@@ -276,4 +277,46 @@ border-radius: 8px;
     position: relative;
     top: 25px;
     font-size: 18px;
+  }
+  .data{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    padding: 0px 7.62939e-06px 0px 0px;
+    gap:  40%;
+    width: 90%;
+    height: 52px;
+    
+    
+  }
+
+  .fundRaise{
+    display: flex;
+    left: 1em;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.40001px 0.0625px 2.59999px 0px;
+    width: 106.06px;
+  }
+
+  .builtOn{
+    display: flex;
+    right: 1em !important;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 2.40001px 0.0625px 2.59999px 0px;
+    width: 126.06px;
+  }
+
+  .fundRaise h2, .builtOn h2{
+    color: #767A85;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 0px;
+  }
+  .fundRaise p, .builtOn p{
+    font-weight: 500;
+font-size: 14px;
+line-height: 0px;
+color:#0A113C;
   }

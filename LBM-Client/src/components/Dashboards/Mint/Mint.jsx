@@ -25,14 +25,14 @@ function Mint() {
         </div>
       </div>
       {first == "mint" ? (
-        <div>
+        <div className="text">
           <p>
             To mint LUSD with the Libertum Protocol, you need to enable it first
           </p>
           <h2>Confirm</h2>
         </div>
       ) : (
-        <div>
+        <div className="text">
           <p>
             To repay LUSD with the Libertum Protocol, you need to enable it
             first
