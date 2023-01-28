@@ -25,10 +25,10 @@
 		grid-column-end: 3;
 		grid-row-start: 1;
 		grid-row-end: 2;
-		margin: 5px 5%;
+		margin: 0px 5%;
 		width: fit-content;
 		font-weight: 700;
-		font-size: 17px;
+		font-size: 1.7vh;
 		width: fit-content;
 	}
 	.price {
@@ -90,8 +90,7 @@
 		min-width: 173px;
 		height: 230px;
 		border-radius: 16px;
-		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3),
-			0 4px 6px -4px rgb(0 0 0 / 0.4);
+		box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
 	}
 	.imgCardPreview {
 		width: 90%;
