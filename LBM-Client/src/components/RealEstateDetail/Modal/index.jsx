@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.scss';
-import { AiOutlineQuestionCircle, AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineQuestionCircle } from 'react-icons/ai';
+import { IoClose } from 'react-icons/io5';
 import arrow from '../../../assets/down.svg';
 function Modal({ number, isOpen, closeModal }) {
 	return (
@@ -10,7 +11,7 @@ function Modal({ number, isOpen, closeModal }) {
 				<p className="modalContainer__p">
 					You are about to place a bid for <br />
 					<button className="closeButton" onClick={() => closeModal()}>
-						<AiOutlineClose className="icon" />
+						<IoClose className="icon" />
 					</button>
 					<span className="modalContainer__span">Land #{number}</span> from{' '}
 					<span className="modalContainer__span">Libertum</span> collection

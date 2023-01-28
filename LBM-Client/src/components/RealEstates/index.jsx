@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import './index.scss';
 import { Link } from 'react-router-dom';
 import { SlRefresh } from 'react-icons/sl';
-import arrow from '../../assets/down.svg';
 import Toggle from './ToggleButton';
 import Status from './Status';
 import Price from './Price';
@@ -14,6 +13,8 @@ import RealEstateDetail from '../RealEstateDetail';
 import { MdOutlineFilterList } from 'react-icons/md';
 import { IoIosArrowUp, IoIosArrowDown, IoIosArrowBack } from 'react-icons/io';
 import { GoSettings } from 'react-icons/go';
+import { IoClose } from 'react-icons/io5';
+
 // db es una ase de datos falsa, para poder renderizar las lands con sus imagenes y numeros, esto deberia cambiar mas adelante, pero sirve para maquetar los componentes
 import db from '../RealEstates/fakedb/db.json';
 const variants = {
@@ -39,6 +40,8 @@ function RealEstates() {
 	//-Al tag <section>, aqui se usa para el manejo de las clases de css por medio de un ternario
 	//-por ultimo se lo pasa por propiedad al componente <CardPreview /> para el manejo de estilos en su respectivo componente
 	const [fiveColumn, setFiveColumn] = useState(false);
+	const [filters, setFilters] = useState(false);
+	console.log(filters);
 	return (
 		<div className="realEstate">
 			<div className="containerEstate">
@@ -51,14 +54,19 @@ function RealEstates() {
 							className="button__realEstate"
 							onClick={() => navigate('/realestate')}
 						>
-							<IoIosArrowBack className='icon' />
+							<IoIosArrowBack className="icon" />
 						</button>
 					)}
-					<button id="filters" className="button__realEstate">
-						Filters &nbsp;&nbsp;&nbsp;<GoSettings className="display icon" />
+					<button
+						id="filters"
+						className="button__realEstate"
+						onClick={() => setFilters(!filters)}
+					>
+						Filters
+						<GoSettings className="display icon" />
 					</button>
 					<button id="refresh" className="button__realEstate">
-						<SlRefresh className='icon' />
+						<SlRefresh className="icon" />
 					</button>
 					<div className="inputWrapper">
 						<input
@@ -94,7 +102,7 @@ function RealEstates() {
 						)}
 					</button>
 					<button id="menu" className="button__realEstate display">
-						<MdOutlineFilterList className='icon' />
+						<MdOutlineFilterList className="icon" />
 					</button>
 					{/* Nuevamente usa location en un ternario, debe renderizarse el toggle en la ruta /realestate, ya que en 'realestate/:id no se muestra el grid con las lands para ordenar*/}
 					{location.pathname === '/realestate' ? (
@@ -103,70 +111,84 @@ function RealEstates() {
 					) : null}
 				</nav>
 				{/* Aqui se usa location nuevamente, este es el cambio mas grande que depende del path, en '/realestate' se renderiza el div de clase "wrapperAsideSection", que como dice el nombre, en su interior tiene dos tags un <aside> y un <section> en el <aside> se encuentran los botones de Status, Price y Properties. En el <section> se encuentra la grilla donde se muetran las cards de las lands. */}
-				{location.pathname === '/realestate' ? (
-					<div className="wrapperAsideSection">
-						<aside className="asideFilters">
-							{/* Los botones Status, Price y Properties, solo setean los estados del mismo nombre para renderizar, o dejar de hacerlo, los componentes <Status/>, <Price /> y <Properties />. Como se ve, debajo de cada boton, hay un <motion> esto envuelve al componente que renderiza y le da una animacion cuando se renderiza */}
-							<button
-								className={`buttonAsideFilter`}
-								onClick={() => setStatus(!status)}
+				{
+					location.pathname === '/realestate' ? (
+						<div className="wrapperAsideSection">
+							<aside className={`asideFilters ${filters ? null : 'is-closed'}`}>
+								{/* Los botones Status, Price y Properties, solo setean los estados del mismo nombre para renderizar, o dejar de hacerlo, los componentes <Status/>, <Price /> y <Properties />. Como se ve, debajo de cada boton, hay un <motion> esto envuelve al componente que renderiza y le da una animacion cuando se renderiza */}
+									<div className="filter display">
+										<h1>Filters</h1>
+										<button
+											className="button__realEstate"
+											onClick={() => setFilters(!filters)}
+										>
+											<IoClose className="icon" />
+										</button>
+									</div>
+									<button
+										className={`buttonAsideFilter`}
+										onClick={() => setStatus(!status)}
+									>
+										Status {status ? <IoIosArrowUp /> : <IoIosArrowDown />}
+									</button>
+									<div className={`animation ${status ? null : 'is-close'}`}>
+										{status ? <Status boolean={status} /> : null}
+									</div>
+									<button
+										className={`buttonAsideFilter`}
+										onClick={() => setPrice(!price)}
+									>
+										Price {price ? <IoIosArrowUp /> : <IoIosArrowDown />}
+									</button>
+									<div className={`animation ${price ? null : 'is-close'}`}>
+										{price ? <Price /> : null}
+									</div>
+									<button
+										className={`buttonAsideFilter`}
+										onClick={() => setProperties(!properties)}
+									>
+										Properties{' '}
+										{properties ? <IoIosArrowUp /> : <IoIosArrowDown />}
+									</button>
+									<div
+										className={`animation ${properties ? null : 'is-close'}`}
+									>
+										{properties ? <Properties /> : null}
+									</div>
+									<div className="btn-filter display">
+										<button className="button__realEstate btn-reset">
+											Reset all
+										</button>
+										<button className="button__realEstate btn-applay">
+											Apply
+										</button>
+									</div>
+							</aside>
+							<section
+								//Utiliza nuevamente el estado fiveColumn para el manejo de la grilla
+								className={`${
+									fiveColumn
+										? 'previewEstatesFiveColums'
+										: 'previewEstatesFourColums'
+								}`}
 							>
-								Status {status ? <IoIosArrowUp /> : <IoIosArrowDown />}
-							</button>
-							<motion.nav
-								animate={status ? 'open' : 'closed'}
-								variants={variants}
-							>
-								{status ? <Status /> : null}
-							</motion.nav>
-							<button
-								className={`buttonAsideFilter`}
-								onClick={() => setPrice(!price)}
-							>
-								Price {price ? <IoIosArrowUp /> : <IoIosArrowDown />}
-							</button>
-							<motion.div
-								animate={price ? 'open' : 'closed'}
-								variants={variants}
-							>
-								{price ? <Price /> : null}
-							</motion.div>
-							<button
-								className={`buttonAsideFilter`}
-								onClick={() => setProperties(!properties)}
-							>
-								Properties {properties ? <IoIosArrowUp /> : <IoIosArrowDown />}
-							</button>
-							<motion.div
-								animate={properties ? 'open' : 'closed'}
-								variants={variants}
-							>
-								{properties ? <Properties /> : null}
-							</motion.div>
-						</aside>
-						<section
-							//Utiliza nuevamente el estado fiveColumn para el manejo de la grilla
-							className={`${
-								fiveColumn
-									? 'previewEstatesFiveColums'
-									: 'previewEstatesFourColums'
-							}`}
-						>
-							{/* Aqui se le aplica un map a la "base de datos falsa" renderizando, por cada elemento, un Link, que lleva al detalle de la land ('/realestate/:id'), y dentro de ella la card donde se muestra informacion de la land, pasandole por propiedades dicha informacion */}
-							{db.map((land) => (
-								<Link to={`/realestate/${land.number}`} key={land.id}>
-									<CardPreview
-										image={land.image}
-										number={land.number}
-										fiveColumn={fiveColumn}
-									/>
-								</Link>
-							))}
-						</section>
-					</div>
-				) : //En la ruta '/realestate/:id' se renderiza el componente <RealEstateDetal/> que es donde se encuentra el detalle de la land.
-				<RealEstateDetail />
-				// null
+								{/* Aqui se le aplica un map a la "base de datos falsa" renderizando, por cada elemento, un Link, que lleva al detalle de la land ('/realestate/:id'), y dentro de ella la card donde se muestra informacion de la land, pasandole por propiedades dicha informacion */}
+								{db.map((land) => (
+									<Link to={`/realestate/${land.number}`} key={land.id}>
+										<CardPreview
+											image={land.image}
+											number={land.number}
+											fiveColumn={fiveColumn}
+										/>
+									</Link>
+								))}
+							</section>
+						</div>
+					) : (
+						//En la ruta '/realestate/:id' se renderiza el componente <RealEstateDetal/> que es donde se encuentra el detalle de la land.
+						<RealEstateDetail />
+					)
+					// null
 				}
 			</div>
 		</div>

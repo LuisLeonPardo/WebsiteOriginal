@@ -44,23 +44,24 @@
 		display: flex;
 		align-items: center;
 		padding: 3px;
-		background-color: var(--white-color);
+		background-color: var(--gray-color);
 		top: 10px;
-		right: 15px;
-		width: 20px;
-		height: 20px;
+		right: 11px;
+		width: 24px;
+		height: 24px;
 		border-radius: 999px;
 		.icon {
-			width: 16px;
-			height: 16px;
+			width: 20px;
+			height: 20px;
+			color: var(--white-color);
 			transition: 0.25s;
 		}
 		transition: 0.25s;
 	}
 	.closeButton:hover {
-		background-color: var(--gray-color);
+		transform: scale(1.2);
 		.icon {
-			color: var(--white-color);
+			transform: scale(1.2);
 		}
 	}
 	&__h1 {

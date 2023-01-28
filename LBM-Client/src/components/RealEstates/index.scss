@@ -1,13 +1,14 @@
 .realEstate {
-	width: 100vw;
+	width: calc(100vw - 63px);
 	height: 100vh;
 	background: url('../../assets/background.jpg');
 	background-size: cover;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-left: 63px;
 	.containerEstate {
-		width: 100vw;
+		width: 90vw;
 		height: 90vh;
 		max-width: 1520px;
 		max-height: 967px;
@@ -15,6 +16,10 @@
 		border-radius: 16px;
 		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
 			0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+		#filters {
+			gap: 15px;
+		}
 		.button__realEstate {
 			border-radius: 14px;
 			width: fit-content;
@@ -40,7 +45,9 @@
 			display: flex;
 			justify-content: space-around;
 			margin: 0 auto 25px auto;
-
+			#filters {
+				margin-left: 5px;
+			}
 			.inputWrapper {
 				position: relative;
 				max-width: 913px;
@@ -83,12 +90,21 @@
 	}
 	.wrapperAsideSection {
 		display: flex;
-		max-width: 85vw;
+		width: 100%;
+		.animation {
+			width: 100%;
+			opacity: 1;
+			transition: opacity 0.3s;
+		}
+		.animation.is-close {
+			opacity: 0;
+			background: none;
+			pointer-events: none;
+			transition: opacity 0.3s;
+		}
 		.asideFilters {
-			display: flex;
 			width: 24%;
-			flex-direction: column;
-			align-items: center;
+			position: relative;
 			border: 2px solid var(--modern-white);
 			border-radius: 16px;
 			margin-left: 33px;
@@ -96,7 +112,9 @@
 			overflow: auto;
 			scrollbar-color: var(--orange-darker) transparent;
 			scrollbar-width: thin;
-
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			.buttonAsideFilter {
 				width: 85%;
 				min-height: 8vh;
@@ -129,9 +147,9 @@
 			background-color: var(--orange-darker);
 		}
 		.previewEstatesFourColums {
-			width: 60vw;
+			width: 72%;
 			margin-left: 15px;
-			max-height: 68vh;
+			max-height: 70vh;
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: repeat(3, 1fr);
@@ -142,9 +160,9 @@
 			scrollbar-width: thin;
 		}
 		.previewEstatesFiveColums {
-			width: 60vw;
+			width: 72%;
 			margin-left: 15px;
-			max-height: 68vh;
+			max-height: 70vh;
 			display: grid;
 			grid-template-columns: repeat(5, 1fr);
 			grid-template-rows: repeat(3, 1fr);
@@ -187,12 +205,15 @@
 	.realEstate {
 		width: 100vw;
 		height: calc(100vh - 3em);
-		margin-top: 3em;
+		margin: 3em 0px 0px 0px;
 		.containerEstate {
 			width: 100%;
 			height: 100%;
 			background: url('../../assets/background.jpg');
-			
+			.display {
+				display: flex;
+				font-weight: 900;
+			}
 			nav {
 				width: 90%;
 				position: relative;
@@ -200,29 +221,25 @@
 				grid-template-columns: repeat(6, 1fr);
 				grid-template-rows: repeat(2, 1fr);
 				grid-column-gap: 10px;
-				.display {
-					display: flex;
-					font-weight: 900;
-				}
-				.inputWrapper{
+
+				.inputWrapper {
 					width: 100%;
 					grid-column-start: 1;
 					grid-column-end: 7;
 					grid-row-start: 1;
 					grid-row-end: 2;
 					margin: 10px auto;
-					
 				}
-				#order{
+				#order {
 					display: none;
 				}
-				#goBack{
+				#goBack {
 					position: absolute;
 					top: -40px;
 					background-color: transparent;
 					left: -25px;
 				}
-				#filters{
+				#filters {
 					width: 100%;
 					grid-column-start: 1;
 					grid-column-end: 5;
@@ -230,9 +247,72 @@
 					justify-content: center;
 					margin: 7px auto;
 				}
-				#refresh, #menu{
+				#refresh,
+				#menu {
 					margin: 7px auto;
 				}
+			}
+		}
+		.wrapperAsideSection {
+			margin-top: -25px;
+			.asideFilters {
+				margin: 0px;
+				border-radius: 0px 16px;
+				position: fixed;
+				z-index: 999;
+				top: 0;
+				right: 5vw;
+				width: 90vw;
+				height: calc(100vh - 20px);
+				background: rgba(0, 0, 0, 0.3);
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				padding-top: 20px;
+				background-color: var(--white-color);
+				left: 1%;
+				transition: left 0.25s;
+				.filter {
+					display: flex;
+					width: 85%;
+					padding-left: 14px;
+					padding-right: 5px;
+					justify-content: space-between;
+				}
+				.btn-filter {
+					width: 85%;
+					justify-content: space-between;
+					position: absolute;
+					bottom: 15px;
+				}
+				.btn-reset {
+					width: 45%;
+					justify-content: center;
+					padding: 15px;
+					background-color: var(--orange-background) !important;
+					color: var(--orange-darker) !important;
+				}
+				.btn-applay {
+					width: 45%;
+					justify-content: center;
+					padding: 15px;
+					background-color: var(--orange-darker) !important;
+					color: var(--white-color) !important;
+				}
+			}
+			.asideFilters.is-closed {
+				left: -100%;
+				pointer-events: none;
+				transition: left 0.25s;
+			}
+			.previewEstatesFiveColums,
+			.previewEstatesFourColums {
+				width: 100%;
+				height: calc(100vh - 16em);
+				margin: 0;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				padding-bottom: 10px;
 			}
 		}
 	}
