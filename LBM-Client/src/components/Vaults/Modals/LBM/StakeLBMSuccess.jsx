@@ -2,7 +2,7 @@ import React from "react";
 import "./StakeLBMSuccess.scss";
 import LBM from "../../assets/LBM-icon.svg";
 import ok from "../../assets/Ok-tick.svg";
-import close from "../../assets/Close-icon.svg";
+import { BsX } from "react-icons/bs";
 
 function StakeLBMSuccess({ states, setStateModals }) {
   function changeState() {
@@ -13,19 +13,16 @@ function StakeLBMSuccess({ states, setStateModals }) {
     <div className={states.lbmsuccess ? "lbmsuccess-modal" : "modals-off"}>
       <div className="modal">
         <div className="top-modal">
-          <img
-            src={close}
-            alt="cross"
-            onClick={changeState}
-            className="close"
-          />
+          <div onClick={changeState}>
+            <BsX className="close" />
+          </div>
           <img src={ok} alt="ok icon" />
         </div>
         <div className="mid-modal">
           <h3>Your stake was successful</h3>
-          <div className="container">
+          <div className="container-lbmsuc">
             <h4>You successfully staked</h4>
-            <div className="mobile">
+            <div className="mobile-lbmsuc">
               <img src={LBM} alt="LBM incon" />
               <h4>100 LBM</h4>
             </div>

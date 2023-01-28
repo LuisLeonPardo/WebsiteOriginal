@@ -1,7 +1,7 @@
 import React from "react";
 import "./WithdrawalLBMLocked.scss";
 import LBM from "../../assets/LBM-icon.svg";
-import close from "../../assets/Close-icon.svg";
+import { BsX } from "react-icons/bs";
 
 function WithdrawalLBMLocked({ states, setStateModals }) {
   function changeState() {
@@ -22,10 +22,12 @@ function WithdrawalLBMLocked({ states, setStateModals }) {
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LBM</h4>
-          <img src={close} alt="cross" onClick={changeState} />
+          <div onClick={changeState}>
+            <BsX className="close" />
+          </div>
         </div>
         <div className="bottom-modal">
-          <div className="container">
+          <div className="container-lbmwth">
             <img src={LBM} alt="LBM incon" />
             <h4 style={{ fontWeight: 700, color: "#000000" }}>100LBM</h4>
             <h4 className="mobile">Requestable LBM</h4>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./StakeLBMForm.scss";
 import LBM from "../../assets/LBM-icon.svg";
-import close from "../../assets/Close-icon.svg";
+import { BsX } from "react-icons/bs";
 
 function StakeLBMForm({ states, setStateModals }) {
   function changeState() {
@@ -21,17 +21,19 @@ function StakeLBMForm({ states, setStateModals }) {
       <div className="modal">
         <div className="top-modal">
           <h4>Stake LBM</h4>
-          <img src={close} alt="cross" onClick={changeState} />
+          <div onClick={changeState}>
+            <BsX className="close" />
+          </div>
         </div>
         <div className="mid-modal">
-          <div className="container">
+          <div className="container-st">
             <img src={LBM} alt="LBM incon" />
             <input type="text" placeholder="0" />
           </div>
           <button className="max-button">MAX</button>
         </div>
         <div className="bottom-modal">
-          <div className="container">
+          <div className="container-st2">
             <img src={LBM} alt="LBM incon" />
             <h4>Available LBM</h4>
           </div>

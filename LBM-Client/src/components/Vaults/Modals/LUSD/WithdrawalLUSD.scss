@@ -41,8 +41,11 @@ $breakpoints: (
   right: 0;
   justify-content: center;
   align-items: center;
-  background-color: rgba($color: #000000, $alpha: 0.6);
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.443);
+  transition: opacity 0.5s, background-color 1s;
   z-index: 999;
+  backdrop-filter: blur(4px);
   color: var(--black-color);
   .modal {
     display: flex;
@@ -51,6 +54,11 @@ $breakpoints: (
     height: 400px;
     background: #ffffff;
     border-radius: 25px;
+    box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    transition: bottom 0.5s;
     justify-content: space-around;
     align-items: center;
     position: relative;
@@ -77,18 +85,26 @@ $breakpoints: (
           line-height: 30px;
         }
       }
-      img {
+      .close {
         position: relative;
-        width: 7px;
-        height: 7px;
-        left: 110px;
-        top: 13px;
+        width: 28px;
+        height: 28px;
+        left: 117px;
+        top: -3px;
+        border-radius: 9999px;
+        border-width: 1px;
+        border-style: solid;
+        background-color: rgba(0, 0, 0, 0.06);
+        color: rgba(60, 66, 66, 0.8);
+        border-color: rgba(0, 0, 0, 0.04);
+        transition: 0.125s ease;
         cursor: pointer;
+        &:hover {
+          transform: scale(1.125);
+        }
         @include media-down(mobile) {
-          width: 16px;
-          height: 16px;
-          top: 7px;
-          left: 75px;
+          left: 70px;
+          bottom: 50px;
         }
       }
     }
@@ -162,7 +178,7 @@ $breakpoints: (
         width: 315px;
         height: 52px;
       }
-      .container {
+      .containerlusd {
         display: flex;
         align-items: center;
       }

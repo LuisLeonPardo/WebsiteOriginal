@@ -1,7 +1,7 @@
 import React from "react";
 import "./StakeLBM.scss";
 import LBM from "../../assets/LBM-icon.svg";
-import close from "../../assets/Close-icon.svg";
+import { BsX } from "react-icons/bs";
 
 function StakeLBM({ states, setStateModals }) {
   function closeModal() {
@@ -21,7 +21,9 @@ function StakeLBM({ states, setStateModals }) {
       <div className="modal">
         <h1>Stake LBM</h1>
         <div className="top-modal">
-          <img src={close} alt="cross" onClick={closeModal} className="close" />
+          <div onClick={closeModal}>
+            <BsX className="close" />
+          </div>
           <img src={LBM} alt="LBM icon" />
         </div>
         <h3>To stake LBM to this vault, you need to enable it first</h3>

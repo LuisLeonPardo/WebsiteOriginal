@@ -1,7 +1,7 @@
 import React from "react";
 import "./WithdrawalLUSDRequest.scss";
 import LUSD from "../../assets/LUSD-icon.svg";
-import close from "../../assets/Close-icon.svg";
+import { BsX } from "react-icons/bs";
 
 function WithdrawalLUSDRequest({ states, setStateModals }) {
   function changeState() {
@@ -41,7 +41,9 @@ function WithdrawalLUSDRequest({ states, setStateModals }) {
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LUSD</h4>
-          <img src={close} alt="cross" onClick={changeState} />
+          <div onClick={changeState}>
+            <BsX className="close" />
+          </div>
         </div>
         <div className="list">
           <h3 onClick={openList}>Withdrawal request list</h3>
@@ -53,7 +55,7 @@ function WithdrawalLUSDRequest({ states, setStateModals }) {
           <button className="request-button">Request Withdrawal</button>
         </div>
         <div className="mid-modal">
-          <div className="container">
+          <div className="container-locklusd">
             <img src={LUSD} alt="LUSD incon" />
             <input type="text" placeholder="0" />
           </div>
@@ -61,14 +63,14 @@ function WithdrawalLUSDRequest({ states, setStateModals }) {
         </div>
         <div className="requestable-container">
           <div className="bottom-modal">
-            <div className="container">
+            <div className="container-locklusd">
               <img src={LUSD} alt="LUSD incon" />
               <h4>Requestable LUSD</h4>
             </div>
             <h4 style={{ fontWeight: 700, color: "#000000" }}>100LUSD</h4>
           </div>
           <div className="bottom-modal">
-            <div className="container">
+            <div className="container-lusdlck">
               <h4>Locking period</h4>
             </div>
             <h4 style={{ fontWeight: 700, color: "#000000" }}>7 days</h4>
