@@ -116,53 +116,51 @@ function RealEstates() {
 						<div className="wrapperAsideSection">
 							<aside className={`asideFilters ${filters ? null : 'is-closed'}`}>
 								{/* Los botones Status, Price y Properties, solo setean los estados del mismo nombre para renderizar, o dejar de hacerlo, los componentes <Status/>, <Price /> y <Properties />. Como se ve, debajo de cada boton, hay un <motion> esto envuelve al componente que renderiza y le da una animacion cuando se renderiza */}
-									<div className="filter display">
-										<h1>Filters</h1>
-										<button
-											className="button__realEstate"
-											onClick={() => setFilters(!filters)}
-										>
-											<IoClose className="icon" />
-										</button>
-									</div>
+								<div className="filter display">
+									<h1>Filters</h1>
 									<button
-										className={`buttonAsideFilter`}
-										onClick={() => setStatus(!status)}
+										className="button__realEstate"
+										onClick={() => setFilters(!filters)}
 									>
-										Status {status ? <IoIosArrowUp /> : <IoIosArrowDown />}
+										<IoClose className="icon" />
 									</button>
-									<div className={`animation ${status ? null : 'is-close'}`}>
-										{status ? <Status boolean={status} /> : null}
-									</div>
-									<button
-										className={`buttonAsideFilter`}
-										onClick={() => setPrice(!price)}
-									>
-										Price {price ? <IoIosArrowUp /> : <IoIosArrowDown />}
+								</div>
+								<button
+									className={`buttonAsideFilter`}
+									onClick={() => setStatus(!status)}
+								>
+									Status {status ? <IoIosArrowUp /> : <IoIosArrowDown />}
+								</button>
+								<div className={`animation ${status ? null : 'is-close'}`}>
+									{status ? <Status boolean={status} /> : null}
+								</div>
+								<button
+									className={`buttonAsideFilter`}
+									onClick={() => setPrice(!price)}
+								>
+									Price {price ? <IoIosArrowUp /> : <IoIosArrowDown />}
+								</button>
+								<div className={`animation ${price ? null : 'is-close'}`}>
+									{price ? <Price /> : null}
+								</div>
+								<button
+									className={`buttonAsideFilter`}
+									onClick={() => setProperties(!properties)}
+								>
+									Properties{' '}
+									{properties ? <IoIosArrowUp /> : <IoIosArrowDown />}
+								</button>
+								<div className={`animation ${properties ? null : 'is-close'}`}>
+									{properties ? <Properties /> : null}
+								</div>
+								<div className="btn-filter display">
+									<button className="button__realEstate btn-reset">
+										Reset all
 									</button>
-									<div className={`animation ${price ? null : 'is-close'}`}>
-										{price ? <Price /> : null}
-									</div>
-									<button
-										className={`buttonAsideFilter`}
-										onClick={() => setProperties(!properties)}
-									>
-										Properties{' '}
-										{properties ? <IoIosArrowUp /> : <IoIosArrowDown />}
+									<button className="button__realEstate btn-applay">
+										Apply
 									</button>
-									<div
-										className={`animation ${properties ? null : 'is-close'}`}
-									>
-										{properties ? <Properties /> : null}
-									</div>
-									<div className="btn-filter display">
-										<button className="button__realEstate btn-reset">
-											Reset all
-										</button>
-										<button className="button__realEstate btn-applay">
-											Apply
-										</button>
-									</div>
+								</div>
 							</aside>
 							<section
 								//Utiliza nuevamente el estado fiveColumn para el manejo de la grilla
