@@ -9,7 +9,8 @@ function YourVaults({
   stakingAPR,
   daily,
   total,
-  setStateModal,
+  states,
+  setStateModals,
 }) {
   const staking = 0;
 
@@ -21,12 +22,44 @@ function YourVaults({
     urlImg = LUSD;
   }
 
-  function changeState() {
-    setStateModal(true);
+  function changeStateStake() {
+    if (shortName === "LBM") {
+      setStateModals({
+        ...states,
+        stakelbm: true,
+      });
+    } else if (shortName === "LUSD") {
+      setStateModals({
+        ...states,
+        stakelusd: true,
+      });
+    }
+  }
+  function changeStateWithdraw() {
+    if (shortName === "LBM") {
+      setStateModals({
+        ...states,
+        withdrawallbm: true,
+      });
+    } else if (shortName === "LUSD") {
+      setStateModals({
+        ...states,
+        withdrawallusd: true,
+      });
+    }
   }
 
   return (
     <div className="vault-container">
+      {/* prueba-------------
+      <motion.div
+        animate={isOpenModal ? "open" : "closed"}
+        variants={variants}
+        transition={{ duration: 0.1 }}
+      >
+        <WithdrawalLUSD isOpen={isOpenModal} closeModal={closeModal} />
+      </motion.div>
+      prueba------------- */}
       <div className="stake-name">
         <img src={urlImg} alt="Coin Icon" className="coin-icon" />
         <h1 className="coin-name">{shortName}</h1>
@@ -55,10 +88,12 @@ function YourVaults({
         </div>
       </div>
       <div className="vault-buttons">
-        <button className="vault-button" onClick={changeState}>
+        <button className="vault-button" onClick={changeStateStake}>
           Stake
         </button>
-        <button className="vault-button" onClick={changeState}>
+        {/* prueba----------------------------- */}
+        <button className="vault-button" onClick={changeStateWithdraw}>
+          {/* prueba----------------------------- */}
           Withdraw
         </button>
       </div>

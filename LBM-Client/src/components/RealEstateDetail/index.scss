@@ -5,6 +5,8 @@
 	overflow: auto;
 	scrollbar-color: var(--orange-darker) transparent;
 	scrollbar-width: thin;
+	position: relative;
+	margin-top: 40px;
 	.section {
 		display: flex;
 		justify-content: space-between;
@@ -13,21 +15,22 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: flex-start;
-			width: 40vw;
+			width: 40%;
 			max-width: 690px;
 			margin: 0px 0px 0px 9%;
 		}
 		.section__image {
-			width: 30vw;
-			height: 30vw;
+			width: 90%;
+			height: 90%;
 			max-width: 690px;
 			border-radius: 16px;
+			box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+				0 4px 6px -4px rgb(0 0 0 / 0.1);
 		}
 		.section__div {
 			display: flex;
 			align-items: flex-start;
-			padding-left: 50px;
-			width: 100%;
+			width: 90%;
 		}
 		.section__p {
 			width: 100%;
@@ -79,8 +82,8 @@
 		.aside {
 			display: flex;
 			flex-direction: column;
-			width: 25vw;
-			margin-right: 5vw;
+			width: 27%;
+			margin-right: 10%;
 			align-items: flex-start;
 
 			.aside__section {
@@ -110,9 +113,13 @@
 			.sectionActions {
 				width: 90%;
 				margin: 60px auto;
+				display: flex;
+				flex-direction: column;
 				.hr {
 					color: var(--gray-color);
 					font-weight: 200;
+					margin-left: 0;
+					margin-right: 0;
 				}
 				.actions {
 					display: flex;
@@ -121,6 +128,9 @@
 						display: flex;
 						justify-content: center;
 						align-items: center;
+					}
+					.config {
+						display: none;
 					}
 					.actions_span {
 						margin-left: 15px;
@@ -143,7 +153,7 @@
 					justify-content: center;
 					width: 80%;
 					height: 40%;
-					margin: 20px auto 10px auto;
+					margin: 20px auto 20px auto;
 					padding-left: 20px;
 					background-color: var(--orange-background);
 					border-radius: 14px;
@@ -179,7 +189,7 @@
 		margin-bottom: 0px;
 		.ul__li {
 			padding: 15px 20px;
-			width: 50%;
+			width: fit-content;
 			display: flex;
 			align-items: center;
 			gap: 10px;
@@ -210,4 +220,107 @@
 .realEstateDetail::-webkit-scrollbar-thumb:vertical {
 	height: 15px;
 	background-color: var(--orange-darker);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.realEstateDetail {
+		width: 100vw;
+		height: fit-content;
+		margin-top: -20px;
+		max-height: none;
+		overflow: unset;
+		.section {
+			display: grid;
+			width: 100vw;
+			height: auto;
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			.section__figure {
+				width: 100vw;
+				margin: 0;
+				grid-row-start: 1;
+				grid-row-end: 2;
+				.section__image {
+					width: 90vw;
+					height: 90vw;
+				}
+			}
+			.section__div {
+				width: 80%;
+				padding: 0;
+				margin-top: 25px;
+				grid-row-start: 2;
+				grid-row-end: 3;
+			}
+			.showMore {
+				-webkit-line-clamp: 4;
+			}
+			.aside {
+				grid-row-start: 1;
+				grid-row-end: 2;
+				width: 90%;
+				height: 40vh;
+				margin: 20px auto;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: [first] 150px [second] auto;
+				.display--none {
+					display: none;
+				}
+				#land {
+					grid-column-start: 1;
+					grid-column-end: 3;
+					grid-row-start: first;
+					grid-row-end: second;
+					margin-top: 50px;
+				}
+				.aside__section {
+					grid-column-start: 1;
+					grid-column-end: 3;
+					grid-row-start: first;
+					grid-row-end: second;
+					margin-top: 0;
+					margin-bottom: 5px;
+				}
+				.aside__figure {
+					width: 20px;
+					height: 20px;
+					border-radius: 4px;
+					box-shadow: none;
+					margin-left: 15px;
+					font-weight: 300;
+				}
+				.sectionActions {
+					grid-column-start: 1;
+					grid-column-end: 4;
+					grid-row-start: first;
+					grid-row-end: second;
+					margin-top: 100px;
+					flex-direction: column-reverse;
+					.actions {
+						.config {
+							display: flex;
+							background-color: transparent;
+						}
+					}
+				}
+				.cardBid {
+					grid-column-start: 1;
+					grid-column-end: 4;
+					grid-row-start: second;
+					grid-row-end: 3;
+					margin-top: 10px;
+					height: 100%;
+				}
+			}
+		}
+		.ul {
+			.ul__li {
+				width: fit-content;
+			}
+		}
+		.h2 {
+			margin: 0 auto;
+		}
+	}
 }

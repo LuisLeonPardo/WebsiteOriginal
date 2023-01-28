@@ -30,7 +30,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: row;
-  z-index: 1;
+  /* z-index: 1; */
   position: relative;
 }
 .Modal{
@@ -45,8 +45,6 @@
   align-items: center;
   justify-content: center;
 }
-
-
 .card {
   padding: 2em;
 }

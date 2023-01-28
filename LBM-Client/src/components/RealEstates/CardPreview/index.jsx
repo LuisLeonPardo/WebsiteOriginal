@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.scss';
+import {BsThreeDots} from 'react-icons/bs'
 function CardPreview({ image, number, fiveColumn }) {
 	//En este componente de renderiza la imagen y el numero de la land pasadas por props
 	//recibe por props image (imagen de la land), number (numero de la land) y fiveColumn que es un booleando
@@ -13,22 +14,12 @@ function CardPreview({ image, number, fiveColumn }) {
 		>
 			<img src={image} alt="imagen preview" className="imgCardPreview" />
 			<div className="bottomCard">
-				<h5>Land #{number}</h5>
-				<div>
-					<table>
-						<tbody>
-							<tr>
-								<th>Price</th>
-								<th>Highest bid</th>
-							</tr>
-							<tr>
-								{/* Posiblemente mas adelante esta 2 <td> sean variables dinamicas */}
-								<td>200 LUSD</td>
-								<td>No bids Yet</td>
-							</tr>
-						</tbody>
-					</table>
+				<h5 className='land'>Land #{number}</h5>
+				<div className='price'>
+					<span className='priceLabel'>Price: </span>
+					<span className='value'>200 LUSD</span>
 				</div>
+				<BsThreeDots className='threeDots'/>
 			</div>
 		</div>
 	);

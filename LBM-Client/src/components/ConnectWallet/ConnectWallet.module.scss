@@ -7,7 +7,9 @@
     top: 0;
     left: 0;
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.443);
+    background-color: rgba(0, 0, 0, 0.261);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     transition:opacity .5s, background-color 1s;
 }
 
@@ -39,6 +41,7 @@
     position: fixed;
     bottom: 20%;
     transition: bottom .5s;
+    
 }
 
 .FlexContainerClosed{

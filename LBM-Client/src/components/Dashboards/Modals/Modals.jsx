@@ -3,11 +3,11 @@ import "./Modals.scss";
 import Frame from "./assets/Frame.svg";
 import Coin from "./assets/Coin.svg";
 
-function Modals({state, setStateModal}) {
+function Modals({ state, setStateModal }) {
   const listArray = [...Array(9)];
 
-  function changeState(){
-    setStateModal(false)
+  function changeState() {
+    setStateModal(false);
   }
 
   return (

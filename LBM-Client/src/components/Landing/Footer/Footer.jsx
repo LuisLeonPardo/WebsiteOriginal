@@ -1,6 +1,7 @@
 import React from "react";
 import { Slide } from "react-awesome-reveal";
-import { Link } from "react-scroll";
+import { Link as Scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import pdf from "../assets/LBM-whitepaper.pdf";
 import { networks } from "../networks";
@@ -25,17 +26,17 @@ export default function Footer() {
           <div className="footer_menu">
             <ul>
               <li>
-                <Link
+                <Scroll
                   to="home"
                   smooth={true}
                   duration={500}
                   className="footer_li"
                 >
                   Home
-                </Link>
+                </Scroll>
               </li>
               <li>
-                <a
+                <Link
                   href={pdf}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -43,17 +44,17 @@ export default function Footer() {
                   className="footer_li"
                 >
                   Whitepaper
-                </a>
+                </Link>
               </li>
               <li>
-                <Link
+                <Scroll
                   to="subscribe"
                   smooth={true}
                   duration={1000}
                   className="footer_li"
                 >
                   Contacts
-                </Link>
+                </Scroll>
               </li>
               <li>
                 <a

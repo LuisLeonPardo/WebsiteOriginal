@@ -73,10 +73,9 @@
           width: 260px;
           height: 48px;
           font-size: 16px;
-          color: #f88612;
           font-family: "Inter";
           font-style: normal;
-          padding-left: 10px;
+          padding-left: 20px;
           &:focus {
             border: none;
             outline: none;
@@ -91,6 +90,13 @@
           padding: 14px 28px;
           border: none;
           color: #ffffff;
+        }
+        span {
+          position: absolute;
+          top: 100%;
+          margin-left: 20px;
+          font-size: 10px;
+          color: red;
         }
       }
     }
@@ -175,6 +181,13 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          span {
+            position: absolute;
+            top: 100%;
+            margin-left: 20px;
+            font-size: 10px;
+            color: red;
+          }
         }
       }
     }
