@@ -1,7 +1,7 @@
 import React from "react";
 import "./WithdrawalLUSD.scss";
 import LUSD from "../../assets/LUSD-icon.svg";
-import close from "../../assets/Close-icon.svg";
+import { BsX } from "react-icons/bs";
 
 function WithdrawalLUSD({ states, setStateModals }) {
   function changeState() {
@@ -33,7 +33,9 @@ function WithdrawalLUSD({ states, setStateModals }) {
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LUSD</h4>
-          <img src={close} alt="cross" onClick={changeState} />
+          <div onClick={changeState}>
+            <BsX className="close" />
+          </div>
         </div>
         <div className="mid-modal">
           <button className="withdrawal-button">Withdrawal</button>
@@ -43,7 +45,7 @@ function WithdrawalLUSD({ states, setStateModals }) {
         </div>
 
         <div className="bottom-modal">
-          <div className="container">
+          <div className="containerlusd">
             <img src={LUSD} alt="LUSD incon" />
             <h4>Available LUSD</h4>
           </div>

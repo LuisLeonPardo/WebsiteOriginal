@@ -1,7 +1,7 @@
 import React from "react";
 import "./WithdrawalLBMRequest.scss";
 import LBM from "../../assets/LBM-icon.svg";
-import close from "../../assets/Close-icon.svg";
+import { BsX } from "react-icons/bs";
 
 function WithdrawalLBMRequest({ states, setStateModals }) {
   function changeState() {
@@ -41,7 +41,9 @@ function WithdrawalLBMRequest({ states, setStateModals }) {
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LBM</h4>
-          <img src={close} alt="cross" onClick={changeState} />
+          <div onClick={changeState}>
+            <BsX className="close" />
+          </div>
         </div>
         <div className="list">
           <h3 onClick={openList}>Withdrawal request list</h3>
@@ -53,7 +55,7 @@ function WithdrawalLBMRequest({ states, setStateModals }) {
           <button className="request-button1">Request Withdrawal</button>
         </div>
         <div className="mid-modal">
-          <div className="container">
+          <div className="container-locklbm">
             <img src={LBM} alt="LBM incon" />
             <input type="text" placeholder="0" />
           </div>
@@ -61,7 +63,7 @@ function WithdrawalLBMRequest({ states, setStateModals }) {
         </div>
         <div className="requestable-container">
           <div className="bottom-modal">
-            <div className="container">
+            <div className="container-locklbm">
               <img src={LBM} alt="LBM incon" />
               <h4>Requestable LBM</h4>
             </div>
@@ -70,7 +72,7 @@ function WithdrawalLBMRequest({ states, setStateModals }) {
             </h4>
           </div>
           <div className="bottom-modal">
-            <div className="container">
+            <div className="container-lbmlck">
               <h4>Locking period</h4>
             </div>
             <h4 style={{ fontWeight: 700, color: "#000000", marginLeft: 5 }}>
