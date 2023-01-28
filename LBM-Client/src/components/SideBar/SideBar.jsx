@@ -14,11 +14,11 @@ import { NavLink } from "react-router-dom";
 import CustomConnectButtom from "./CustomConnectButtom";
 import LaunchpadIcon from "../../../public/icons/LaunchpadIcon";
 function SideBar() {
-  const dispatch = useDispatch();
-  const { selectedIcon, walletPopUp } = useSelector(
-    (state) => state.reducerCompleto
-  );
-  const [container, setContainer] = useState(style.Container);
+	const dispatch = useDispatch();
+	const { selectedIcon, walletPopUp } = useSelector(
+		(state) => state.reducerCompleto
+	);
+	const [container, setContainer] = useState(style.Container);
 
   const [Icons, setIcons] = useState(style.IconsNone);
   const [buttonsContainer, setButtonsContainer] = useState(
