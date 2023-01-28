@@ -74,7 +74,7 @@ export default function Launchpad() {
     )
   );
 
-  const layout = [];
+  /* const layout = [];
 
   for (let i = 0; i < grid.length; i++) {
     let row = [];
@@ -88,15 +88,17 @@ export default function Launchpad() {
         {row}
       </div>
     );
-  }
+  } */
 
   return (
     <div className="launchpad">
       <div className="mainPort">
         <div className="header">
           <div className="title">
-            <h1>Launchpad</h1>
+            <h1 className="hidden">Launchpad</h1>
+            <h1 className="hiddenD">{state.charAt(0).toUpperCase() +state.slice(1)} projects</h1>
           </div>
+          <div className="discover">Discover all the top-tier projects launching on PAID Ignition.</div>
           <div className="interact">
             <button
               name="upcoming"
@@ -139,8 +141,13 @@ export default function Launchpad() {
               )}
             </div>
           </div>
+          <input className="searchM" placeholder="  Search"></input>
         </div>
-        <div className="body">{layout}</div>
+        <div className="body">
+          <div className="rowLP">
+            {grid}
+          </div>     
+        </div>
       </div>
     </div>
   );
