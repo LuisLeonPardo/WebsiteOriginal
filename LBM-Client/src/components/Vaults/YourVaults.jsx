@@ -49,17 +49,111 @@ function YourVaults({
     }
   }
 
+  var modal = document.getElementById("stakelbm");
+  var modal1 = document.getElementById("lbmform");
+  var modal2 = document.getElementById("lbmsuccess");
+  var modal3 = document.getElementById("stakelusd");
+  var modal4 = document.getElementById("lusdform");
+  var modal5 = document.getElementById("lusdsuccess");
+  var modal6 = document.getElementById("withdrawallbm");
+  var modal7 = document.getElementById("withdrawallbmrequest");
+  var modal8 = document.getElementById("withdrawallbmlocked");
+  var modal9 = document.getElementById("withdrawallbmsuccess");
+  var modal10 = document.getElementById("withdrawallusd");
+  var modal11 = document.getElementById("withdrawallusdrequest");
+  var modal12 = document.getElementById("withdrawallusdlocked");
+  var modal13 = document.getElementById("withdrawallusdsuccess");
+
+  window.onclick = function (event) {
+    switch (event.target) {
+      case modal:
+        setStateModals({
+          ...states,
+          stakelbm: false,
+        });
+        break;
+      case modal1:
+        setStateModals({
+          ...states,
+          lbmform: false,
+        });
+        break;
+      case modal2:
+        setStateModals({
+          ...states,
+          lbmsuccess: false,
+        });
+        break;
+      case modal3:
+        setStateModals({
+          ...states,
+          stakelusd: false,
+        });
+        break;
+      case modal4:
+        setStateModals({
+          ...states,
+          lusdform: false,
+        });
+        break;
+      case modal5:
+        setStateModals({
+          ...states,
+          lusdsuccess: false,
+        });
+        break;
+      case modal6:
+        setStateModals({
+          ...states,
+          withdrawallbm: false,
+        });
+        break;
+      case modal7:
+        setStateModals({
+          ...states,
+          withdrawallbmrequest: false,
+        });
+        break;
+      case modal8:
+        setStateModals({
+          ...states,
+          withdrawallbmlocked: false,
+        });
+        break;
+      case modal9:
+        setStateModals({
+          ...states,
+          withdrawallbmsuccess: false,
+        });
+        break;
+      case modal10:
+        setStateModals({
+          ...states,
+          withdrawallusd: false,
+        });
+        break;
+      case modal11:
+        setStateModals({
+          ...states,
+          withdrawallusdrequest: false,
+        });
+        break;
+      case modal12:
+        setStateModals({
+          ...states,
+          withdrawallusdlocked: false,
+        });
+        break;
+      case modal13:
+        setStateModals({
+          ...states,
+          withdrawallusdsuccess: false,
+        });
+    }
+  };
+
   return (
     <div className="vault-container">
-      {/* prueba-------------
-      <motion.div
-        animate={isOpenModal ? "open" : "closed"}
-        variants={variants}
-        transition={{ duration: 0.1 }}
-      >
-        <WithdrawalLUSD isOpen={isOpenModal} closeModal={closeModal} />
-      </motion.div>
-      prueba------------- */}
       <div className="stake-name">
         <img src={urlImg} alt="Coin Icon" className="coin-icon" />
         <h1 className="coin-name">{shortName}</h1>
@@ -91,9 +185,7 @@ function YourVaults({
         <button className="vault-button" onClick={changeStateStake}>
           Stake
         </button>
-        {/* prueba----------------------------- */}
         <button className="vault-button" onClick={changeStateWithdraw}>
-          {/* prueba----------------------------- */}
           Withdraw
         </button>
       </div>

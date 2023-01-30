@@ -34,6 +34,7 @@ function WithdrawalLBMRequest({ states, setStateModals }) {
 
   return (
     <div
+      id="withdrawallbmrequest"
       className={
         states.withdrawallbmrequest ? "requestlbm-modal" : "modals-off"
       }

@@ -10,7 +10,10 @@ function StakeLUSDSuccess({ states, setStateModals }) {
   }
 
   return (
-    <div className={states.lusdsuccess ? "lusdsuccess-modal" : "modals-off"}>
+    <div
+      id="lusdsuccess"
+      className={states.lusdsuccess ? "lusdsuccess-modal" : "modals-off"}
+    >
       <div className="modal">
         <div className="top-modal">
           <div onClick={changeState}>

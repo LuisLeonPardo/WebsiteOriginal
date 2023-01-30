@@ -17,7 +17,10 @@ function StakeLBMForm({ states, setStateModals }) {
   }
 
   return (
-    <div className={states.lbmform ? "modal-stakelbm-form" : "modals-off"}>
+    <div
+      id="lbmform"
+      className={states.lbmform ? "modal-stakelbm-form" : "modals-off"}
+    >
       <div className="modal">
         <div className="top-modal">
           <h4>Stake LBM</h4>

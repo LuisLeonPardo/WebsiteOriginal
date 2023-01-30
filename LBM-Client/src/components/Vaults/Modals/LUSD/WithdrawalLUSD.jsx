@@ -26,6 +26,7 @@ function WithdrawalLUSD({ states, setStateModals }) {
 
   return (
     <div
+      id="withdrawallusd"
       className={
         states.withdrawallusd ? "modal-withdrawalLUSD-container" : "modals-off"
       }
