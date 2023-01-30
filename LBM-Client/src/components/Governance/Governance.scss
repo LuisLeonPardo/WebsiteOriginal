@@ -51,9 +51,10 @@
           flex-direction: column;
           gap: 30px;
           width: 784px;
-          height: 620px;
+          height: 78vh;
           overflow-y: scroll;
           .governance-list-item {
+            cursor: pointer;
             h6 {
               font-family: "Inter";
               font-style: normal;

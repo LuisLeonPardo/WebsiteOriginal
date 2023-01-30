@@ -3,6 +3,7 @@ import Check from "./assets/check.svg";
 import Info from "./assets/info.svg";
 import Coin from "./assets/coin.svg";
 import "./Governance.scss";
+import { Link } from "react-router-dom";
 
 function Governance() {
   const listArray = [...Array(7)];
@@ -23,19 +24,21 @@ function Governance() {
             <div className="sdadsa">
               {listArray.map(() => {
                 return (
-                  <div className="governance-list-item">
-                    <h6>#79</h6>
-                    <div className="governance-list-item-text">
-                      <h3>
-                        VIP-79 Whitelist BNB Chain as sole liquidator of the BNB
-                        Exploiter address
-                      </h3>
-                      <div className="executed">
-                        <img src={Check} />
-                        <h5>Executed</h5>
+                  <Link to='/governance/id' style={{textDecoration: 'none', color: 'black'}}>
+                    <div className="governance-list-item">
+                      <h6>#79</h6>
+                      <div className="governance-list-item-text">
+                        <h3>
+                          VIP-79 Whitelist BNB Chain as sole liquidator of the
+                          BNB Exploiter address
+                        </h3>
+                        <div className="executed">
+                          <img src={Check} />
+                          <h5>Executed</h5>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>
