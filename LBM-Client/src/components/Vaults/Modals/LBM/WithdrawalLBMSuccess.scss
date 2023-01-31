@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+$breakpoints: (
+  mobile: 540px,
+  xs: 750px,
+  sm: 900px,
+  md: 1200px,
+  lg: 1600px,
+  lgh: 750px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+.modals-off {
+  display: none;
+}
+
+.withdrawallbm-success-modal {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.443);
+  transition: opacity 0.5s, background-color 1s;
+  z-index: 99999;
+  backdrop-filter: blur(4px);
+  .modal {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+    height: 469px;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    transition: bottom 0.5s;
+    justify-content: space-between;
+    align-items: center;
+    @include media-down(mobile) {
+      width: 358px;
+      height: 445px;
+      margin-top: 64px;
+    }
+    .top-modal {
+      display: flex;
+      flex-direction: column;
+      padding-top: 70px;
+      align-items: center;
+      @include media-down(mobile) {
+        padding-top: 50px;
+      }
+      .close {
+        position: relative;
+        width: 28px;
+        height: 28px;
+        left: 190px;
+        top: -45px;
+        border-radius: 9999px;
+        border-width: 1px;
+        border-style: solid;
+        background-color: rgba(0, 0, 0, 0.06);
+        color: rgba(60, 66, 66, 0.8);
+        border-color: rgba(0, 0, 0, 0.04);
+        transition: 0.125s ease;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.125);
+        }
+        @include media-down(mobile) {
+          left: 140px;
+          top: -25px;
+        }
+      }
+      img {
+        width: 89px;
+        height: 89px;
+      }
+    }
+    .mid-modal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 30px;
+      @include media-down(mobile) {
+        padding-bottom: 40px;
+      }
+      .container-lbmconf {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        width: 384px;
+        height: 22px;
+        @include media-down(mobile) {
+          flex-direction: column;
+          width: 319px;
+        }
+        .wth-mobile {
+          display: none;
+          @include media-down(mobile) {
+            display: block;
+            font-family: "Inter";
+            font-style: normal;
+            line-height: 24px;
+            margin: 0;
+            font-weight: 400;
+            font-size: 20px;
+            color: #374151;
+          }
+        }
+        .mobile-lbmconf {
+          display: flex;
+          align-items: center;
+          @include media-down(mobile) {
+            display: flex;
+            align-items: center;
+            height: 22px;
+          }
+        }
+        img {
+          width: 17px;
+          height: 17px;
+          @include media-down(mobile) {
+            width: 16px;
+            height: 16px;
+          }
+        }
+        h4 {
+          font-family: "Raleway";
+          font-style: normal;
+          font-weight: 100;
+          font-size: 15px;
+          line-height: 18px;
+          color: #828892;
+          @include media-down(mobile) {
+            display: none;
+          }
+        }
+      }
+      h3 {
+        display: flex;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        justify-content: center;
+        color: #000000;
+        width: 315px;
+        height: 22px;
+        @include media-down(mobile) {
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 25px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+    button {
+      width: 386px;
+      height: 64px;
+      color: #f7931a;
+      background-color: #fff1f2;
+      margin-bottom: 29px;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        background-color: #f7931a;
+        color: white;
+      }
+      @include media-down(mobile) {
+        width: 326px;
+        height: 50px;
+        margin: 10px 0px 20px;
+      }
+    }
+  }
+}
+
+.modal::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}

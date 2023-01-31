@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+$breakpoints: (
+  mobile: 540px,
+  xs: 750px,
+  sm: 900px,
+  md: 1200px,
+  lg: 1600px,
+  lgh: 750px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+.modals-off {
+  display: none;
+}
+
+.modal-withdrawalLUSD-container {
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.443);
+  transition: opacity 0.5s, background-color 1s;
+  z-index: 999;
+  backdrop-filter: blur(4px);
+  color: var(--black-color);
+  .modal {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    height: 400px;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    transition: bottom 0.5s;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    @include media-down(mobile) {
+      width: 358px;
+      height: 367px;
+      margin-top: 64px;
+    }
+    .top-modal {
+      display: flex;
+      h4 {
+        padding-top: 5px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        @include media-down(mobile) {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 19px;
+          line-height: 30px;
+        }
+      }
+      .close {
+        position: relative;
+        width: 28px;
+        height: 28px;
+        left: 117px;
+        top: -3px;
+        border-radius: 9999px;
+        border-width: 1px;
+        border-style: solid;
+        background-color: rgba(0, 0, 0, 0.06);
+        color: rgba(60, 66, 66, 0.8);
+        border-color: rgba(0, 0, 0, 0.04);
+        transition: 0.125s ease;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.125);
+        }
+        @include media-down(mobile) {
+          left: 70px;
+          bottom: 50px;
+        }
+      }
+    }
+    .mid-modal {
+      padding-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 279px;
+      height: 34px;
+      gap: 41px;
+      @include media-down(mobile) {
+        width: 326px;
+        height: 74px;
+      }
+      .withdrawal-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 103px;
+        height: 34px;
+        font-size: 14px;
+        color: #f7931a;
+        padding: 0;
+        background-color: #f9f9f9;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background-color: #f7931a;
+          color: white;
+        }
+        @include media-down(mobile) {
+          width: 159px;
+          height: 50px;
+        }
+      }
+      .request-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 144px;
+        height: 34px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #000000;
+        padding: 0;
+        background-color: white;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background-color: #f9f9f9;
+          color: #f7931a;
+        }
+        @include media-down(mobile) {
+          width: 142px;
+          height: 50px;
+        }
+      }
+    }
+    .bottom-modal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 366px;
+      height: 73px;
+      @include media-down(mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 315px;
+        height: 52px;
+      }
+      .containerlusd {
+        display: flex;
+        align-items: center;
+      }
+      img {
+        width: 24px;
+        height: 24px;
+      }
+      h4 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        margin-left: 5px;
+      }
+    }
+    h3 {
+      display: flex;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      justify-content: center;
+      align-items: center;
+      color: #000000;
+      width: 129px;
+      height: 24px;
+    }
+    h4 {
+      margin: 0px;
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 28.5px;
+      display: flex;
+      color: #a3a3a3;
+    }
+
+    button {
+      width: 366px;
+      height: 64px;
+      color: #f7931a;
+      font-size: 18px;
+      background-color: #fff1f2;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        background-color: #f7931a;
+        color: white;
+      }
+      @include media-down(mobile) {
+        display: none;
+      }
+    }
+    .withdrawlusd-btn {
+      display: none;
+      @include media-down(mobile) {
+        display: block;
+        width: 366px;
+        height: 64px;
+        color: #f7931a;
+        font-size: 18px;
+        background-color: #fff1f2;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background-color: #f7931a;
+          color: white;
+        }
+        width: 315px;
+        height: 52px;
+      }
+    }
+  }
+}
+
+.modal::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}

@@ -30,8 +30,14 @@
   min-height: 100vh;
   display: flex;
   flex-direction: row;
-  z-index: 1;
+  /* z-index: 1; */
   position: relative;
+}
+.Modal{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
 }
 .App .PopUps {
   width: 100%;
@@ -40,25 +46,9 @@
   justify-content: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 
 .card {
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
-}
+

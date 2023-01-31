@@ -8,6 +8,7 @@ export default function Deposit() {
 
     const [info , setInfo] = useState()
     const [search, setSearch] = useState('')
+    const [render, setRender] = useState(NaN)
 
     useEffect(()=> {
         setInfo(data)
@@ -38,12 +39,14 @@ export default function Deposit() {
             <div className="table">
             {info && info.data.map((el,index) => 
                 <Row
-                value = {true}
                 key={index}
+                id = {index}
                 img = {el.img}
                 name = {el.name}
                 change = {el.change}
                 amount = {el.amount}
+                render = {render}
+                setRender = {setRender}
                 />
             )}
             </div>

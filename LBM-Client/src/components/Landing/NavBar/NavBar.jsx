@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Slide } from "react-awesome-reveal";
+import { Link as Scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 import logo from "../assets/logo.svg";
 import cross from "./assets/cross.svg";
@@ -7,6 +9,7 @@ import home from "./assets/home.svg";
 import whitepaper from "./assets/whitepaper.svg";
 import contacts from "./assets/contacts.svg";
 import bepart from "./assets/bepart.svg";
+import pdf from "../assets/LBM-whitepaper.pdf";
 import { networks } from "../networks";
 import "./NavBar.scss";
 
@@ -21,16 +24,45 @@ export default function NavBar() {
           <img src={logo} className="logo" />
           <ul className="menu_items">
             <li className="menu-li_items">
-              <a className="menu-a_items">Home</a>
+              <Scroll
+                to="home"
+                smooth={true}
+                duration={500}
+                className="menu-a_items"
+              >
+                Home
+              </Scroll>
             </li>
             <li className="menu-li_items">
-              <a className="menu-a_items">Whitepaper</a>
+              <Link
+                to={pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="LBM-whitepaper.pdf"
+                className="menu-a_items"
+              >
+                Whitepaper
+              </Link>
             </li>
             <li className="menu-li_items">
-              <a className="menu-a_items">Contacts</a>
+              <Scroll
+                to="subscribe"
+                smooth={true}
+                duration={1000}
+                className="menu-a_items"
+              >
+                Contacts
+              </Scroll>
             </li>
             <li className="menu-li_items">
-              <a className="menu-a_items">I want to be part</a>
+              <a
+                href="https://discord.com/invite/cAB2MKRw7b"
+                target="_blank"
+                rel="noreferrer"
+                className="menu-a_items"
+              >
+                I want to be part
+              </a>
             </li>
           </ul>
 
@@ -50,19 +82,48 @@ export default function NavBar() {
           <ul className="responsive-menu_items">
             <li className="responsive-menu-li_items">
               <img src={home} />
-              <a className="responsive-menu-a_items">Home</a>
+              <Scroll
+                to="home"
+                smooth={true}
+                duration={500}
+                className="responsive-menu-a_items"
+              >
+                Home
+              </Scroll>
             </li>
             <li className="responsive-menu-li_items">
               <img src={whitepaper} />
-              <a className="responsive-menu-a_items">Whitepaper</a>
+              <Link
+                to={pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="LBM-whitepaper.pdf"
+                className="responsive-menu-a_items"
+              >
+                Whitepaper
+              </Link>
             </li>
             <li className="responsive-menu-li_items">
               <img src={contacts} />
-              <a className="responsive-menu-a_items">Contacts</a>
+              <Scroll
+                to="subscribe"
+                smooth={true}
+                duration={1000}
+                className="responsive-menu-a_items"
+              >
+                Contacts
+              </Scroll>
             </li>
             <li className="responsive-menu-li_items">
               <img src={bepart} />
-              <a className="responsive-menu-a_items">I want to be part</a>
+              <a
+                href="https://discord.com/invite/cAB2MKRw7b"
+                target="_blank"
+                rel="noreferrer"
+                className="responsive-menu-a_items"
+              >
+                I want to be part
+              </a>
             </li>
           </ul>
           <div className="responsive-menu_networks">

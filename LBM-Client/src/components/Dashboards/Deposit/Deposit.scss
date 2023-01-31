@@ -64,7 +64,7 @@
         border: 0px;
         width: 120px;
         height: 35px;
-        background-color: white;
+        background-color: #F9FAFB;;
         color:#707EAE;
         &:focus {
             outline: none;
@@ -81,7 +81,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 180px;
+    width: 50%;
     cursor: pointer;
     p {
         padding-left: 75px;
@@ -90,6 +90,7 @@
 }
 
 .innerRow3 {
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;

@@ -1,4 +1,5 @@
 
+
 .Container{
     width: 63px;
     height: 100vh ;
@@ -97,6 +98,16 @@ cursor: pointer;
     line-height: 1em ;
     transition: all 2s;
 }
+.Icons:hover{
+    $color1: #e27625;
+    $color2: #f8630a;
+    color:#F4911A;
+    transition: all 0s;
+}
+.Icons:hover  p{
+ transition: all 0s;
+}
+
 .IconsNone p{
     position: absolute;
     opacity: 0;
@@ -104,6 +115,17 @@ cursor: pointer;
     line-height: 0em;
     transition: all 0s;
 }
+
+.Icons:hover{
+    $color1: #e27625;
+    $color2: #f8630a;
+    color:#F4911A;
+    transition: all 0s;
+}
+.Icons:hover  p{
+ transition: all 0s;
+}
+
 
 .ButtonsContainer{
     display: flex;
@@ -116,6 +138,7 @@ cursor: pointer;
     transition: width 1s;
 
 }
+
 
 .OpenButtons{
     display: flex;
@@ -319,6 +342,12 @@ transition: font-size 1s;
     transition:  width 1s;
 }
 
+.button{
+    display: flex;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+}
 .ConnectedModalClosed{
     display: flex;
     align-items: center;
@@ -354,8 +383,8 @@ transition: font-size 1s;
 
 
 
-$color1: #9199B1; 
-$color2: #5a6689;
+$color1: #9199B1 !default; 
+$color2: #5a6689 !default;
 $color3: #e27625;
 $color4: #f8630a;
 
@@ -365,4 +394,10 @@ $color4: #f8630a;
     color2: $color2;
     color3: $color3;
     color4: $color4;
+}
+
+@media(max-width: 600px) {
+    .Container{
+        width: 100px;
+    }
 }

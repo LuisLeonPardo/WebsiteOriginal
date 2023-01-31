@@ -1,0 +1,58 @@
+.BarShow{
+    display: flex;
+}
+.Bar {display: flex;}
+.BarMobile{    display: none;
+    pointer-events: none;}
+.wallet {
+    display: none;
+    pointer-events: none;
+}
+
+@media(max-width: 500px) {
+    .Bar{
+        display: none;
+    }
+    .BarShow{display: flex;}
+    .BarMobile{
+        display: flex;
+        position: fixed;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        pointer-events: all;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 4em;
+        background-color: rgb(255, 255, 255);
+        z-index: 3;
+    }
+    .icon{
+        position: absolute;
+        right: 2em;
+        height: 2em;
+        width: 2em;
+    }
+    .BarMobile svg{
+        color: black;
+        height: 2em;
+        width: 2em;
+        cursor: pointer;
+    }
+    .BarMobile svg:hover{
+        color:#e27625 ;
+    }
+    .BarMobile a{
+        position: fixed;
+        left: 2em;
+
+    }
+    .wallet{
+        display: flex;
+        pointer-events: all;
+        height: 48px;
+        align-items: center;
+        justify-content: center;
+    }
+}

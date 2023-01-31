@@ -11,45 +11,39 @@ import { useSelector, useDispatch } from "react-redux";
 import { setSelectedIcon, setWalletPopUp } from "../../../redux/reducer";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { NavLink } from "react-router-dom";
-import ConnectWallet from "../ConnectWallet/ConnectWallet";
-import { useWeb3React } from "@web3-react/core";
-import { connector } from "../../config/web3";
+import CustomConnectButtom from "./CustomConnectButtom";
+import LaunchpadIcon from "../../../public/icons/LaunchpadIcon";
 function SideBar() {
-  const WalletData = () => {
-    const { active, activate, account } = useWeb3React();
-  };
-
-  const connect = () => {
-    activate(connector);
-  };
-  const dispatch = useDispatch();
-  const { selectedIcon, walletPopUp } = useSelector(
-    (state) => state.reducerCompleto
-  );
-  const [container, setContainer] = useState(style.Container);
+	const dispatch = useDispatch();
+	const { selectedIcon, walletPopUp } = useSelector(
+		(state) => state.reducerCompleto
+	);
+	const [container, setContainer] = useState(style.Container);
 
   const [Icons, setIcons] = useState(style.IconsNone);
   const [buttonsContainer, setButtonsContainer] = useState(
     style.ButtonsContainer
   );
-  console.log(container);
+
   return (
     <div className={container}>
       <div className={style.FlexContainer}>
-        <div className={style.LogoContainer}>
-          <img src="./icons/Logo.svg" className={style.Logo} />
-          {container === style.OpenContainer ? (
-            <img
-              src="./icons/Logo Cherryswap.svg"
-              className={style.LogoCherryswap}
-            />
-          ) : (
-            <img
-              src="./icons/Logo Cherryswap.svg"
-              className={style.LogoCherryswap2}
-            />
-          )}
-        </div>
+        <NavLink to={"./"}>
+          <div className={style.LogoContainer}>
+            <img src="./icons/Logo.svg" className={style.Logo} />
+            {container === style.OpenContainer ? (
+              <img
+                src="./icons/Logo Cherryswap.svg"
+                className={style.LogoCherryswap}
+              />
+            ) : (
+              <img
+                src="./icons/Logo Cherryswap.svg"
+                className={style.LogoCherryswap2}
+              />
+            )}
+          </div>
+        </NavLink>
         <div className={buttonsContainer}>
           <NavLink to={"./dashboard"}>
             <div
@@ -66,30 +60,21 @@ function SideBar() {
               <p>Dashboard</p>
             </div>
           </NavLink>
-          <div
-            className={
-              selectedIcon === "OrdersIcon" && Icons === style.Icons
-                ? style.IconSelected
-                : Icons
-            }
-            onClick={() => dispatch(setSelectedIcon("OrdersIcon"))}
-          >
-            <NavLink to={"./vaults"}>
-              <div
-                className={
-                  selectedIcon === "OrdersIcon" && Icons === style.Icons
-                    ? style.IconSelected
-                    : Icons
-                }
-                onClick={() => dispatch(selectedIcon("OrdersIcon"))}
-              >
-                <OrdersIcon
-                  selected={selectedIcon === "OrdersIcon" ? true : false}
-                />
-                <p>Vaults</p>
-              </div>
-            </NavLink>
-          </div>
+          <NavLink to={"./vaults"}>
+            <div
+              className={
+                selectedIcon === "OrdersIcon" && Icons === style.Icons
+                  ? style.IconSelected
+                  : Icons
+              }
+              onClick={() => dispatch(selectedIcon("OrdersIcon"))}
+            >
+              <OrdersIcon
+                selected={selectedIcon === "OrdersIcon" ? true : false}
+              />
+              <p>Vaults</p>
+            </div>
+          </NavLink>
           <NavLink to={"./realestate"}>
             <div
               className={
@@ -102,7 +87,22 @@ function SideBar() {
               <Layer1Icon
                 selected={selectedIcon === "Layer1Icon" ? true : false}
               />
-              <p>Real State</p>
+              <p>Real Estate</p>
+            </div>
+          </NavLink>
+          <NavLink to={"./launchpad"}>
+            <div
+              className={
+                selectedIcon === "Launchpad" && Icons === style.Icons
+                  ? style.IconSelected
+                  : Icons
+              }
+              onClick={() => dispatch(setSelectedIcon("Launchpad"))}
+            >
+              <LaunchpadIcon
+                selected={selectedIcon === "Launchpad" ? true : false}
+              />
+              <p>Launchpad</p>
             </div>
           </NavLink>
           <div
@@ -126,16 +126,7 @@ function SideBar() {
               : style.BottomButtonsContainer
           }
         >
-          <div
-            className={
-              container === style.OpenContainer
-                ? style.walletButtonOpen
-                : style.walletButton
-            }
-            onClick={() => <ConnectWallet />}
-          >
-            Connect Wallet
-          </div>
+          <CustomConnectButtom container={container} />
           <div
             className={
               container === style.OpenContainer

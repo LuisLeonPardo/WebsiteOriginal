@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+$breakpoints: (
+  mobile: 540px,
+  xs: 750px,
+  sm: 900px,
+  md: 1200px,
+  lg: 1600px,
+  lgh: 750px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+.modals-off {
+  display: none;
+}
+
+.lockedlbm-modal {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.443);
+  transition: opacity 0.5s, background-color 1s;
+  z-index: 99999;
+  backdrop-filter: blur(4px);
+  .modal {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    height: 260px;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    transition: bottom 0.5s;
+    justify-content: space-around;
+    align-items: center;
+    @include media-down(mobile) {
+      width: 358px;
+      height: 227px;
+      margin-top: 64px;
+    }
+    .top-modal {
+      display: flex;
+      h4 {
+        padding-top: 15px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        @include media-down(mobile) {
+          font-size: 19px;
+          line-height: 30px;
+        }
+      }
+      .close {
+        position: relative;
+        width: 28px;
+        height: 28px;
+        left: 117px;
+        top: 5px;
+        border-radius: 9999px;
+        border-width: 1px;
+        border-style: solid;
+        background-color: rgba(0, 0, 0, 0.06);
+        color: rgba(60, 66, 66, 0.8);
+        border-color: rgba(0, 0, 0, 0.04);
+        transition: 0.125s ease;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.125);
+        }
+        @include media-down(mobile) {
+          left: 65px;
+          top: 5px;
+        }
+      }
+    }
+
+    .bottom-modal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 366px;
+      height: 73px;
+      @include media-down(mobile) {
+        width: 302px;
+        height: 24px;
+      }
+      .container-lbmwth {
+        display: flex;
+        align-items: center;
+        @include media-down(mobile) {
+          width: 300px;
+          justify-content: space-around;
+        }
+      }
+      img {
+        width: 24px;
+        height: 24px;
+        @include media-down(mobile) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      h4 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        margin-left: 5px;
+        @include media-down(mobile) {
+          display: none;
+        }
+      }
+      .mobile {
+        display: none;
+        @include media-down(mobile) {
+          margin: 0px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          display: flex;
+          color: #9597a1;
+          padding-left: 5px;
+          padding-right: 70px;
+        }
+      }
+      .hidden-amount {
+        display: none;
+        @include media-down(mobile) {
+          display: block;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          color: #000000;
+        }
+      }
+    }
+    h4 {
+      margin: 0px;
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 28.5px;
+      display: flex;
+      color: #a3a3a3;
+    }
+    .locked-mobile {
+      margin: 0px;
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 28.5px;
+      display: flex;
+      color: #a3a3a3;
+      @include media-down(mobile) {
+        display: none;
+      }
+    }
+    button {
+      width: 366px;
+      height: 48px;
+      color: #f7931a;
+      font-size: 18px;
+      background-color: #fff1f2;
+      margin-bottom: 15px;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        background-color: #f7931a;
+        color: white;
+      }
+      @include media-down(mobile) {
+        width: 302px;
+        height: 54px;
+      }
+    }
+  }
+}
+
+.modal::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}

@@ -27,7 +27,7 @@ export default function Protocol() {
   return (
     <main className="protocol_items">
       <section className="protocol_section">
-        <Slide direction={"left"}>
+        <Slide direction={"left"} triggerOnce={"true"}>
           <div className="procotol_image">
             <div>
               <div></div>
@@ -35,7 +35,7 @@ export default function Protocol() {
             <img alt="Launch App" src={desktop} />
           </div>
         </Slide>
-        <Slide direction={"right"}>
+        <Slide direction={"right"} triggerOnce={"true"}>
           <div className="protocol_text">
             <h2>
               What is Libertum <br></br>Protocol?

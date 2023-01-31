@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+.cs_items {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../../public/icons/Background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .cs_section {
+    position: relative;
+    .cs_back {
+      position: absolute;
+      top: 0%;
+      left: 5%;
+      display: flex;
+      background: #f88612;
+      box-shadow: 0px 10px 30px rgba(56, 29, 219, 0.2);
+      border-radius: 15px;
+      border: none;
+      color: #ffffff;
+    }
+    .cs_text {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 300px;
+        line-height: 90.02%;
+        color: #f9fafb;
+      }
+      div {
+        position: absolute;
+        top: 80%;
+        h3 {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 48px;
+          margin: 0;
+        }
+        p {
+          font-family: "Raleway";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 21px;
+          text-align: center;
+          letter-spacing: 0.08em;
+        }
+      }
+    }
+    .cs_form {
+      display: flex;
+      justify-content: center;
+      margin: 60px 0 60px 0;
+      form {
+        display: flex;
+        gap: 10px;
+        input {
+          background: rgba(0, 0, 0, 0.1);
+          box-sizing: border-box;
+          border: 1px solid #ffffff;
+          border-radius: 15px;
+          width: 260px;
+          height: 48px;
+          font-size: 16px;
+          font-family: "Inter";
+          font-style: normal;
+          padding-left: 20px;
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+        button {
+          width: 146px;
+          height: 48px;
+          background: #f88612;
+          box-shadow: 0px 10px 30px rgba(56, 29, 219, 0.2);
+          border-radius: 15px;
+          padding: 14px 28px;
+          border: none;
+          color: #ffffff;
+        }
+        span {
+          position: absolute;
+          top: 100%;
+          margin-left: 20px;
+          font-size: 10px;
+          color: red;
+        }
+      }
+    }
+    .cs_network {
+      max-width: 300px;
+      gap: 24px;
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .cs_items {
+    .cs_section {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      .cs_back {
+        top: -7%;
+        left: 45%;
+      }
+      .cs_text {
+        h1 {
+          font-size: 150px;
+        }
+        div {
+          h3 {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  .cs_items {
+    .cs_section {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+
+      .cs_text {
+        h1 {
+          font-size: 150px;
+        }
+        div {
+          h3 {
+            font-size: 25px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .cs_items {
+    .cs_section {
+      gap: 80px;
+      .cs_text {
+        h1 {
+          width: 350px;
+          font-size: 80px;
+        }
+        div {
+          width: 350px;
+          h3 {
+            font-size: 25px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+      .cs_form {
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          span {
+            position: absolute;
+            top: 100%;
+            margin-left: 20px;
+            font-size: 10px;
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,27 +1,30 @@
 import Landing from './components/Landing/Landing';
+import NotFound from './components/NotFound/NotFound';
 // import Dashboard from "./components/Dashboards/Dashboard";
 import './App.css';
 import SideBar from './components/SideBar/SideBar';
 import {
-	Route,
-	Routes,
-	useLocation,
-	Outlet,
-	BrowserRouter,
-} from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import Home from './components/Landing/Home/Home';
-import Dash from './components/Dashboards/Dash/Dash';
-import RealEstates from './components/RealEstates';
-import React, { useEffect, useState } from 'react';
-import Modals from './components/Dashboards/Modals/Modals';
+  Route,
+  Routes,
+  useLocation,
+  Outlet,
+  BrowserRouter,
+} from "react-router-dom";
+import { useSelector } from "react-redux";
+import Home from "./components/Landing/Home/Home";
+import Dash from "./components/Dashboards/Dash/Dash";
+import RealEstates from "./components/RealEstates";
+import React, { useEffect, useState } from "react";
+import Modals from "./components/Dashboards/Modals/Modals";
+import Web3 from "web3";
 import Governance from "./components/Governance/Governance";
-import Web3 from 'web3';
-import Vaults from './components/Vaults/Vaults';
-import RealEstateDetail from './components/RealEstateDetail';
+import Vaults from "./components/Vaults/Vaults";
+import RealEstateDetail from "./components/RealEstateDetail/index";
+import SideBarMobile from "./components/SideBar/mobile/SideBarMobile";
+import CoomingSoon from "./components/ComingSoon/ComingSoon";
+import Launchpad from "./components/Launchpad/Launchpad";
+import ProductPage from "./components/Launchpad/ProductPage/ProductPage";
 import GovernanceDetails from './components/Governance/GovernanceDetails/GovernanceDetails'
-
-
 function App() {
 	const [stateModal, setStateModal] = useState(false);
 	const { selectedIcon, walletPopUp } = useSelector(
@@ -36,53 +39,57 @@ function App() {
 			<Modals state={stateModal} setStateModal={setStateModal} />
 
 			<div className="SideBar">
-				<SideBar />
+				<SideBarMobile />
 			</div>
-
 			<Outlet />
 		</>
 	);
-	useEffect(() => {
-		if (window.ethereum) {
-		}
-	});
-	return (
-		<div className="App">
-			<Routes>
-				<Route path="/" element={<Landing />} />
-				<Route   element={<AppLayout />}>
-					<Route
-						path="/dashboard"
-						element={
-							<div className="Page">
-								<Dash setStateModal={setStateModal} />
-							</div>
-						}
-					/>
-					<Route
-						path="/vaults"
-						element={
-							<div className="Page">
-								<Vaults />
-							</div>
-						}
-					/>
-					<Route
-						path="/realestate"
-						element={
-							<div className="Page">
-								<RealEstates />
-							</div>
-						}
-					/>
-					<Route
-						path="/realestate/:id"
-						element={
-							<div className="Page">
-								<RealEstateDetail />
-							</div>
-						}
-					/>
+
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route element={<AppLayout />}>
+          <Route
+            path="/dashboard"
+            element={
+              <div className="Page">
+                <Dash setStateModal={setStateModal} />
+              </div>
+            }
+          />
+          <Route
+            path="/vaults"
+            element={
+              <div className="Page">
+                <Vaults />
+              </div>
+            }
+          />
+          <Route
+            path={"/realestate"}
+            element={
+              <div className="Page">
+                <RealEstates />
+              </div>
+            }
+          />
+          <Route
+            path={"/realestate/:id"}
+            element={
+              <div className="Page">
+                <RealEstates />
+              </div>
+            }
+          />
+          <Route
+            path={"/launchpad"}
+            element={
+              <div className="Page">
+                <Launchpad />
+              </div>
+            }
+          />
           <Route
             path="/governance"
             element={
@@ -91,7 +98,7 @@ function App() {
               </div>
             }
           />
-		  <Route
+          <Route
             path="/governance/id"
             element={
               <div className="Page">
@@ -99,11 +106,21 @@ function App() {
               </div>
             }
           />
-					{/* Dentro de este Route van todas las cosas que tengan sidebar */}
-				</Route>
-			</Routes>
-		</div>
-	);
+          <Route
+            path={"/product"}
+            element={
+              <div className="Page">
+                <ProductPage />
+              </div>
+            }
+          />
+          {/* Dentro de este Route van todas las cosas que tengan sidebar */}
+        </Route>
+        <Route path="/swap" element={<CoomingSoon />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
