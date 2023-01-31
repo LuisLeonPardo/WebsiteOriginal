@@ -3,6 +3,7 @@
 $breakpoints: (
     smh: 680px,
     xs: 750px,
+    xxs: 420px
 );
 
 @mixin height-down($breakpoint) {
@@ -41,7 +42,7 @@ $breakpoints: (
     align-items: center;
     justify-content: flex-start;
     @include media-down(xs) {
-        min-width: 370px;
+        width: 100%;
         position: relative;
         top: 30px;
         background-color: transparent;
@@ -56,8 +57,11 @@ $breakpoints: (
       margin: 2% 0%;
       @include media-down(xs) {
         height: 200px;
-        min-width: 370px;
+        width: 370px;
         justify-content: space-evenly;
+      }
+      @include media-down(xxs) {
+        width: 350px;
       }
             .title {
                 display: flex;
