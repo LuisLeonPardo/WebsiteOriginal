@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import style from "./SideBar.module.scss";
 import FirstIcon from "../../../public/icons/firstIcon";
 import OrdersIcon from "../../../public/icons/ordersIcon";
@@ -14,15 +14,20 @@ import { NavLink } from "react-router-dom";
 import CustomConnectButtom from "./CustomConnectButtom";
 import LaunchpadIcon from "../../../public/icons/LaunchpadIcon";
 function SideBar() {
-	const dispatch = useDispatch();
-	const { selectedIcon, walletPopUp } = useSelector(
-		(state) => state.reducerCompleto
-	);
-	const [container, setContainer] = useState(style.Container);
+  const dispatch = useDispatch();
+  const { selectedIcon, walletPopUp } = useSelector(
+    (state) => state.reducerCompleto
+  );
+  const screenWidth = window.innerWidth || document.body.clientWidth;
+  const [container, setContainer] = useState(
+    screenWidth < 600 ? style.OpenContainer : style.Container
+  );
 
-  const [Icons, setIcons] = useState(style.IconsNone);
+  const [Icons, setIcons] = useState(
+    screenWidth < 600 ? style.Icons : style.IconsNone
+  );
   const [buttonsContainer, setButtonsContainer] = useState(
-    style.ButtonsContainer
+    screenWidth < 600 ? style.OpenButtons : style.ButtonsContainer
   );
 
   return (
@@ -67,7 +72,7 @@ function SideBar() {
                   ? style.IconSelected
                   : Icons
               }
-              onClick={() => dispatch(selectedIcon("OrdersIcon"))}
+              onClick={() => dispatch(setSelectedIcon("OrdersIcon"))}
             >
               <OrdersIcon
                 selected={selectedIcon === "OrdersIcon" ? true : false}
@@ -119,42 +124,44 @@ function SideBar() {
             <p>Governance</p>
           </div>
         </div>
-        <div
-          className={
-            container === style.OpenContainer
-              ? style.BottomOpenContainer
-              : style.BottomButtonsContainer
-          }
-        >
-          <CustomConnectButtom container={container} />
+        {screenWidth < 600 ? null : (
           <div
             className={
               container === style.OpenContainer
-                ? style.twoLastButtonsOpen
-                : style.twoLastButtons
+                ? style.BottomOpenContainer
+                : style.BottomButtonsContainer
             }
           >
+            <CustomConnectButtom container={container} />
             <div
-              onClick={() =>
-                container === style.Container
-                  ? (setContainer(style.OpenContainer),
-                    setIcons(style.Icons),
-                    setButtonsContainer(style.OpenButtons))
-                  : (setContainer(style.Container),
-                    setIcons(style.IconsNone),
-                    setButtonsContainer(style.ButtonsContainer))
-              }
               className={
                 container === style.OpenContainer
-                  ? style.collapseOpen
-                  : style.collapse
+                  ? style.twoLastButtonsOpen
+                  : style.twoLastButtons
               }
             >
-              <CollapseIcon />
-              <p>Collapse</p>
+              <div
+                onClick={() =>
+                  container === style.Container
+                    ? (setContainer(style.OpenContainer),
+                      setIcons(style.Icons),
+                      setButtonsContainer(style.OpenButtons))
+                    : (setContainer(style.Container),
+                      setIcons(style.IconsNone),
+                      setButtonsContainer(style.ButtonsContainer))
+                }
+                className={
+                  container === style.OpenContainer
+                    ? style.collapseOpen
+                    : style.collapse
+                }
+              >
+                <CollapseIcon />
+                <p>Collapse</p>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
