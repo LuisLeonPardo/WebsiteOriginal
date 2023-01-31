@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import logo from '../../../public/icons/Logo.svg';
 import { useParams } from 'react-router-dom';
 // import './index.scss';
@@ -13,27 +13,40 @@ import { Link } from 'react-router-dom';
 import Selector from './Selector';
 import Modal from './Modal';
 import { useModal } from '../../helpers/useModal/useModal';
-import { motion } from 'framer-motion';
-
+//<RealEstateDetail/> es el componente que muestra los detalles del land, es importado en el index.jsx de la carpeta RealEstates
 function RealEstateDetail() {
-	const start = Math.floor(Math.random() * db.length);
-	const splicedb = db.slice(start > 11 ? 11 : start, start + 5);
-	// const splicedb = db.slice(8 , 10);
-
+	//Necesito acceder a un div que tiene un overflow para poder manejar el scroll con una funcioanlidad, por eso uso useRef
+	const div = useRef()
+	//accedo al id mediante useParamans
 	const { id } = useParams();
+	//Al final del componente, se renderizan 5 recomendaciones de estates, utilizo start para hacer un recorte de 5 lands a la base de datos y asi renderizar, uso un Math.random para que no siempre sean los mismos 5
+	const start = useMemo(() => Math.floor(Math.random() * db.length), [id]);
+	//aqui abajo se hace el recorte
+	const splicedb = db.slice(start > 11 ? 11 : start, start + 5);
+	//showMore sirve para mostrar mas o menos texto en la descripcion del detalle
 	const [showMore, setShowMore] = useState(false);
+	//con land encuentro el estate que se selecciono y guardo sus detalles alli
 	const land = db.find((e) => e.number === id);
+	//nuevamente el hook para abrir <Modal />
 	const [isOpenModal, openModal, closeModal] = useModal();
+	//este useEffect lo utilizo para scrollear automaticamente hacie arriba en ciertas situaciones
+	useEffect(() => {
+		window.scroll(0,0)
+		div.current.scrollTo({ top: div.current.scrollTop = 5, behavior: 'smooth' });
+	}, [id])
+	
 	return (
-		<div className="realEstateDetail">
+		<div ref={div} className="realEstateDetail">
 			<Modal
 				number={land.number}
 				isOpen={isOpenModal}
 				closeModal={closeModal}
 			/>
+			{/* Aqui abajo se encuentra la imagen del detalle del estate */}
 			<figure className="figure">
 				<img src={land.image} alt="Land" className="figure__image" />
 			</figure>
+			{/* Dentro del tag <aside> se encuentran todo lo que esta a la derecha de la imagen en la ruta /realestate/:id */}
 			<aside className="aside">
 				<h1
 					id="land"
@@ -86,9 +99,10 @@ function RealEstateDetail() {
 						</small>
 						<span className="aside__text aside__text--bold">200 LUSD</span>
 					</div>
-					<button className="cardBid__button" onClick={() => openModal()}>
+					<button className="cardBid__button">
 						Buy now
 					</button>
+					{/* Cuando le das click al boton de aqui abajo se abre el modal */}
 					<button
 						className="cardBid__button cardBid__button--bg-transparent"
 						onClick={() => openModal()}
@@ -100,6 +114,7 @@ function RealEstateDetail() {
 					</p>
 				</div>
 			</aside>
+			{/* En el tag se <section> abarca todo lo que esta debajo de la imagen hasta el h1 que dice "More from this collection" (sin incluir) */}
 			<section className="section">
 				<Selector />
 				<div className="section__div section--flex--column">
@@ -158,17 +173,18 @@ function RealEstateDetail() {
 					</ul>
 				</div>
 			</section>
-
+			{/* En el tag <footer> se encuentra el h1 nombrado anteriormente y las 5 cards de estates recomendadas */}
 			<footer className="cards">
 				<h2 className="h2">More from this collection</h2>
 				<div className='gridCards'>
 					{splicedb.map((e) => (
-						<Link to={`/realestate/${e.number}`} className="link" key={e.id}>
+						<Link to={`/realestate/${e.number}`} className="link" key={e.id} >
 							<CardPreview
 								key={e.id}
 								image={e.image}
 								number={e.number}
 								fiveColumn={true}
+
 							/>
 						</Link>
 					))}
