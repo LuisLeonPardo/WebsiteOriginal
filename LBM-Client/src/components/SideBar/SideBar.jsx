@@ -30,8 +30,24 @@ function SideBar() {
     screenWidth < 600 ? style.OpenButtons : style.ButtonsContainer
   );
 
+  useEffect(() => {
+    document.addEventListener("click", (e) => {
+      const isDropdownButton = e.target.matches("[data-dropdown-button]");
+      const isSideBar = e.target.matches("[data-dropdown-sidebar]");
+      if (!isSideBar && e.target.closest("[data-dropdown-sidebar]") != null)
+        return;
+      if (!isDropdownButton && e.target.closest("[data-dropdown]") != null)
+        return;
+      if (!isSideBar) {
+        setContainer(style.Container);
+        setIcons(style.IconsNone);
+        setButtonsContainer(style.ButtonsContainer);
+      }
+    });
+  }, []);
+
   return (
-    <div className={container}>
+    <div data-dropdown-sidebar className={container}>
       <div className={style.FlexContainer}>
         <NavLink to={"./"}>
           <div className={style.LogoContainer}>
@@ -141,6 +157,7 @@ function SideBar() {
               }
             >
               <div
+                data-dropdown-button
                 onClick={() =>
                   container === style.Container
                     ? (setContainer(style.OpenContainer),
