@@ -94,7 +94,10 @@ function ProductPage() {
                 </div>
               ) : selected === "description" ? (
                 <div className={style.descriptionContainer}>
-                  <div className={style.descriptionFlex}>
+                  <div
+                    className={style.descriptionFlex}
+                    style={{ width: "100%" }}
+                  >
                     <p>
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Neque id nulla sit eos obcaecati architecto, odio
