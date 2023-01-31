@@ -19,9 +19,11 @@ $breakpoints: (
     flex-direction: column;
     align-content: center;
     align-items: center;
+    user-select: none;
 
     @include media-down(xs) {
         width: 80vw;
+        height: 70vh;
     }
 
     .header {
@@ -54,9 +56,21 @@ $breakpoints: (
         }
 
         .close {
-            font-size: 12px;
             position: relative;
             cursor: pointer;
+            width: 28px;
+            height: 28px;
+            border-radius: 9999px;
+            border-width: 1px;
+            border-style: solid;
+            background-color: rgba(0, 0, 0, 0.06);
+            color: rgba(60, 66, 66, 0.8);
+            border-color: rgba(0, 0, 0, 0.04);
+            transition: 0.125s ease;
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.125);
+            }
         }
     }
 
@@ -135,6 +149,9 @@ $breakpoints: (
             align-items: center;
             text-align: center;
             color: #000000;
+            @include media-down(xs) {
+                font-size: 15px;
+            }
         }
     }
 
@@ -220,6 +237,7 @@ $breakpoints: (
     width: 50vw;
     max-width: 400px;
     max-height: 470px;
+    user-select: none;
     @include media-down(xs) {
         width: 80vw;
     }
@@ -229,19 +247,30 @@ $breakpoints: (
     align-items: center;
     justify-content: space-between;
 
-    .exit {
-        width: 80%;
-        height: 20%;
+    .head {
+        height: 15%;
+        width: 90%;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+    }
+
+    .exit {
+        position: relative;
         cursor: pointer;
-
-
-        h2 {
-            font-size: 16px;
-            margin: 0px;
+        width: 28px;
+        height: 28px;
+        border-radius: 9999px;
+        border-width: 1px;
+        border-style: solid;
+        background-color: rgba(0, 0, 0, 0.06);
+        color: rgba(60, 66, 66, 0.8);
+        border-color: rgba(0, 0, 0, 0.04);
+        transition: 0.125s ease;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.125);
         }
     }
 
