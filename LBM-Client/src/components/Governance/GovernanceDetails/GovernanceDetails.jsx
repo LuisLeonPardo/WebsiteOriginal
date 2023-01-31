@@ -14,7 +14,7 @@ function GovernanceDetails() {
             <img src={Vector} />
             <h1>Proposals</h1>
           </div>
-          <div className="govdetails-top-text">
+          <div className="govdetails-top-text grey">
             <h2>+ Create proposal</h2>
             <img src={Info} />
           </div>

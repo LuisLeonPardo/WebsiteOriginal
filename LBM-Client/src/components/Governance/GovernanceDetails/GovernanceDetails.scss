@@ -238,3 +238,93 @@
     }
   }
 }
+
+/* ======= MEDIA QUERIES (SMALL DEVICES) ======= */
+
+@media screen and (max-width: 600px) {
+  .govdetails-container {
+    width: 100%;
+    padding: 0 20px;
+    .govdetails {
+      width: 100%;
+      .govdetails-top {
+        .grey{
+          display: none;
+        }
+        .govdetails-top-text {
+        }
+        h1 {
+        }
+        h2 {
+        }
+      }
+      .govdetails-title {
+        width: 100%;
+        flex-direction: column;
+        .govdetails-name {
+          h2 {
+          }
+          .govdetails-name-text {
+            h1 {
+              width: 100%;
+            }
+            .govdetails-name-help {
+              h3 {
+              }
+            }
+          }
+        }
+        .govdetails-proposal {
+          h2 {
+          }
+          h3 {
+          }
+          h1 {
+          }
+          .proposal-list {
+            .proposal-list-item {
+              .proposal-list-item-text {
+                img {
+                }
+                h2 {
+                }
+              }
+              h3 {
+              }
+            }
+          }
+        }
+      }
+      .govdetails-middle {
+        flex-direction: column;
+        .govdetails-cards {
+          width: 90%;
+          .govdetails-cards-top {
+            .govdetails-cards-top-text {
+              h1 {
+              }
+              h2 {
+              }
+            }
+            span {
+            }
+            h6 {
+            }
+          }
+          .govdetails-list-title {
+            h1 {
+            }
+          }
+          .govdetails-list {
+            .govdetails-list-text {
+              h2 {
+              }
+              h3 {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
