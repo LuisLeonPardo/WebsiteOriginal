@@ -173,4 +173,9 @@
 	align-items: center;
 	transition: bottom 0.25s;
 }
+@media only screen and (min-width: 320px) and (max-width: 480px){
+	.modalContainer{
+		width: 90vw;
+	}
+}
 
