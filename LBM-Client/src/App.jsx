@@ -19,6 +19,7 @@ import Governance from "./components/Governance/Governance";
 import Web3 from 'web3';
 import Vaults from './components/Vaults/Vaults';
 import RealEstateDetail from './components/RealEstateDetail';
+import GovernanceDetails from './components/Governance/GovernanceDetails/GovernanceDetails'
 
 
 function App() {
@@ -87,6 +88,14 @@ function App() {
             element={
               <div className="Page">
                 <Governance />
+              </div>
+            }
+          />
+		  <Route
+            path="/governance/id"
+            element={
+              <div className="Page">
+                <GovernanceDetails />
               </div>
             }
           />
