@@ -161,7 +161,7 @@ function GovernanceDetails() {
           </div>
           <div>
             <h2 style={{ marginBottom: "9px" }}>Voting options</h2>
-            <div className="votinAgainst">
+            <div className="voting">
               <p style={{ marginBottom: "4px" }}>
                 For - I agree that Venus Protocol should proceed with the
                 Buyback & Tokenomics Distribution

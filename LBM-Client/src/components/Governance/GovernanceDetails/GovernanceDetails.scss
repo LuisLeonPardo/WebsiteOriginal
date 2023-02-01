@@ -245,6 +245,9 @@
     }
     .govdetails-bottom {
       text-align: left;
+      .voting {
+        padding-left: 20px;
+      }
       h1 {
         font-family: "Inter";
         font-style: normal;
@@ -370,9 +373,6 @@
       .govdetails-bottom {
         width: 95%;
         padding-left: 10px;
-        .voting {
-          padding-left: 20px;
-        }
         p {
           word-break: keep-all;
         }
