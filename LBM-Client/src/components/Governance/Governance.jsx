@@ -3,6 +3,7 @@ import Check from "./assets/check.svg";
 import Info from "./assets/info.svg";
 import Coin from "./assets/coin.svg";
 import "./Governance.scss";
+import { Link } from "react-router-dom";
 
 function Governance() {
   const listArray = [...Array(7)];
@@ -23,25 +24,28 @@ function Governance() {
             <div className="sdadsa">
               {listArray.map(() => {
                 return (
-                  <div className="governance-list-item">
-                    <h6>#79</h6>
-                    <div className="governance-list-item-text">
-                      <h3>
-                        VIP-79 Whitelist BNB Chain as sole liquidator of the BNB
-                        Exploiter address
-                      </h3>
-                      <div className="executed">
-                        <img src={Check} />
-                        <h5>Executed</h5>
+                  <Link to='/governance/id' style={{textDecoration: 'none', color: 'black'}}>
+                    <div className="governance-list-item">
+                      <h6>#79</h6>
+                      <div className="governance-list-item-text">
+                        <h3>
+                          VIP-79 Whitelist BNB Chain as sole liquidator of the
+                          BNB Exploiter address
+                        </h3>
+                        <div className="executed">
+                          <img src={Check} />
+                          <h5>Executed</h5>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>
           </div>
         </div>
         <div className="second-column">
+          <h1 className="governance-phone">Governance</h1>
           <h2>Voting wallet</h2>
           <div className="gov-deposit">
             <div className="voting-weight">
@@ -60,10 +64,10 @@ function Governance() {
           <div className="gov-recommendations">
             <h4>To vote you should:</h4>
             <h5>
-              1. <h6>Deposit your tokens</h6> in the LBM Vault
+              1. <em>Deposit your tokens</em> in the LBM Vault
             </h5>
             <h5>
-              2. <h6>Delegate your voting power</h6> to yourself or somebody
+              2. <em>Delegate your voting power</em> to yourself or somebody
               else
             </h5>
           </div>

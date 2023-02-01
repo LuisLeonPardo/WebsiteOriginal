@@ -1,4 +1,8 @@
 .toggle-switch {
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 3;
 	width: 7vw;
 	height: 48px;
 	background-color: var(--modern-white);
@@ -28,12 +32,12 @@
 		background-color: var(--white-color);
 	}
 }
-.toggle-switch:hover{
+.toggle-switch:hover {
 	cursor: pointer;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px){
-	.toggle-switch{
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.toggle-switch {
 		display: none;
 	}
 }

@@ -11,6 +11,7 @@ function WithdrawalLUSDSuccess({ states, setStateModals }) {
 
   return (
     <div
+      id="withdrawallusdsuccess"
       className={
         states.withdrawallusdsuccess ? "withdrawal-success-modal" : "modals-off"
       }

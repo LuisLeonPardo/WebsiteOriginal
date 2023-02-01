@@ -4,10 +4,6 @@ import LUSD from "../../assets/LUSD-icon.svg";
 import { BsX } from "react-icons/bs";
 
 function WithdrawalLUSDLocked({ states, setStateModals }) {
-  function changeState() {
-    setStateModals(false);
-  }
-
   function goBack() {
     setStateModals({
       ...states,
@@ -17,12 +13,13 @@ function WithdrawalLUSDLocked({ states, setStateModals }) {
   }
   return (
     <div
+      id="withdrawallusdlocked"
       className={states.withdrawallusdlocked ? "locked-modal" : "modals-off"}
     >
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LUSD</h4>
-          <div onClick={changeState}>
+          <div onClick={goBack}>
             <BsX className="close" />
           </div>
         </div>

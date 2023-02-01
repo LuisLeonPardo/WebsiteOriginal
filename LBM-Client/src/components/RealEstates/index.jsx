@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './index.scss';
-import { Link } from 'react-router-dom';
 import { SlRefresh } from 'react-icons/sl';
 import Toggle from './ToggleButton';
 import Status from './Status';
 import Price from './Price';
 import Properties from './Properties';
 import CardPreview from './CardPreview';
-import { motion } from 'framer-motion';
 import RealEstateDetail from '../RealEstateDetail';
 import { MdOutlineFilterList } from 'react-icons/md';
 import { IoIosArrowUp, IoIosArrowDown, IoIosArrowBack } from 'react-icons/io';
@@ -23,6 +21,10 @@ const variants = {
 	open: { opacity: 1 },
 	closed: { opacity: 0, display: 'none' },
 };
+import { useModal } from '../../helpers/useModal/useModal';
+// db es una ase de datos falsa, para poder renderizar las lands con sus imagenes y numeros, esto deberia cambiar mas adelante, pero sirve para maquetar los componentes
+import db from '../RealEstates/fakedb/db.json';
+import ModalOrder from './ModalOrder';
 //Aclarancion, a parti de ahora me voy a referir a los estaes que estan en venta como "Lands"
 //El componente RealEstates se renderiza en la ruta /realestates y /realestates/:id pero aqui con algunas modificaciones como se vera mas adelante en el codigo.
 //Aclaracion: Todos los componente que se importan en este archivo (a exepcion de <RealEstateDetail /> que se encuetra en la carpeta "RealEstateDetail"), se encuentran dentro de la carpeta 'RealEstates', las imagenes son importadas desde la carpeta assets fuera de la carpeta components
@@ -33,6 +35,8 @@ function RealEstates() {
 	const navigate = useNavigate();
 	//'ascendant' es un estado booleano para el manejo de un boton que aparece en el navbar que sirve para ordenar por precio (mayor a menos y viceversa) las lands
 	const [ascendant, setAscendant] = useState(false);
+	//'order' es un estado de tipo string que dictamina el orden en que se van a ordenar los estates, pueden ser de mayor a menor precio, viceversa y tambien por mas reciente en tiempo de publicacions
+	const [order, setOrder] = useState('Price: low to high');
 	//'status', 'price', 'properties', son estados booleanos que utiliza para saber cuando renderizar los componentes del mismo nombre (<Status /> <Price /> <Properties />)
 	const [status, setStatus] = useState(false);
 	const [price, setPrice] = useState(false);
@@ -42,6 +46,7 @@ function RealEstates() {
 	//-Al tag <section>, aqui se usa para el manejo de las clases de css por medio de un ternario
 	//-por ultimo se lo pasa por propiedad al componente <CardPreview /> para el manejo de estilos en su respectivo componente
 	const [fiveColumn, setFiveColumn] = useState(false);
+	//filters es un estado booleano que sirve para abrir y cerrar los filtros en responsive
 	const [filters, setFilters] = useState(false);
 	const [lands, setLands] = useState(db);
 
@@ -56,11 +61,44 @@ function RealEstates() {
 		setLands(sort(lands, ascendant))
 	}, [ascendant, lands])
 
+	//show, lastScrollY y controlNavbar son estados y una funcion para el manejo del navbar con esto, el navbar se muestra cuando se scrollea hacia arriba y desaparece hacia abajo, todo esto solo en responsive
+	const [show, setShow] = useState(true);
+	const [lastScrollY, setLastScrollY] = useState(0);
+	const controlNavbar = () => {
+		if (typeof window !== 'undefined') {
+			if (window.scrollY > lastScrollY) {
+				// if scroll down hide the navbar
+				setShow(false);
+			} else {
+				// if scroll up show the navbar
+				setShow(true);
+			}
+
+			// remember current page location to use in the next move
+			setLastScrollY(window.scrollY);
+		}
+	};
+	//este es un hook personalizado, se utiliza en varias partes del codigo, sirve para abrir y cerrar un modal, hay que invocarlo una vez por cada modal que se quiera abrir, esto ahora codigo
+	const [isOpen, openModal, closeModal] = useModal();
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			window.addEventListener('scroll', controlNavbar);
+
+			// cleanup function
+			return () => {
+				window.removeEventListener('scroll', controlNavbar);
+			};
+		}
+	}, [lastScrollY]);
 	return (
 		<div className="realEstate">
 			<div className="containerEstate">
-				<h3>Real Estate</h3>
-				<nav>
+				<nav
+					className={`navBar ${
+						location.pathname === '/realestate' ? null : 'detailEstate'
+					} ${show ? null : 'notShowNavBar'}`}
+				>
+					<h3>Real Estate</h3>
 					{/* utilizo location en un ternario, en '/realestate' no deberia renderizarse el boton de volver atras */}
 					{location.pathname === '/realestate' ? null : (
 						<button
@@ -71,6 +109,7 @@ function RealEstates() {
 							<IoIosArrowBack className="icon" />
 						</button>
 					)}
+					{/* Aquie abajo se utiliza el boton para abrir y cerrar los filtros (en responsive) */}
 					<button
 						id="filters"
 						className="button__realEstate"
@@ -86,6 +125,7 @@ function RealEstates() {
 					>
 						<SlRefresh className="icon" />
 					</button>
+					{/* Este div con classname  "inputWrapper" es un buscador*/}
 					<div className="inputWrapper">
 						<input
 							type="search"
@@ -110,21 +150,32 @@ function RealEstates() {
 					<button
 						id="order"
 						className="button__realEstate"
-						onClick={() => {setAscendant(!ascendant)}}
+						// onClick={() => {setAscendant(!ascendant)}}
+						onClick={() => (isOpen ? closeModal() : openModal())}
 					>
-						Price: {ascendant ? 'low to high' : 'high to low'}
-						{ascendant ? (
+						{order}
+						{!isOpen ? (
 							<IoIosArrowDown className="icon" />
 						) : (
 							<IoIosArrowUp className="icon" />
 						)}
 					</button>
-					<button id="menu" className="button__realEstate display">
+					{/* Este es un modal en responsive, y un select en desktop, sirve para seleccionar el filtro por orden, es importado de ./RealEstates/ModalOrder  */}
+					<ModalOrder
+						isOpen={isOpen}
+						closeModal={closeModal}
+						setOrder={setOrder}
+					/>
+					<button
+						id="menu"
+						className="button__realEstate display"
+						onClick={() => openModal()}
+					>
 						<MdOutlineFilterList className="icon" />
 					</button>
 					{/* Nuevamente usa location en un ternario, debe renderizarse el toggle en la ruta /realestate, ya que en 'realestate/:id no se muestra el grid con las lands para ordenar*/}
 					{location.pathname === '/realestate' ? (
-						//aqui le pasamos el estado de fiveColumn como se dijo anteriormente (ir a la parte de estados, esta explicado)
+						//aqui le pasamos el estado de fiveColumn como se dijo anteriormente (ir a la parte de estados, esta explicado), es importado de ./RealEstate/ToggleButton
 						<Toggle setFiveColumn={setFiveColumn} fiveColumn={fiveColumn} />
 					) : null}
 				</nav>
@@ -133,7 +184,7 @@ function RealEstates() {
 					location.pathname === '/realestate' ? (
 						<div className="wrapperAsideSection">
 							<aside className={`asideFilters ${filters ? null : 'is-closed'}`}>
-								{/* Los botones Status, Price y Properties, solo setean los estados del mismo nombre para renderizar, o dejar de hacerlo, los componentes <Status/>, <Price /> y <Properties />. Como se ve, debajo de cada boton, hay un <motion> esto envuelve al componente que renderiza y le da una animacion cuando se renderiza */}
+								{/* Este boton solo aparece en responsive, en la parte de filtros, sirve para cerrar los filtros */}
 								<div className="filter display">
 									<h1>Filters</h1>
 									<button
@@ -143,6 +194,8 @@ function RealEstates() {
 										<IoClose className="icon" />
 									</button>
 								</div>
+								{/* Los botones Status, Price y Properties, solo setean los estados del mismo nombre para renderizar, o dejar de hacerlo, los componentes <Status/>, <Price /> y <Properties />. Como se ve, debajo de cada boton, hay un <motion> esto envuelve al componente que renderiza y le da una animacion cuando se renderiza */}
+								{/* Boton Status */}
 								<button
 									className={`buttonAsideFilter`}
 									onClick={() => setStatus(!status)}
@@ -150,8 +203,10 @@ function RealEstates() {
 									Status {status ? <IoIosArrowUp /> : <IoIosArrowDown />}
 								</button>
 								<div className={`animation ${status ? null : 'is-close'}`}>
+									{/* El componente <Status /> is importado de ./RealEstate/Status */}
 									{status ? <Status boolean={status} /> : null}
 								</div>
+								{/* Boton Price */}
 								<button
 									className={`buttonAsideFilter`}
 									onClick={() => setPrice(!price)}
@@ -159,12 +214,13 @@ function RealEstates() {
 									Price {price ? <IoIosArrowUp /> : <IoIosArrowDown />}
 								</button>
 								<div className={`animation ${price ? null : 'is-close'}`}>
-									{price ?
-									<Price
+									{/* El componente <Price /> is importado de ./RealEstate/Price */}
+									{price ? <Price
 										setLands={setLands}
 										lands={db}
-									/> : null}
+									/> : null }
 								</div>
+								{/* Boton properties */}
 								<button
 									className={`buttonAsideFilter`}
 									onClick={() => setProperties(!properties)}
@@ -173,8 +229,10 @@ function RealEstates() {
 									{properties ? <IoIosArrowUp /> : <IoIosArrowDown />}
 								</button>
 								<div className={`animation ${properties ? null : 'is-close'}`}>
+									{/* El componente <Properties /> is importado de ./RealEstate/Properties */}
 									{properties ? <Properties /> : null}
 								</div>
+								{/* Estos botones solo aparecen en responsive, sirven para aplicar el filtro, recomiendo que se renderice tambien en desktop para asi aplicar los filtro dandole al boton y no de manera dinamica mientras se escribe, para renderizarlo tambien en desktop, simplemente hay que borrar la clase "display" del classname */}
 								<div className="btn-filter display">
 									<button className="button__realEstate btn-reset">
 										Reset all
@@ -199,6 +257,7 @@ function RealEstates() {
 										<Link to={`/realestate/${land.number}`} key={land.id}>
 											<CardPreview
 												image={land.image}
+												key={land.number}
 												number={land.number}
 												fiveColumn={fiveColumn}
 												price={land.price}

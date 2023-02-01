@@ -1,0 +1,147 @@
+.modalOrder {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	position: relative;
+	left: 0;
+	top: 30px;
+	display: flex;
+	width: fit-content;
+	height: fit-content;
+	width: 90%;
+	margin: auto;
+	opacity: 1;
+	transition: opacity 0.1s, ease-in 0.15s;
+	z-index: 2;
+	.ulOrder {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		list-style: none;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.9);
+		padding: 10px 20px;
+		border-radius: 16px;
+	    transition: ease-in 0.1s;
+		.closeModal{
+			display: none;
+		}
+		&__li {
+			padding: 10px 5px;
+			font-weight: 700;
+			font-size: 13px;
+			line-height: 16px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			cursor: pointer;
+			.label {
+				cursor: pointer;
+			}
+			.isActive {
+				color: var(--orange-darker);
+			}
+		}
+		input[type='checkbox'] {
+			appearance: none;
+			background-color: transparent;
+			margin: 0 10px;
+			font: inherit;
+			color: transparent;
+			width: 1.15em;
+			height: 1.15em;
+			border: 0.15em solid currentColor;
+			border-radius: 0.15em;
+			transform: translateY(-0.075em);
+			display: grid;
+			place-content: center;
+		}
+		input[type='checkbox']::before {
+			content: '';
+			width: 0.9em;
+			height: 0.9em;
+			transform: scale(0);
+			transition: 120ms transform ease-in-out;
+			box-shadow: inset 1em 1em var(--orange-darker);
+			transform-origin: bottom left;
+			clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+		}
+		input[type='checkbox']:checked::before {
+			transform: scale(1);
+		}
+	}
+    .ulOrder.isClosed {
+        transition: ease-out 0.2s;
+    }
+}
+.modalOrder.isClosed {
+	opacity: 0;
+	z-index: 0;
+	background: none;
+	pointer-events: none;
+    transition: opacity 0.1s, ease-out 0.15s;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.modalOrder {
+		position: fixed;
+		z-index: 999;
+		top: 0;
+		right: 0;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.4);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 1;
+		transition: opacity 0.25s, background-color 1s;
+		backdrop-filter: blur(2px);
+		.ulOrder {
+			width: 65vw;
+			height: auto;
+			background: var(--white-color);
+			position: relative;
+			bottom: 1%;
+			transition: bottom 0.25s;
+			padding-bottom: 30px;
+			.closeModal {
+				display: flex;
+				align-items: center;
+				padding: 3px;
+				background-color: var(--gray-color);
+				width: 24px;
+				height: 24px;
+				border-radius: 999px;
+				transition: 0.25s;
+				align-self: flex-end;
+				.iconModalBuy {
+					width: 20px;
+					height: 20px;
+					color: var(--white-color);
+					transition: 0.25s;
+				}
+			}
+			&__li {
+				padding: 15px 10px;
+			}
+			&__li:active {
+				color: var(--orange-darker);
+			}
+		}
+		.ulOrder.isClosed {
+			bottom: -10%;
+			transition: bottom 0.25s;
+		}
+	}
+
+	.modalOrder.isClosed {
+		opacity: 0;
+		z-index: 0;
+		background: none;
+		pointer-events: none;
+		transition: opacity 0.25s, background-color 0s;
+	}
+}

@@ -8,35 +8,41 @@
 	box-shadow: 1px 1px 3px 0 rgb(0 0 0 / 0.2), 1px 3px 2px -1px rgb(0 0 0 / 0.3);
 	transition: 0.15s;
 }
-.imgCardPreview {
+.linkImg {
 	width: 90%;
 	height: 70%;
-	margin: 7px auto 0px auto;
-	border-radius: 10px;
+	margin: auto;
+	margin-top: 7px;
+	.imgCardPreview {
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+	}
 }
 .bottomCard {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-rows: [one] 50% [two] auto;
 	height: 25%;
 	margin-top: 5px;
-	.land {
+	.linkLand {
 		grid-column-start: 1;
 		grid-column-end: 3;
 		grid-row-start: 1;
 		grid-row-end: 2;
-		margin: 0px 5%;
-		width: fit-content;
-		font-weight: 700;
-		font-size: 1.7vh;
-		width: fit-content;
+		.land {
+			margin: 0px 5%;
+			width: fit-content;
+			font-weight: 700;
+			font-size: 1.7vh;
+		}
 	}
 	.price {
 		grid-column-start: 1;
 		grid-column-end: 3;
 		grid-row-start: 2;
 		grid-row-end: 3;
-		margin: 0 5%;
+		margin: 0px 5%;
 		width: fit-content;
 		.priceLabel {
 			font-weight: 700;
@@ -54,8 +60,9 @@
 		grid-row-start: 1;
 		grid-row-end: 2;
 		justify-self: end;
-		margin-right: 15%;
-		margin-top: 5px;
+		display: flex;
+		align-items: flex-start;
+		padding: 0px 10%;
 	}
 }
 .cardPreviewFourColumns:hover {
@@ -70,15 +77,12 @@
 	flex-direction: column;
 	box-shadow: 1px 1px 3px 0 rgb(0 0 0 / 0.2), 1px 3px 2px -1px rgb(0 0 0 / 0.3);
 	transition: 0.15s;
-	.imgCardPreview {
-		width: 90%;
-		height: 70%;
-		margin: 7px auto 0px auto;
-		border-radius: 10px;
-	}
 }
 .cardPreviewFiveColumns:hover {
 	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+}
+.cardPreviewFiveColumns,.cardPreviewFourColumns{
+	position: relative;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
 	.cardPreview {
@@ -86,7 +90,8 @@
 	}
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-	.cardPreviewFourColumns, .cardPreviewFiveColumns {
+	.cardPreviewFourColumns,
+	.cardPreviewFiveColumns {
 		min-width: 173px;
 		height: 230px;
 		border-radius: 16px;
@@ -99,12 +104,12 @@
 		margin-top: 7px;
 	}
 	.bottomCard {
+		margin-top: 10px;
 		.price {
 			grid-column-start: 1;
 			grid-column-end: 3;
-			grid-row-start: 1;
-			grid-row-end: 2;
-			margin-top: 25px;
+			grid-row-start: 2;
+			grid-row-end: 3;
 		}
 	}
 }
