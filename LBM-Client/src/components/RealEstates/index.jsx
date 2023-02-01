@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './index.scss';
 import { Link } from 'react-router-dom';
@@ -14,9 +14,11 @@ import { MdOutlineFilterList } from 'react-icons/md';
 import { IoIosArrowUp, IoIosArrowDown, IoIosArrowBack } from 'react-icons/io';
 import { GoSettings } from 'react-icons/go';
 import { IoClose } from 'react-icons/io5';
+import { TbSearchOff } from 'react-icons/tb';
 
 // db es una ase de datos falsa, para poder renderizar las lands con sus imagenes y numeros, esto deberia cambiar mas adelante, pero sirve para maquetar los componentes
 import db from '../RealEstates/fakedb/db.json';
+import { sort } from '../../helpers/useModal/utils';
 const variants = {
 	open: { opacity: 1 },
 	closed: { opacity: 0, display: 'none' },
@@ -30,7 +32,7 @@ function RealEstates() {
 	//Utiliza useNavigate para el boton de vuelta atras que se renderiza en la ruta /realestaes/:id, en el navbar
 	const navigate = useNavigate();
 	//'ascendant' es un estado booleano para el manejo de un boton que aparece en el navbar que sirve para ordenar por precio (mayor a menos y viceversa) las lands
-	const [ascendant, setAscendant] = useState(true);
+	const [ascendant, setAscendant] = useState(false);
 	//'status', 'price', 'properties', son estados booleanos que utiliza para saber cuando renderizar los componentes del mismo nombre (<Status /> <Price /> <Properties />)
 	const [status, setStatus] = useState(false);
 	const [price, setPrice] = useState(false);
@@ -41,7 +43,19 @@ function RealEstates() {
 	//-por ultimo se lo pasa por propiedad al componente <CardPreview /> para el manejo de estilos en su respectivo componente
 	const [fiveColumn, setFiveColumn] = useState(false);
 	const [filters, setFilters] = useState(false);
-	console.log(filters);
+	const [lands, setLands] = useState(db);
+
+	//Hook que apenas se monta el componente ordena las cards
+	useEffect(() => {
+		setAscendant(true);
+		setLands(sort(lands, ascendant));
+	}, [])
+
+	//Hook que actualiza el orden de las cards cada vez que hay cambios en las tierras o en el orden
+	useEffect(() => {
+		setLands(sort(lands, ascendant))
+	}, [ascendant, lands])
+
 	return (
 		<div className="realEstate">
 			<div className="containerEstate">
@@ -65,7 +79,11 @@ function RealEstates() {
 						Filters
 						<GoSettings className="display icon" />
 					</button>
-					<button id="refresh" className="button__realEstate">
+					<button
+						id="refresh"
+						className="button__realEstate"
+						onClick={() => setLands(db)}
+					>
 						<SlRefresh className="icon" />
 					</button>
 					<div className="inputWrapper">
@@ -92,7 +110,7 @@ function RealEstates() {
 					<button
 						id="order"
 						className="button__realEstate"
-						onClick={() => setAscendant(!ascendant)}
+						onClick={() => {setAscendant(!ascendant)}}
 					>
 						Price: {ascendant ? 'low to high' : 'high to low'}
 						{ascendant ? (
@@ -141,7 +159,11 @@ function RealEstates() {
 									Price {price ? <IoIosArrowUp /> : <IoIosArrowDown />}
 								</button>
 								<div className={`animation ${price ? null : 'is-close'}`}>
-									{price ? <Price /> : null}
+									{price ?
+									<Price
+										setLands={setLands}
+										lands={db}
+									/> : null}
 								</div>
 								<button
 									className={`buttonAsideFilter`}
@@ -171,15 +193,23 @@ function RealEstates() {
 								}`}
 							>
 								{/* Aqui se le aplica un map a la "base de datos falsa" renderizando, por cada elemento, un Link, que lleva al detalle de la land ('/realestate/:id'), y dentro de ella la card donde se muestra informacion de la land, pasandole por propiedades dicha informacion */}
-								{db.map((land) => (
-									<Link to={`/realestate/${land.number}`} key={land.id}>
-										<CardPreview
-											image={land.image}
-											number={land.number}
-											fiveColumn={fiveColumn}
-										/>
-									</Link>
-								))}
+								{
+									lands.length?
+										lands.map((land) => (
+										<Link to={`/realestate/${land.number}`} key={land.id}>
+											<CardPreview
+												image={land.image}
+												number={land.number}
+												fiveColumn={fiveColumn}
+												price={land.price}
+											/>
+										</Link>
+								)) :
+								<div id='advisor'>
+									<TbSearchOff id='searchOff' color='#f7931a'/>
+									<p>There are no properties matching your requirements</p>
+								</div>
+								}
 							</section>
 						</div>
 					) : (

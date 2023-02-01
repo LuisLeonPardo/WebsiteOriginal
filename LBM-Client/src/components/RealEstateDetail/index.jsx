@@ -84,7 +84,7 @@ function RealEstateDetail() {
 						<small className="aside__text aside__text--gray aside__text--semibold">
 							Price
 						</small>
-						<span className="aside__text aside__text--bold">200 LUSD</span>
+						<span className="aside__text aside__text--bold">{land.price} LUSD</span>
 					</div>
 					<button className="cardBid__button" onClick={() => openModal()}>
 						Buy now
@@ -169,6 +169,7 @@ function RealEstateDetail() {
 								image={e.image}
 								number={e.number}
 								fiveColumn={true}
+								price={e.price}
 							/>
 						</Link>
 					))}

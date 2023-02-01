@@ -1,9 +1,9 @@
 import React from 'react';
 import './index.scss';
 import {BsThreeDots} from 'react-icons/bs'
-function CardPreview({ image, number, fiveColumn }) {
+function CardPreview({ image, number, fiveColumn, price }) {
 	//En este componente de renderiza la imagen y el numero de la land pasadas por props
-	//recibe por props image (imagen de la land), number (numero de la land) y fiveColumn que es un booleando
+	//recibe por props image (imagen de la land), number (numero de la land), fiveColumn que es un booleando y price que es el precio de la land
 	//Aclaracion: de momento todo esto es un maquetado, posiblemente mas adelante sea necesario hacer modificaciones para las variables dinamicas que podamos recibir
 	return (
 		<div
@@ -17,7 +17,7 @@ function CardPreview({ image, number, fiveColumn }) {
 				<h5 className='land'>Land #{number}</h5>
 				<div className='price'>
 					<span className='priceLabel'>Price: </span>
-					<span className='value'>200 LUSD</span>
+					<span className='value'>{price}</span>
 				</div>
 				<BsThreeDots className='threeDots'/>
 			</div>
