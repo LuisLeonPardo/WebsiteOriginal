@@ -184,11 +184,7 @@ function RealEstateDetail() {
 								image={e.image}
 								number={e.number}
 								fiveColumn={true}
-<<<<<<< HEAD
 								price={e.price}
-=======
-
->>>>>>> ca191c42b8b96a333a51fa136cf32f034b8d0c23
 							/>
 						</Link>
 					))}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './index.scss';
 import { SlRefresh } from 'react-icons/sl';
 import Toggle from './ToggleButton';
@@ -22,20 +22,12 @@ const variants = {
 	closed: { opacity: 0, display: 'none' },
 };
 import { useModal } from '../../helpers/useModal/useModal';
-// db es una ase de datos falsa, para poder renderizar las lands con sus imagenes y numeros, esto deberia cambiar mas adelante, pero sirve para maquetar los componentes
-import db from '../RealEstates/fakedb/db.json';
 import ModalOrder from './ModalOrder';
 //Aclarancion, a parti de ahora me voy a referir a los estaes que estan en venta como "Lands"
 //El componente RealEstates se renderiza en la ruta /realestates y /realestates/:id pero aqui con algunas modificaciones como se vera mas adelante en el codigo.
-//Aclaracion: Todos los componente que se importan en este archivo (a exepcion de <RealEstateDetail /> que se encuetra en la carpeta "RealEstateDetail"), se encuentran dentro de la carpeta 'RealEstates', las imagenes son importadas desde la carpeta assets fuera de la carpeta components
 function RealEstates() {
-	//Utiliza useLocacion para saber en el path que estoy parado y poder hacer un ternario para saber que renderizar
 	const location = useLocation();
-	//Utiliza useNavigate para el boton de vuelta atras que se renderiza en la ruta /realestaes/:id, en el navbar
 	const navigate = useNavigate();
-	//'ascendant' es un estado booleano para el manejo de un boton que aparece en el navbar que sirve para ordenar por precio (mayor a menos y viceversa) las lands
-	const [ascendant, setAscendant] = useState(false);
-	//'order' es un estado de tipo string que dictamina el orden en que se van a ordenar los estates, pueden ser de mayor a menor precio, viceversa y tambien por mas reciente en tiempo de publicacions
 	const [order, setOrder] = useState('Price: low to high');
 	//'status', 'price', 'properties', son estados booleanos que utiliza para saber cuando renderizar los componentes del mismo nombre (<Status /> <Price /> <Properties />)
 	const [status, setStatus] = useState(false);
@@ -52,14 +44,14 @@ function RealEstates() {
 
 	//Hook que apenas se monta el componente ordena las cards
 	useEffect(() => {
-		setAscendant(true);
-		setLands(sort(lands, ascendant));
+		setOrder('Price: low to high');
+		setLands(sort(lands, order));
 	}, [])
 
 	//Hook que actualiza el orden de las cards cada vez que hay cambios en las tierras o en el orden
 	useEffect(() => {
-		setLands(sort(lands, ascendant))
-	}, [ascendant, lands])
+		setLands(sort(lands, order))
+	}, [lands, order])
 
 	//show, lastScrollY y controlNavbar son estados y una funcion para el manejo del navbar con esto, el navbar se muestra cuando se scrollea hacia arriba y desaparece hacia abajo, todo esto solo en responsive
 	const [show, setShow] = useState(true);
@@ -150,7 +142,6 @@ function RealEstates() {
 					<button
 						id="order"
 						className="button__realEstate"
-						// onClick={() => {setAscendant(!ascendant)}}
 						onClick={() => (isOpen ? closeModal() : openModal())}
 					>
 						{order}
@@ -275,7 +266,6 @@ function RealEstates() {
 						//En la ruta '/realestate/:id' se renderiza el componente <RealEstateDetal/> que es donde se encuentra el detalle de la land.
 						<RealEstateDetail />
 					)
-					// null
 				}
 			</div>
 		</div>

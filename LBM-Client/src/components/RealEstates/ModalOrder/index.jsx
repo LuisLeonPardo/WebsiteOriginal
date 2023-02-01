@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.scss';
 import {IoClose} from 'react-icons/io5'
 //<ModalOrder /> es importado en RealEstate, este model renderiza las opciones por las cuales se puede ordenar los estates
@@ -12,6 +12,7 @@ function ModalOrder({ isOpen, closeModal, setOrder }) {
         setOrder(e.target.value)
 		closeModal()
 	};
+
 	return (
 		<div
 			className={`modalOrder ${isOpen ? null : 'isClosed'}`}

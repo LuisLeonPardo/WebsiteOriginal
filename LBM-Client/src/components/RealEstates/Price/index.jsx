@@ -34,7 +34,6 @@ function Price({ setLands, lands }) {
 	return (
 		<div className="priceContainer">
 			<div className="maxAndMin">
-				{/* Estos dos inputs, de momento, no tienen ninguna logica aplicada, pero deberian ser los precios por los cuales se quiere filtrar las lands */}
 				<input
 					className="inputValue"
 					type="number"
