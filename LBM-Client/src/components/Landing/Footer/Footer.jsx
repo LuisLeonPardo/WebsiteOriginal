@@ -37,7 +37,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={pdf}
+                  to={pdf}
                   target="_blank"
                   rel="noopener noreferrer"
                   download="LBM-whitepaper.pdf"

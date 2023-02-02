@@ -11,7 +11,6 @@ function Status() {
 		notSale: false,
 	});
 	return (
-
 		<div className="statusComponent">
 			<button
 				className={`buttonStatus ${status.all ? 'isActive' : null}`}

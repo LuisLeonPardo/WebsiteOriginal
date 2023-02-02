@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './index.scss';
 import { SlRefresh } from 'react-icons/sl';
 import Toggle from './ToggleButton';
@@ -12,19 +12,22 @@ import { MdOutlineFilterList } from 'react-icons/md';
 import { IoIosArrowUp, IoIosArrowDown, IoIosArrowBack } from 'react-icons/io';
 import { GoSettings } from 'react-icons/go';
 import { IoClose } from 'react-icons/io5';
-import { useModal } from '../../helpers/useModal/useModal';
+import { TbSearchOff } from 'react-icons/tb';
+
 // db es una ase de datos falsa, para poder renderizar las lands con sus imagenes y numeros, esto deberia cambiar mas adelante, pero sirve para maquetar los componentes
 import db from '../RealEstates/fakedb/db.json';
+import { sort } from '../../helpers/useModal/utils';
+const variants = {
+	open: { opacity: 1 },
+	closed: { opacity: 0, display: 'none' },
+};
+import { useModal } from '../../helpers/useModal/useModal';
 import ModalOrder from './ModalOrder';
 //Aclarancion, a parti de ahora me voy a referir a los estaes que estan en venta como "Lands"
 //El componente RealEstates se renderiza en la ruta /realestates y /realestates/:id pero aqui con algunas modificaciones como se vera mas adelante en el codigo.
-//Aclaracion: Todos los componente que se importan en este archivo (a exepcion de <RealEstateDetail /> que se encuetra en la carpeta "RealEstateDetail"), se encuentran dentro de la carpeta 'RealEstates', las imagenes son importadas desde la carpeta assets fuera de la carpeta components
 function RealEstates() {
-	//Utiliza useLocacion para saber en el path que estoy parado y poder hacer un ternario para saber que renderizar
 	const location = useLocation();
-	//Utiliza useNavigate para el boton de vuelta atras que se renderiza en la ruta /realestaes/:id, en el navbar
 	const navigate = useNavigate();
-	//'order' es un estado de tipo string que dictamina el orden en que se van a ordenar los estates, pueden ser de mayor a menor precio, viceversa y tambien por mas reciente en tiempo de publicacions
 	const [order, setOrder] = useState('Price: low to high');
 	//'status', 'price', 'properties', son estados booleanos que utiliza para saber cuando renderizar los componentes del mismo nombre (<Status /> <Price /> <Properties />)
 	const [status, setStatus] = useState(false);
@@ -37,6 +40,19 @@ function RealEstates() {
 	const [fiveColumn, setFiveColumn] = useState(false);
 	//filters es un estado booleano que sirve para abrir y cerrar los filtros en responsive
 	const [filters, setFilters] = useState(false);
+	const [lands, setLands] = useState(db);
+
+	//Hook que apenas se monta el componente ordena las cards
+	useEffect(() => {
+		setOrder('Price: low to high');
+		setLands(sort(lands, order));
+	}, [])
+
+	//Hook que actualiza el orden de las cards cada vez que hay cambios en las tierras o en el orden
+	useEffect(() => {
+		setLands(sort(lands, order))
+	}, [lands, order])
+
 	//show, lastScrollY y controlNavbar son estados y una funcion para el manejo del navbar con esto, el navbar se muestra cuando se scrollea hacia arriba y desaparece hacia abajo, todo esto solo en responsive
 	const [show, setShow] = useState(true);
 	const [lastScrollY, setLastScrollY] = useState(0);
@@ -94,7 +110,11 @@ function RealEstates() {
 						Filters
 						<GoSettings className="display icon" />
 					</button>
-					<button id="refresh" className="button__realEstate">
+					<button
+						id="refresh"
+						className="button__realEstate"
+						onClick={() => setLands(db)}
+					>
 						<SlRefresh className="icon" />
 					</button>
 					{/* Este div con classname  "inputWrapper" es un buscador*/}
@@ -186,7 +206,10 @@ function RealEstates() {
 								</button>
 								<div className={`animation ${price ? null : 'is-close'}`}>
 									{/* El componente <Price /> is importado de ./RealEstate/Price */}
-									{price ? <Price /> : null}
+									{price ? <Price
+										setLands={setLands}
+										lands={db}
+									/> : null }
 								</div>
 								{/* Boton properties */}
 								<button
@@ -219,22 +242,30 @@ function RealEstates() {
 								}`}
 							>
 								{/* Aqui se le aplica un map a la "base de datos falsa" renderizando, por cada elemento, un Link, que lleva al detalle de la land ('/realestate/:id'), y dentro de ella la card donde se muestra informacion de la land, pasandole por propiedades dicha informacion */}
-								{db.map((land) => (
-									//El componente <Properties /> is importado de ./RealEstate/CardPreview
-									<CardPreview
-										key={land.number}
-										image={land.image}
-										number={land.number}
-										fiveColumn={fiveColumn}
-									/>
-								))}
+								{
+									lands.length?
+										lands.map((land) => (
+										<Link to={`/realestate/${land.number}`} key={land.id}>
+											<CardPreview
+												image={land.image}
+												key={land.number}
+												number={land.number}
+												fiveColumn={fiveColumn}
+												price={land.price}
+											/>
+										</Link>
+								)) :
+								<div id='advisor'>
+									<TbSearchOff id='searchOff' color='#f7931a'/>
+									<p>There are no properties matching your requirements</p>
+								</div>
+								}
 							</section>
 						</div>
 					) : (
 						//En la ruta '/realestate/:id' se renderiza el componente <RealEstateDetal/> que es donde se encuentra el detalle de la land.
 						<RealEstateDetail />
 					)
-					// null
 				}
 			</div>
 		</div>
