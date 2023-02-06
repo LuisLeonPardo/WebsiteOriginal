@@ -11,6 +11,7 @@ function WithdrawalLBMSuccess({ states, setStateModals }) {
 
   return (
     <div
+      id="withdrawallbmsuccess"
       className={
         states.withdrawallbmsuccess
           ? "withdrawallbm-success-modal"

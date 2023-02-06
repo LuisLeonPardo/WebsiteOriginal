@@ -1,0 +1,119 @@
+.modalBuy {
+	position: absolute;
+	bottom: -80px;
+	right: 25px;
+	z-index: 2;
+	opacity: 1;
+	transition: opacity 0.1s, ease-in 0.15s;
+	.ulModal {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		background-color: rgba(255, 255, 255, 0.9);
+		width: 100%;
+		list-style: none;
+		border-radius: 16px 4px 16px 16px;
+		padding: 5px 5px;
+		box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+		.closeModal{
+			display: none;
+		}
+		&__li {
+			width: 100%;
+			padding: 5px 10px;
+			font-weight: 700;
+			font-size: 13px;
+			line-height: 16px;
+			display: flex;
+			cursor: pointer;
+			transition: 0.2s
+		}
+		&__li:hover{
+			color: var(--orange-darker);
+		}
+		&__hr {
+			margin-left: 0;
+			margin-right: 0;
+			width: 90%;
+			align-self: center;
+			color: var(--modern-white);
+		}
+	}
+	.ulModal.isClosed {
+		transition: ease-out 0.2s;
+	}
+}
+.modalBuy.isClosed {
+	opacity: 0;
+	z-index: 0;
+	background: none;
+	pointer-events: none;
+	transition: opacity 0.1s, ease-out 0.15s;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.modalBuy {
+		position: fixed;
+		z-index: 999;
+		top: 0;
+		right: 0;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.4);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 1;
+		transition: opacity 0.25s, background-color 1s;
+		backdrop-filter: blur(2px);
+		.ulModal {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			width: 70vw;
+			height: auto;
+			list-style: none;
+			background: var(--white-color);
+			border-radius: 15px;
+			position: relative;
+			bottom: 1%;
+			transition: bottom 0.25s;
+			padding-bottom: 30px;
+			.closeModal {
+				display: flex;
+				align-items: center;
+				padding: 3px;
+				background-color: var(--gray-color);
+				width: 24px;
+				height: 24px;
+				border-radius: 999px;
+				transition: 0.25s;
+				align-self: flex-end;
+				.iconModalBuy {
+					width: 20px;
+					height: 20px;
+					color: var(--white-color);
+					transition: 0.25s;
+				}
+			}
+			&__li {
+				padding: 15px;
+			}
+			&__li:active {
+				color: var(--orange-darker);
+			}
+		}
+		.ulModal.isClosed {
+			bottom: -10%;
+			align-items: center;
+			transition: bottom 0.25s;
+		}
+	}
+	.modalBuy.isClosed {
+		opacity: 0;
+		z-index: 0;
+		background: none;
+		pointer-events: none;
+		transition: opacity 0.25s, background-color 0s;
+	}
+}

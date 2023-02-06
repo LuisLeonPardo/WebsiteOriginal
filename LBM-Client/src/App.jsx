@@ -24,6 +24,7 @@ import SideBarMobile from "./components/SideBar/mobile/SideBarMobile";
 import CoomingSoon from "./components/ComingSoon/ComingSoon";
 import Launchpad from "./components/Launchpad/Launchpad";
 import ProductPage from "./components/Launchpad/ProductPage/ProductPage";
+import GovernanceDetails from './components/Governance/GovernanceDetails/GovernanceDetails'
 function App() {
 	const [stateModal, setStateModal] = useState(false);
 	const { selectedIcon, walletPopUp } = useSelector(
@@ -89,7 +90,22 @@ function App() {
               </div>
             }
           />
-
+          <Route
+            path="/governance"
+            element={
+              <div className="Page">
+                <Governance />
+              </div>
+            }
+          />
+          <Route
+            path="/governance/id"
+            element={
+              <div className="Page">
+                <GovernanceDetails />
+              </div>
+            }
+          />
           <Route
             path={"/product"}
             element={

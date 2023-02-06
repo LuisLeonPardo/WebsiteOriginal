@@ -13,6 +13,7 @@ import "./BorrowRepay.scss";
 
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  backdropFilter: "blur(4px)",
   '& .MuiDialogContent-root': {
     padding: theme.spacing(2),
   },

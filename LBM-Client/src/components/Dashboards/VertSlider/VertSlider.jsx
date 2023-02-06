@@ -5,7 +5,7 @@ import refresh from "./assets/refresh.svg";
 import Coin from "../Slider/assets/Coin.svg";
 import { motion } from "framer-motion";
 
-function VertSlider({setStateModal}) {
+function VertSlider({ setStateModal }) {
   const dragSlider = useRef();
   /* const [height, setHeight] = useState(0); */
 
@@ -20,8 +20,8 @@ function VertSlider({setStateModal}) {
     );
   }); */
 
-  function changeState(){
-    setStateModal(true)
+  function changeState() {
+    setStateModal(true);
   }
 
   return (
@@ -37,59 +37,28 @@ function VertSlider({setStateModal}) {
         </div>
       </div>
       <div className="overflow">
-        {length <= 3 ? (
-          <div className="market-list">
-            {listArray.map(() => {
-              return (
-                <div className="market-table">
-                  <img src={Coin} />
-                  <h3 className="coin-name">Bitcoin</h3>
-                  <div className="danger-status">
-                    <h4>High</h4>
-                    <h6>Danger Status</h6>
-                  </div>
-                  <div className="last-payment">
-                    <h5>7 Jun, 21</h5>
-                    <h6>Last payment</h6>
-                  </div>
-                  <div className="balance">
-                    <h5>-10.24 BTC</h5>
-                    <h6>Balance</h6>
-                  </div>
+        <div className="scroll">
+          {listArray.map(() => {
+            return (
+              <div className="market-table">
+                <img src={Coin} />
+                <h3 className="coin-name">Bitcoin</h3>
+                <div className="danger-status">
+                  <h4>High</h4>
+                  <h6>Danger Status</h6>
                 </div>
-              );
-            })}
-          </div>
-        ) : (
-          <motion.div
-            ref={dragSlider}
-            drag="y"
-            dragConstraints={{ top: -height, bottom: 0 }}
-            dragElastic={0}
-            className="market-list"
-          >
-            {listArray.map(() => {
-              return (
-                <div className="market-table">
-                  <img src={Coin} />
-                  <h3 className="coin-name">Bitcoin</h3>
-                  <div className="danger-status">
-                    <h4>High</h4>
-                    <h6>Danger Status</h6>
-                  </div>
-                  <div className="last-payment">
-                    <h5>7 Jun, 21</h5>
-                    <h6>Last payment</h6>
-                  </div>
-                  <div className="balance">
-                    <h5>-10.24 BTC</h5>
-                    <h6>Balance</h6>
-                  </div>
+                <div className="last-payment">
+                  <h5>7 Jun, 21</h5>
+                  <h6>Last payment</h6>
                 </div>
-              );
-            })}
-          </motion.div>
-        )}
+                <div className="balance">
+                  <h5>-10.24 BTC</h5>
+                  <h6>Balance</h6>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

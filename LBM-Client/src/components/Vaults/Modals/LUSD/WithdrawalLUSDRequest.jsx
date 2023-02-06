@@ -34,6 +34,7 @@ function WithdrawalLUSDRequest({ states, setStateModals }) {
 
   return (
     <div
+      id="withdrawallusdrequest"
       className={
         states.withdrawallusdrequest ? "requestlusd-modal" : "modals-off"
       }

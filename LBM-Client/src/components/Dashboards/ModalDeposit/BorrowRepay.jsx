@@ -4,6 +4,7 @@ import Box from "./Assets/Box.svg"
 import Vector from "./Assets/Vector.svg"
 import Ok from "./Assets/ok.svg"
 import { useState } from "react";
+import { BsX } from "react-icons/bs";
 
 export default function BorrowRepay({handleClose, name}) {
 
@@ -27,7 +28,7 @@ export default function BorrowRepay({handleClose, name}) {
                             <img src={AVAX}/>
                             <h1>Avalanche</h1>
                         </div>
-                        <div className="close" onClick={handleClose}>x</div>
+                        <div onClick={handleClose}><BsX className="close" /></div>
                 </div>
                 <div className="text1">
                         <p>The easiest way to support the Supply market</p>
@@ -66,10 +67,8 @@ export default function BorrowRepay({handleClose, name}) {
                 </div>
             </div>
             <div className={confirm? "modalHide": "cContainer"}>
-                <div className="exit" onClick={handleClose}>
-                    <h2 >
-                        X
-                    </h2>
+                <div onClick={handleClose} className='head'>
+                     <BsX className="exit" />
                 </div>
                 <img src={Ok} alt="hello"/>
                 <h3 className="ready">Ready !</h3>

@@ -45,6 +45,7 @@ function Governance() {
           </div>
         </div>
         <div className="second-column">
+          <h1 className="governance-phone">Governance</h1>
           <h2>Voting wallet</h2>
           <div className="gov-deposit">
             <div className="voting-weight">
@@ -63,10 +64,10 @@ function Governance() {
           <div className="gov-recommendations">
             <h4>To vote you should:</h4>
             <h5>
-              1. <h6>Deposit your tokens</h6> in the LBM Vault
+              1. <em>Deposit your tokens</em> in the LBM Vault
             </h5>
             <h5>
-              2. <h6>Delegate your voting power</h6> to yourself or somebody
+              2. <em>Delegate your voting power</em> to yourself or somebody
               else
             </h5>
           </div>

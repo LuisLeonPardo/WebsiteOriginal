@@ -12,7 +12,7 @@ function WarningBuilding({ isOpen, closeModal }) {
 				className={`modalContainerBuilding ${isOpen ? null : 'is-close'}`}
 				onClick={(e) => e.stopPropagation()}
 			>
-				<div className='info'>
+				<div className="info">
 					<BsInfoCircle className="icon" />
 				</div>
 				<h1 className="modalContainerBuilding__h1">
@@ -24,8 +24,18 @@ function WarningBuilding({ isOpen, closeModal }) {
 					seeing at the moment is just a preview, but you can still explore some
 					of our available sections.
 				</p>
-				<button onClick={() => closeModal()} className="information button__modal">More information</button>
-				<button onClick={() => closeModal()} className="understood button__modal">Understood</button>
+				<button
+					onClick={() => closeModal()}
+					className="information button__modal"
+				>
+					More information
+				</button>
+				<button
+					onClick={() => closeModal()}
+					className="understood button__modal"
+				>
+					Understood
+				</button>
 			</div>
 		</article>
 	);
