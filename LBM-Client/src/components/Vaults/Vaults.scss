@@ -61,6 +61,10 @@ $breakpoints: (
     //top: 15px;
     gap: 0px;
     justify-content: space-evenly;
+    @include media-down(mobile){
+      width: 80%;
+      align-items: center;
+    }
   }
   .vaults-title {
     display: none;
@@ -113,7 +117,7 @@ $breakpoints: (
   }
 
   @include media-down(mobile) {
-    width: 358px;
+    width: 100%;
     height: 395px;
     zoom: 85%;
     padding-bottom: 10px;
@@ -249,7 +253,7 @@ $breakpoints: (
   @include media-down(mobile) {
     flex-direction: column;
     align-items: stretch;
-    width: 310px;
+    width: 90%;
     height: 79px;
   }
 }

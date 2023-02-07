@@ -20,8 +20,18 @@ function Mint() {
       <div className="title-mint">
         <h1>Mint/Repay LUSD</h1>
         <div className="mint-repay">
-          <h3 onClick={changeStateMint}>Mint LUSD</h3>
-          <h3 onClick={changeStateRepay}>Repay LUSD</h3>
+          <h3
+            onClick={changeStateMint}
+            className={first === "mint" ? "active" : "none"}
+          >
+            Mint LUSD
+          </h3>
+          <h3
+            onClick={changeStateRepay}
+            className={first === "repay" ? "active" : "none"}
+          >
+            Repay LUSD
+          </h3>
         </div>
       </div>
       {first == "mint" ? (

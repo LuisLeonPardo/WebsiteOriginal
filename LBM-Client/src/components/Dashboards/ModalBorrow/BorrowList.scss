@@ -1,0 +1,80 @@
+.borrowlist-container {
+  width: 560px;
+  height: 555px;
+  padding: 10px 24px 0 16px;
+  .top-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .search {
+      border-radius: 10px;
+      outline: none;
+      width: 250px;
+    }
+    .close {
+      position: relative;
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+      border-radius: 9999px;
+      border-width: 1px;
+      border-style: solid;
+      background-color: rgba(0, 0, 0, 0.06);
+      color: rgba(60, 66, 66, 0.8);
+      border-color: rgba(0, 0, 0, 0.04);
+      transition: 0.125s ease;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.125);
+      }
+    }
+  }
+  .title-list-modal {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 16px;
+    h2 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  .list-modal {
+    padding-right: 16px;
+    overflow-y: scroll;
+    height: 454px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .list-item-modal {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h3 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.016em;
+
+        color: #a3a3a3;
+      }
+    }
+  }
+}
+
+.list-modal::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  

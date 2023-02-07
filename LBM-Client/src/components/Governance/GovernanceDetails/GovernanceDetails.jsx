@@ -4,16 +4,20 @@ import Info from "../assets/info.svg";
 import Vector from "./assets/Vector.svg";
 import Help from "./assets/Help.svg";
 import Check from "../assets/check.svg";
+import { NavLink } from "react-router-dom";
 
 function GovernanceDetails() {
   return (
     <div className="govdetails-container">
       <div className="govdetails">
         <div className="govdetails-top">
-          <div className="govdetails-top-text" style={{ cursor: "pointer" }}>
-            <img src={Vector} />
-            <h1>Proposals</h1>
-          </div>
+          <NavLink to={'/governance'}>
+            <div className="govdetails-top-text" style={{ cursor: "pointer" }}>
+              <img src={Vector} />
+              <h1>Proposals</h1>
+            </div>
+          </NavLink>
+
           <div className="govdetails-top-text grey">
             <h2>+ Create proposal</h2>
             <img src={Info} />
