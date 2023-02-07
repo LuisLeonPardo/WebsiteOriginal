@@ -4,6 +4,7 @@ import add from "./assets/add.svg";
 import refresh from "./assets/refresh.svg";
 import Coin from "../Slider/assets/Coin.svg";
 import { motion } from "framer-motion";
+import ModalBorrow from "../ModalBorrow/ModalBorrow";
 
 function VertSlider({ setStateModal }) {
   const dragSlider = useRef();
@@ -12,6 +13,8 @@ function VertSlider({ setStateModal }) {
   const listArray = [...Array(7)];
   const length = listArray.length;
   const height = (length - 3) * 73;
+
+  const [first, setFirst] = useState(false)
 
   /* useEffect(() => {
     setHeight(dragSlider.current.scrollHeight - dragSlider.current.offsetTop);
@@ -24,6 +27,13 @@ function VertSlider({ setStateModal }) {
     setStateModal(true);
   }
 
+  function scoope(){
+    setFirst(true)
+    setTimeout(() =>{
+      setFirst(false)
+  }, 1700)
+  }
+
   return (
     <div className="container-vertslider">
       <div className="top-vertslider">
@@ -32,8 +42,10 @@ function VertSlider({ setStateModal }) {
           <h2>Updated 12 minutes ago</h2>
         </div>
         <div className="icons-vertslider">
-          <img src={refresh} />
-          <img src={add} onClick={changeState} />
+            <img src={refresh} onClick={scoope} className={ first ? 'refresh scoope' : 'refresh' }  />
+
+          {/* <img src={add} onClick={changeState} /> */}
+          <ModalBorrow />
         </div>
       </div>
       <div className="overflow">

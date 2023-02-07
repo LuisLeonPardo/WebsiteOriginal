@@ -126,19 +126,21 @@ function SideBar() {
               <p>Launchpad</p>
             </div>
           </NavLink>
-          <div
-            className={
-              selectedIcon === "HistoryIcon" && Icons === style.Icons
-                ? style.IconSelected
-                : Icons
-            }
-            onClick={() => dispatch(setSelectedIcon("HistoryIcon"))}
-          >
-            <HistoryIcon
-              selected={selectedIcon === "HistoryIcon" ? true : false}
-            />
-            <p>Governance</p>
-          </div>
+          <NavLink to={"./governance"}>
+            <div
+              className={
+                selectedIcon === "HistoryIcon" && Icons === style.Icons
+                  ? style.IconSelected
+                  : Icons
+              }
+              onClick={() => dispatch(setSelectedIcon("HistoryIcon"))}
+            >
+              <HistoryIcon
+                selected={selectedIcon === "HistoryIcon" ? true : false}
+              />
+              <p>Governance</p>
+            </div>
+          </NavLink>
         </div>
         {screenWidth < 600 ? null : (
           <div
