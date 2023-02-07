@@ -3,6 +3,7 @@ import "./index.scss";
 import { BsInfoCircle } from "react-icons/bs";
 
 function WarningBuilding({ isOpen, closeModal }) {
+
   return (
     <article
       className={`modalBuilding ${isOpen ? null : "is-close"}`}

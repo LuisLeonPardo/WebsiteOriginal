@@ -4,7 +4,7 @@ import { BsThreeDots } from 'react-icons/bs';
 import ModalBuy from './ModalBuy';
 import { Link } from 'react-router-dom';
 import { useModal } from '../../../helpers/useModal/useModal';
-function CardPreview({ image, number, fiveColumn }) {
+function CardPreview({ image, number, fiveColumn, price }) {
 	//En este componente de renderiza la imagen y el numero de la land pasadas por props
 	//recibe por props image (imagen de la land), number (numero de la land) y fiveColumn que es un booleando. Para hacer un filtrado por precio deberia recibir tambien el precio por propiedades
 	//Aclaracion: de momento todo esto es un maquetado, posiblemente mas adelante sea necesario hacer modificaciones para las variables dinamicas que podamos recibir
@@ -30,8 +30,7 @@ function CardPreview({ image, number, fiveColumn }) {
 
 				<div className="price">
 					<span className="priceLabel">Price: </span>
-					{/* Aqui abajo tenemos un precio hardcodeado, esto deberia ser un valor dinamico, guardado en la base de datos falsa */}
-					<span className="value">200 LUSD</span>
+					<span className='value'>{price}</span>
 				</div>
 				{/* El boton de aqui abajo abre y cierra el modal <ModalBuy /> que es importado de ./ModalBuy */}
 				<button className="threeDots" onClick={handleClick}>
