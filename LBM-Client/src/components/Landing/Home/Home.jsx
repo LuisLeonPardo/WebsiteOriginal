@@ -28,7 +28,9 @@ export default function Home() {
               </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
-              <a className="token">Add token libertum</a>
+              <a href="/swap" className="token">
+                Add token libertum
+              </a>
             </motion.div>
           </div>
         </div>
