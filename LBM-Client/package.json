@@ -12,6 +12,7 @@
     "@astar-network/astar-api": "^0.1.12",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@formspree/react": "^2.4.1",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.5",
     "@polkadot/api": "^9.11.3",

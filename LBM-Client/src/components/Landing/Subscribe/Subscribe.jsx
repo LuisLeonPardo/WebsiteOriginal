@@ -1,31 +1,8 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { JackInTheBox } from "react-awesome-reveal";
-
+import React from "react";
+import ContactForm from "./ContactForm";
 import "./Subscribe.scss";
 
 export default function Subscribe() {
-  const [input, setInput] = useState("");
-  const [error, setError] = useState(undefined);
-
-  const handleInput = (e) => {
-    setInput(e.target.value);
-    setError(emailValidation(input));
-  };
-
-  const emailValidation = (value) => {
-    return /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i.test(
-      value
-    )
-      ? true
-      : false;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Gracias");
-  };
-
   return (
     <main name="subscribe" className="subscribe_items">
       <section className="subscribe_section">
@@ -37,18 +14,7 @@ export default function Subscribe() {
           </p>
         </div>
         <div className="subscribe_form">
-          <form onSubmit={handleSubmit}>
-            <input onChange={handleInput} type="text" placeholder="Email" />
-            {error == false && <span>*Direccion de email incorrecta</span>}
-            <motion.button
-              type="submit"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 1 }}
-              disabled={!error}
-            >
-              Subscribe
-            </motion.button>
-          </form>
+          <ContactForm />
         </div>
       </section>
     </main>
