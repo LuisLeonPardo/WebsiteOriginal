@@ -20,7 +20,7 @@ function Dash({ setStateModal }) {
 	}, []);
 
 	return (
-		<div className="general">
+		<div className="generalD">
 			<WarningBuilding isOpen={isOpenModal} closeModal={closeModal} />  
 			<div className="dash">
 				<div className="columnOne">

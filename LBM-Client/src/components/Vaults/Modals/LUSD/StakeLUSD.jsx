@@ -7,6 +7,7 @@ function StakeLUSD({ states, setStateModals }) {
   function changeState() {
     setStateModals(false);
   }
+
   function openForm() {
     setStateModals({
       ...states,
@@ -14,8 +15,12 @@ function StakeLUSD({ states, setStateModals }) {
       lusdform: true,
     });
   }
+
   return (
-    <div className={states.stakelusd ? "modal-container-lusd" : "modals-off"}>
+    <div
+      id="stakelusd"
+      className={states.stakelusd ? "modal-container-lusd" : "modals-off"}
+    >
       <div className="modal">
         <h1>Stake LUSD</h1>
         <div className="top-modal">

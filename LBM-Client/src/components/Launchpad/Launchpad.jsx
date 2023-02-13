@@ -7,7 +7,7 @@ import Frame from "./Frame.svg";
 export default function Launchpad() {
   const [type, setType] = useState("ICO");
 
-  const [state, setState] = useState("ended");
+  const [state, setState] = useState("upcoming");
 
   const [drop, setDrop] = useState({
     ICO: true,

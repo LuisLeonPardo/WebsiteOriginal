@@ -10,7 +10,10 @@ function StakeLBMSuccess({ states, setStateModals }) {
   }
 
   return (
-    <div className={states.lbmsuccess ? "lbmsuccess-modal" : "modals-off"}>
+    <div
+      id="lbmsuccess"
+      className={states.lbmsuccess ? "lbmsuccess-modal" : "modals-off"}
+    >
       <div className="modal">
         <div className="top-modal">
           <div onClick={changeState}>

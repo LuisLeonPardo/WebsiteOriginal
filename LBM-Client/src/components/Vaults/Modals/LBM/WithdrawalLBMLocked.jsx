@@ -4,10 +4,6 @@ import LBM from "../../assets/LBM-icon.svg";
 import { BsX } from "react-icons/bs";
 
 function WithdrawalLBMLocked({ states, setStateModals }) {
-  function changeState() {
-    setStateModals(false);
-  }
-
   function goBack() {
     setStateModals({
       ...states,
@@ -17,12 +13,13 @@ function WithdrawalLBMLocked({ states, setStateModals }) {
   }
   return (
     <div
+      id="withdrawallbmlocked"
       className={states.withdrawallbmlocked ? "lockedlbm-modal" : "modals-off"}
     >
       <div className="modal">
         <div className="top-modal">
           <h4>Withdrawal LBM</h4>
-          <div onClick={changeState}>
+          <div onClick={goBack}>
             <BsX className="close" />
           </div>
         </div>

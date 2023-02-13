@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useState } from "react";
 import data from "./data.json"
-import Card from "./Card"
 import "./SupplyMarket.scss";
 import ModalDepositMobile from "../ModalDeposit/ModalDepositMobile"
 

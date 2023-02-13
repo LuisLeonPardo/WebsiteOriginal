@@ -24,8 +24,19 @@ function WithdrawalLBM({ states, setStateModals }) {
     });
   }
 
+  // var modal = document.getElementById("withdrawallbm");
+  // window.onclick = function (event) {
+  //   if (event.target === modal) {
+  //     setStateModals({
+  //       ...states,
+  //       withdrawallbm: false,
+  //     });
+  //   }
+  // };
+
   return (
     <div
+      id="withdrawallbm"
       className={
         states.withdrawallbm ? "modal-withdrawal-container" : "modals-off"
       }

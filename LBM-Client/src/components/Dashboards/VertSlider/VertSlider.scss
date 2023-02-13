@@ -4,18 +4,10 @@
 .container-vertslider {
   width: 733px;
   height: 384px;
-  background: #F9FAFB;
+  background: #f9fafb;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 5px 3px 0px rgba(128, 128, 128, 0.7);
-
-  .overflow{
-    overflow: hidden;
-  }
-
-  .market-list{
-    margin-top: -15px;
-  }
 
   .top-vertslider {
     background: #f5f5f5;
@@ -44,65 +36,94 @@
       height: 41px;
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 5px;
       padding-top: 10px;
       padding-right: 15px;
       img {
         cursor: pointer;
       }
-    }
-  }
-  .market-table {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 55px;
-    margin-top: 20px;
-    /* padding-left: 28px; */
-    .coin-name {
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 22px;
-    }
-    .danger-status {
-      h4 {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-
-        color: #f3458c;
-        margin: 0;
+      .refresh {
+        width: 20px;
+      }
+      .scoope {
+        animation-name: girarb;
+        animation-duration: 1.7s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
       }
     }
-    
-    h5 {
-      margin: 0;
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 17px;
-      line-height: 19px;
+  }
+  .overflow {
+    .scroll {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: 35vh;
+      overflow-y: scroll;
+      .market-table {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 55px;
+        .coin-name {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+        }
+        .danger-status {
+          h4 {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
 
-      /* color 1 */
+            color: #f3458c;
+            margin: 0;
+          }
+        }
 
-      color: #000000;
+        h5 {
+          margin: 0;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 19px;
+
+          /* color 1 */
+
+          color: #000000;
+        }
+        h6 {
+          font-family: "Raleway";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          margin: 0;
+          margin-top: 4px;
+
+          /* color 2 */
+
+          color: #6f767e;
+        }
+      }
     }
-    h6 {
-      font-family: "Raleway";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 16px;
-      margin: 0;
-      margin-top: 4px;
+  }
+}
 
-      /* color 2 */
+.scroll::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
 
-      color: #6f767e;
-    }
+@keyframes girarb {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
