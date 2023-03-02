@@ -16,7 +16,7 @@ export default function Footer() {
             <img src={logo} />
             <div>
               <p>
-                Libertum Project breaking down the real estate investment market barriers, by making investing simple,<br></br>
+                Libertum Project is breaking down the real estate investment market barriers, by making investing simple,<br></br>
                 affordable and accessible for everyone, anytime and anywhere through the tokenization of property and 
                 providing multiple payment options.
               </p>
