@@ -20,7 +20,7 @@ export default function Footer() {
                 affordable and accessible for everyone, anytime and anywhere through the tokenization of property and 
                 providing multiple payment options.
               </p>
-              <span>© 2023 Libertum Protocol</span>
+              <span>© 2023 Libertum Project</span>
             </div>
           </div>
           <div className="footer_menu">
