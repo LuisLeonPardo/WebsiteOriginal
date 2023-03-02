@@ -14,11 +14,11 @@ export default function Home() {
         <div>
           <div className="home_text">
             <h1>
-              Borrow Assets, <span>Create Opportunities</span> and Earn Interest
+              Tokenize Property, <span>Democratize Real Estate</span> and Earn Interest
             </h1>
             <p>
-              DeFi protocol with a fluid and inclusive economy; at you service,
-              to help you on a daily basis
+              DeFi protocol for a fluid and all inclusive economy; to make Real Estate Investing,
+              accessible to everyone
             </p>
           </div>
           <div className="home_links">
