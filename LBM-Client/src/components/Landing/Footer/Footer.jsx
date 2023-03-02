@@ -16,11 +16,9 @@ export default function Footer() {
             <img src={logo} />
             <div>
               <p>
-
-                Libertum Project is breaking down the real estate investment market barriers, by making investing simple,<br></br>
-                affordable and accessible for everyone, anytime and anywhere through the tokenization of property and 
-                providing multiple payment options.
-
+                Libertum Project is a decentralized finance algorithmic money <br></br>
+                market protocol that seeks to democratize the real estate market and increase DeFi adoption more friendly
+                with real property collateral.
               </p>
               <span>© 2023 Libertum Project</span>
             </div>
@@ -65,7 +63,7 @@ export default function Footer() {
                   rel="noreferrer"
                   className="footer_li"
                 >
-                  I want to be part
+                  I want to be part of Libertum Project
                 </a>
               </li>
             </ul>
