@@ -6,11 +6,9 @@ import arrow from "./assets/arrow.svg";
 import "./Protocol.scss";
 
 const firstParagraph =
-  "Real estate is the single biggest asset class that may be tokenized. Total real estate is worth around $326 trillion today and only 7% of this is available to retail investors. However, more than 80% of people believe real estate to be a good investment. 
-.";
+  "Real estate is the single biggest asset class that may be tokenized. Total real estate is worth around $326 trillion today and only 7% of this is available to retail investors. However, more than 80% of people believe real estate to be a good investment.";
 const secondParagraph =
-  "The Libertum Project democratizes real estate investment market by allowing each and everyone to invest in tokenized property with crypto or fiat-currency. With tokenization, real estate assets can be represented as tokens on the blockchain that will become as efficient and inexpensive to issue, transfer and trade as other cryptocurrencies.
-.";
+  "The Libertum Project democratizes real estate investment market by allowing each and everyone to invest in tokenized property with crypto or fiat-currency. With tokenization, real estate assets can be represented as tokens on the blockchain that will become as efficient and inexpensive to issue, transfer and trade as other cryptocurrencies.";
 export default function Protocol() {
   const [index, setIndex] = useState(1);
   const [paragraph, setParagraph] = useState(firstParagraph);
