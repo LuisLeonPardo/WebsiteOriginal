@@ -20,7 +20,7 @@ export default function Footer() {
                 market protocol that seeks to make DeFi adoption more friendly
                 with real collaterals.
               </p>
-              <span>© 2023 Libertum Protocol</span>
+              <span>© 2023 Libertum Project</span>
             </div>
           </div>
           <div className="footer_menu">
