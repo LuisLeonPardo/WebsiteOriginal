@@ -16,9 +16,9 @@ export default function Footer() {
             <img src={logo} />
             <div>
               <p>
-                Libertum is a decentralized finance algorithmic money <br></br>
-                market protocol that seeks to make DeFi adoption more friendly
-                with real collaterals.
+                Libertum Project breaking down the real estate investment market barriers, by making investing simple,<br></br>
+                affordable and accessible for everyone, anytime and anywhere through the tokenization of property and 
+                providing multiple payment options.
               </p>
               <span>© 2023 Libertum Protocol</span>
             </div>
