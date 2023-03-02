@@ -16,11 +16,11 @@ export default function Footer() {
             <img src={logo} />
             <div>
               <p>
-                Libertum is a decentralized finance algorithmic money <br></br>
-                market protocol that seeks to make DeFi adoption more friendly
-                with real collaterals.
+                Libertum Project is a decentralized finance algorithmic money <br></br>
+                market protocol that seeks to democratize the real estate market and increase DeFi adoption more friendly
+                with real property collateral.
               </p>
-              <span>© 2023 Libertum Protocol</span>
+              <span>© 2023 Libertum Project</span>
             </div>
           </div>
           <div className="footer_menu">
@@ -63,7 +63,7 @@ export default function Footer() {
                   rel="noreferrer"
                   className="footer_li"
                 >
-                  I want to be part
+                  I want to be part of Libertum Project
                 </a>
               </li>
             </ul>
