@@ -6,10 +6,11 @@ import arrow from "./assets/arrow.svg";
 import "./Protocol.scss";
 
 const firstParagraph =
-  "Libertum is a decentralized borrowing protocolenables users to utilize their cryptocurrencies by supplying collateral to the network that  may be borrowed by pledging over-collateralized cryptocurrencies.";
+  "Real estate is the single biggest asset class that may be tokenized. Total real estate is worth around $326 trillion today and only 7% of this is available to retail investors. However, more than 80% of people believe real estate to be a good investment. 
+.";
 const secondParagraph =
-  "The Libertum difference from other money markets protocols is the ability to use the collateral supplied to the market not only to borrow other assets, but also to mint stablecoins with over-collateralized positions that protect the protocol";
-
+  "The Libertum Project democratizes real estate investment market by allowing each and everyone to invest in tokenized property with crypto or fiat-currency. With tokenization, real estate assets can be represented as tokens on the blockchain that will become as efficient and inexpensive to issue, transfer and trade as other cryptocurrencies.
+.";
 export default function Protocol() {
   const [index, setIndex] = useState(1);
   const [paragraph, setParagraph] = useState(firstParagraph);
@@ -38,7 +39,7 @@ export default function Protocol() {
         <Slide direction={"right"} triggerOnce={"true"}>
           <div className="protocol_text">
             <h2>
-              What is Libertum <br></br>Protocol?
+              What is the Libertum <br></br>Project?
             </h2>
             <div className="protocol_slide">
               <p>{paragraph}</p>
