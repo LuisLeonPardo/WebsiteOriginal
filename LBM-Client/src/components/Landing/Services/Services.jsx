@@ -28,7 +28,7 @@ export default function Services() {
             <div className="services-quad_item">
               <img src={loans} />
               <h3>Decentralized Finance Loans</h3>
-              <p>The ability to passively earn interest through DeFi 2.0 loans. With our Defi proposition we broaden the horizon of the credit markets, connecting the real estate, and secondary market with decentralized finance solutions</p>
+              <p>The ability to passively earn interest through DeFi 2.0 loans. Our proposition broadens the horizon of credit markets, connecting the real estate, and secondary market with Defi solutions</p>
               <div></div>
             </div>
           </Slide>
