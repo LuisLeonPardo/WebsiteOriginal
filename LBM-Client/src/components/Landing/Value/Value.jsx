@@ -16,7 +16,7 @@ export default function Value() {
         <Slide direction={"right"} triggerOnce={"true"}>
           <div className="value_text">
             <div className="value-text_item">
-              <h2>Creativity & Technology</h2>
+              <h2>Real Estate Market & Technology</h2>
               <p>
                 Libertum Project allows for everyone to take part in the global US$ 369 Trillion real estate market, 
                 Join us as we disrupt the real estate market and revolutionize the future of property investment and ownership.
@@ -32,7 +32,7 @@ export default function Value() {
               </p>
             </div>
             <div className="value-text_item">
-              <h2>Our true Value</h2>
+              <h2>Our True Value</h2>
               <p>
                 Is to be the gateway to real estate opportunities for everyone, anywhere, and at anytime with the aim of
                 democratizing the property investment market through the Tokenization of property, lowering the high barriers of entry, increase liquidity for property owners AND investors, 
