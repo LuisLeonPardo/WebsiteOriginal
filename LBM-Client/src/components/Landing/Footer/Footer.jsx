@@ -16,9 +16,9 @@ export default function Footer() {
             <img src={logo} />
             <div>
               <p>
-                Libertum Project is a decentralized finance algorithmic money <br></br>
-                market protocol that seeks to democratize the real estate market and increase DeFi adoption more friendly
-                with real property collateral.
+                Libertum Project is a decentralized finance algorithmic money market protocol that seeks to democratize the real estate market and increase DeFi adoption more friendly
+                with real property collateral. <br></br><br></br>
+                Libertum Project is headquartered in Dubai, United Arab Emirates, and is dedicated to break down the barriers of real estate investment through tokenization of property, and allowing individual investors to own property everywhere, and at anytime.  
               </p>
               <span>© 2023 Libertum Project</span>
             </div>
