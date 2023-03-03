@@ -35,7 +35,7 @@ export default function Value() {
               <h2>Our True Value</h2>
               <p>
                 Is to be the gateway to real estate opportunities for <span>everyone, anywhere, and at anytime</span> with the aim of
-                democratizing the property investment market, by lowering the high barriers of entry, increase liquidity for property owners AND investors, 
+                democratizing the property investment market through <span>Tokenization of property</span>, lowering the high barriers of entry, increase liquidity for property owners AND investors, 
                 lower investment costs, simplify the process to invest and open up opportunities for everyone never seen before.
               </p>
             </div>
