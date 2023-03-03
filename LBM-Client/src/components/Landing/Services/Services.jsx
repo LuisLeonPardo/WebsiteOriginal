@@ -12,14 +12,14 @@ export default function Services() {
       <section className="services_section">
         <Slide direction={"down"} triggerOnce={"true"}>
           <div className="services_text">
-            <h2>Libertum Services</h2>
+            <h2>Libertum Project Stages</h2>
             <p>
-              Libertum Project services are divided into 3 categories and are
+              Libertum Project services are divided into 3 categories and were
               developed in 3 different stages. In
-              the first stage we have the DeFi 1.0 loans with the addition of
-              minting stablecoins, in the second stage we have the real estate
-              marketplace which allows for tokenization of property, and finally we encourage other projects to take part in
-              offering loan services with real estate property collateral
+              the first stage we developed the DeFi 1.0 loans component with the functionality of
+              minting stablecoins, in the second stage we finalized the real estate investment
+              marketplace which provides for the tokenization of property, and in the last stage we created an environment where we encourage other projects to take part in
+              offering loan services backed by real estate property collateral
             </p>
           </div>
         </Slide>
