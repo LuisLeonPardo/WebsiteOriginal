@@ -18,7 +18,7 @@ export default function Value() {
             <div className="value-text_item">
               <h2>Creativity & Technology</h2>
               <p>
-                Libertum Project allows for everyone to take part in the global US$ 369 Trillion real estate market<br></br<br></br> 
+                Libertum Project allows for everyone to take part in the global US$ 369 Trillion real estate market<br></br><br></br> 
                 Join us as we disrupt the real estate market and revolutionize the future of property investment and ownership.<br></br><br></br>
                 We break down the barriers to make it simple, affordable and accessible for everyone to be able to realize the 
                 benefits of investing in real estate.<br></br><br></br>
