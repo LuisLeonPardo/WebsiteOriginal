@@ -32,11 +32,11 @@ export default function Value() {
               </p>
             </div>
             <div className="value-text_item">
-              <h2>Our True Value</h2>
+              <h2>Our true Value</h2>
               <p>
                 Is to be the gateway to real estate opportunities for everyone, anywhere, and at anytime with the aim of
-                democratizing the property investment market through Tokenization of property, lowering the high barriers of entry, increase liquidity for property owners AND investors, 
-                lower investment costs, simplify the process to invest and open up opportunities for everyone never seen before.
+                democratizing the property investment market through the Tokenization of property, lowering the high barriers of entry, increase liquidity for property owners AND investors, 
+                lower investment costs, simplify the process to invest and open up opportunities for everyone never seen before
               </p>
             </div>
           </div>
