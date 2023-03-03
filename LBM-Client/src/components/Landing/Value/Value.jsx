@@ -36,7 +36,7 @@ export default function Value() {
               <p>
                 Is to be the gateway to real estate opportunities for everyone, anywhere, and at anytime with the aim of
                 democratizing the real estate investment market through tokenization of property, lowering the high barriers of entry, increase liquidity for property owners AND investors, 
-                lower investment costs, simplify the process to invest and open up opportunities for everyone never seen before
+                lower investment costs, simplify the process to invest and open up opportunities for everyone never seen before.
               </p>
             </div>
           </div>
