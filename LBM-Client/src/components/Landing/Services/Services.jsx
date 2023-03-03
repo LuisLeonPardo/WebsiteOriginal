@@ -27,7 +27,7 @@ export default function Services() {
           <Slide direction={"left"} triggerOnce={"true"}>
             <div className="services-quad_item">
               <img src={loans} />
-              <h3>Loans</h3>
+              <h3>Decentralized Finance Loans</h3>
               <p>The ability to passively earn interest through DeFi 2.0 loans. With our Defi proposition we broaden the horizon of the credit markets, connecting the real estate, and secondary market with decentralized finance solutions</p>
               <div></div>
             </div>
@@ -48,7 +48,7 @@ export default function Services() {
           <Slide direction={"right"} triggerOnce={"true"}>
             <div className="services-quad_item">
               <img src={launchpad} />
-              <h3>Launchpad Crypto</h3>
+              <h3>Crypto-currency Launchpad</h3>
               <p>
                 Libertum Project invites real estate owners, syndicates, individuals and startups that want a solid experience in
                 the DeFi world are looking for liquidity
