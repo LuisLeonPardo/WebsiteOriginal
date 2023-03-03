@@ -37,7 +37,7 @@ export default function Protocol() {
         <Slide direction={"right"} triggerOnce={"true"}>
           <div className="protocol_text">
             <h2>
-              The Libertum <br></br>Project?
+              The Libertum Project
             </h2>
             <div className="protocol_slide">
               <p>{paragraph}</p>
