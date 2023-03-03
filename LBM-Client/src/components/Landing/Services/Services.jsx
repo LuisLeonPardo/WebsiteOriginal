@@ -28,7 +28,7 @@ export default function Services() {
             <div className="services-quad_item">
               <img src={loans} />
               <h3>Loans</h3>
-              <p>The ability to passively earn interest through DeFi 2.0 loans</p>
+              <p>The ability to passively earn interest through DeFi 2.0 loans. With our Defi proposition we broaden the horizon of the credit markets, connecting the real estate, and secondary market with decentralized finance solutions</p>
               <div></div>
             </div>
           </Slide>
@@ -40,7 +40,7 @@ export default function Services() {
               </h3>
               <p>
                 One of the first real estate markets where you can buy, sell, trade and
-                invest in crypto or fiat-currency with real estate collatoral
+                invest in crypto or fiat-currency backed by real estate collatoral
               </p>
               <div></div>
             </div>
