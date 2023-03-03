@@ -17,8 +17,8 @@ export default function Home() {
               Tokenize Property, <span>Democratize Real Estate</span> and Earn Interest
             </h1>
             <p>
-              DeFi protocol for a fluid and all inclusive economy; to make Real Estate Investing,
-              accessible to everyone
+              DeFi platform for a fluid and all inclusive economy; Real Estate Investing made simple,
+              accessible to everyone, anywhere and at anytime
             </p>
           </div>
           <div className="home_links">
