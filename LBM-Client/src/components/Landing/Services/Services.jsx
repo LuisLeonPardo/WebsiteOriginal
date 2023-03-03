@@ -12,7 +12,7 @@ export default function Services() {
       <section className="services_section">
         <Slide direction={"down"} triggerOnce={"true"}>
           <div className="services_text">
-            <h2>Libertum Project Stages</h2>
+            <h2>Libertum Project Proposition</h2>
             <p>
               Libertum Project services are divided into 3 categories and were
               developed in 3 different stages. In
@@ -36,7 +36,7 @@ export default function Services() {
             <div className="services-quad_item">
               <img src={mkt} />
               <h3>
-                Real Estate <br></br>Marketplace
+                Real Estate Marketplace
               </h3>
               <p>
                 One of the first real estate marketplaces where you can buy, sell, trade and
@@ -48,7 +48,7 @@ export default function Services() {
           <Slide direction={"right"} triggerOnce={"true"}>
             <div className="services-quad_item">
               <img src={launchpad} />
-              <h3>Crypto-currency Launchpad</h3>
+              <h3>Crypto Currency Launchpad</h3>
               <p>
                 Libertum Project invites real estate owners, syndicates, individuals and startups that want a solid experience in
                 the DeFi world are looking for liquidity
