@@ -21,11 +21,11 @@ export default function Value() {
                 Libertum Project allows for everyone to take part in the global US$ 369 Trillion real estate market, 
                 Join us as we disrupt the real estate market and revolutionize the future of property investment and ownership.
                 We break down the barriers to make it simple, affordable and accessible for everyone to be able to realize the 
-                benefits of investing in real estate.<br></br>
+                benefits of investing in real estate.<p></p>
                 Libertum Project creates a fundamental shift in the future of real estate investment and ownership, we empower 
-                individuals to start building a property portfolio that earns a passive income.<br></br>
+                individuals to start building a property portfolio that earns a passive income.<p></p>
                 Powered by the $LBM Token, our blockchain based platform enables <span>fractional ownership</span> of properties which can be 
-                easily bought, sold or traded; reducing entry barriers and equally providing liquidity.<br></br>
+                easily bought, sold or traded; reducing entry barriers and equally providing liquidity.<p></p>
                 We empower our community with the knowledge, tools and DeFi solutions to 
                 benefit from real estate investment opportunities that have previously only been available to institutional and 
                 private high-net worth investors.
