@@ -36,10 +36,10 @@ export default function Services() {
             <div className="services-quad_item">
               <img src={mkt} />
               <h3>
-                Marketplace <br></br>Real Estate
+                Real Estate <br></br>Marketplace
               </h3>
               <p>
-                One of the first real estate markets where you can buy, sell, trade and
+                One of the first real estate marketplaces where you can buy, sell, trade and
                 invest in crypto or fiat-currency backed by real estate collatoral
               </p>
               <div></div>
