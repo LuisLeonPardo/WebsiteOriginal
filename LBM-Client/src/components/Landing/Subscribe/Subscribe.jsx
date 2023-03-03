@@ -10,7 +10,7 @@ export default function Subscribe() {
           <h2>Creating opportunities where none existed</h2>
           <p>
             Subscribe to our newsletter to receive updates on the progress of
-            Libertum Project and can be part of a movement to democratize the real estate investment market.
+            Libertum Project and be part of a movement to democratize the real estate investment market
           </p>
         </div>
         <div className="subscribe_form">
