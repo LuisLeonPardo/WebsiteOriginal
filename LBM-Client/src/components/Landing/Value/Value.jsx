@@ -24,7 +24,7 @@ export default function Value() {
                 benefits of investing in real estate.<br></br><br></br>
                 Libertum Project creates a fundamental shift in the future of real estate investment and ownership, we empower 
                 individuals to start building a property portfolio that earns a passive income.<br></br><br></br>
-                Powered by the $LBM Token, our blockchain based platform enables <span>fractional ownership</span> of properties which can be 
+                Powered by the $LBM Token, our blockchain based platform enables fractional ownership of properties which can be 
                 easily bought, sold or traded; reducing entry barriers and equally providing liquidity.<br></br><br></br>
                 We empower our community with the knowledge, tools and DeFi solutions to 
                 benefit from real estate investment opportunities that have previously only been available to institutional and 
