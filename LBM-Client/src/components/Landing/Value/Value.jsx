@@ -28,7 +28,7 @@ export default function Value() {
                 easily bought, sold or traded; reducing entry barriers and equally providing liquidity <br></br><br></br>
                 We empower our community with the knowledge, tools and DeFi solutions to 
                 benefit from real estate investment opportunities that have previously only been available to institutional and 
-                private high net worth investors
+                high net worth investors
               </p>
             </div>
             <div className="value-text_item">
