@@ -16,9 +16,9 @@ export default function Footer() {
             <img src={logo} />
             <div>
               <p>
-                Libertum Project is a decentralized finance algorithmic money market protocol that seeks to democratize the real estate market and increase DeFi adoption more friendly
+                Libertum Project, a decentralized finance algorithmic money market protocol that seeks to democratize the real estate market and increase DeFi adoption more friendly
                 with real property collateral.
-                We are headquartered in Dubai, United Arab Emirates, and are dedicated to break down the barriers of real estate investment through tokenization of property, and allowing individual investors to own property everywhere, and at anytime  
+                Headquartered in Dubai, United Arab Emirates, and dedicated to break down the barriers of real estate investment through tokenization of property, and allowing individual investors to own property everywhere, and at anytime  
               </p>
               <span>© 2023 Libertum Project</span>
             </div>
@@ -63,7 +63,7 @@ export default function Footer() {
                   rel="noreferrer"
                   className="footer_li"
                 >
-                  I want to be part of the Libertum Project
+                  Be part of the Libertum Project
                 </a>
               </li>
             </ul>
