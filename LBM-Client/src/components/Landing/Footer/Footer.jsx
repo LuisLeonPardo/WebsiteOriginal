@@ -63,6 +63,16 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="mailto:info@libertumproject.org"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer_li"
+                >
+                  Join 
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://discord.com/invite/cAB2MKRw7b"
                   target="_blank"
                   rel="noreferrer"
