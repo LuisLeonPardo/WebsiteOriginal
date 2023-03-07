@@ -68,7 +68,7 @@ export default function Footer() {
                   rel="noreferrer"
                   className="footer_li"
                 >
-                  Join 
+                  Write Us 
                 </a>
               </li>
               <li>
@@ -78,7 +78,7 @@ export default function Footer() {
                   rel="noreferrer"
                   className="footer_li"
                 >
-                  Join the Libertum Project
+                  Join Libertum 
                 </a>
               </li>
             </ul>
