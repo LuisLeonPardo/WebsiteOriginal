@@ -51,7 +51,8 @@ export default function Footer() {
                   Whitepaper
                 </Link>
               </li>
-              <li>
+
+              
             <li className="responsive-menu-li_items">
               <img src={bepart} />
               <a
