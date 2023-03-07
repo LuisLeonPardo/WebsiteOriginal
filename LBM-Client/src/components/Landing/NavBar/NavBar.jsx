@@ -51,7 +51,7 @@ export default function NavBar() {
                 duration={1000}
                 className="menu-a_items"
               >
-                Contacts
+                Contact
               </Scroll>
             </li>
             <li className="menu-li_items">
@@ -61,7 +61,7 @@ export default function NavBar() {
                 rel="noreferrer"
                 className="menu-a_items"
               >
-                I want to be part
+                Community
               </a>
             </li>
           </ul>
@@ -122,7 +122,7 @@ export default function NavBar() {
                 rel="noreferrer"
                 className="responsive-menu-a_items"
               >
-                I want to be part
+                Community
               </a>
             </li>
           </ul>
