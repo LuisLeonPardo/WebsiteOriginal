@@ -22,8 +22,6 @@ export default function Footer() {
                 collateral. <br></br>
                 <br></br>Headquartered in Dubai, United Arab Emirates, and
                 dedicated to break down the barriers of real estate investment{" "}
-                <br></br>
-                <br></br>
                 through tokenization of property, and allowing individual
                 investors to invest in property everywhere, anytime
               </p>
