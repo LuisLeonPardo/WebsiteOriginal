@@ -51,20 +51,6 @@ export default function Footer() {
                   Whitepaper
                 </Link>
               </li>
-
-              
-            <li className="responsive-menu-li_items">
-              <img src={bepart} />
-              <a
-                href="mailto:info@libertumproject.org"
-                target="_blank"
-                rel="noreferrer"
-                className="responsive-menu-a_items"
-              >
-                Write Us
-              </a>
-            </li>
-          
               <li>
                 <Scroll
                   to="subscribe"
