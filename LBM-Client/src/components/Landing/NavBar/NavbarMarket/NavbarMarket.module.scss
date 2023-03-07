@@ -1,0 +1,113 @@
+.container{
+    width: 100%;
+    height: 5em;
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    position: fixed;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+color: #000000;
+}
+
+.flexContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    justify-content:center ;
+}
+
+.button, .button2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.button svg{
+    width: 20px;
+    height: 20px;
+    transition-duration: 500ms;
+    pointer-events: none;
+}
+
+.button p, .button2 p{
+    pointer-events: none;
+}
+
+.button2 svg{
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+    transition-duration: 500ms;
+    pointer-events: none;
+}
+
+.buttons p:hover, .button:hover, .button2:hover ,.user svg:hover{ 
+    color: #F7931A;
+
+}
+
+.buttons2{
+    display: flex;
+    flex-direction: row;
+    gap:2em;
+}
+
+.language{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    color: #5B5B5B;
+}
+.language:hover{
+    svg, p{
+    color: #F7931A;}
+}
+
+.language svg{
+    width: 20px;
+    height: 20px;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height:38px ;
+    width: 81px;
+    border: 1px solid #5b5b5bd1;
+    border-radius: 5em;
+}
+
+.user svg{
+    height: 22px;
+    width: 22px;
+    color: #5b5b5bd1;
+    cursor: pointer;
+}
