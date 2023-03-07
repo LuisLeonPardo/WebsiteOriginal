@@ -1,8 +1,8 @@
-import Landing from './components/Landing/Landing';
-import NotFound from './components/NotFound/NotFound';
+import Landing from "./components/Landing/Landing";
+import NotFound from "./components/NotFound/NotFound";
 // import Dashboard from "./components/Dashboards/Dashboard";
-import './App.css';
-import SideBar from './components/SideBar/SideBar';
+import "./App.css";
+import SideBar from "./components/SideBar/SideBar";
 import {
   Route,
   Routes,
@@ -24,26 +24,27 @@ import SideBarMobile from "./components/SideBar/mobile/SideBarMobile";
 import CoomingSoon from "./components/ComingSoon/ComingSoon";
 import Launchpad from "./components/Launchpad/Launchpad";
 import ProductPage from "./components/Launchpad/ProductPage/ProductPage";
-import GovernanceDetails from './components/Governance/GovernanceDetails/GovernanceDetails'
+import GovernanceDetails from "./components/Governance/GovernanceDetails/GovernanceDetails";
+import NavbarMarket from "./components/Landing/NavBar/NavbarMarket/NavbarMarket";
 function App() {
-	const [stateModal, setStateModal] = useState(false);
-	const { selectedIcon, walletPopUp } = useSelector(
-		(state) => state.reducerCompleto
-	);
-	const AppLayout = () => (
-		<>
-			<div className="bgImage">
-				<img src="./icons/Background.svg" />
-			</div>
+  const [stateModal, setStateModal] = useState(false);
+  const { selectedIcon, walletPopUp } = useSelector(
+    (state) => state.reducerCompleto
+  );
+  const AppLayout = () => (
+    <>
+      <div className="bgImage">
+        <img src="./icons/Background.svg" />
+      </div>
 
-			<Modals state={stateModal} setStateModal={setStateModal} />
+      <Modals state={stateModal} setStateModal={setStateModal} />
 
-			<div className="SideBar">
-				<SideBarMobile />
-			</div>
-			<Outlet />
-		</>
-	);
+      <div className="SideBar">
+        <NavbarMarket />
+      </div>
+      <Outlet />
+    </>
+  );
 
   return (
     <div className="App">

@@ -265,7 +265,7 @@ transition: font-size 1s;
     pointer-events: none;
 }
 .walletButton div, .walletButtonOpen div{
-    width: 160px;
+    width: 100%;
     text-overflow: ellipsis;
     overflow: visible;
     line-height: 0em;
@@ -277,7 +277,7 @@ transition: font-size 1s;
     justify-content: center;
     border-radius: 6px;
     visibility: visible;
-    width: 204px;
+    width: 184px;
     height: 38px;
     cursor: pointer;
     color: white;
@@ -307,8 +307,9 @@ transition: font-size 1s;
     height: 38px;
     background-color: #F4911A;
     overflow: hidden;
-    width: 50%;
+    width: 100%;
     color: white;
+    border-radius: .7em;
 }
 
 .balanceModal{
@@ -321,8 +322,9 @@ transition: font-size 1s;
     overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    width: 50%;
+    width: 45%;
     color: white;
+    border-radius: .7em;
 }
 
 .balanceModal::-webkit-scrollbar{
@@ -334,8 +336,7 @@ transition: font-size 1s;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    border-radius: 6px;
-    width: 204px;
+    width: 100%;
     visibility: visible;
     height: 38px;
     gap: .5em;
@@ -345,6 +346,8 @@ transition: font-size 1s;
 .button{
     display: flex;
     height: 38px;
+    width: 100%;
+    position: relative;
     align-items: center;
     justify-content: center;
 }

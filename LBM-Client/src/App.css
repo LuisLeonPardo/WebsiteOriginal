@@ -23,12 +23,14 @@
 }
 .SideBar {
   z-index: 5;
+  top: 0;
   position: fixed;
 }
 .Page {
   width: 100%;
   min-height: 100vh;
   display: flex;
+  margin-top: 5em;
   flex-direction: row;
   /* z-index: 1; */
   position: relative;
