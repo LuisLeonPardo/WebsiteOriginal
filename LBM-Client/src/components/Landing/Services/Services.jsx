@@ -12,14 +12,14 @@ export default function Services() {
       <section className="services_section">
         <Slide direction={"down"} triggerOnce={"true"}>
           <div className="services_text">
-            <h2>Libertum Services</h2>
+            <h2>Libertum Project Proposition</h2>
             <p>
-              Libertum services were divided into 3 categories and will be
-              developed in 3 different times according to the avaze project. In
-              the first place we have the DeFi 1.0 loans with the plus of
-              minting stablecoins, in the second we will have the real estate
-              marketplace and finally encourage other projects to incur in
-              offering loan services with real collaterals
+              Libertum Project services are divided into 3 categories and were
+              developed in 3 different stages. In
+              the first stage we developed the DeFi 1.0 loans component with the functionality of
+              minting stablecoins, in the second stage we finalized the real estate investment
+              marketplace which provides for the tokenization of property, and in the last stage we created an environment where we encourage other projects to take part in
+              offering loan services backed by real estate property collateral
             </p>
           </div>
         </Slide>
@@ -27,8 +27,8 @@ export default function Services() {
           <Slide direction={"left"} triggerOnce={"true"}>
             <div className="services-quad_item">
               <img src={loans} />
-              <h3>Loans</h3>
-              <p>The ability to passively earn through DeFi 2.0 loans</p>
+              <h3>Decentralized Finance Loans</h3>
+              <p>The ability to passively earn interest through DeFi 2.0 loans. Our proposition broadens the horizon of credit markets, connecting the real estate, and secondary market with Defi solutions</p>
               <div></div>
             </div>
           </Slide>
@@ -36,11 +36,11 @@ export default function Services() {
             <div className="services-quad_item">
               <img src={mkt} />
               <h3>
-                Marketplace <br></br>Real Estate
+                Real Estate Marketplace
               </h3>
               <p>
-                One of the first real estate markets where you can buy, sell and
-                invest in crypto
+                One of the first real estate marketplaces where you can buy, sell, trade and
+                invest in crypto or fiat-currency backed by real estate collatoral
               </p>
               <div></div>
             </div>
@@ -48,10 +48,10 @@ export default function Services() {
           <Slide direction={"right"} triggerOnce={"true"}>
             <div className="services-quad_item">
               <img src={launchpad} />
-              <h3>Launchpad Crypto</h3>
+              <h3>Crypto Currency Launchpad</h3>
               <p>
-                Libertum promotes ventures and startups that want adventures in
-                the DeFi world and need an immediate Liquidity market
+                Libertum Project invites real estate owners, syndicates, individuals and startups that want a solid experience in
+                the DeFi world are looking for liquidity
               </p>
               <div></div>
             </div>

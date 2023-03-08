@@ -14,11 +14,11 @@ export default function Home() {
         <div>
           <div className="home_text">
             <h1>
-              Borrow Assets, <span>Create Opportunities</span> and Earn Interest
+              Tokenize Property, <span>Democratize Real Estate</span> and Earn Interest
             </h1>
             <p>
-              DeFi protocol with a fluid and inclusive economy; at you service,
-              to help you on a daily basis
+              DeFi platform for a fluid and all inclusive economy; Real Estate Investing made simple,
+              accessible to everyone, anywhere and at anytime
             </p>
           </div>
           <div className="home_links">
@@ -28,7 +28,9 @@ export default function Home() {
               </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
-              <a className="token">Add token libertum</a>
+              <a href="/swap" className="token">
+                Add Libertum Token
+              </a>
             </motion.div>
           </div>
         </div>
