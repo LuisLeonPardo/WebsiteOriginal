@@ -3,6 +3,7 @@ const initialState = {
   selectedIcon: "",
   walletPopUp: false,
   containerRedux: false,
+  currency: "USD - $",
 };
 
 export const appSlice = createSlice({
@@ -18,10 +19,17 @@ export const appSlice = createSlice({
     setContainerRedux: (state, action) => {
       state.containerRedux = action.payload;
     },
+    setCurrency: (state, action) => {
+      state.currency = action.payload;
+    },
   },
 });
 
-export const { setSelectedIcon, setWalletPopUp, setContainerRedux } =
-  appSlice.actions;
+export const {
+  setSelectedIcon,
+  setWalletPopUp,
+  setContainerRedux,
+  setCurrency,
+} = appSlice.actions;
 
 export default appSlice.reducer;

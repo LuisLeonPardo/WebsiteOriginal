@@ -11,7 +11,7 @@ import { TbVector } from "react-icons/tb";
 
 function PopUpMarket() {
   return (
-    <div className={style.Container}>
+    <div className={style.Container} data-dropdown>
       <div className={style.flexContainer}>
         <a href="/realestate" className={style.button}>
           <div className={style.icon}>

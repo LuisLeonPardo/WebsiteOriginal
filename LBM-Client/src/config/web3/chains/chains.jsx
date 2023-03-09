@@ -95,3 +95,25 @@ export const avalancheChain = {
   },
   testnet: false,
 };
+
+export const kavaChain = {
+  id: 2222,
+  name: "Kava",
+  network: "Kava EVM Co-Chain",
+  iconUrl: "./icons/kava_logo.png",
+  iconBackground: "#fff",
+  nativeCurrency: {
+    decimals: 18,
+    name: "KAVA",
+    symbol: "KAVA",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://evm.kava.io"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://explorer.kava.io" },
+  },
+  testnet: false,
+};
