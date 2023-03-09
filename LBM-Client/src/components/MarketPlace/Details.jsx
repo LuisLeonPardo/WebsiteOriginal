@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Details.scss";
 import star from "./assets/star.svg";
 import share from "./assets/share.svg";
@@ -10,14 +10,16 @@ import image4 from "./assets/Image4.png";
 import image5 from "./assets/Image5.png";
 import iconPic from "./assets/Icon1.svg";
 import blackStar from "./assets/blackStar.svg";
+import line from "./assets/line.svg";
+import avatar from "./assets/Avatar.png";
+import divider from "./assets/Divider.svg";
+import chevron from "./assets/chevron-right.svg";
 
 export default function Details() {
   return (
     <div
       style={{
-        marginLeft: 279,
-        marginTop: 150,
-        marginRight: 279,
+        margin: 150,
       }}
     >
       <div>
@@ -56,8 +58,31 @@ export default function Details() {
       </div>
       <div className="lowerDetails">
         <div className="lowerLeft">
-          <div>Description</div>
-          <div>Offers</div>
+          <div className="head">
+            <div className="title">
+              <h1>Entire rental unit hosted by Ghazal</h1>
+              <h2>2 guests · 1 bedroom · 1 bed · 1 bath</h2>
+            </div>
+            <img src={avatar} alt="avatar pic" className="avatar" />
+          </div>
+          <img src={divider} alt="divider line" className="divider" />
+          <p>
+            Come and stay in this superb duplex T2, in the heart of the historic
+            center of Bordeaux. Spacious and bright, in a real Bordeaux building
+            in exposed stone, you will enjoy all the charms of the city thanks
+            to its ideal location. Close to many shops, bars and restaurants,
+            you can access the apartment by tram A and C and bus routes 27 and
+            44. <br />
+            ...
+          </p>
+          <div className="showMore">
+            <h1>Show more</h1>
+            <img src={chevron} alt="arrow" />
+          </div>
+
+          <div className="offers">
+            <h1>Offers</h1>
+          </div>
         </div>
         <div className="lowerRight">
           <div className="modal">
@@ -72,44 +97,46 @@ export default function Details() {
               <h2>= 0.04800000 ETH</h2>
             </div>
             <div className="time">
-              <div>
-                <h1>22</h1>
-                <h1>Hours</h1>
+              <div className="hourMinSec">
+                <div className="times">
+                  <h1>22</h1>
+                  <h1 className="h-m-s">Hours</h1>
+                </div>
+                <div className="times">
+                  <h1>22</h1>
+                  <h1 className="h-m-s">Minutes</h1>
+                </div>
+                <div className="times">
+                  <h1>22</h1>
+                  <h1 className="h-m-s">Seconds</h1>
+                </div>
               </div>
-              <div>
-                <h1>22</h1>
-                <h1>Minutes</h1>
-              </div>
-              <div>
-                <h1>22</h1>
-                <h1>Seconds</h1>
-              </div>
-              <div>
-                <h2>Sale ends Febraury 28th, 2023 at 2:54 p.m.</h2>
+              <div className="saleTime">
+                <h1>Sale ends Febraury 28th, 2023 at 2:54 p.m.</h1>
               </div>
             </div>
             <div className="detailsButtons">
-              <button>Buy Now</button>
-              <button>Place a Bb</button>
+              <button className="buyBtn">Buy Now</button>
+              <button className="bidear">Place a bid</button>
             </div>
-            <div className="DetailsBalance">
-              <div>
-                <h1>Your balance</h1>
-                <h1>$600.500</h1>
+            <div className="detailsBalance">
+              <div className="lines">
+                <h1 className="underline">Your balance</h1>
+                <h1 className="positiveNum">$600.500</h1>
               </div>
-              <div>
-                <h1>Service fee</h1>
-                <h1>-$300</h1>
+              <div className="lines">
+                <h1 className="underline">Service fee</h1>
+                <h1 className="negativeNum">-$300</h1>
               </div>
-              <div>
-                <h1>Taxes</h1>
-                <h1>-$5</h1>
+              <div className="lines">
+                <h1 className="underline">Taxes</h1>
+                <h1 className="negativeNum">-$5</h1>
               </div>
             </div>
-            <div>------------división--------------</div>
+            <img src={line} alt="line" className="line" />
             <div className="totalTaxesDetail">
-              <h1>Total before taxes</h1>
-              <h1>$500.305</h1>
+              <h1 className="totalBTax">Total before taxes</h1>
+              <h1 className="beforeTaxNum">$500.305</h1>
             </div>
           </div>
         </div>
