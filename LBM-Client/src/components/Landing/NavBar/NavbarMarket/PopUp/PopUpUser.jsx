@@ -4,7 +4,7 @@ import style from "./PopUpUser.module.scss";
 
 function PopUpUser() {
   return (
-    <div className={style.container}>
+    <div className={style.container} data-Menu>
       <div className={style.flexContainer}>
         <CustomConnectButtom />
         <p>Notifications</p>

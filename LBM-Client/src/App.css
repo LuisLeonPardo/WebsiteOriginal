@@ -51,5 +51,9 @@
   padding: 2em;
 }
 
-
+@media(max-width: 600px) {
+  .Page{
+    margin-top: 5em;
+  }
+}
 
