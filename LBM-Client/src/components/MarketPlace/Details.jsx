@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import "./Details.scss";
 import star from "./assets/star.svg";
 import share from "./assets/share.svg";
@@ -14,8 +14,75 @@ import line from "./assets/line.svg";
 import avatar from "./assets/Avatar.png";
 import divider from "./assets/Divider.svg";
 import chevron from "./assets/chevron-right.svg";
+import { useTable } from "react-table";
 
 export default function Details() {
+  const [data, setData] = useState([
+    {
+      price: "500.600 USD",
+      usdPrice: "$ 500.600",
+      floorDifference: "11% below",
+      expiration: "7 days",
+      from: "8CCD36",
+    },
+    {
+      price: "500.600 USD",
+      usdPrice: "$ 500.600",
+      floorDifference: "11% below",
+      expiration: "7 days",
+      from: "8CCD36",
+    },
+    {
+      price: "500.600 USD",
+      usdPrice: "$ 500.600",
+      floorDifference: "11% below",
+      expiration: "7 days",
+      from: "8CCD36",
+    },
+    {
+      price: "500.600 USD",
+      usdPrice: "$ 500.600",
+      floorDifference: "11% below",
+      expiration: "7 days",
+      from: "8CCD36",
+    },
+    {
+      price: "500.600 USD",
+      usdPrice: "$ 500.600",
+      floorDifference: "11% below",
+      expiration: "7 days",
+      from: "8CCD36",
+    },
+  ]);
+  const COLUMNS = [
+    {
+      Header: "Price",
+      accessor: "price",
+    },
+    {
+      Header: "USD Price",
+      accessor: "usdPrice",
+    },
+    {
+      Header: "Floor Difference",
+      accessor: "floorDifference",
+    },
+    {
+      Header: "Expiration",
+      accessor: "expiration",
+    },
+    {
+      Header: "From",
+      accessor: "from",
+    },
+  ];
+
+  const columns = useMemo(() => COLUMNS, []);
+  const tableInstance = useTable({ columns, data });
+
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable({ columns, data });
+
   return (
     <div
       style={{
@@ -79,9 +146,58 @@ export default function Details() {
             <h1>Show more</h1>
             <img src={chevron} alt="arrow" />
           </div>
-
-          <div className="offers">
-            <h1>Offers</h1>
+          <div className="bottomLeft">
+            <div className="offersList">
+              <h1>Offers</h1>
+              <h1 className="latest">List of latest offers</h1>
+            </div>
+            <div className="offersTable">
+              <table {...getTableProps()}>
+                <thead>
+                  {headerGroups.map((headerGroup) => (
+                    <tr {...headerGroup.getHeaderGroupProps()}>
+                      {headerGroup.headers.map((column) => (
+                        <th {...column.getHeaderProps()}>
+                          {column.render("Header")}
+                        </th>
+                      ))}
+                    </tr>
+                  ))}
+                </thead>
+                <tbody {...getTableBodyProps()}>
+                  {rows.map((row) => {
+                    prepareRow(row);
+                    return (
+                      <tr {...row.getRowProps()}>
+                        {row.cells.map((cell) => {
+                          return (
+                            <td {...cell.getCellProps()}>
+                              {cell.render("Cell")}
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+              {/* <table>
+                <thead>
+                  <tc>Price</tc>
+                  <tc>USD Price</tc>
+                  <tc>Floor Difference</tc>
+                  <tc>Expiration</tc>
+                  <tc>From</tc>
+                </thead>
+                <tbody>
+                  <tc>Price</tc>
+                  <tc>USD Price</tc>
+                  <tc>Floor Difference</tc>
+                  <tc>Expiration</tc>
+                  <tc>From</tc>
+                </tbody>
+              </table> */}
+            </div>
           </div>
         </div>
         <div className="lowerRight">

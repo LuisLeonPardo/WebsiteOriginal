@@ -171,6 +171,58 @@
       line-height: 150%;
     }
   }
+  .bottomLeft {
+    display: flex;
+    flex-direction: column;
+    .offersList {
+      padding: 41px 0px 29px;
+      h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+      }
+      .latest {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #6b7280;
+      }
+    }
+    .offersTable {
+      display: flex;
+      flex-direction: column;
+      table {
+        thead {
+          height: 53px;
+          background-color: #f9fafb;
+          tr {
+            color: #6b7280;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+          }
+        }
+        tbody {
+          tr {
+            color: #6b7280;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 53px;
+          }
+          tr:nth-child(even) {
+            background-color: #f9fafb;
+          }
+        }
+      }
+    }
+  }
 }
 
 //------------------------------------------------------------------------------
