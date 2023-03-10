@@ -8,7 +8,7 @@ import { IoChevronDownOutline } from "react-icons/io5";
 function PopUpUser() {
   const screenWidth = window.innerWidth || document.body.clientWidth;
   const { currency } = useSelector((state) => state.reducerCompleto);
-  const [active, setActive] = useState("currency");
+  const [active, setActive] = useState("null");
   const dispatch = useDispatch();
   const languages = [
     "English",
@@ -42,7 +42,7 @@ function PopUpUser() {
         <div className={style.connect}>
           <CustomConnectButtom />
         </div>
-        {screenWidth < 600 ? (
+        {screenWidth < 800 ? (
           <div className={style.buttons}>
             <a href="/">Home</a>
             <a href="/about">About us</a>
