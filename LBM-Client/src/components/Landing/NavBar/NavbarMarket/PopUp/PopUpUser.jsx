@@ -8,7 +8,7 @@ import { IoChevronDownOutline } from "react-icons/io5";
 function PopUpUser() {
   const screenWidth = window.innerWidth || document.body.clientWidth;
   const { currency } = useSelector((state) => state.reducerCompleto);
-  const [active, setActive] = useState("currency");
+  const [active, setActive] = useState("null");
   const dispatch = useDispatch();
   const languages = [
     "English",
