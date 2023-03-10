@@ -26,7 +26,7 @@ export const AstarNetworkChain = {
 
 export const BinanceSmartChain = {
   id: 56,
-  name: "Binance Smart Chain Mainnet",
+  name: "Binance",
   network: "Binance Smart Chain",
   iconUrl: "./icons/Binance_Logo.png",
   iconBackground: "#fff",

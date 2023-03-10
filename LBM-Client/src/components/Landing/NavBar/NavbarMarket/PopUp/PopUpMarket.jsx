@@ -5,6 +5,7 @@ import {
   IoArrowForward,
   IoRocketOutline,
   IoRocketSharp,
+  IoChevronDownOutline,
 } from "react-icons/io5";
 import { BsFileEarmarkPlus } from "react-icons/bs";
 import { TbVector } from "react-icons/tb";
@@ -24,7 +25,7 @@ function PopUpMarket() {
             <p>Buying and selling houses has never been so easy</p>
           </div>
         </a>
-        <div className={style.button}>
+        <div className={style.buttonSoon}>
           <div className={style.icon}>
             <BsFileEarmarkPlus />
           </div>
@@ -55,6 +56,17 @@ function PopUpMarket() {
               <h1>Launchpad</h1> <IoArrowForward />
             </div>
             <p>Drive high-value web3 projects</p>
+          </div>
+        </a>
+
+        <a className={style.buttonMore}>
+          <div className={style.icon}>
+            <IoChevronDownOutline />
+          </div>
+          <div className={style.text}>
+            <div className={style.title}>
+              <h1>More</h1> <IoArrowForward />
+            </div>
           </div>
         </a>
       </div>

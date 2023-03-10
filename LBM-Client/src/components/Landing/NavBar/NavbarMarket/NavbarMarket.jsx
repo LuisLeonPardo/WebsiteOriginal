@@ -9,27 +9,35 @@ import {
   IoGlobeOutline,
   IoPerson,
   IoMenuOutline,
+  IoCloseOutline,
 } from "react-icons/io5";
 import PopUpMarket from "./PopUp/PopUpMarket";
 import PopUpUser from "./PopUp/PopUpUser";
 import { useAccountModal } from "@rainbow-me/rainbowkit";
 import PopUpLanguage from "./PopUp/PopUpLanguage";
+import MobileMenu from "./MobileMenu/MobileMenu";
+import { Divide as Hamburger } from "hamburger-react";
 
 function NavbarMarket() {
   const { openAccountModal } = useAccountModal();
   const [active, setActive] = useState(false);
   const { currency } = useSelector((state) => state.reducerCompleto);
   const [activeMenu, setActiveMenu] = useState(false);
+  const [activeMenuMobile, setActiveMenuMobile] = useState(false);
   const [activeLanguage, setActiveLanguage] = useState(false);
+  const [activeIcon, setActiveIcon] = useState(false);
   const screenWidth = window.innerWidth || document.body.clientWidth;
 
   useEffect(() => {
     document.addEventListener("click", (e) => {
       const isDropdownButton = e.target.matches("[data-dropdown-button]");
       const isMenuButton = e.target.matches("[data-dropdown-menu]");
+      const isMenuButtonMobile = e.target.matches("[data-dropdown-menumobile]");
       const isLanguageButton = e.target.matches("[data-dropdown-language]");
 
       if (!isMenuButton && e.target.closest("[data-menu]") != null) return;
+      if (!isMenuButtonMobile && e.target.closest("[data-menumobile]") != null)
+        return;
       if (!isDropdownButton && e.target.closest("[data-dropdown]") != null)
         return;
       if (!isLanguageButton && e.target.closest("[data-language]") != null)
@@ -38,14 +46,18 @@ function NavbarMarket() {
       if (!isDropdownButton) {
         setActive(false);
       }
-      if (!isMenuButton) {
-        setActiveMenu(false);
-      }
+      // if (!isMenuButton) {
+      //   setActiveMenu(false);
+      // }
+      // if (!isMenuButtonMobile) {
+      //   setActiveMenuMobile(false);
+      // }
       if (!isLanguageButton && e.target.closest("[data-language]") === null) {
         setActiveLanguage(false);
       }
     });
   }, []);
+  console.log(activeMenuMobile, "2", activeMenu);
   return (
     <div>
       {screenWidth > 600 ? (
@@ -82,16 +94,17 @@ function NavbarMarket() {
               <div className={openAccountModal ? style.user : style.user1}>
                 <div
                   data-dropdown-menu
+                  className={style.hamburger}
                   onClick={() => setActiveMenu(!activeMenu)}
                 >
-                  <IoMenuOutline data-dropdown-menu />
+                  <Hamburger size={18} toggled={activeMenu} />
                 </div>
                 {openAccountModal && (
-                  <div onClick={openAccountModal}>
+                  <div onClick={openAccountModal} className={style.account}>
                     <IoPerson />
                   </div>
                 )}
-                {activeMenu ? <PopUpUser data-Menu /> : null}
+                {activeMenu ? <PopUpUser data-menu /> : null}
               </div>
             </div>
           </div>
@@ -100,19 +113,28 @@ function NavbarMarket() {
       ) : (
         <div className={style.container}>
           <div className={style.flexContainer}>
-            <div data-dropdown-menu onClick={() => setActiveMenu(!activeMenu)}>
-              <IoMenuOutline data-dropdown-menu />
+            <div
+              data-dropdown-menumobile
+              className={style.MobileMenuIcon}
+              onClick={() => setActiveMenuMobile(!activeMenuMobile)}
+            >
+              <Hamburger
+                size={20}
+                toggled={activeMenuMobile}
+                data-dropdown-menumobile
+              />
             </div>
             <a href="/" className={style.icon}>
               <img src="./icons/Logo.svg"></img>
               <img src="./icons/Logo Cherryswap.svg"></img>
             </a>
             {openAccountModal && (
-              <div onClick={openAccountModal}>
+              <div onClick={openAccountModal} className={style.accountIcon}>
                 <IoPerson />
               </div>
             )}
           </div>
+          {activeMenuMobile ? <MobileMenu data-menumobile /> : null}
         </div>
       )}
     </div>

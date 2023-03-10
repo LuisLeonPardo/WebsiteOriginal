@@ -111,17 +111,33 @@ color: #000000;
     border: 1px solid #5b5b5bd1;
     border-radius: 5em;
     transition: width .5s;
+    position: relative;
 }
 .user1{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height:38px ;
+    height:38px;
     width: 40px;
     border: 1px solid #5b5b5bd1;
     border-radius: 1em;
     transition: width .5s;
+}
+
+.hamburger{
+    padding: 0 !important;
+    position: absolute;
+    left: .1em;
+}
+
+.hamburger:hover{
+    color: #F7931A;
+}
+
+.account{
+    position: absolute;
+    right: .9em;
 }
 
 .user svg, .user1 svg{
@@ -137,6 +153,24 @@ color: #000000;
  }
 
  .flexContainer svg{
+    width: 20px;
+    height: 20px;
+ }
+
+ .MobileMenuIcon{
+    width: 20px;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .accountIcon{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .accountIcon svg{
     width: 20px;
     height: 20px;
  }
