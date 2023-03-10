@@ -52,7 +52,7 @@
   padding: 2em;
 }
 
-@media(max-width: 900px) {
+@media screen and (max-width: 900px) {
   .Page{
     margin-top: 5em;
   }

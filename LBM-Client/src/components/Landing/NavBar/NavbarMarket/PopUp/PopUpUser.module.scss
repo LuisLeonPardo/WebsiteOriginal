@@ -38,7 +38,7 @@ color: #777E90;
 .flexContainer p:hover{
     color: #F7931A;
 }
-@media(min-width: 800px) {
+@media screen and (min-width: 800px) {
     .flexContainer{
         justify-content: space-evenly;
     }
@@ -47,7 +47,7 @@ color: #777E90;
     }
 }
 
-@media(max-width: 800px){
+@media screen and (max-width: 800px){
     .container{
         top: auto;
         position: relative;
