@@ -24,6 +24,7 @@
     "axios": "^1.2.2",
     "ethers": "^5.7.2",
     "framer-motion": "^8.5.2",
+    "hamburger-react": "^2.5.0",
     "node-sass": "^8.0.0",
     "progressbar.js": "^1.1.0",
     "react": "^18.2.0",

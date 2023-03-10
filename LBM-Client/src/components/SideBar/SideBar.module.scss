@@ -274,11 +274,11 @@ transition: font-size 1s;
 .walletButtonOpen{
     display: flex;
     align-items: center;
+    justify-content: start;
     justify-content: center;
     border-radius: 6px;
     visibility: visible;
-    width: 184px;
-    height: 38px;
+    width: 184.8px;
     cursor: pointer;
     color: white;
     background-color: #F4911A;
@@ -307,7 +307,7 @@ transition: font-size 1s;
     height: 38px;
     background-color: #F4911A;
     overflow: hidden;
-    width: 100%;
+    width: 184.8px;
     color: white;
     border-radius: .7em;
 }

@@ -4,6 +4,7 @@
 .App {
   width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .bgImage {
@@ -54,6 +55,10 @@
 @media(max-width: 600px) {
   .Page{
     margin-top: 5em;
+    overflow-x: hidden;
+  }
+  .App{
+    overflow-x: hidden;
   }
 }
 
