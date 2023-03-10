@@ -52,7 +52,9 @@ function PopUpUser() {
             <a>Post your project</a>
             <a>FAQ</a>
             <div
-              className={style.dropdown}
+              className={
+                active === "language" ? style.dropdownActive : style.dropdown
+              }
               onClick={() =>
                 setActive(active === "language" ? "null" : "language")
               }
@@ -68,7 +70,9 @@ function PopUpUser() {
               ))}
             </div>
             <div
-              className={style.dropdown}
+              className={
+                active === "currency" ? style.dropdownActive : style.dropdown
+              }
               onClick={() =>
                 setActive(active === "currency" ? "null" : "currency")
               }
