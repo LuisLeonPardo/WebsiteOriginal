@@ -39,24 +39,10 @@ function CustomConnectButtom({ container }) {
                 if (!connected) {
                   return (
                     <div className={style.button}>
-                      <div
-                        onClick={openConnectModal}
-                        className={
-                          container === style.OpenContainer
-                            ? style.WalletIconClosed
-                            : style.WalletIcon
-                        }
-                      >
-                        <WalletIcon />
-                      </div>
                       <button
                         onClick={openConnectModal}
                         type="button"
-                        className={
-                          container === style.OpenContainer
-                            ? style.walletButtonOpen
-                            : style.walletButton
-                        }
+                        className={style.walletButtonOpen}
                       >
                         Connect Wallet
                       </button>
@@ -73,13 +59,7 @@ function CustomConnectButtom({ container }) {
                 }
 
                 return (
-                  <div
-                    className={
-                      container === style.OpenContainer
-                        ? style.ConnectedModal
-                        : style.ConnectedModalClosed
-                    }
-                  >
+                  <div className={style.ConnectedModal}>
                     <button
                       onClick={openChainModal}
                       type="button"
@@ -107,7 +87,7 @@ function CustomConnectButtom({ container }) {
                         )} */}
                       {chain.name}
                     </button>
-
+                    {/* 
                     <button
                       onClick={openAccountModal}
                       type="button"
@@ -117,7 +97,7 @@ function CustomConnectButtom({ container }) {
                       {account.displayBalance
                         ? ` (${account.displayBalance})`
                         : ""}
-                    </button>
+                    </button> */}
                   </div>
                 );
               })()}

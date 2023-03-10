@@ -23,6 +23,7 @@ import {
   avalancheChain,
   BinanceSmartChain,
   BinanceTestNet,
+  kavaChain,
 } from "./config/web3/chains/chains";
 import {
   braveWallet,
@@ -44,6 +45,7 @@ const { chains, provider } = configureChains(
     arbitrum,
     avalancheChain,
     AstarNetworkChain,
+    kavaChain,
   ],
   [
     alchemyProvider({

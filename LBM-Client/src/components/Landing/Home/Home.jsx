@@ -14,16 +14,18 @@ export default function Home() {
         <div>
           <div className="home_text">
             <h1>
-              Tokenize Property, <span>Democratize Real Estate</span> and Earn Interest
+              Tokenize Property, <span>Democratize Real Estate</span> and Earn
+              Interest
             </h1>
             <p>
-              DeFi platform for a fluid and all inclusive economy; Real Estate Investing made simple,
-              accessible to everyone, anywhere and at anytime
+              DeFi platform for a fluid and all inclusive economy; Real Estate
+              Investing made simple, accessible to everyone, anywhere and at
+              anytime
             </p>
           </div>
           <div className="home_links">
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
-              <a href="/dashboard" className="launchapp">
+              <a href="/realestate" className="launchapp">
                 <span>Launch App</span> <img src={launchapp} />
               </a>
             </motion.div>

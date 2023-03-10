@@ -25,7 +25,11 @@ import CoomingSoon from "./components/ComingSoon/ComingSoon";
 import Launchpad from "./components/Launchpad/Launchpad";
 import ProductPage from "./components/Launchpad/ProductPage/ProductPage";
 import GovernanceDetails from "./components/Governance/GovernanceDetails/GovernanceDetails";
+<<<<<<< HEAD
 import Details from "./components/MarketPlace/Details";
+=======
+import NavbarMarket from "./components/Landing/NavBar/NavbarMarket/NavbarMarket";
+>>>>>>> 19130768a61700f2efff4d35b6ce4aaa6840eae1
 function App() {
   const [stateModal, setStateModal] = useState(false);
   const { selectedIcon, walletPopUp } = useSelector(
@@ -40,7 +44,11 @@ function App() {
       <Modals state={stateModal} setStateModal={setStateModal} />
 
       <div className="SideBar">
+<<<<<<< HEAD
         <SideBarMobile />
+=======
+        <NavbarMarket />
+>>>>>>> 19130768a61700f2efff4d35b6ce4aaa6840eae1
       </div>
       <Outlet />
     </>

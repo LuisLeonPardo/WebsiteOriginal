@@ -4,6 +4,7 @@
 .App {
   width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .bgImage {
@@ -23,12 +24,14 @@
 }
 .SideBar {
   z-index: 5;
+  top: 0;
   position: fixed;
 }
 .Page {
   width: 100%;
   min-height: 100vh;
   display: flex;
+  margin-top: 5em;
   flex-direction: row;
   /* z-index: 1; */
   position: relative;
@@ -49,5 +52,12 @@
   padding: 2em;
 }
 
-
+@media screen and (max-width: 900px) {
+  .Page{
+    margin-top: 5em;
+  }
+  .App{
+    width: 100vw;
+  }
+}
 

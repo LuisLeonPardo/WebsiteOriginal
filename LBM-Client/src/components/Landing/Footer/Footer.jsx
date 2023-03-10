@@ -22,8 +22,6 @@ export default function Footer() {
                 collateral. <br></br>
                 <br></br>Headquartered in Dubai, United Arab Emirates, and
                 dedicated to break down the barriers of real estate investment{" "}
-                <br></br>
-                <br></br>
                 through tokenization of property, and allowing individual
                 investors to invest in property everywhere, anytime
               </p>
@@ -65,12 +63,22 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="mailto:info@libertumproject.org"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer_li"
+                >
+                  Write Us 
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://discord.com/invite/cAB2MKRw7b"
                   target="_blank"
                   rel="noreferrer"
                   className="footer_li"
                 >
-                  Join the Libertum Project
+                  Join Libertum 
                 </a>
               </li>
             </ul>
