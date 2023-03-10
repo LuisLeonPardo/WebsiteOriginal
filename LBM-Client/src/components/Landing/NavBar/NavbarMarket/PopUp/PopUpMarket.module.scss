@@ -104,7 +104,7 @@ color: #5B5B5B;
     }
 }
 
-@media(max-width: 800px) {
+@media screen and (max-width: 800px) {
     .Container{
         width: 100%;
         top: auto;
@@ -115,7 +115,7 @@ color: #5B5B5B;
     }
 }
 
-@media(max-width: 500px) {
+@media screen and (max-width: 500px) {
     .Container{
         width: 94.5%;
         height: auto;
