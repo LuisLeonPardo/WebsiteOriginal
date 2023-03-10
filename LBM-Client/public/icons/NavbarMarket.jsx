@@ -63,8 +63,8 @@ function NavbarMarket() {
         <div className={style.container}>
           <div className={style.flexContainer}>
             <a href="/" className={style.icon}>
-              <img src="../icons/Logo.svg"></img>
-              <img src="../icons/Logo Cherryswap.svg"></img>
+              <img src="./Logo.svg"></img>
+              <img src="./Logo Cherryswap.svg"></img>
             </a>
             <div className={style.buttons}>
               <div
@@ -124,8 +124,8 @@ function NavbarMarket() {
               />
             </div>
             <a href="/" className={style.icon}>
-              <img src="../icons/Logo.svg"></img>
-              <img src="../icons/Logo Cherryswap.svg"></img>
+              <img src={logo1}></img>
+              <img src={logo2}></img>
             </a>
             {openAccountModal && (
               <div onClick={openAccountModal} className={style.accountIcon}>

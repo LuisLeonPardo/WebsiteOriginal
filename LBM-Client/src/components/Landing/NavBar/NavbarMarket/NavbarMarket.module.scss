@@ -224,6 +224,9 @@ color: #000000;
 }
 
 @media screen and (max-width: 900px) {
+    .container{
+        width: 100%;
+    }
  .flexContainer{
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;

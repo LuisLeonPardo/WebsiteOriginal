@@ -25,6 +25,7 @@ import CoomingSoon from "./components/ComingSoon/ComingSoon";
 import Launchpad from "./components/Launchpad/Launchpad";
 import ProductPage from "./components/Launchpad/ProductPage/ProductPage";
 import GovernanceDetails from "./components/Governance/GovernanceDetails/GovernanceDetails";
+import Details from "./components/MarketPlace/Details";
 import NavbarMarket from "./components/Landing/NavBar/NavbarMarket/NavbarMarket";
 function App() {
   const [stateModal, setStateModal] = useState(false);
@@ -80,6 +81,14 @@ function App() {
             element={
               <div className="Page">
                 <RealEstates />
+              </div>
+            }
+          />
+          <Route
+            path={"/marketplace/details"}
+            element={
+              <div className="Page" style={{ flexDirection: "column" }}>
+                <Details />
               </div>
             }
           />
