@@ -52,13 +52,12 @@
   padding: 2em;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 900px) {
   .Page{
     margin-top: 5em;
-    overflow-x: hidden;
   }
   .App{
-    overflow-x: hidden;
+    width: 100vw;
   }
 }
 
