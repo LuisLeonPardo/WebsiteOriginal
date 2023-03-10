@@ -57,7 +57,6 @@ function NavbarMarket() {
       }
     });
   }, []);
-  console.log(activeMenuMobile, "2", activeMenu);
   return (
     <div>
       {screenWidth > 600 ? (
