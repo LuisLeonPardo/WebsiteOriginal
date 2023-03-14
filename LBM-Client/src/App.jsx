@@ -85,7 +85,7 @@ function App() {
             }
           />
           <Route
-            path={"/marketplace/details"}
+            path={"/marketplace/:id"}
             element={
               <div className="Page" style={{ flexDirection: "column" }}>
                 <Details />

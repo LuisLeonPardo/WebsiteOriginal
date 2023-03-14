@@ -15,6 +15,12 @@ import avatar from "./assets/Avatar.png";
 import divider from "./assets/Divider.svg";
 import chevron from "./assets/chevron-right.svg";
 import { useTable } from "react-table";
+import { useModal } from "../../helpers/useModal/useModal";
+import Modal from "./Modal";
+import Carousel from "./Carousel";
+import { useParams } from "react-router-dom";
+import img1 from "./assets/ImageCar.png";
+import img2 from "./assets/ImageCar2.png";
 
 export default function Details() {
   const [data, setData] = useState([
@@ -83,12 +89,19 @@ export default function Details() {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable({ columns, data });
 
+  const [isOpenModal, openModal, closeModal] = useModal();
+  const [isOpenGallery, openGallery, closeGallery] = useModal();
+  const { id } = useParams();
+
+  const slides = [img1, img2];
+
   return (
     <div
       style={{
         margin: 150,
       }}
     >
+      <Modal isOpen={isOpenModal} closeModal={closeModal} number={id} />
       <div>
         <div className="detailsTitle">
           <h1>Bordeax Getaway</h1>
@@ -111,13 +124,25 @@ export default function Details() {
             </div>
           </div>
         </div>
+        <div className="carousel">
+          <Carousel
+            slides={slides}
+            isOpen={isOpenGallery}
+            closeModal={closeGallery}
+          />
+        </div>
         <div className="detailsImages">
-          <img src={image1} alt="first image" className="item one" />
+          <img
+            src={image1}
+            alt="first image"
+            className="item one"
+            onClick={openGallery}
+          />
           <img src={image2} alt="other image" className="item" />
           <img src={image3} alt="other image" className="item" />
           <img src={image4} alt="other image" className="item" />
           <img src={image5} alt="other image" className="item" />
-          <button className="showPhotosBtn">
+          <button className="showPhotosBtn" onClick={openGallery}>
             <img src={iconPic} alt="tuvieja" />
             <h1>Show all photos</h1>
           </button>
@@ -233,7 +258,9 @@ export default function Details() {
             </div>
             <div className="detailsButtons">
               <button className="buyBtn">Buy Now</button>
-              <button className="bidear">Place a bid</button>
+              <button className="bidear" onClick={openModal}>
+                Place a bid
+              </button>
             </div>
             <div className="detailsBalance">
               <div className="lines">
