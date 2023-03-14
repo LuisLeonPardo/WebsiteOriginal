@@ -1,3 +1,29 @@
+$breakpoints: (
+  mobile: 540px,
+  xs: 750px,
+  sm: 900px,
+  md: 1200px,
+  lg: 1600px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
 .detailsTitle {
   display: flex;
   flex-direction: column;
@@ -65,6 +91,7 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
+    cursor: pointer;
   }
   img {
     width: 100%;
@@ -109,6 +136,10 @@
   width: 771px;
   height: 812px;
   text-align: left;
+  @include media-down(lg) {
+    width: 50%;
+    height: 50%;
+  }
   .head {
     display: flex;
     justify-content: space-between;
@@ -176,6 +207,10 @@
     flex-direction: column;
     .offersList {
       padding: 41px 0px 29px;
+      @include media-down(lg) {
+        width: 50%;
+        height: 50%;
+      }
       h1 {
         font-family: "Inter";
         font-style: normal;
@@ -431,6 +466,18 @@
         font-size: 16px;
         line-height: 19px;
       }
+    }
+    @include media-down(mobile) {
+      width: 358px;
+      height: 307px;
+    }
+    @include media-down(lg) {
+      width: 80%;
+      height: 80%;
+    }
+    @include media-down(md) {
+      width: 70%;
+      height: 80%;
     }
   }
 }
