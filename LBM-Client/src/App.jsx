@@ -26,6 +26,8 @@ import Launchpad from "./components/Launchpad/Launchpad";
 import ProductPage from "./components/Launchpad/ProductPage/ProductPage";
 import GovernanceDetails from "./components/Governance/GovernanceDetails/GovernanceDetails";
 import Marketplace from "./components/Marketplace/Marketplace";
+import Details from "./components/MarketPlace/Details";
+import NavbarMarket from "./components/Landing/NavBar/NavbarMarket/NavbarMarket";
 function App() {
   const [stateModal, setStateModal] = useState(false);
   const { selectedIcon, walletPopUp } = useSelector(
@@ -40,7 +42,7 @@ function App() {
       <Modals state={stateModal} setStateModal={setStateModal} />
 
       <div className="SideBar">
-        <SideBarMobile />
+        <NavbarMarket />
       </div>
       <Outlet />
     </>
@@ -80,6 +82,14 @@ function App() {
             element={
               <div className="Page">
                 <RealEstates />
+              </div>
+            }
+          />
+          <Route
+            path={"/marketplace/:id"}
+            element={
+              <div className="Page" style={{ flexDirection: "column" }}>
+                <Details />
               </div>
             }
           />
