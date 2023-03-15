@@ -111,10 +111,16 @@ function NavbarMarket() {
         </div>
       ) : (
         <div className={style.container}>
-          <div className={style.flexContainer}>
+          <div
+            className={
+              openAccountModal ? style.flexContainer : style.flexContainer2
+            }
+          >
             <div
               data-dropdown-menumobile
-              className={style.MobileMenuIcon}
+              className={
+                openAccountModal ? style.MobileMenuIcon : style.MobileMenuIcon2
+              }
               onClick={() => setActiveMenuMobile(!activeMenuMobile)}
             >
               <Hamburger
@@ -123,7 +129,7 @@ function NavbarMarket() {
                 data-dropdown-menumobile
               />
             </div>
-            <a href="/" className={style.icon}>
+            <a href="/" className={openAccountModal ? style.icon : style.icon2}>
               <img src="../icons/Logo.svg"></img>
               <img src="../icons/Logo Cherryswap.svg"></img>
             </a>
