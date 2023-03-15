@@ -25,6 +25,7 @@ import CoomingSoon from "./components/ComingSoon/ComingSoon";
 import Launchpad from "./components/Launchpad/Launchpad";
 import ProductPage from "./components/Launchpad/ProductPage/ProductPage";
 import GovernanceDetails from "./components/Governance/GovernanceDetails/GovernanceDetails";
+import Marketplace from "./components/Marketplace/Marketplace";
 import Details from "./components/MarketPlace/Details";
 import NavbarMarket from "./components/Landing/NavBar/NavbarMarket/NavbarMarket";
 function App() {
@@ -126,6 +127,7 @@ function App() {
           />
           {/* Dentro de este Route van todas las cosas que tengan sidebar */}
         </Route>
+        <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/swap" element={<CoomingSoon />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
