@@ -27,8 +27,11 @@ import ProductPage from "./components/Launchpad/ProductPage/ProductPage";
 import GovernanceDetails from "./components/Governance/GovernanceDetails/GovernanceDetails";
 import Details from "./components/MarketPlace/Details";
 import NavbarMarket from "./components/Landing/NavBar/NavbarMarket/NavbarMarket";
+import { useModal } from "./helpers/useModal/useModal";
+import WarningBuilding from "./components/WarningBuilding";
 function App() {
   const [stateModal, setStateModal] = useState(false);
+  const [isOpenModal, openModal, closeModal] = useModal();
   const { selectedIcon, walletPopUp } = useSelector(
     (state) => state.reducerCompleto
   );
@@ -37,7 +40,7 @@ function App() {
       <div className="bgImage">
         <img src="./icons/Background.svg" />
       </div>
-
+      <WarningBuilding isOpen={isOpenModal} closeModal={closeModal} />
       <Modals state={stateModal} setStateModal={setStateModal} />
 
       <div className="SideBar">
@@ -46,6 +49,11 @@ function App() {
       <Outlet />
     </>
   );
+
+  useEffect(() => {
+    1;
+    openModal();
+  }, []);
 
   return (
     <div className="App">
