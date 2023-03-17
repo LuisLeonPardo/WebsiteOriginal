@@ -1,8 +1,9 @@
 $breakpoints: (
   mobile: 540px,
-  xs: 750px,
-  sm: 900px,
+  xs: 740px,
+  sm: 852px,
   md: 1200px,
+  l: 1420px,
   lg: 1600px,
 );
 
@@ -22,6 +23,30 @@ $breakpoints: (
   @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
     @content;
   }
+}
+
+.details {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.detailsContainer {
+  width: 80%;
+  padding: 12px 0px 28px;
+  @include media-down(sm) {
+    width: 95%;
+    padding-right: 10px;
+  }
+}
+
+.detailsHeader {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .detailsTitle {
@@ -84,14 +109,69 @@ $breakpoints: (
   //   -moz-box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 2fr;
+  grid-template-rows: 1fr 1fr;
   gap: 8px;
+  @include media-down(sm) {
+  }
   .one {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
     cursor: pointer;
+    @include media-down(sm) {
+      // height: 315px;
+      // width: 315px;
+      // object-fit: cover;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+  }
+  .two {
+    @include media-down(sm) {
+      // height: 154px;
+      // width: 176px;
+      object-fit: cover;
+      grid-column-start: 3;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
+  }
+  .three {
+    @include media-down(sm) {
+      // height: 154px;
+      // width: 176px;
+      object-fit: cover;
+      grid-column-start: 4;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
+  }
+  .four {
+    @include media-down(sm) {
+      // height: 154px;
+      // width: 176px;
+      object-fit: cover;
+      grid-column-start: 3;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 2;
+    }
+  }
+  .five {
+    @include media-down(sm) {
+      height: 154px;
+      // width: 176px;
+      object-fit: cover;
+      grid-column-start: 4;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 2;
+    }
   }
   img {
     width: 100%;
@@ -128,6 +208,9 @@ $breakpoints: (
   padding-top: 100px;
   display: flex;
   justify-content: space-between;
+  @include media-down(sm) {
+    padding-top: 29px;
+  }
 }
 
 .lowerLeft {
@@ -137,12 +220,14 @@ $breakpoints: (
   height: 812px;
   text-align: left;
   @include media-down(lg) {
-    width: 50%;
+    width: 60%;
     height: 50%;
   }
   .head {
     display: flex;
     justify-content: space-between;
+    height: auto;
+    position: relative;
     .title {
       display: flex;
       flex-direction: column;
@@ -169,8 +254,11 @@ $breakpoints: (
       height: 56px;
     }
   }
-  .divider {
-    padding: 24px 0px;
+  .dividerLeft {
+    margin: 24px 0px;
+    @include media-down(xs) {
+      margin-top: 48px;
+    }
   }
   p {
     font-family: "Inter";
@@ -205,9 +293,12 @@ $breakpoints: (
   .bottomLeft {
     display: flex;
     flex-direction: column;
+    @include media-down(sm) {
+      width: 95vw;
+    }
     .offersList {
       padding: 41px 0px 29px;
-      @include media-down(lg) {
+      @include media-down(xs) {
         width: 50%;
         height: 50%;
       }
@@ -270,6 +361,13 @@ $breakpoints: (
   right: 0;
   justify-content: center;
   align-items: center;
+  @include media-down(sm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    //height: auto;
+  }
   .modal {
     display: flex;
     flex-direction: column;
@@ -283,6 +381,18 @@ $breakpoints: (
     -moz-box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
     justify-content: space-around;
     align-items: center;
+    @include media-down(sm) {
+      display: none;
+    }
+    @include media-down(l) {
+      width: 70%;
+      height: 100%;
+    }
+    @include media-down(md) {
+      width: 60%;
+      height: 90%;
+    }
+
     .priceAndPoints {
       display: flex;
       flex-direction: column;
@@ -443,6 +553,12 @@ $breakpoints: (
     }
     .line {
       padding: 18px 0px;
+      @include media-down(l) {
+        width: 100%;
+      }
+      // @include media-down(md) {
+      //   width: 60%;
+      // }
     }
     .totalTaxesDetail {
       width: 100%;
@@ -467,17 +583,93 @@ $breakpoints: (
         line-height: 19px;
       }
     }
-    @include media-down(mobile) {
-      width: 358px;
-      height: 307px;
+  }
+  .bidTablet {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding-top: 12px;
+    width: 80%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    h1 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
     }
-    @include media-down(lg) {
-      width: 80%;
-      height: 80%;
+    .equiv {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      display: flex;
+      align-items: center;
+      text-align: right;
     }
-    @include media-down(md) {
-      width: 70%;
-      height: 80%;
+    .sliderBtn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #000000;
+      border-radius: 8px;
+      height: 44px;
+      width: 161px;
+      margin-top: 17px;
+      cursor: pointer;
+      transition: all 0.25;
+      input {
+        border: none;
+        width: 70%;
+        padding-left: 12px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      .subslide {
+        display: flex;
+        align-items: center;
+        padding-right: 12px;
+      }
+    }
+
+    .sliderBtn2 {
+      display: flex;
+      border: none;
+      background-color: #f7931a;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 8px;
+      height: 44px;
+      width: 161px;
+      margin-top: 17px;
+      cursor: pointer;
+      transition: all 0.25;
+      h1 {
+        padding-right: 12px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #ffffff;
+      }
+      .subslide {
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+      }
+    }
+
+    @include media-up(sm) {
+      display: none;
     }
   }
 }
