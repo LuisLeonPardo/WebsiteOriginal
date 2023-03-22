@@ -1,8 +1,9 @@
 $breakpoints: (
   mobile: 540px,
-  xs: 750px,
-  sm: 900px,
+  xs: 740px,
+  sm: 852px,
   md: 1200px,
+  l: 1420px,
   lg: 1600px,
 );
 
@@ -51,7 +52,12 @@ $breakpoints: (
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  width: 85vw;
   img {
     cursor: pointer;
   }
+  // @include media-down(sm) {
+  //   display: n;
+  // }
 }

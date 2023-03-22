@@ -34,12 +34,23 @@ $breakpoints: (
   height: auto;
 }
 
+.detailClasses {
+  width: 100vw;
+  @include media-down(mobile) {
+    display: none;
+  }
+}
 .detailsContainer {
   width: 80%;
   padding: 12px 0px 28px;
   @include media-down(sm) {
     width: 95%;
     padding-right: 10px;
+  }
+}
+.test {
+  @include media-up(mobile) {
+    display: none;
   }
 }
 
@@ -53,6 +64,19 @@ $breakpoints: (
   display: flex;
   flex-direction: column;
   padding-bottom: 10px;
+  .groupTitle {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .avatarMobile {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    @include media-up(mobile) {
+      display: none;
+    }
+  }
   h1 {
     display: flex;
     align-items: start;
@@ -68,6 +92,12 @@ $breakpoints: (
     .cityAndPoints {
       display: flex;
       gap: 8px;
+      @include media-down(mobile) {
+        flex-direction: row-reverse;
+      }
+      .group {
+        display: flex;
+      }
       .dot {
         display: flex;
         align-items: center;
@@ -101,6 +131,9 @@ $breakpoints: (
 }
 
 .detailsImages {
+  @include media-down(mobile) {
+    display: none;
+  }
   border-radius: 16px;
   position: relative;
   overflow: hidden;
@@ -211,6 +244,9 @@ $breakpoints: (
   @include media-down(sm) {
     padding-top: 29px;
   }
+  @include media-down(mobile) {
+    flex-direction: column;
+  }
 }
 
 .lowerLeft {
@@ -222,6 +258,9 @@ $breakpoints: (
   @include media-down(lg) {
     width: 60%;
     height: 50%;
+  }
+  @include media-down(mobile) {
+    width: 100%;
   }
   .head {
     display: flex;
@@ -239,6 +278,9 @@ $breakpoints: (
         font-weight: 500;
         font-size: 24px;
         line-height: 32px;
+        @include media-down(mobile) {
+          display: none;
+        }
       }
       h2 {
         font-family: "Inter";
@@ -246,12 +288,19 @@ $breakpoints: (
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;
+        @include media-down(mobile) {
+          font-size: 12px;
+          padding-bottom: 70px;
+        }
       }
     }
     .avatar {
       display: flex;
       width: 56px;
       height: 56px;
+      @include media-down(mobile) {
+        display: none;
+      }
     }
   }
   .dividerLeft {
@@ -266,6 +315,103 @@ $breakpoints: (
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+  }
+  .bidMobile {
+    @include media-up(mobile) {
+      display: none;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    h1 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
+    }
+    .equiv {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      display: flex;
+      align-items: center;
+      text-align: right;
+    }
+    .sliderBtn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #000000;
+      border-radius: 8px;
+      height: 44px;
+      width: 161px;
+      margin-top: 17px;
+      cursor: pointer;
+      transition: all 0.25;
+      input {
+        border: none;
+        width: 70%;
+        padding-left: 12px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      .subslide {
+        display: flex;
+        align-items: center;
+        padding-right: 12px;
+      }
+    }
+
+    .sliderBtn2 {
+      display: flex;
+      border: none;
+      background-color: #f7931a;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 8px;
+      height: 44px;
+      width: 161px;
+      margin-top: 17px;
+      cursor: pointer;
+      transition: all 0.25;
+      h1 {
+        padding-right: 28px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #ffffff;
+      }
+      .subslide {
+        display: flex;
+        align-items: center;
+        padding-left: 24px;
+      }
+    }
+
+    @include media-up(sm) {
+      display: none;
+    }
+    .prueba {
+      padding: 100px 5px;
+      input {
+        appearance: none;
+        scale: 1.1;
+      }
+    }
   }
   .showMore {
     display: flex;
@@ -359,7 +505,7 @@ $breakpoints: (
   width: 379px;
   top: 0;
   right: 0;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   @include media-down(sm) {
     display: flex;
@@ -367,6 +513,9 @@ $breakpoints: (
     justify-content: flex-start;
     width: 30%;
     //height: auto;
+    @include media-down(mobile) {
+      display: none;
+    }
   }
   .modal {
     display: flex;
@@ -653,7 +802,7 @@ $breakpoints: (
       cursor: pointer;
       transition: all 0.25;
       h1 {
-        padding-right: 12px;
+        padding-right: 28px;
         font-family: "Inter";
         font-style: normal;
         font-weight: 400;
@@ -664,12 +813,19 @@ $breakpoints: (
       .subslide {
         display: flex;
         align-items: center;
-        padding-left: 12px;
+        padding-left: 24px;
       }
     }
 
     @include media-up(sm) {
       display: none;
+    }
+    .prueba {
+      padding: 100px 5px;
+      input {
+        appearance: none;
+        scale: 1.1;
+      }
     }
   }
 }

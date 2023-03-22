@@ -26,6 +26,7 @@ import { useParams } from "react-router-dom";
 import img1 from "../assets/ImageCar.png";
 import img2 from "../assets/ImageCar2.png";
 import Classes from "../Classes/Classes";
+import MobileCarousel from "./MobileCarousel";
 
 export default function Details() {
   const [data, setData] = useState([
@@ -99,6 +100,7 @@ export default function Details() {
   const { id } = useParams();
 
   const slides = [img1, img2];
+  const mobileSlides = [image1, image2, image3, image4, image5];
 
   const [bid, setBid] = useState(false);
 
@@ -113,15 +115,25 @@ export default function Details() {
   return (
     <div className="details">
       <Modal isOpen={isOpenModal} closeModal={closeModal} number={id} />
-      <Classes />
+      <div className="detailClasses">
+        <Classes />
+      </div>
       <div className="detailsContainer">
+        <div className="test">
+          <MobileCarousel slides={mobileSlides} />
+        </div>
         <div className="detailsHeader">
           <div className="detailsTitle">
-            <h1>Bordeax Getaway</h1>
+            <div className="groupTitle">
+              <h1>Bordeax Getaway</h1>
+              <img src={avatar} alt="avatar pic" className="avatarMobile" />
+            </div>
             <div className="detailsSubtitle">
               <div className="cityAndPoints">
-                <img src={star} alt="star icon" />
-                <h2>5.0</h2>
+                <div className="group">
+                  <img src={star} alt="star icon" />
+                  <h2>5.0</h2>
+                </div>
                 <span className="dot">·</span>
                 <h2 className="city">Bordeaux, Dubai</h2>
               </div>
@@ -181,6 +193,36 @@ export default function Details() {
               and bus routes 27 and 44. <br />
               ...
             </p>
+            <div className="bidMobile">
+              <div>
+                <h1>500.000 USDT</h1>
+                <h1 className="equiv">= 0.04800000 ETH</h1>
+              </div>
+              <a
+                onTouchMove={changeBid}
+                href="#"
+                id="ko"
+                className={bid ? "sliderBtn" : "sliderBtn2"}
+              >
+                {bid ? (
+                  <>
+                    <input type="text" placeholder="Place a bid" />
+                    <div className="subslide">
+                      <img src={verticalRectangle} alt="bar img" />
+                      <img src={yellowFlash} alt="flash img" />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <h1>Buy Now</h1>
+                    <div className="subslide">
+                      <img src={whiteFlash} alt="flash img" />
+                      <img src={whiteRectangle} alt="bar img" />
+                    </div>
+                  </>
+                )}
+              </a>
+            </div>
             <div className="showMore">
               <h1>Show more</h1>
               <img src={chevron} alt="arrow" />
@@ -299,7 +341,7 @@ export default function Details() {
                   </>
                 ) : (
                   <>
-                    <h1>Buy now</h1>
+                    <h1>Buy Now</h1>
                     <div className="subslide">
                       <img src={whiteFlash} alt="flash img" />
                       <img src={whiteRectangle} alt="bar img" />
@@ -307,6 +349,9 @@ export default function Details() {
                   </>
                 )}
               </a>
+              {/* <div className="prueba">
+                <input type="range" />
+              </div> */}
             </div>
           </div>
         </div>
