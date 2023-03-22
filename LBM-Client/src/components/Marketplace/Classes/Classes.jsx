@@ -10,7 +10,7 @@ function Classes() {
   useEffect(() => {
     setWidth(dragSlider.current.scrollWidth - dragSlider.current.offsetWidth);
   });
-  console.log(InfoClasses)
+  //console.log(InfoClasses)
 
   return (
     <motion.div className="classes-container">
@@ -24,7 +24,7 @@ function Classes() {
       >
         {InfoClasses.map((e) => {
           return (
-            <div className="classes-card">
+            <div className="classes-card" key={e.name}>
               <img src={e.img} />
               <p>{e.name}</p>
             </div>

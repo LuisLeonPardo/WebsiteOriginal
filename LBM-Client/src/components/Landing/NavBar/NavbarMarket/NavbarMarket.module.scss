@@ -1,268 +1,275 @@
-.container{
-    width: 100vw;
-    height: 5em;
-    background-color: rgb(248, 248, 248);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    z-index: 10;
-    position: fixed;
-    font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-text-align: center;
-color: #000000;
+.container {
+  width: 100vw;
+  height: 5em;
+  background-color: rgb(248, 248, 248);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 10;
+  position: fixed;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
 }
 
-.flexContainer{
-    width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+.flexContainer {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.icon{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.buttons{
-    width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 3em;
-    -webkit-box-pack:center ;
-        -ms-flex-pack:center ;
-            justify-content:center ;
+.buttons {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 3em;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.button, .button2{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 10px;
-    cursor: pointer;
+.button,
+.button2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
 }
 
-.button svg{
-    width: 20px;
-    height: 20px;
-    -webkit-transition-duration: 100ms;
-         -o-transition-duration: 100ms;
-            transition-duration: 100ms;
-    pointer-events: none;
+.button svg {
+  width: 20px;
+  height: 20px;
+  -webkit-transition-duration: 100ms;
+  -o-transition-duration: 100ms;
+  transition-duration: 100ms;
+  pointer-events: none;
 }
 
-.button p, .button2 p{
-    pointer-events: none;
+.button p,
+.button2 p {
+  pointer-events: none;
 }
 
-.button2 svg{
-    width: 20px;
-    height: 20px;
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transition-duration: 100ms;
-         -o-transition-duration: 100ms;
-            transition-duration: 100ms;
-    pointer-events: none;
+.button2 svg {
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition-duration: 100ms;
+  -o-transition-duration: 100ms;
+  transition-duration: 100ms;
+  pointer-events: none;
 }
 
-.buttons p:hover, .button:hover, .button2:hover ,.user svg:hover{ 
-    color: #F7931A;
-
+.buttons p:hover,
+.button:hover,
+.button2:hover,
+.user svg:hover {
+  color: #f7931a;
 }
 
-.buttons2{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap:2em;
+.buttons2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 2em;
 }
 
-.language, .languageButton{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1em;
-    color: #5B5B5B;
+.language,
+.languageButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1em;
+  color: #5b5b5b;
 }
 
-
-.languageButton:hover{
-    svg, p{
-    color: #F7931A;}
+.languageButton:hover {
+  svg,
+  p {
+    color: #f7931a;
+  }
 }
 
-.languageButton svg , .languageButton p{
-    pointer-events: none;
+.languageButton svg,
+.languageButton p {
+  pointer-events: none;
 }
 
-
-.language svg{
-    width: 20px;
-    height: 20px;
+.language svg {
+  width: 20px;
+  height: 20px;
 }
 
-.user{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    height:38px ;
-    width: 81px;
-    border: 1px solid #5b5b5bd1;
-    border-radius: 5em;
-    -webkit-transition: width .5s;
-    -o-transition: width .5s;
-    transition: width .5s;
-    position: relative;
+.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  height: 38px;
+  width: 81px;
+  border: 1px solid #5b5b5bd1;
+  border-radius: 5em;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
+  position: relative;
 }
-.user1{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    height:38px;
-    width: 40px;
-    border: 1px solid #5b5b5bd1;
-    border-radius: 1em;
-    -webkit-transition: width .5s;
-    -o-transition: width .5s;
-    transition: width .5s;
-}
-
-.hamburger{
-    padding: 0 !important;
-    position: absolute;
+.user1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  height: 38px;
+  width: 40px;
+  border: 1px solid #5b5b5bd1;
+  border-radius: 1em;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
 }
 
-.hamburger:hover{
-    color: #F7931A;
+.hamburger {
+  padding: 0 !important;
+  position: absolute;
 }
 
-.account{
-    position: absolute;
-    right: .9em;
+.hamburger:hover {
+  color: #f7931a;
 }
 
-.user svg, .user1 svg{
-    height: 22px;
-    width: 22px;
-    color: #5b5b5bd1;
-    cursor: pointer;
+.account {
+  position: absolute;
+  right: 0.9em;
+}
+
+.user svg,
+.user1 svg {
+  height: 22px;
+  width: 22px;
+  color: #5b5b5bd1;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {
-    .container{
-        width: 100%;
-    }
- .flexContainer{
+  .container {
+    width: 100%;
+  }
+  .flexContainer {
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
- }
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
 
- .flexContainer svg{
+  .flexContainer svg {
     width: 20px;
     height: 20px;
- }
+  }
 
- .MobileMenuIcon{
+  .MobileMenuIcon {
     width: 20px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
- }
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 
- .accountIcon{
+  .accountIcon {
     width: 48px;
     height: 48px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
- }
- .accountIcon svg{
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .accountIcon svg {
     width: 20px;
     height: 20px;
- }
+  }
 }
