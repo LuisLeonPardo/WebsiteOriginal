@@ -27,69 +27,93 @@ import img1 from "../assets/ImageCar.png";
 import img2 from "../assets/ImageCar2.png";
 import Classes from "../Classes/Classes";
 import MobileCarousel from "./MobileCarousel";
+import { info, column, dataReducer, columnsReducer } from "./data.js";
 
 export default function Details() {
-  const [data, setData] = useState([
-    {
-      price: "500.600 USD",
-      usdPrice: "$ 500.600",
-      floorDifference: "11% below",
-      expiration: "7 days",
-      from: "8CCD36",
-    },
-    {
-      price: "500.600 USD",
-      usdPrice: "$ 500.600",
-      floorDifference: "11% below",
-      expiration: "7 days",
-      from: "8CCD36",
-    },
-    {
-      price: "500.600 USD",
-      usdPrice: "$ 500.600",
-      floorDifference: "11% below",
-      expiration: "7 days",
-      from: "8CCD36",
-    },
-    {
-      price: "500.600 USD",
-      usdPrice: "$ 500.600",
-      floorDifference: "11% below",
-      expiration: "7 days",
-      from: "8CCD36",
-    },
-    {
-      price: "500.600 USD",
-      usdPrice: "$ 500.600",
-      floorDifference: "11% below",
-      expiration: "7 days",
-      from: "8CCD36",
-    },
-  ]);
-  const COLUMNS = [
-    {
-      Header: "Price",
-      accessor: "price",
-    },
-    {
-      Header: "USD Price",
-      accessor: "usdPrice",
-    },
-    {
-      Header: "Floor Difference",
-      accessor: "floorDifference",
-    },
-    {
-      Header: "Expiration",
-      accessor: "expiration",
-    },
-    {
-      Header: "From",
-      accessor: "from",
-    },
-  ];
+  const width = window.innerWidth;
+  const breakpoint = 540;
+  const [data, setData] = useState(info);
+  const [COLUMNS, setCOLUMNS] = useState(column);
+  // const [data, setData] = useState([
+  //   {
+  //     price: "500.600 USD",
+  //     usdPrice: "$ 500.600",
+  //     floorDifference: "11% below",
+  //     expiration: "7 days",
+  //     from: "8CCD36",
+  //   },
+  //   {
+  //     price: "500.600 USD",
+  //     usdPrice: "$ 500.600",
+  //     floorDifference: "11% below",
+  //     expiration: "7 days",
+  //     from: "8CCD36",
+  //   },
+  //   {
+  //     price: "500.600 USD",
+  //     usdPrice: "$ 500.600",
+  //     floorDifference: "11% below",
+  //     expiration: "7 days",
+  //     from: "8CCD36",
+  //   },
+  //   {
+  //     price: "500.600 USD",
+  //     usdPrice: "$ 500.600",
+  //     floorDifference: "11% below",
+  //     expiration: "7 days",
+  //     from: "8CCD36",
+  //   },
+  //   {
+  //     price: "500.600 USD",
+  //     usdPrice: "$ 500.600",
+  //     floorDifference: "11% below",
+  //     expiration: "7 days",
+  //     from: "8CCD36",
+  //   },
+  // ]);
+  // const [COLUMNS, setCOLUMNS] = useState([
+  //   {
+  //     Header: "Price",
+  //     accessor: "price",
+  //   },
+  //   {
+  //     Header: "USD Price",
+  //     accessor: "usdPrice",
+  //   },
+  //   {
+  //     Header: "Floor Difference",
+  //     accessor: "floorDifference",
+  //   },
+  //   {
+  //     Header: "Expiration",
+  //     accessor: "expiration",
+  //   },
+  //   {
+  //     Header: "From",
+  //     accessor: "from",
+  //   },
+  // ]);
 
-  const columns = useMemo(() => COLUMNS, []);
+  // function dataReducer(data) {
+  //   return data.map((offer) => {
+  //     return { price: offer.price, usdPrice: offer.usdPrice };
+  //   });
+  // }
+  // function columnsReducer(columns) {
+  //   return columns.slice(0, 2);
+  // }
+
+  useEffect(() => {
+    if (width < breakpoint) {
+      const data2 = dataReducer(data);
+      const columns2 = columnsReducer(COLUMNS);
+      setData(data2);
+      setCOLUMNS(columns2);
+      console.log(COLUMNS);
+    }
+  }, [console.log(COLUMNS)]);
+
+  const columns = useMemo(() => COLUMNS, [COLUMNS]);
   const tableInstance = useTable({ columns, data });
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
@@ -199,7 +223,7 @@ export default function Details() {
                 <h1 className="equiv">= 0.04800000 ETH</h1>
               </div>
               <a
-                onTouchMove={changeBid}
+                onTouchEndCapture={changeBid}
                 href="#"
                 id="ko"
                 className={bid ? "sliderBtn" : "sliderBtn2"}

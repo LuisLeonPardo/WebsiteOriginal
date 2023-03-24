@@ -44,7 +44,7 @@ function MobileCarousel({ slides }) {
         }}
       >
         {slides.map((pic) => (
-          <img src={pic} className="imgas" />
+          <img src={pic} className="imgas" key={pic} />
         ))}
       </Carousel>
       {/* <div className="slidesDots">
