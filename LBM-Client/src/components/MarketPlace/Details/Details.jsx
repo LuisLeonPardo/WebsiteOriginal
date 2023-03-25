@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState, useMemo } from "react";
 import "./Details.scss";
 import star from "../assets/yellowStar.svg";
 import share from "../assets/share.svg";
+import whiteShare from "../assets/whiteShare.svg";
 import heart from "../assets/heart.svg";
+import whiteHeart from "../assets/whiteHeart.svg";
 import image1 from "../assets/buildingsPic.png";
 import image2 from "../assets/Image2.png";
 import image3 from "../assets/Image3.png";
@@ -14,6 +16,7 @@ import line from "../assets/line.svg";
 import avatar from "../assets/Avatar.png";
 import divider from "../assets/Divider.svg";
 import chevron from "../assets/chevron-right.svg";
+import goBack from "../assets/goBack.svg";
 import yellowFlash from "../assets/yellowFlash.svg";
 import whiteFlash from "../assets/whiteFlash.svg";
 import verticalRectangle from "../assets/VerticalRectangle.svg";
@@ -73,6 +76,21 @@ export default function Details() {
       <Modal isOpen={isOpenModal} closeModal={closeModal} number={id} />
       <div className="detailClasses">
         <Classes />
+      </div>
+      <div className="mobileUpperControls">
+        <a href="/marketplace">
+          <img src={goBack} alt="go back" />
+        </a>
+        <div className="controlsContainer">
+          <div className="shareMobile">
+            <img src={whiteShare} alt="share icon" />
+            <h2>Share</h2>
+          </div>
+          <div className="saveMobile">
+            <img src={whiteHeart} alt="heart icon" />
+            <h2>Save</h2>
+          </div>
+        </div>
       </div>
       <div className="detailsContainer">
         <div className="test">
