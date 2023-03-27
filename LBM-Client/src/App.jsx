@@ -28,6 +28,7 @@ import GovernanceDetails from "./components/Governance/GovernanceDetails/Governa
 import Marketplace from "./components/Marketplace/Marketplace";
 import Details from "./components/MarketPlace/Details/Details";
 import NavbarMarket from "./components/Landing/NavBar/NavbarMarket/NavbarMarket";
+import IDO from "./components/IDO/IDO";
 function App() {
   const [stateModal, setStateModal] = useState(false);
   const { selectedIcon, walletPopUp } = useSelector(
@@ -97,7 +98,7 @@ function App() {
             path={"/launchpad"}
             element={
               <div className="Page">
-                <Launchpad />
+                <IDO />
               </div>
             }
           />
@@ -125,9 +126,16 @@ function App() {
               </div>
             }
           />
+          <Route
+            path="/marketplace"
+            element={
+              <div className="Page">
+                <Marketplace />
+              </div>
+            }
+          />
           {/* Dentro de este Route van todas las cosas que tengan sidebar */}
         </Route>
-        <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/swap" element={<CoomingSoon />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

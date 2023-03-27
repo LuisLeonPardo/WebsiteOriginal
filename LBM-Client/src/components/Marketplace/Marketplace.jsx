@@ -8,7 +8,6 @@ import Classes from "./Classes/Classes";
 function Marketplace() {
   return (
     <div className="marketplace-container">
-      <div className="navbar"></div>
       <Classes />
       <div className="marketplace-content">
         <div className="marketplace-title">
