@@ -23,6 +23,7 @@ const variants = {
 };
 import { useModal } from "../../helpers/useModal/useModal";
 import ModalOrder from "./ModalOrder";
+import AddProject from "../Launchpad/addProject/AddProject";
 //Aclarancion, a parti de ahora me voy a referir a los estaes que estan en venta como "Lands"
 //El componente RealEstates se renderiza en la ruta /realestates y /realestates/:id pero aqui con algunas modificaciones como se vera mas adelante en el codigo.
 function RealEstates() {

@@ -7,7 +7,7 @@ import { IoChevronDownOutline } from "react-icons/io5";
 
 function PopUpUser() {
   const screenWidth = window.innerWidth || document.body.clientWidth;
-  const { currency } = useSelector((state) => state.reducerCompleto);
+  const { currency, isAdmin } = useSelector((state) => state.reducerCompleto);
   const [active, setActive] = useState("null");
   const dispatch = useDispatch();
   const languages = [
@@ -51,6 +51,7 @@ function PopUpUser() {
             <a>Post your property</a>
             <a>Post your project</a>
             <a>FAQ</a>
+            {isAdmin ? <a href="/admin">Admin menu</a> : null}
             <div
               className={
                 active === "language" ? style.dropdownActive : style.dropdown
@@ -97,6 +98,7 @@ function PopUpUser() {
             <a>Post your property</a>
             <a>Post your project</a>
             <a>FAQ</a>
+            {isAdmin ? <a href="/admin">Admin menu</a> : null}
           </div>
         )}
       </div>

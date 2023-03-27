@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+.container{
+    width: 100%;
+    height: 5em;
+    background-color: rgb(248, 248, 248);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 10;
+    position: fixed;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+color: #000000;
+=======
 .container {
   width: 100vw;
   height: 5em;
@@ -17,6 +38,7 @@
   line-height: 18px;
   text-align: center;
   color: #000000;
+>>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5
 }
 
 .flexContainer {
@@ -208,18 +230,29 @@
   transition: width 0.5s;
 }
 
+<<<<<<< HEAD
+.hamburger{
+    padding: 0 !important;
+=======
 .hamburger {
   padding: 0 !important;
   position: absolute;
+>>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5
 }
 
 .hamburger:hover {
   color: #f7931a;
 }
 
+<<<<<<< HEAD
+.account{
+    position: relative;
+    right: .6em;
+=======
 .account {
   position: absolute;
   right: 0.9em;
+>>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5
 }
 
 .user svg,
@@ -236,11 +269,35 @@
   }
   .flexContainer {
     -webkit-box-pack: justify;
+<<<<<<< HEAD
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+            position: relative;
+ }
+
+ .flexContainer2{
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+ .flexContainer svg{
+=======
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
   .flexContainer svg {
+>>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5
     width: 20px;
     height: 20px;
   }
@@ -255,7 +312,23 @@
     justify-content: center;
   }
 
+<<<<<<< HEAD
+ .MobileMenuIcon2{
+    width: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+            position: absolute;
+            left: 2em;
+ }
+
+ .accountIcon{
+=======
   .accountIcon {
+>>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5
     width: 48px;
     height: 48px;
     display: -webkit-box;
@@ -271,5 +344,16 @@
   .accountIcon svg {
     width: 20px;
     height: 20px;
+<<<<<<< HEAD
+ }
+
+ .icon2{
+    display: flex;
+    position: absolute;
+    align-self: center;
+ }
+}
+=======
   }
 }
+>>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5

@@ -8,6 +8,7 @@ import "./Dash.scss";
 import SupplyMarket from "../SupplyMarket/SupplyMarket";
 import { useModal } from "../../../helpers/useModal/useModal";
 import WarningBuilding from "../../WarningBuilding";
+import AddProject from "../../Launchpad/addProject/AddProject";
 function Dash({ setStateModal }) {
   const [active, setActive] = useState("Supply");
   const [isOpenModal, openModal, closeModal] = useModal();
