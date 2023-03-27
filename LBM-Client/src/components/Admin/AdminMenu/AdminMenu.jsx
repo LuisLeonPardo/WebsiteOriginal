@@ -11,7 +11,6 @@ import { setAdminWallet } from "../../../../redux/reducer";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Slider from "./Silder";
 
 function AdminMenu() {
   const dispatch = useDispatch();
