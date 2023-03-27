@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./PopUpMarket.module.scss";
 import {
   IoGridOutline,
@@ -9,8 +9,16 @@ import {
 } from "react-icons/io5";
 import { BsFileEarmarkPlus } from "react-icons/bs";
 import { TbVector } from "react-icons/tb";
+import { getAdminByWallet } from "../../../../../../redux/actions";
+import { useAccountModal } from "@rainbow-me/rainbowkit";
+import { useAccount } from "wagmi";
+import { Wallet } from "ethers";
+import { useDispatch } from "react-redux";
 
 function PopUpMarket() {
+  const { address } = useAccount();
+  const dispatch = useDispatch();
+
   return (
     <div className={style.Container} data-dropdown>
       <div className={style.flexContainer}>

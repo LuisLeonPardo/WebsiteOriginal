@@ -204,7 +204,6 @@ color: #000000;
 
 .hamburger{
     padding: 0 !important;
-    position: absolute;
 }
 
 .hamburger:hover{
@@ -212,8 +211,8 @@ color: #000000;
 }
 
 .account{
-    position: absolute;
-    right: .9em;
+    position: relative;
+    right: .6em;
 }
 
 .user svg, .user1 svg{

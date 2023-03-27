@@ -6,8 +6,12 @@ import UserInfo from "../UserInfo/UserInfo";
 import FinancialMarket from "../Deposit/Deposit";
 import "./Dash.scss";
 import SupplyMarket from "../SupplyMarket/SupplyMarket";
+import { useModal } from "../../../helpers/useModal/useModal";
+import WarningBuilding from "../../WarningBuilding";
+import AddProject from "../../Launchpad/addProject/AddProject";
 function Dash({ setStateModal }) {
   const [active, setActive] = useState("Supply");
+  const [isOpenModal, openModal, closeModal] = useModal();
   const handleClick = (e) => {
     setActive(e.target.name);
   };
@@ -19,6 +23,7 @@ function Dash({ setStateModal }) {
 
   return (
     <div className="generalD">
+      <WarningBuilding isOpen={isOpenModal} closeModal={closeModal} />
       <div className="dash">
         <div className="columnOne">
           <div className="account">
