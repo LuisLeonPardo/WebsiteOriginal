@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .container{
     width: 100%;
     height: 5em;
@@ -18,27 +17,6 @@ font-size: 14px;
 line-height: 18px;
 text-align: center;
 color: #000000;
-=======
-.container {
-  width: 100vw;
-  height: 5em;
-  background-color: rgb(248, 248, 248);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  z-index: 10;
-  position: fixed;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  color: #000000;
->>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5
 }
 
 .flexContainer {
@@ -230,29 +208,17 @@ color: #000000;
   transition: width 0.5s;
 }
 
-<<<<<<< HEAD
 .hamburger{
     padding: 0 !important;
-=======
-.hamburger {
-  padding: 0 !important;
-  position: absolute;
->>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5
 }
 
 .hamburger:hover {
   color: #f7931a;
 }
 
-<<<<<<< HEAD
 .account{
     position: relative;
     right: .6em;
-=======
-.account {
-  position: absolute;
-  right: 0.9em;
->>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5
 }
 
 .user svg,
@@ -269,7 +235,6 @@ color: #000000;
   }
   .flexContainer {
     -webkit-box-pack: justify;
-<<<<<<< HEAD
         -ms-flex-pack: justify;
             justify-content: space-between;
             position: relative;
@@ -291,13 +256,6 @@ color: #000000;
 }
 
  .flexContainer svg{
-=======
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-
-  .flexContainer svg {
->>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5
     width: 20px;
     height: 20px;
   }
@@ -312,7 +270,6 @@ color: #000000;
     justify-content: center;
   }
 
-<<<<<<< HEAD
  .MobileMenuIcon2{
     width: 20px;
     -webkit-box-align: center;
@@ -326,9 +283,6 @@ color: #000000;
  }
 
  .accountIcon{
-=======
-  .accountIcon {
->>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5
     width: 48px;
     height: 48px;
     display: -webkit-box;
@@ -344,7 +298,6 @@ color: #000000;
   .accountIcon svg {
     width: 20px;
     height: 20px;
-<<<<<<< HEAD
  }
 
  .icon2{
@@ -353,7 +306,3 @@ color: #000000;
     align-self: center;
  }
 }
-=======
-  }
-}
->>>>>>> 9d8c115b78313d89f64c159e625ea9a89fef69e5
