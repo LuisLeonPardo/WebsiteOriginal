@@ -1,7 +1,7 @@
 import React from "react";
 import "./Marketplace.scss";
-import Star from "./assets/Star.svg";
-import image from "./assets/image.png";
+//import Star from "./assets/Star.svg";
+//import image from "./assets/image.png";
 import ModalFilter from "./ModalFilter/ModalFilter";
 import Classes from "./Classes/Classes";
 
@@ -30,7 +30,7 @@ function Marketplace() {
           {[...Array(20)].map(() => {
             return (
               <div className="marketplace-card">
-                <img src={image} />
+                {/* <img src={image} /> */}
                 <div className="marketplace-card-details">
                   <div className="marketplace-card-text">
                     <h1>Groveland, California</h1>
@@ -39,7 +39,7 @@ function Marketplace() {
                     <h1>$289</h1>
                   </div>
                   <div className="marketplace-card-stars">
-                    <img src={Star} />
+                    {/* <img src={Star} /> */}
                     <h4>4.91</h4>
                   </div>
                 </div>

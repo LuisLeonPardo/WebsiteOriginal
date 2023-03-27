@@ -18,7 +18,7 @@ import divider from "../assets/Divider.svg";
 import chevron from "../assets/chevron-right.svg";
 import goBack from "../assets/goBack.svg";
 import yellowFlash from "../assets/yellowFlash.svg";
-import whiteflash from "../assets/whiteFlash.svg";
+//import whiteflash from "../assets/whiteFlash.svg";
 import verticalRectangle from "../assets/VerticalRectangle.svg";
 import whiteRectangle from "../assets/WhiteRectangle.svg";
 import { useTable } from "react-table";
@@ -190,7 +190,7 @@ export default function Details() {
                   <>
                     <h1>Buy Now</h1>
                     <div className="subslide">
-                      <img src={whiteFlash} alt="flash img" />
+                      {/* <img src={whiteFlash} alt="flash img" /> */}
                       <img src={whiteRectangle} alt="bar img" />
                     </div>
                   </>
@@ -317,7 +317,7 @@ export default function Details() {
                   <>
                     <h1>Buy Now</h1>
                     <div className="subslide">
-                      <img src={whiteFlash} alt="flash img" />
+                      {/* <img src={whiteFlash} alt="flash img" /> */}
                       <img src={whiteRectangle} alt="bar img" />
                     </div>
                   </>
