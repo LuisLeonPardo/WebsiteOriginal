@@ -1,6 +1,6 @@
 import React from "react";
 import "./Marketplace.scss";
-//import Star from "./assets/Star.svg";
+//import Star from "./assets/Star.svg"
 //import image from "./assets/image.png";
 import ModalFilter from "./ModalFilter/ModalFilter";
 import Classes from "./Classes/Classes";
