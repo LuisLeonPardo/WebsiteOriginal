@@ -1,9 +1,9 @@
 import React from "react";
 import "./Modal.scss";
-import close from "./assets/Cerrar.svg";
-import calendar from "./assets/Calendar today.svg";
-import personIcon from "./assets/material-symbols_person.svg";
-import line from "./assets/line.svg";
+import close from "../assets/Cerrar.svg";
+import calendar from "../assets/Calendar today.svg";
+import personIcon from "../assets/material-symbols_person.svg";
+import line from "../assets/line.svg";
 
 function Modal({ number, isOpen, closeModal }) {
   return (

@@ -1,0 +1,85 @@
+.Container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.FlexContainer{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    margin-top: 3em;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 1em;
+    box-shadow: 10px 10px 45px -6px rgba(0,0,0,0.37);
+    -webkit-box-shadow: 10px 10px 45px -6px rgba(0,0,0,0.37);
+    -moz-box-shadow: 10px 10px 45px -6px rgba(0,0,0,0.37);
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 2em;
+    gap: 1em;
+}
+
+.title h1{
+    top: 1em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+}
+
+.title span{
+    width: 110%;
+    height: 1px;
+    background: rgb(0,206,255);
+background: linear-gradient(90deg, rgba(0,206,255,0) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 67%, rgba(0,255,205,0) 100%);
+}
+
+.grid{
+    display: flex;
+    width: 90%;
+    height: 60%;
+    margin-top: 5em;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    position: relative;
+}
+
+.project{
+    font-size: 1em;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.project button{
+    width: 7em;
+    height: 1em;
+    border-radius: .5em;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#approve:hover{
+    background-color: rgb(53, 232, 53);
+    border-color: black;
+}
+
+#reject:hover{
+    background-color: rgb(232, 53, 53);
+    border-color: black;
+}

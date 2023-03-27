@@ -10,7 +10,7 @@ import {
   Outlet,
   BrowserRouter,
 } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Home from "./components/Landing/Home/Home";
 import Dash from "./components/Dashboards/Dash/Dash";
 import RealEstates from "./components/RealEstates";
@@ -25,19 +25,29 @@ import CoomingSoon from "./components/ComingSoon/ComingSoon";
 import Launchpad from "./components/Launchpad/Launchpad";
 import ProductPage from "./components/Launchpad/ProductPage/ProductPage";
 import GovernanceDetails from "./components/Governance/GovernanceDetails/GovernanceDetails";
-import Details from "./components/MarketPlace/Details";
+import Marketplace from "./components/MarketPlace/Marketplace";
+import Details from "./components/MarketPlace/Details/Details";
 import NavbarMarket from "./components/Landing/NavBar/NavbarMarket/NavbarMarket";
+import { useModal } from "./helpers/useModal/useModal";
+import WarningBuilding from "./components/WarningBuilding";
+import AdminMenu from "./components/Admin/AdminMenu/AdminMenu";
+import { useAccount } from "wagmi";
+import { getAdminByWallet, getUnapprovedProjects } from "../redux/actions";
+import { setIsAdmin } from "../redux/reducer";
 function App() {
+  const dispatch = useDispatch();
   const [stateModal, setStateModal] = useState(false);
-  const { selectedIcon, walletPopUp } = useSelector(
+  const [isOpenModal, openModal, closeModal] = useModal();
+  const { address } = useAccount();
+  const { selectedIcon, walletPopUp, adminWallet, isAdmin } = useSelector(
     (state) => state.reducerCompleto
   );
   const AppLayout = () => (
     <>
-      <div className="bgImage">
+      {/* <div className="bgImage">
         <img src="./icons/Background.svg" />
-      </div>
-
+      </div> */}
+      <WarningBuilding isOpen={isOpenModal} closeModal={closeModal} />
       <Modals state={stateModal} setStateModal={setStateModal} />
 
       <div className="SideBar">
@@ -46,6 +56,13 @@ function App() {
       <Outlet />
     </>
   );
+
+  useEffect(() => {
+    openModal();
+    dispatch(getAdminByWallet(address));
+    dispatch(setIsAdmin(adminWallet.length ? true : false));
+    isAdmin ? dispatch(getUnapprovedProjects()) : null;
+  }, [dispatch]);
 
   return (
     <div className="App">
@@ -121,6 +138,22 @@ function App() {
             element={
               <div className="Page">
                 <ProductPage />
+              </div>
+            }
+          />
+          <Route
+            path={"/admin"}
+            element={
+              <div className="Page">
+                <AdminMenu />
+              </div>
+            }
+          />
+          <Route
+            path="/marketplace"
+            element={
+              <div className="Page">
+                <Marketplace />
               </div>
             }
           />
