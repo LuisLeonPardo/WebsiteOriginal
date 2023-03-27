@@ -52,8 +52,12 @@ const Slider = () => {
         <HiLightningBolt />
         <span />
       </div>
-      <div className={text === "buy" ? "buy" : "buyClose"}>Buy Now</div>
-      <div className={text === "bid" ? "bid" : "bidClose"}>Place a bid</div>
+      <div className={text === "buy" ? "buy" : "buyClose"}>
+        <button>Buy now</button>
+      </div>
+      <div className={text === "bid" ? "bid" : "bidClose"}>
+        <button>Place Bid</button>
+      </div>
     </div>
   );
 };

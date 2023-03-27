@@ -80,15 +80,21 @@ transition: all .5s;
 .buy{
   position: absolute;
   font-size: 1.5em;
-  color: aliceblue;
   transition: all .5s;
   opacity: 1;
+}
+
+.buy button{
+  color: white;
+}
+
+.bid button{
+  color:black;
 }
 
 .bid{
   position: absolute;
   font-size: 1.5em;
-  color: rgb(10, 10, 10);
   transition: all .5s;
 }
 

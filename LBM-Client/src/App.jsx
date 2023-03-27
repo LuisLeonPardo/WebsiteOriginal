@@ -44,9 +44,9 @@ function App() {
   );
   const AppLayout = () => (
     <>
-      <div className="bgImage">
+      {/* <div className="bgImage">
         <img src="./icons/Background.svg" />
-      </div>
+      </div> */}
       <WarningBuilding isOpen={isOpenModal} closeModal={closeModal} />
       <Modals state={stateModal} setStateModal={setStateModal} />
 
@@ -149,9 +149,16 @@ function App() {
               </div>
             }
           />
+          <Route
+            path="/marketplace"
+            element={
+              <div className="Page">
+                <Marketplace />
+              </div>
+            }
+          />
           {/* Dentro de este Route van todas las cosas que tengan sidebar */}
         </Route>
-        <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/swap" element={<CoomingSoon />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
