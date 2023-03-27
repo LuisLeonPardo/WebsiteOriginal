@@ -25,7 +25,7 @@ import CoomingSoon from "./components/ComingSoon/ComingSoon";
 import Launchpad from "./components/Launchpad/Launchpad";
 import ProductPage from "./components/Launchpad/ProductPage/ProductPage";
 import GovernanceDetails from "./components/Governance/GovernanceDetails/GovernanceDetails";
-import Marketplace from "./components/Marketplace/Marketplace";
+import Marketplace from "./components/MarketPlace/Marketplace";
 import Details from "./components/MarketPlace/Details/Details";
 import NavbarMarket from "./components/Landing/NavBar/NavbarMarket/NavbarMarket";
 function App() {
