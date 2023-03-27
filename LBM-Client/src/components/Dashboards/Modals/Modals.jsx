@@ -6,6 +6,10 @@ import Coin from "./assets/Coin.svg";
 function Modals({ state, setStateModal }) {
   const listArray = [...Array(9)];
 
+  function getRandom() {
+    return Math.random();
+  }
+
   function changeState() {
     setStateModal(false);
   }
@@ -25,7 +29,7 @@ function Modals({ state, setStateModal }) {
             <h4>Asset</h4>
             {listArray.map(() => {
               return (
-                <div className="modal-name">
+                <div className="modal-name" key={getRandom()}>
                   <img src={Coin} />
                   <h5>Bitcoin</h5>
                 </div>
@@ -35,13 +39,13 @@ function Modals({ state, setStateModal }) {
           <div>
             <h4>Wallet</h4>
             {listArray.map(() => {
-              return <h5>0 BTC</h5>;
+              return <h5 key={getRandom()}>0 BTC</h5>;
             })}
           </div>
           <div>
             <h4>Amount</h4>
             {listArray.map(() => {
-              return <h5>+1545,00</h5>;
+              return <h5 key={getRandom()}>+1545,00</h5>;
             })}
           </div>
         </div>

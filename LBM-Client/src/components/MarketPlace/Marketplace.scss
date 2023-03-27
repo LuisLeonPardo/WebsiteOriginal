@@ -1,0 +1,256 @@
+.marketplace-container {
+  width: 100vw;
+  .navbar {
+    height: 71px;
+    background: red;
+  }
+  .marketplace-content {
+    width: 69.68%;
+    margin: 0 auto;
+    .marketplace-title {
+      height: 50px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 16px;
+        color: #515562;
+      }
+      .marketplace-filters {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        .content-select select {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+        }
+        .content-select select::-ms-expand {
+          display: none;
+        }
+        .content-select {
+          max-width: 250px;
+          position: relative;
+        }
+
+        .content-select select {
+          display: inline-block;
+          width: 180px;
+          cursor: pointer;
+          padding: 7px 10px;
+          height: 40px;
+          outline: 0;
+          border: 0;
+          border-radius: 0;
+          background: #f0f0f0;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 21px;
+          color: #23262f;
+          font-family: "Inter";
+          border: 2px solid rgba(0, 0, 0, 0.2);
+          border-radius: 12px;
+          position: relative;
+          transition: all 0.25s ease;
+        }
+        .content-select i {
+          position: absolute;
+          right: 20px;
+          top: calc(50% - 6px);
+          width: 6px;
+          height: 6px;
+          display: block;
+          border-left: 3px solid #777e90;
+          border-bottom: 3px solid #777e90;
+          transform: rotate(-45deg); /* Giramos el cuadrado */
+          transition: all 0.25s ease;
+        }
+        .div-filter {
+          display: flex;
+          align-items: center;
+          background: #f7931a;
+          padding: 11px 24px;
+          border-radius: 9999px;
+          gap: 12px;
+          cursor: pointer;
+          h2 {
+            margin: 0;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: #fcfcfd;
+          }
+        }
+      }
+    }
+    .marketplace-content-items {
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      align-items: center;
+      grid-gap: 42px;
+      .marketplace-card {
+        width: 100%;
+        cursor: pointer;
+        img {
+          width: 100%;
+        }
+        .marketplace-card-details {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          margin-top: 16px;
+          .marketplace-card-text {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            h1 {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 17px;
+              color: #222222;
+            }
+            h2 {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 17px;
+              color: #5e5e5e;
+              margin: 0;
+            }
+          }
+          .marketplace-card-stars {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            h4 {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 17px;
+              color: #222222;
+              margin: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .marketplace-container {
+    .navbar {
+    }
+    .marketplace-content {
+      width: 75%;
+      margin: 0 auto;
+      .marketplace-title {
+        h1 {
+        }
+        .marketplace-filters {
+          .content-select select {
+            width: 150px;
+          }
+          .content-select select::-ms-expand {
+          }
+          .content-select {
+          }
+
+          .content-select select {
+          }
+          .content-select i {
+          }
+          .div-filter {
+          }
+        }
+      }
+      .marketplace-content-items {
+        grid-template-columns: 1fr 1fr;
+        .marketplace-card {
+          .marketplace-card-details {
+            .marketplace-card-text {
+              h1 {
+              }
+              h2 {
+              }
+            }
+            .marketplace-card-stars {
+              h4 {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .marketplace-container {
+    width: 100vw;
+    overflow: hidden;
+    .navbar {
+    }
+    .marketplace-content {
+      width: 70%;
+      margin: 0 auto;
+      .marketplace-title {
+        flex-direction: column;
+        gap: 20px;
+        h1 {
+          width: 100%;
+          text-align: left;
+        }
+        .marketplace-filters {
+          .content-select select {
+            width: 150px;
+          }
+          .content-select select::-ms-expand {
+          }
+          .content-select {
+          }
+
+          .content-select select {
+          }
+          .content-select i {
+          }
+          .div-filter {
+          }
+        }
+      }
+      .marketplace-content-items {
+        margin-top: 50px;
+        grid-template-columns: 1fr ;
+        .marketplace-card {
+          .marketplace-card-details {
+            .marketplace-card-text {
+              h1 {
+              }
+              h2 {
+              }
+            }
+            .marketplace-card-stars {
+              h4 {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
