@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <div className="home_links">
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
-              <a href="/realestate" className="launchapp">
+              <a href="/marketplace" className="launchapp">
                 <span>Launch App</span> <img src={launchapp} />
               </a>
             </motion.div>

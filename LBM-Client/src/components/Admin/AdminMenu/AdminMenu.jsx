@@ -7,7 +7,6 @@ import {
   approveProject,
   deleteProject,
 } from "../../../../redux/actions";
-import { setAdminWallet } from "../../../../redux/reducer";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
