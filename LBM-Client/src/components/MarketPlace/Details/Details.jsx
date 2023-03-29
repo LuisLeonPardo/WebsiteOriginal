@@ -18,7 +18,7 @@ import divider from "../assets/Divider.svg";
 import chevron from "../assets/chevron-right.svg";
 import goBack from "../assets/goBack.svg";
 import yellowFlash from "../assets/yellowFlash.svg";
-//import whiteflash from "../assets/whiteFlash.svg";
+import whiteflash from "../assets/whiteFlash.svg";
 import verticalRectangle from "../assets/VerticalRectangle.svg";
 import whiteRectangle from "../assets/WhiteRectangle.svg";
 import { useTable } from "react-table";
@@ -31,7 +31,7 @@ import img2 from "../assets/ImageCar2.png";
 import Classes from "../Classes/Classes";
 import MobileCarousel from "./MobileCarousel";
 import { info, column, dataReducer, columnsReducer } from "./data.js";
-
+import Slider from "../../../helpers/Silder";
 export default function Details() {
   const width = window.innerWidth;
   const breakpoint = 540;
@@ -172,7 +172,8 @@ export default function Details() {
                 <h1>500.000 USDT</h1>
                 <h1 className="equiv">= 0.04800000 ETH</h1>
               </div>
-              <a
+              <Slider className="sliderMobile" />
+              {/* <a
                 onTouchEndCapture={changeBid}
                 href="#"
                 id="ko"
@@ -190,12 +191,12 @@ export default function Details() {
                   <>
                     <h1>Buy Now</h1>
                     <div className="subslide">
-                      {/* <img src={whiteFlash} alt="flash img" /> */}
+                      <img src={whiteflash} alt="flash img" />
                       <img src={whiteRectangle} alt="bar img" />
                     </div>
                   </>
                 )}
-              </a>
+              </a> */}
             </div>
             <div className="showMore">
               <h1>Show more</h1>
