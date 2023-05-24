@@ -18,7 +18,7 @@ import divider from "../assets/Divider.svg";
 import chevron from "../assets/chevron-right.svg";
 import goBack from "../assets/goBack.svg";
 import yellowFlash from "../assets/yellowFlash.svg";
-import whiteflash from "../assets/whiteFlash.svg";
+import whiteflash from "../assets/whiteflash.svg";
 import verticalRectangle from "../assets/VerticalRectangle.svg";
 import whiteRectangle from "../assets/WhiteRectangle.svg";
 import { useTable } from "react-table";
