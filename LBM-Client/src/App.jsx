@@ -34,6 +34,7 @@ import AdminMenu from "./components/Admin/AdminMenu/AdminMenu";
 import { useAccount } from "wagmi";
 import { getAdminByWallet, getUnapprovedProjects } from "../redux/actions";
 import { setIsAdmin } from "../redux/reducer";
+import IDO from "./components/IDO/IDO";
 function App() {
   const dispatch = useDispatch();
   const [stateModal, setStateModal] = useState(false);
@@ -113,7 +114,7 @@ function App() {
             path={"/launchpad"}
             element={
               <div className="Page">
-                <Launchpad />
+                <IDO />
               </div>
             }
           />
@@ -165,5 +166,6 @@ function App() {
     </div>
   );
 }
+//Check
 
 export default App;

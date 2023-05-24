@@ -1,0 +1,121 @@
+.launchpad-container {
+  margin: 0 auto;
+  width: 69.68%;
+  .launchpad-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .launchpad-top-buttons {
+      display: flex;
+      gap: 25px;
+      h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 16px;
+
+        padding: 16px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .upcoming {
+        background: #f7931a;
+        color: #ffffff;
+      }
+      .ending {
+        border: 1px solid #222222;
+        color: #222222;
+      }
+    }
+    .launchpad-top-input {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      input {
+        width: 300px;
+        height: 25px;
+        border: 1px solid #bdbdbd;
+        border-radius: 8px;
+        padding-left: 10px;
+        outline: none;
+      }
+      input::placeholder {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #000000;
+      }
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+  .launchpad-content {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    .launchpad-item {
+      display: flex;
+      .launchpad-item-content {
+        width: 100%;
+        margin-left: 26px;
+        h1 {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 32px;
+          color: #000000;
+        }
+        p {
+          margin: 0;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 26px;
+          color: #767a85;
+        }
+        h6 {
+          margin: 0;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          color: #000000;
+        }
+        span {
+          display: block;
+          width: 100%;
+          height: 8px;
+          background: #9c9c9f;
+          border-radius: 12px;
+          margin-top: 12px;
+        }
+        h2 {
+          margin: 0;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 22px;
+          color: #767a85;
+        }
+        h3 {
+          margin: 0;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 22px;
+          color: #0a113c;
+        }
+      }
+    }
+  }
+}
