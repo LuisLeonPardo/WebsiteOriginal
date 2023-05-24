@@ -123,7 +123,7 @@ export default function Details() {
               </div>
             </div>
           </div>
-          <div className="carousel">
+          <div>
             <Carousel
               slides={slides}
               isOpen={isOpenGallery}
