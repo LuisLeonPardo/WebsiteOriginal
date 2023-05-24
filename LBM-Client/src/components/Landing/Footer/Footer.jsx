@@ -16,6 +16,7 @@ export default function Footer() {
             <img src={logo} />
             <div>
               <p>
+                 {/* I would remove this text from the footer  */}
                 Libertum Project. A decentralized finance algorithmic money
                 market protocol that seeks to democratize the real estate market
                 and increase DeFi adoption more friendly with real property

@@ -34,6 +34,10 @@ import AdminMenu from "./components/Admin/AdminMenu/AdminMenu";
 import { useAccount } from "wagmi";
 import { getAdminByWallet, getUnapprovedProjects } from "../redux/actions";
 import { setIsAdmin } from "../redux/reducer";
+import SupportCenter from "./components/SupportCenter/SupportCenter";
+import DetailSupport from "./components/DetailSupport/DetailSupport";
+
+
 function App() {
   const dispatch = useDispatch();
   const [stateModal, setStateModal] = useState(false);
@@ -157,10 +161,14 @@ function App() {
               </div>
             }
           />
+      
           {/* Dentro de este Route van todas las cosas que tengan sidebar */}
         </Route>
         <Route path="/swap" element={<CoomingSoon />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/support" element={<SupportCenter />} />
+        <Route path="/detail/:id" element={<DetailSupport/>} />
+            
       </Routes>
     </div>
   );
