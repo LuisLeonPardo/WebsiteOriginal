@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState, useMemo } from "react";
 import "./Details.scss";
 import star from "../assets/yellowStar.svg";
 import share from "../assets/share.svg";
+import whiteShare from "../assets/whiteShare.svg";
 import heart from "../assets/heart.svg";
+import whiteHeart from "../assets/whiteHeart.svg";
 import image1 from "../assets/buildingsPic.png";
 import image2 from "../assets/Image2.png";
 import image3 from "../assets/Image3.png";
@@ -14,8 +16,9 @@ import line from "../assets/line.svg";
 import avatar from "../assets/Avatar.png";
 import divider from "../assets/Divider.svg";
 import chevron from "../assets/chevron-right.svg";
+import goBack from "../assets/goBack.svg";
 import yellowFlash from "../assets/yellowFlash.svg";
-import whiteFlash from "../assets/whiteFlash.svg";
+import whiteflash from "../assets/whiteFlash.svg";
 import verticalRectangle from "../assets/VerticalRectangle.svg";
 import whiteRectangle from "../assets/WhiteRectangle.svg";
 import { useTable } from "react-table";
@@ -27,69 +30,25 @@ import img1 from "../assets/ImageCar.png";
 import img2 from "../assets/ImageCar2.png";
 import Classes from "../Classes/Classes";
 import MobileCarousel from "./MobileCarousel";
-
+import { info, column, dataReducer, columnsReducer } from "./data.js";
+import Slider from "../../../helpers/Silder";
 export default function Details() {
-  const [data, setData] = useState([
-    {
-      price: "500.600 USD",
-      usdPrice: "$ 500.600",
-      floorDifference: "11% below",
-      expiration: "7 days",
-      from: "8CCD36",
-    },
-    {
-      price: "500.600 USD",
-      usdPrice: "$ 500.600",
-      floorDifference: "11% below",
-      expiration: "7 days",
-      from: "8CCD36",
-    },
-    {
-      price: "500.600 USD",
-      usdPrice: "$ 500.600",
-      floorDifference: "11% below",
-      expiration: "7 days",
-      from: "8CCD36",
-    },
-    {
-      price: "500.600 USD",
-      usdPrice: "$ 500.600",
-      floorDifference: "11% below",
-      expiration: "7 days",
-      from: "8CCD36",
-    },
-    {
-      price: "500.600 USD",
-      usdPrice: "$ 500.600",
-      floorDifference: "11% below",
-      expiration: "7 days",
-      from: "8CCD36",
-    },
-  ]);
-  const COLUMNS = [
-    {
-      Header: "Price",
-      accessor: "price",
-    },
-    {
-      Header: "USD Price",
-      accessor: "usdPrice",
-    },
-    {
-      Header: "Floor Difference",
-      accessor: "floorDifference",
-    },
-    {
-      Header: "Expiration",
-      accessor: "expiration",
-    },
-    {
-      Header: "From",
-      accessor: "from",
-    },
-  ];
+  const width = window.innerWidth;
+  const breakpoint = 540;
+  const [data, setData] = useState(info);
+  const [COLUMNS, setCOLUMNS] = useState(column);
 
-  const columns = useMemo(() => COLUMNS, []);
+  useEffect(() => {
+    if (width < breakpoint) {
+      const data2 = dataReducer(data);
+      const columns2 = columnsReducer(COLUMNS);
+      setData(data2);
+      setCOLUMNS(columns2);
+      console.log(COLUMNS);
+    }
+  }, [console.log(COLUMNS)]);
+
+  const columns = useMemo(() => COLUMNS, [COLUMNS]);
   const tableInstance = useTable({ columns, data });
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
@@ -117,6 +76,21 @@ export default function Details() {
       <Modal isOpen={isOpenModal} closeModal={closeModal} number={id} />
       <div className="detailClasses">
         <Classes />
+      </div>
+      <div className="mobileUpperControls">
+        <a href="/marketplace">
+          <img src={goBack} alt="go back" />
+        </a>
+        <div className="controlsContainer">
+          <div className="shareMobile">
+            <img src={whiteShare} alt="share icon" />
+            <h2>Share</h2>
+          </div>
+          <div className="saveMobile">
+            <img src={whiteHeart} alt="heart icon" />
+            <h2>Save</h2>
+          </div>
+        </div>
       </div>
       <div className="detailsContainer">
         <div className="test">
@@ -198,8 +172,9 @@ export default function Details() {
                 <h1>500.000 USDT</h1>
                 <h1 className="equiv">= 0.04800000 ETH</h1>
               </div>
-              <a
-                onTouchMove={changeBid}
+              <Slider className="sliderMobile" />
+              {/* <a
+                onTouchEndCapture={changeBid}
                 href="#"
                 id="ko"
                 className={bid ? "sliderBtn" : "sliderBtn2"}
@@ -216,12 +191,12 @@ export default function Details() {
                   <>
                     <h1>Buy Now</h1>
                     <div className="subslide">
-                      <img src={whiteFlash} alt="flash img" />
+                      <img src={whiteflash} alt="flash img" />
                       <img src={whiteRectangle} alt="bar img" />
                     </div>
                   </>
                 )}
-              </a>
+              </a> */}
             </div>
             <div className="showMore">
               <h1>Show more</h1>
@@ -343,7 +318,7 @@ export default function Details() {
                   <>
                     <h1>Buy Now</h1>
                     <div className="subslide">
-                      <img src={whiteFlash} alt="flash img" />
+                      {/* <img src={whiteFlash} alt="flash img" /> */}
                       <img src={whiteRectangle} alt="bar img" />
                     </div>
                   </>

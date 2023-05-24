@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { Persistor } from "../redux/store/Store";
+import axios from "axios";
 import "./index.css";
 //wallet imports
 import "@rainbow-me/rainbowkit/styles.css";
@@ -76,6 +77,9 @@ const wagmiClient = createClient({
   connectors,
   provider,
 });
+
+axios.defaults.baseURL =
+  import.meta.env.VITE_BACK_ROUTE || "http://localhost:3001/";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>

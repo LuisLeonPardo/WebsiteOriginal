@@ -37,14 +37,16 @@ function MobileCarousel({ slides }) {
             width: "7px",
             height: "7px",
             fill: "#F7931A",
-            scale: "1.5",
+            scale: "1.2",
             borderRadius: "50%",
-            padding: "8px",
+            paddingLeft: "5px",
+            paddingRight: "5px",
+            paddingBottom: "30px",
           },
         }}
       >
         {slides.map((pic) => (
-          <img src={pic} className="imgas" />
+          <img src={pic} className="imgas" key={pic} />
         ))}
       </Carousel>
       {/* <div className="slidesDots">
