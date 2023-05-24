@@ -1,0 +1,23 @@
+.searchContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width:80rem;
+    margin: 0;
+    
+  }
+   
+  .input {
+    border: none;/* Quita el borde del input */
+    font-size: large;
+    background-color:white;    
+  }
+
+  .button {
+    background-color: #F7931A;
+    color: #FFFFFF;
+    border-radius: 0;
+    margin-left: 0px; /* Agrega margen izquierdo para separar del input */
+    border: none; /* Opcional: quita el borde del botón */
+    align-items: center;
+  }

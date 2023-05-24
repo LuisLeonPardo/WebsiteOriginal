@@ -11,9 +11,12 @@
     width: 100%;
   
     .h1 {
+        margin-left: 21.5%;
+        margin-top: 7%;
         font-family: 'Inter';
-        font-style: normal;
+        font-style: Bold;
         font-weight: 600;
+        text-align: left;
         font-size: 36px;
         line-height: 52px;
         color: #000000;
@@ -23,12 +26,28 @@
     
       .h3{
         font-family: 'Inter';
+        text-align: left;
+        margin-left: 21.5%;
+        margin-top: 7%;
         color: #000000;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size:28px;
         line-height: 28px;
+      }
+
+      .popular{
+        color:rgba(0, 0, 0, 0.6);
+        text-align: left;
+      }
+        
+      .questions{
+      font-family: Inter;
+      font-size: 16px;
+      line-height: 28px;
+      color:#000000;
+      text-align: left;
       }
 }
   
-  
+

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Autosuggest from 'react-autosuggest';
 import styles from './SearchBar.module.scss';
-import cardsData from '../Cards/cards.json';
+import Cards from '../Cards/cards.json'
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -14,70 +14,77 @@ const SearchBar = () => {
 
     return inputLength === 0
       ? []
-      : cardsData.filter((card) =>
+      : Cards.filter((card) =>
           card.title.toLowerCase().includes(inputValue)
         );
   };
 
   // Renderizar cada sugerencia
   const renderSuggestion = (suggestion) => (
-    <div className={styles.card}>
+    <div>
+      <div>
       <h2>{suggestion.title}</h2>
-      <ul>
+      <p>
         {suggestion.questions.map((question) => (
-          <li key={question.id}>
+          <div key={question.id}>
             <a href={`/detail/${question.id}`}>{question.question}</a>
-          </li>
+          </div>
         ))}
-      </ul>
+      </p>
     </div>
+    </div>
+    
   );
 
-  // Controlar cambios en el valor de búsqueda
+  // Controls changes in the search value
   const onChange = (event, { newValue }) => {
     setSearchTerm(newValue);
   };
 
-  // Actualizar las sugerencias al escribir en el campo de búsqueda
+  // update suggestions writen in the input
   const onSuggestionsFetchRequested = ({ value }) => {
     setSuggestions(getSuggestions(value));
   };
 
-  // Limpiar las sugerencias al borrar el contenido del campo de búsqueda
+  // Clean suggestions when user delete the input
   const onSuggestionsClearRequested = () => {
     setSuggestions([]);
   };
 
-  // Realizar la búsqueda al hacer clic en el botón de búsqueda
+  // Do the serach when the button is clicked
   const handleSearch = () => {
-    const filteredCards = cardsData.filter((card) =>
+      const filteredCards = Cards.filter((card) =>
       card.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSuggestions(filteredCards);
   };
 
-  // Configuración de Autosuggest
+  //  Autosuggest configuration
   const inputProps = {
-    placeholder: 'Search...',
+    placeholder: '🔍 Search',
     value: searchTerm,
     onChange: onChange,
+    style: {
+      width: '500px', // Cambia el ancho según tus necesidades
+      height: '40px', // Cambia el alto según tus necesidades
+      border: 'none', // Elimina el borde
+      outline: 'none', // Elimina el contorno cuando se enfoca
+    }
   };
 
   return (
-    <div>
-      <div className={styles.searchContainer}>
-        <button onClick={handleSearch}>Search</button>
-        <Autosuggest
+    <div className={styles.searchContainer}>
+      <div className={styles.input}>
+      <Autosuggest 
           suggestions={suggestions}
           onSuggestionsFetchRequested={onSuggestionsFetchRequested}
           onSuggestionsClearRequested={onSuggestionsClearRequested}
           getSuggestionValue={(suggestion) => suggestion.title}
           renderSuggestion={renderSuggestion}
-          inputProps={inputProps}
+          inputProps={inputProps}     
         />
-      
       </div>
-      
+      <button className={styles.button} onClick={handleSearch}>Search</button>
     </div>
   );
 };

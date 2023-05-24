@@ -10,7 +10,8 @@
   .card {
     background-color: white;
     padding: 2.5rem;
-    border: 2px solid rgba(6, 6, 25, 0.6);
+    border: 0;
+    box-shadow: black;
     width: calc(50% - 1rem); /* Ancho de cada card (50% para mostrar 2 cards por columna) */
     margin-bottom: 1rem;
   }

@@ -7,7 +7,6 @@ import SearchBar from "../SearchBar/SearchBar";
 import Cards from "../Cards/Cards";
 
 
-
 export default function SupportCenter() {
     return (
       <div className={styles.supcontainer}>
@@ -16,16 +15,19 @@ export default function SupportCenter() {
         </nav>
         <div className={styles.content}>
             <h1 className={styles.h1} >Support Center</h1>
-            <span>
+            <span >
             <h3 className={styles.h3}>Browse through our frequently asked questions, tutorials, and other self-help resources to find the answers you need.</h3>
             </span>   
             <span>
               <SearchBar></SearchBar>
             </span>
-            <div>
-              <h3>POPULAR:</h3>
-              <Link to = ""><p>What is hosting?</p></Link>
-              <Link to =""><p>Why my website is slow?</p></Link>
+            <div >
+              <h3 className={styles.popular}>POPULAR:</h3>
+              
+                <Link to ="" className={styles.questions}><p>What is hosting?</p></Link>
+                <Link to ="" className={styles.questions}><p>Why my website is slow?</p></Link>
+        
+              
             </div>
             <div>
               <Cards/>
