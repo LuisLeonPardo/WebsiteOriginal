@@ -1,53 +1,54 @@
-
-
 .supcontainer {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 53.96%, #FFFFFF 100%), url('../../assets/Fondo.png');
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    height: 50vh;
-    width: 100%;
-  
-    .h1 {
-        margin-left: 21.5%;
-        margin-top: 7%;
-        font-family: 'Inter';
-        font-style: Bold;
-        font-weight: 600;
-        text-align: left;
-        font-size: 36px;
-        line-height: 52px;
-        color: #000000;
-        
-      }
-    
-    
-      .h3{
-        font-family: 'Inter';
-        text-align: left;
-        margin-left: 21.5%;
-        margin-top: 7%;
-        color: #000000;
-        font-style: normal;
-        font-weight: 400;
-        font-size:28px;
-        line-height: 28px;
-      }
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 53.96%, #FFFFFF 100%), url('../../assets/Fondo.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 50vh;
+  width: 100%;
 
-      .popular{
-        color:rgba(0, 0, 0, 0.6);
-        text-align: left;
-      }
-        
-      .questions{
-      font-family: Inter;
-      font-size: 16px;
-      line-height: 28px;
-      color:#000000;
-      text-align: left;
-      }
+  .h1 {
+    margin-left: 21.5%;
+    margin-top: 7%;
+    font-family: 'Inter';
+    font-style: bold;
+    font-weight: 600;
+    text-align: left;
+    font-size: 36px;
+    line-height: 52px;
+    color: #000000;
+  }
+
+  .h3 {
+    font-family: 'Inter';
+    text-align: left;
+    margin-left: 20%;
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+    display: inline-block;
+    word-break: break-all;
+    
+  }
+
+  .popular {
+    color: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    margin-left: 21.5%;
+    margin-top: 0;
+  }
+
+  .questions {
+    display: inline-block;
+    word-break: break-all;
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+    margin-top: 0;
+   
+  }
 }
-  
-
