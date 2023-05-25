@@ -8,7 +8,7 @@ import questionsData from "../Cards/cards.json"; // import Card.JSON with questi
 import ThumbUp from '../../assets/ThumbUp.png';
 import ThumbDown from '../../assets/ThumbDown.png';
 import {Link} from 'react-router-dom';
-
+import SearchBar from '../SearchBar/SearchBar'
 
 
 
@@ -43,28 +43,29 @@ export default function DetailSupport() {
 
 
   return (
-    <div className={styles.container}>
+    <div className={styles.detailContainer}>
       <nav>
         <NavBar />
       </nav>
-      <div className={styles.content}>
+      <div>
         <h1 className={styles.h1}>Support Center</h1>
         <span>
-          <h3 className={styles.h3}>
+          <h3 className={styles.h2}>
             Browse through our frequently asked questions, tutorials, and other self-help resources to find the answers you need.
           </h3>
         </span>
-       <div>
-        <h2>POPULAR:</h2>
-        <Link to = "/detail/1"><p>What is hosting?</p></Link>
-        <Link to ="/detail/2"><p>Why my website is slow?</p></Link>
+        <SearchBar></SearchBar>
+       <div className={styles.divPopular}>
+        <h2 className={styles.popular}>POPULAR:</h2>
+        <Link to = "/detail/1" className={styles.question1}><p>What is hosting?</p></Link>
+        <Link to ="/detail/2" className={styles.question2}><p>Why my website is slow?</p></Link>
         </div>
 
-        <div className={styles.container}>
-          <div className={styles.rectangle}>
-             <h2 className={styles.h2}>{question}</h2>
+        <div>
+          <div className={styles.divRectangle}>
+             <h2 className={styles.h1}>{question}</h2>
               <p className={styles.h3}>{content}</p>
-              <div>
+              <div className={styles.thumbs} >
             <p>Is this article helpful?</p>
             <div>
               <button onClick={handleHelpfulClick}>
