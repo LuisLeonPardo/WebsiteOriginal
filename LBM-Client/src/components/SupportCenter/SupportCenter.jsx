@@ -21,13 +21,10 @@ export default function SupportCenter() {
             <span>
               <SearchBar></SearchBar>
             </span>
-            <div >
+            <div  className={styles.divPopular}>
               <h3 className={styles.popular}>POPULAR:</h3>
-              
-                <Link to ="" className={styles.questions}><p>What is hosting?</p></Link>
-                <Link to ="" className={styles.questions}><p>Why my website is slow?</p></Link>
-        
-              
+                <Link to ="" className={styles.question1}><p>What is hosting?</p></Link>
+                <Link to ="" className={styles.question2}><p>Why my website is slow?</p></Link>      
             </div>
             <div>
               <Cards/>
