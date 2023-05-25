@@ -6,7 +6,23 @@
     margin: 0 auto;
     justify-content: space-between;
   }
-  
+
+ 
+
+  .icon li:before {
+    content: "";
+    display: inline-block;
+    background-image: url(' /public/icons/prueba.png'); /* Reemplaza 'ruta-de-la-imagen.png' con la ruta y nombre de tu imagen de icono */
+    background-size: 16px 16px; /* Ajusta el tamaño del icono */
+    width: 20px; /* Ajusta el ancho del icono */
+    height: 20px; /* Ajusta la altura del icono */
+    margin-right: 5px; /* Ajusta el espacio entre el icono y el texto del <li> */
+  }
+
+  .li {
+    list-style-type: none;
+  }
+
   .card {
     background-color: white;
     padding: 2.5rem;

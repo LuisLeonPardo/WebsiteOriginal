@@ -32,7 +32,8 @@
     font-size: 36px;
     line-height: 52px;
     color: #000000;
-    
+    text-align: justify;  
+    align-items: left; 
   }
 
   .h3 {
@@ -46,7 +47,8 @@
     line-height: 28px;
     display: inline-block;
     word-break: break-all;
-    text-align: left;    
+    text-align: left;
+      
   }
 
 
@@ -115,6 +117,46 @@
     text-align: justify;  
     align-items: left; 
     
+    
+    .title {
+    margin-left: 21.5%;
+    margin-top: 7%;
+    font-family: 'Inter';
+    font-style: bold;
+    font-weight: 600;
+    text-align: left;
+    font-size: 36px;
+    line-height: 52px;
+    color: #000000;
+    text-align: justify;  
+    align-items: left; 
+    margin-left: 2%;
+    }
+    
+    .content{
+      font-family: 'Inter';
+      text-align: left;
+      margin-left: 20%;
+      color: #000000;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      display: inline-block;
+      word-break: break-all;
+      text-align: left;
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-bottom: 7%;  
+    }
+    .p {
+      display: inline-block;
+      word-break: break-all;
+      margin: 0 0 3em; /* Ajusta el valor según el espacio deseado entre los párrafos */
+      line-height: 2;
+      text-align: justify;
+    }
+
     .thumbs{
       font-family: 'Inter';
       text-align: center;

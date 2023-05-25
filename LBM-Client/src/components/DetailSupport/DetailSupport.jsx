@@ -63,8 +63,11 @@ export default function DetailSupport() {
 
         <div>
           <div className={styles.divRectangle}>
-             <h2 className={styles.h1}>{question}</h2>
-              <p className={styles.h3}>{content}</p>
+             <h2 className={styles.title}>{question}</h2>
+             <div className={styles.content}>
+               <p className={styles.p} >{content}</p>
+             </div>
+             
               <div className={styles.thumbs} >
             <p>Is this article helpful?</p>
             <div>
