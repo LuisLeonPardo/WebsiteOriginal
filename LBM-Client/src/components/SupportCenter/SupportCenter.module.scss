@@ -23,21 +23,24 @@
   .h3 {
     font-family: 'Inter';
     text-align: left;
-    margin-left: 20%;
+    margin-left: 0%;
+    margin-right: 6.5%;
     color: #000000;
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
-    line-height: 28px;
+    line-height: 50px;
     display: inline-block;
     word-break: break-all;
-    
+    inline-size: 1020px; 
+    overflow: hidden;
   }
 
 
   .divPopular {
     text-align: left;
     margin-left: 21.5%;
+    margin-bottom: 7%;
 
     .popular {
       font-family: 'Inter';

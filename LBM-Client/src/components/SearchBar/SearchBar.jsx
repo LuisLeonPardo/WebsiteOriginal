@@ -21,17 +21,16 @@ const SearchBar = () => {
 
   // Renderizar cada sugerencia
   const renderSuggestion = (suggestion) => (
-    <div>
-      <div>
+    <div className={styles.title}>
+ 
       <h2>{suggestion.title}</h2>
-      <p>
+      {/* <p>
         {suggestion.questions.map((question) => (
           <div key={question.id}>
             <a href={`/detail/${question.id}`}>{question.question}</a>
           </div>
         ))}
-      </p>
-    </div>
+      </p> */}
     </div>
     
   );
@@ -84,7 +83,9 @@ const SearchBar = () => {
           inputProps={inputProps}     
         />
       </div>
-      <button className={styles.button} onClick={handleSearch}>Search</button>
+      <div>
+        <button className={styles.button} onClick={handleSearch}>Search</button>
+      </div>
     </div>
   );
 };

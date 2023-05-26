@@ -8,7 +8,12 @@ const Cards = () => {
       <div className={styles.container}>
         {cardsData.map((card) => (
           <div className={styles.card} key={card.id}>
-            <h2>{card.title}</h2>
+            <div  className={styles.icon1}>
+              <span>
+                <h2 className={styles.title}>{card.title}</h2>
+              </span>
+              
+            </div>
             <ul className={styles.icon}>
               {card.questions.map((question) => (
                 <li className={styles.li} key={question.id}>

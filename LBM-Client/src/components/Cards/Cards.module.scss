@@ -5,6 +5,7 @@
     max-width:80rem;
     margin: 0 auto;
     justify-content: space-between;
+
   }
 
  
@@ -21,20 +22,47 @@
 
   .li {
     list-style-type: none;
+    margin-top: 0%;
+    text-align: left;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 7%;
+  }
+  
+  
+  .icon1{
+    width: 4rem;
+    height:4rem;
+    background-image: url('/src/assets/Frame 346.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .title{
+   display: flex;
+   margin-left: 130%;
+   font-family: 'Inter';
+   font-weight: bold;
+   font-size: 18px;
+   line-height: 28px;
+   color: #060619;
+   inline-size: 150px; 
+   overflow: hidden;
   }
 
   .card {
     background-color: white;
-    padding: 2.5rem;
+    padding: 2rem;
     border: 0;
-    box-shadow: black;
-    width: calc(50% - 1rem); /* Ancho de cada card (50% para mostrar 2 cards por columna) */
-    margin-bottom: 1rem;
+    width: calc(26% - 3rem); /* Ancho de cada card (50% para mostrar 2 cards por columna) */
+    margin-bottom: 6rem;
+    margin-left: 4rem;
   }
   
   @media (min-width: 768px) {
     .card {
-      width: calc(25% - 1rem); /* Ancho de cada card (33.33% para mostrar 3 cards por fila) */
+      width: calc(26% - 3rem); 
     }
   }
   
