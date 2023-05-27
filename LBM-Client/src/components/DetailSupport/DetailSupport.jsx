@@ -30,13 +30,30 @@ export default function DetailSupport() {
 
   const [helpful, setHelpful] = useState(0);
   const [notHelpful, setNotHelpful] = useState(0);
+  const [thumbsUpClicked, setThumbsUpClicked] = useState(false);
+  const [thumbsDownClicked, setThumbsDownClicked] = useState(false);
+
 
   const handleHelpfulClick = () => {
-    setHelpful(helpful + 1);
+    if (!thumbsUpClicked) {
+      setHelpful((prevCount) => prevCount + 1);
+      setThumbsUpClicked(true);
+      if (thumbsDownClicked) {
+        setNotHelpful((prevCount) => prevCount - 1);
+        setThumbsDownClicked(false);
+      }
+    }
   };
 
   const handleNotHelpfulClick = () => {
-    setNotHelpful(notHelpful + 1);
+    if (!thumbsDownClicked) {
+      setNotHelpful((prevCount) => prevCount + 1);
+      setThumbsDownClicked(true);
+      if (thumbsUpClicked) {
+        setHelpful((prevCount) => prevCount - 1);
+        setThumbsUpClicked(false);
+      }
+    }
   };
 
  
@@ -71,11 +88,11 @@ export default function DetailSupport() {
               <div className={styles.thumbs} >
             <p>Is this article helpful?</p>
             <div>
-              <button onClick={handleHelpfulClick}>
+              <button onClick={handleHelpfulClick} disabled={thumbsUpClicked}>
                 <img src={ThumbUp} alt="Thumbs Up"/>
               </button>
               <span>{helpful}</span>
-              <button  onClick={handleNotHelpfulClick}>
+              <button  onClick={handleNotHelpfulClick} disabled={thumbsDownClicked}>
                 <img src={ThumbDown} alt="Thumbs Down" />
               </button> 
               <span>{notHelpful}</span>
