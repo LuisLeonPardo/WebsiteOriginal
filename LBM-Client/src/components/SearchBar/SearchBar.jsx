@@ -6,6 +6,7 @@ import Cards from '../Cards/cards.json'
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+ 
 
   // Obtener sugerencias basadas en el valor de búsqueda actual
   const getSuggestions = (value) => {
@@ -49,13 +50,13 @@ const SearchBar = () => {
   const onSuggestionsClearRequested = () => {
     setSuggestions([]);
   };
-
+  const [filteredCards, setFilteredCards] = useState([]);
   // Do the serach when the button is clicked
   const handleSearch = () => {
-      const filteredCards = Cards.filter((card) =>
-      card.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setSuggestions(filteredCards);
+    const filteredCards = Cards.filter((card) =>
+    card.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  setFilteredCards(filteredCards);
   };
 
   //  Autosuggest configuration
