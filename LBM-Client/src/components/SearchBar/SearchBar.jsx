@@ -105,9 +105,9 @@ const SearchBar = () => {
       <div>
         <button className={styles.button} onClick={handleSearch}>Search</button>
       </div>
-      
       <div className={styles.container}>
           {filteredCards.length > 0 ? <FilteredCards /> : null }
+     
       </div>
     
     </div>

@@ -5,7 +5,6 @@
     max-width:80rem;
     margin: 0 auto;
     justify-content: space-between;
-
   }
 
  
@@ -58,8 +57,11 @@
     width: calc(26% - 3rem); /* Ancho de cada card (50% para mostrar 2 cards por columna) */
     margin-bottom: 6rem;
     margin-left: 4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra en la tarjeta */
   }
   
+
+
   @media (min-width: 768px) {
     .card {
       width: calc(26% - 3rem); 

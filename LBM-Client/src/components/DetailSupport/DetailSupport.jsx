@@ -82,7 +82,9 @@ export default function DetailSupport() {
           <div className={styles.divRectangle}>
              <h2 className={styles.title}>{question}</h2>
              <div className={styles.content}>
-               <p className={styles.p} >{content}</p>
+             {content.split('\n').map((paragraph, index) => (
+      <p className={styles.p} key={index}>{paragraph}</p>
+    ))}    
              </div>
              
               <div className={styles.thumbs} >

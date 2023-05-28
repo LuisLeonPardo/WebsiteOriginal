@@ -1,13 +1,11 @@
 
 
   .detailContainer {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 53.96%, #FFFFFF 100%), url('../../assets/Fondo.png');
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+   background-image: url('../../assets/Fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
   
   .h2{
     font-family: 'Inter';
@@ -83,6 +81,7 @@
       text-decoration-line: underline;
       margin-right: 1%;
       margin-left: 0%;
+      font-weight: bold;
     }
   
     .question2 {
@@ -98,6 +97,7 @@
       text-decoration-line: underline;
       margin-right: 1%;
       margin-left: 0%;
+      font-weight: bold;
     }
   }
   
@@ -135,31 +135,45 @@
     text-align: justify;  
     align-items: left; 
     margin-left: 2%;
+    font-weight: bold;
     }
     
-    .content{
+    .content {
+    font-family: 'Inter';
+    text-align: left;
+    margin-left: 20%;
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    display: inline-block;
+    word-break: break-all;
+    text-align: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 7%;
+   
+
+
+    .p {
       font-family: 'Inter';
-      text-align: left;
-      margin-left: 20%;
-      color: #000000;
       font-style: normal;
-      font-weight: 400;
       font-size: 16px;
-      line-height: 28px;
+      line-height: 24px;
       display: inline-block;
-      word-break: break-all;
-      text-align: left;
+      word-break: normal;
+      text-align: justify;
       margin-left: 2%;
       margin-right: 2%;
-      margin-bottom: 7%;  
+      margin-bottom: 7%;
+      margin: 0 0 1rem;  
     }
-    .p {
-      display: inline-block;
-      word-break: break-all;
-      margin: 0 0 3em; /* Ajusta el valor según el espacio deseado entre los párrafos */
-      line-height: 2;
-      text-align: justify;
-    }
+}
+
+
+
+
 
     .thumbs{
       font-family: 'Inter';
