@@ -10,7 +10,7 @@ const Cards = () => {
           <div className={styles.card} key={card.id}>
             <div  className={styles.icon1}>
               <span>
-                <h2 className={styles.title}>{card.title}</h2>
+                <h2 className={styles.title}>{card.title}:</h2>
               </span>     
             </div>
             <ul className={styles.icon}>
