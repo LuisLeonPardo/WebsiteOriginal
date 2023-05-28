@@ -117,3 +117,15 @@
     }
   }
 }
+
+@media (max-width: 340px) {
+  .footer_items {
+    background: rgba(34, 34, 34, 0.03);
+    height: 150px;
+    animation-name: inOpacity;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    margin-left: -25px;
+    padding: 20px;
+}
+}

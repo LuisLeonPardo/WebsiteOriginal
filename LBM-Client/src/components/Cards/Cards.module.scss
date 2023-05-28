@@ -68,3 +68,38 @@
     }
   }
   
+  @media (max-width: 740px) {
+    .card {
+        background-color: white;
+        padding: 2rem;
+        border: 0;
+        width: calc(43% - 3rem);
+        margin-bottom: 6rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-weight: 500;
+    }
+  }
+
+  @media (max-width: 340px) {
+    .card {
+      background-color: white;
+    padding: 2rem;
+    border: 0;
+    width: calc(100% - 3rem);
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: 700;
+    font-size: 12px;
+
+    .icon {
+          /* align-items: center; */
+    display: inline;
+    /* position: relative; */
+    /* top: 76px; */
+
+    }
+  }
+    
+  }
