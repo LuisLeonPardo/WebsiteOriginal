@@ -29,7 +29,6 @@
 }
 .Page {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   margin-top: 5em;
   flex-direction: row;

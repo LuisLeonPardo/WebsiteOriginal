@@ -1,0 +1,284 @@
+.card {
+  align-items: center;
+  padding: 2rem 1.2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.info {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title h3 {
+  margin: 0;
+  text-align: left;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #222222;
+}
+
+.title p {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5e5e5e;
+}
+
+.description {
+  display: none;
+}
+
+.rating {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.rating img {
+  width: 16px;
+  height: 16px;
+}
+
+.rating p {
+  margin: 0;
+  font-family: "SF Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #222222;
+}
+
+.rating span {
+  display: none;
+}
+
+.price {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.price p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+  color: #f7931a;
+  text-align: left;
+}
+
+.price i {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+  color: #222222;
+}
+
+.heartIconMobile,
+.heartIconPc {
+  position: absolute;
+  cursor: pointer;
+  top: 3rem;
+  right: 2rem;
+}
+
+.heartIconMobile:hover,
+.heartIconPc:hover {
+  transform: scale(1.1);
+  transition: all ease-in 200ms;
+}
+
+.heartIconMobile img {
+  width: 32px;
+  height: 32px;
+}
+
+.heartIconPc {
+  display: none;
+}
+
+@media (min-width: 740px) {
+  .card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .card img {
+    width: 229px;
+    min-width: 229px;
+    height: 200px;
+  }
+
+  .rating p {
+    order: 1;
+  }
+
+  .rating img {
+    width: 16px;
+    min-width: auto;
+    height: 16px;
+    order: 2;
+  }
+
+  .rating span {
+    display: inline;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #374151;
+    order: 3;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .title {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .title h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    color: #374151;
+    order: 1;
+  }
+
+  .title p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6b7280;
+    order: 0;
+  }
+
+  .description {
+    display: block;
+  }
+
+  .description p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    text-align: left;
+    color: #6b7280;
+    max-width: 221px;
+    margin: 0;
+  }
+
+  .price {
+    position: absolute;
+    flex-direction: row;
+    right: 1.2rem;
+    bottom: 33px;
+    max-width: 220px;
+  }
+
+  .price p,
+  .price i {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .heartIconMobile {
+    display: none;
+  }
+
+  .heartIconPc {
+    display: block;
+    right: 1.2rem;
+    top: 2rem;
+  }
+
+  .heartIconPc img {
+    width: 32px;
+    min-width: auto;
+    height: 32px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .card {
+    padding: 1rem 1.2rem;
+  }
+
+  .card img {
+    width: 300px;
+    min-width: 300px;
+  }
+
+  .info {
+    gap: 1rem;
+  }
+
+  .rating p {
+    order: 1;
+  }
+
+  .rating img {
+    width: 16px;
+    min-width: auto;
+  }
+
+  .heartIconPc img {
+    width: 32px;
+    min-width: auto;
+  }
+
+  .description::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 0px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 1rem;
+  }
+
+  .description::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 0px;
+    border: 1px solid #e5e7eb;
+    margin-top: 1rem;
+  }
+}

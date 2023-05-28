@@ -1,98 +1,146 @@
 [
-	{
-		"id": "1",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674176327/my_assets/seventhEstate_pg8zti.svg",
-		"number": "4567",
-		"price": 20000
-	},
-	{
-		"id": "2",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674176327/my_assets/sixthEstate_qr1lru.svg",
-		"number": "4269",
-		"price": 40000
-	},
-	{
-		"id": "3",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674176326/my_assets/eigthEstate_lr27nu.svg",
-		"number": "4106",
-		"price": 38000
-	},
-	{
-		"id": "4",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674176326/my_assets/ninthEstate_lptys5.svg",
-		"number": "3012",
-		"price": 50000
-	},
-	{
-		"id": "5",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174969/my_assets/thirdEstate_gy5rmg.svg",
-		"number": "7952",
-		"price": 200000
-	},
-	{
-		"id": "6",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174969/my_assets/firstEstate_cngn5o.svg",
-		"number": "2235",
-		"price": 76000
-	},
-	{
-		"id": "7",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174969/my_assets/secondEstate_znusxi.svg",
-		"number": "3615",
-		"price": 285000
-	},
-	{
-		"id": "8",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174969/my_assets/forthEstate_tuzouj.svg",
-		"number": "6788",
-		"price": 200000
-	},
-	{
-		"id": "9",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674232136/patrick-robert-doyle-AH8zKXqFITA-unsplash_nskdvr.jpg",
-		"number": "8377",
-		"price": 1500000
-	},
-	{
-		"id": "10",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674232134/the-anam-_twiIcIsp2s-unsplash_ikei5h.jpg",
-		"number": "3619",
-		"price": 20500
-	},
-	{
-		"id": "11",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674232130/christian-lambert-ycyXpdhCnp8-unsplash_santlm.jpg",
-		"number": "6798",
-		"price": 180000
-	},
-	{
-		"id": "12",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674232124/anmol-seth-hDbCjHNdF48-unsplash_lsaawl.jpg",
-		"number": "8378",
-		"price": 257000
-	},
-	{
-		"id": "13",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174968/my_assets/noFoto_eqfmgg.svg",
-		"number": "1023",
-		"price": 320000
-	},
-	{
-		"id": "14",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174968/my_assets/noFoto_eqfmgg.svg",
-		"number": "8899",
-		"price": 28000
-	},
-	{
-		"id": "15",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174968/my_assets/noFoto_eqfmgg.svg",
-		"number": "7001",
-		"price": 900000
-	},
-	{
-		"id": "16",
-		"image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674174968/my_assets/noFoto_eqfmgg.svg",
-		"number": "3290",
-		"price": 2000000
-	}
+  {
+    "id": "1",
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+    "number": "4567",
+    "price": 20000,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  },
+  {
+    "id": "2",
+    "image": "https://images.unsplash.com/photo-1592595896551-12b371d546d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "number": "4269",
+    "price": 40000,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  },
+  {
+    "id": "3",
+    "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    "number": "4106",
+    "price": 38000,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  },
+  {
+    "id": "4",
+    "image": "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "number": "3012",
+    "price": 50000,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  },
+  {
+    "id": "5",
+    "image": "https://images.unsplash.com/photo-1560184897-ae75f418493e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "number": "7952",
+    "price": 20000,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  },
+  {
+    "id": "6",
+    "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "number": "2235",
+    "price": 76000,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  },
+  {
+    "id": "7",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "number": "3615",
+    "price": 28500,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  },
+  {
+    "id": "8",
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "number": "6788",
+    "price": 20000,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  },
+  {
+    "id": "9",
+    "image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674232136/patrick-robert-doyle-AH8zKXqFITA-unsplash_nskdvr.jpg",
+    "number": "8377",
+    "price": 15000,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  },
+  {
+    "id": "10",
+    "image": "https://res.cloudinary.com/dd7pglmrp/image/upload/v1674232134/the-anam-_twiIcIsp2s-unsplash_ikei5h.jpg",
+    "number": "3619",
+    "price": 20500,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  },
+  {
+    "id": "11",
+    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "number": "6798",
+    "price": 18000,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  },
+  {
+    "id": "12",
+    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=875&q=80",
+    "number": "8378",
+    "price": 25700,
+    "review": "5.0",
+    "totalreviews": 318,
+    "amenities": "kitchen, WiFi, Free Parking",
+    "rooms": "5 beds, 3 toilets",
+    "guests": "4-6",
+    "type": "Entire Home"
+  }
 ]

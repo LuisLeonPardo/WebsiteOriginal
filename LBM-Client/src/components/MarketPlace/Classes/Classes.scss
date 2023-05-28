@@ -1,11 +1,11 @@
 .classes-container {
   height: 76px;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   overflow: hidden;
+  padding: 0 0.5rem;
   .classes-card-container {
     display: flex;
-    gap: 21px;
+    gap: 30px;
     .classes-card {
       display: flex;
       flex-direction: column;
@@ -16,6 +16,7 @@
       cursor: pointer;
       img {
         width: 24px;
+        pointer-events: none;
       }
       p {
         margin: 0;
@@ -26,9 +27,23 @@
         line-height: 16px;
         text-transform: capitalize;
         color: #000000;
+        opacity: 0.65;
         margin-top: 8px;
         white-space: nowrap;
       }
     }
+  }
+}
+
+@media (min-width: 740px) {
+  .classes-container {
+    padding: 1rem;
+    width: auto;
+  }
+}
+
+@media (min-width: 1250px) {
+  .classes-container {
+    margin-inline: clamp(4rem, 12vw, 17.5rem);
   }
 }
