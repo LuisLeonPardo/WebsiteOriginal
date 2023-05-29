@@ -1,0 +1,443 @@
+
+
+  .detailContainer {
+   background-image: url('../../assets/Fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  
+  .h2{
+    font-family: 'Inter';
+    text-align: left;
+    margin-left: 0%;
+    margin-right: 6.5%;
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 50px;
+    display: inline-block;
+    word-break: break-all;
+    inline-size: 1020px; 
+    overflow: hidden;
+  }
+
+  .h1 {
+    margin-left: 21.5%;
+    margin-top: 7%;
+    font-family: 'Inter';
+    font-style: bold;
+    font-weight: 600;
+    text-align: left;
+    font-size: 36px;
+    line-height: 52px;
+    color: #000000;
+    text-align: justify;  
+    align-items: left; 
+      word-break: break-all;
+  }
+
+  .h3 {
+    font-family: 'Inter';
+    text-align: left;
+    margin-left: 20%;
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    display: inline-block;
+    word-break: break-all;
+    text-align: left;
+      
+  }
+
+
+  .divPopular {
+    text-align: left;
+    margin-left: 21.5%;
+
+    .popular {
+      font-family: 'Inter';
+      color: rgba(0, 0, 0, 0.6);
+      margin-top: 0;
+      display: inline-block;
+      word-break: break-all;
+      margin-right: 1%;
+      margin-left: 0%;
+    }
+  
+    .question1 {
+      font-family: 'Inter';
+      display: inline-block;
+      word-break: break-all;
+      font-family: Inter;
+      font-size: 16px;
+      line-height: 28px;
+      color: #000000;
+      margin-top: 0%;
+      margin-bottom: 8%;
+      text-decoration-line: underline;
+      margin-right: 1%;
+      margin-left: 0%;
+      font-weight: bold;
+    }
+  
+    .question2 {
+      font-family: 'Inter';
+      display: inline-block;
+      word-break: break-all;
+      font-family: Inter;
+      font-size: 16px;
+      line-height: 28px;
+      color: #000000;
+      margin-top: 0%;
+      margin-bottom: 8%;
+      text-decoration-line: underline;
+      margin-right: 1%;
+      margin-left: 0%;
+      font-weight: bold;
+    }
+  }
+  
+}
+
+
+  .divRectangle {
+    font-family: 'Inter';
+    display: inline-block;
+    word-break: break-all;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 60px;
+    background: #FFFFFF;
+    box-shadow: 0px 30px 60px rgba(58, 58, 244, 0.1);
+    border-radius: 10px;
+    margin-right: 20%;
+    margin-left: 21.5%;
+    margin-bottom: 10%;
+    text-align: justify;  
+    align-items: left; 
+    
+    
+    .title {
+    margin-left: 21.5%;
+    margin-top: 7%;
+    font-family: 'Inter';
+    font-style: bold;
+    font-weight: 600;
+    text-align: left;
+    font-size: 36px;
+    line-height: 52px;
+    color: #000000;
+    text-align: justify;  
+    align-items: left; 
+    margin-left: 2%;
+    font-weight: bold;
+    }
+    
+    .content {
+    font-family: 'Inter';
+    text-align: left;
+    margin-left: 20%;
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    display: inline-block;
+    word-break: break-all;
+    text-align: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 7%;
+   
+
+
+    .p {
+      font-family: 'Inter';
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      display: inline-block;
+      word-break: normal;
+      text-align: justify;
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-bottom: 7%;
+      margin: 0 0 1rem;  
+    }
+}
+
+
+
+
+
+    .thumbs{
+      font-family: 'Inter';
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 740px) {
+    .detailContainer {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 53.96%, #FFFFFF 100%), url(/src/assets/Fondo.png);
+      background-size: contain;
+      background-position: top;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    .h2 {
+      font-family: "Inter";
+      text-align: left;
+      margin-left: 0%;
+      margin-right: 6.5%;
+      color: #000000;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+      display: inline-block;
+      word-break: break-all;
+      inline-size: 552px;
+      overflow: hidden;
+    }
+
+   .h3 {
+      font-family: "Inter";
+      text-align: left;
+      margin-left: 0%;
+      max-width: 2000px;
+      margin-right: 6.5%;
+      color: #000000;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 31px;
+      display: inline-block;
+      word-break: break-all;
+      inline-size: 554px;
+      overflow: hidden;
+  }
+  .h1 {
+    margin-left: 9.5%;
+    margin-top: 7%;
+    font-family: "Inter";
+    font-style: bold;
+    font-weight: 600;
+    text-align: left;
+    font-size: 36px;
+    line-height: 52px;
+    color: #000000;
+}
+.divPopular {
+  text-align: left;
+  margin-left: 11%;
+  margin-bottom: 7%;
+}
+
+.question1 {
+  font-family: 'Inter';
+  display: inline-block;
+  word-break: break-all;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 28px;
+  color: #000000;
+  margin-top: 0%;
+  margin-bottom: 8%;
+  text-decoration-line: underline;
+  margin-right: 1%;
+  margin-left: 0%;
+  font-weight: 600;
+
+}
+
+.question2  {
+  display: inline-block;
+      word-break: break-all;
+      font-family: Inter;
+      font-size: 16px;
+      line-height: 28px;
+      color: #000000;
+      margin-top: 0%;
+      margin-bottom: 8%;
+      text-decoration-line: underline;
+      margin-right: 1%;
+      margin-left: 0%;
+      font-weight: 600;
+} 
+  }
+  .divRectangle {
+    height: 1151px;
+    width: 575px;
+    /* left: 80.5px; */
+    /* top: 8px; */
+    border-radius: 10px;
+    padding: 60px;
+    background: #FFFF;
+    margin-left: 1em;
+  }
+
+  }
+
+  @media (max-width: 340px) {
+
+   .detailContainer {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 53.96%, #FFFFFF 100%), url(/src/assets/Fondo.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    .h1 {width: 312px;
+    height: 52px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 52px;
+    color: #000000;
+    margin-left: 10px;
+   }  
+   .h2 {
+    width: 312px;
+    height: 60px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+    margin-left: 10px;
+   }
+   .divPopular {
+    text-align: left;
+    margin-left: 3.5%;
+    margin-bottom: 7%;
+
+    .popular {
+      font-family: "Inter";
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 0;
+    font-size: 17px;
+    display: inline-block;
+    word-break: break-all;
+    margin-right: 1%;
+    margin-left: 0%;
+    }
+  
+    .question1 {
+      font-family: 'Inter';
+      display: inline-block;
+      word-break: break-all;
+      font-family: Inter;
+      font-size: 16px;
+      line-height: 28px;
+      color: #000000;
+      margin-top: 0%;
+      margin-bottom: 8%;
+      text-decoration-line: underline;
+      margin-right: 1%;
+      margin-left: 2.5%;
+      font-weight: 600;
+    
+    }
+    
+    .question2  {
+      display: inline-block;
+          word-break: break-all;
+          font-family: Inter;
+          font-size: 16px;
+          line-height: 28px;
+          color: #000000;
+          margin-top: 0%;
+          margin-bottom: 8%;
+          text-decoration-line: underline;
+          margin-right: 1%;
+          margin-left: 0%;
+          font-weight: 600;
+          position: relative;
+          top: -53px;
+    } 
+  
+  }
+  
+  
+    
+
+  }
+  .divRectangle {
+    height: 100%;
+    width: 56%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    /* left: 80.5px; */
+    /* top: 8px; */
+    border-radius: 10px;
+    padding: 60px;
+    background: white;
+    margin-left: 1em;
+    align-content: space-around;
+
+    .title {
+      width: 220px;
+    height: 60px;
+    /* font-family: 'Source Sans Pro'; */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 30px;
+    text-align: center;
+    color: #060619;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    }
+    .p {
+      width: 234px;
+    height: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: justify;
+    color: rgba(6, 6, 25, 0.6);
+    }
+    .content {
+      font-family: "Inter";
+    text-align: left;
+    margin-left: 20%;
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    display: inline-block;
+    word-break: break-all;
+    text-align: left;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 7%;
+    }
+    .thumbs {
+      font-family: "Inter";
+      text-align: center;
+      display: block;
+      margin-left: 27px;
+    }
+    div  {
+      display: flex;
+      justify-content: center; /* Centrar los botones horizontalmente */
+      margin-top: 10px; 
+    }
+
+  }
+
+}

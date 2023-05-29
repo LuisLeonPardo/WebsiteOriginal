@@ -76,7 +76,9 @@ function NavbarMarket() {
                 <IoChevronDownOutline />
               </div>
               <p>ABOUT US</p>
+              <NavLink to ="/support">
               <p>SUPPORT</p>
+              </NavLink>
             </div>
             <div className={style.buttons2}>
               <div className={style.language}>

@@ -1,0 +1,157 @@
+.searchContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width:80rem;
+    margin: 0;
+    margin-left: 21.5%;
+    margin-top: 0%;
+    list-style-type: none;
+  }
+   
+  .input {
+    border: none;/* Quita el borde del input */
+    background-color:white;   
+    margin-top: 0; 
+    list-style-type: none;
+  }
+
+  .button {
+    background-color: #F7931A;
+    color: #FFFFFF;
+    border-radius: 0;
+    margin-left: 0px; /* Agrega margen izquierdo para separar del input */
+    border: none; /* Opcional: quita el borde del botón */
+    align-items: center;
+  }
+
+
+  ul{
+    list-style-type: none;
+    
+  }
+
+
+  .h2 {
+   color:#060619;
+    list-style-type: none;
+    margin-top: 0%;
+    text-align: left;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 7%;
+  }
+
+  .container {
+    column-count: 3; // Cambia el número de columnas según tus necesidades
+    column-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width:80rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    line-height: 120%;
+  }
+
+
+  .icon li:before {
+    content: "";
+    display: inline-block;
+    background-image: url(' /public/icons/prueba.png'); /* Reemplaza 'ruta-de-la-imagen.png' con la ruta y nombre de tu imagen de icono */
+    background-size: 16px 16px; /* Ajusta el tamaño del icono */
+    width: 20px; /* Ajusta el ancho del icono */
+    height: 20px; /* Ajusta la altura del icono */
+    margin-right: 5px; /* Ajusta el espacio entre el icono y el texto del <li> */
+    list-style-type: none;
+  }
+
+  .li {
+    list-style-type: none;
+    margin-top: 0%;
+    text-align: left;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 7%;
+  }
+  
+  
+  .icon1{
+    width: 4rem;
+    height:4rem;
+    background-image: url('/src/assets/Frame 346.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .title{
+   display: flex;
+   margin-left: 130%;
+   font-family: 'Inter';
+   font-weight: bold;
+   font-size: 18px;
+   line-height: 28px;
+   color: #060619;
+   inline-size: 150px; 
+   overflow: hidden;
+  }
+
+  .card {
+    background-color: white;
+    padding: 2rem;
+    border: 0;
+    width: calc(26% - 3rem); /* Ancho de cada card (50% para mostrar 2 cards por columna) */
+    margin-bottom: 6rem;
+    margin-left: 4rem;
+    margin-top: 5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra en la tarjeta */
+  }
+  
+  @media (min-width: 768px) {
+    .card {
+      width: calc(26% - 3rem); 
+    }
+  }
+  
+  @media (max-width: 740px) {
+    .card {
+      width: calc(43% - 3rem);
+    margin-bottom: 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    }
+   .searchContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0;
+    margin-left: 9.5%;
+    margin-top: 0%;
+    list-style-type: none;
+   }
+  
+
+  }
+  @media (max-width: 340px) {
+    .input {
+      width: 221px;
+      height: 37px;
+      border: none;
+      outline: none;
+      margin-left: -21px;
+    }
+  .button {
+    background-color: #F7931A;
+    color: #FFFFFF;
+    border-radius: 0;
+    margin-left: 0px;
+    border: none;
+    display: flex;
+    align-items: center;
+    height: 42px;
+  }
+  }
