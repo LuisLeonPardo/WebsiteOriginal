@@ -29,14 +29,13 @@
 }
 .Page {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   margin-top: 5em;
   flex-direction: row;
   /* z-index: 1; */
   position: relative;
 }
-.Modal{
+.Modal {
   display: flex;
   justify-content: center;
   position: fixed;
@@ -53,11 +52,10 @@
 }
 
 @media screen and (max-width: 900px) {
-  .Page{
+  .Page {
     margin-top: 5em;
   }
-  .App{
+  .App {
     width: 100vw;
   }
 }
-

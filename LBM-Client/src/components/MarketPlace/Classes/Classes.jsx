@@ -8,7 +8,7 @@ function Classes() {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    setWidth(dragSlider.current.scrollWidth - dragSlider.current.offsetWidth);
+    setWidth(dragSlider.current.scrollWidth - dragSlider.current.offsetWidth + 30 );
   });
   //console.log(InfoClasses)
 

@@ -38,6 +38,7 @@ import SupportCenter from "./components/SupportCenter/SupportCenter";
 import DetailSupport from "./components/DetailSupport/DetailSupport";
 import Cards from '../src/components/Cards/Cards'
 
+import IDO from "./components/IDO/IDO";
 function App() {
   const dispatch = useDispatch();
   const [stateModal, setStateModal] = useState(false);
@@ -101,7 +102,7 @@ function App() {
             path={"/realestate/:id"}
             element={
               <div className="Page">
-                <RealEstates />
+                <RealEstateDetail />
               </div>
             }
           />
@@ -117,7 +118,7 @@ function App() {
             path={"/launchpad"}
             element={
               <div className="Page">
-                <Launchpad />
+                <IDO />
               </div>
             }
           />
@@ -173,5 +174,6 @@ function App() {
     </div>
   );
 }
+//Check
 
 export default App;
