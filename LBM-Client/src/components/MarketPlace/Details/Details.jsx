@@ -123,7 +123,7 @@ export default function Details() {
               </div>
             </div>
           </div>
-          <div className="carousel">
+          <div>
             <Carousel
               slides={slides}
               isOpen={isOpenGallery}
@@ -172,7 +172,7 @@ export default function Details() {
                 <h1>500.000 USDT</h1>
                 <h1 className="equiv">= 0.04800000 ETH</h1>
               </div>
-              <Slider className="sliderMobile" />
+              <Slider openModal={openModal} className="sliderMobile" />
               {/* <a
                 onTouchEndCapture={changeBid}
                 href="#"
@@ -300,34 +300,8 @@ export default function Details() {
             <div className="bidTablet">
               <h1>500.000 USDT</h1>
               <h1 className="equiv">= 0.04800000 ETH</h1>
-              <a
-                onTouchMove={changeBid}
-                href="#"
-                id="ko"
-                className={bid ? "sliderBtn" : "sliderBtn2"}
-              >
-                {bid ? (
-                  <>
-                    <input type="text" placeholder="Place a bid" />
-                    <div className="subslide">
-                      <img src={verticalRectangle} alt="bar img" />
-                      <img src={yellowFlash} alt="flash img" />
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <h1>Buy Now</h1>
-                    <div className="subslide">
-                      {/* <img src={whiteFlash} alt="flash img" /> */}
-                      <img src={whiteRectangle} alt="bar img" />
-                    </div>
-                  </>
-                )}
-              </a>
-              {/* <div className="prueba">
-                <input type="range" />
-              </div> */}
             </div>
+            <Slider openModal={openModal} className="sliderMobile" />
           </div>
         </div>
       </div>
