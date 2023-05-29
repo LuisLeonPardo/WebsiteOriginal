@@ -76,6 +76,7 @@ export default function DetailSupport() {
         <h2 className={styles.popular}>POPULAR:</h2>
         <Link to = "/detail/6" className={styles.question1}><p>What is hosting?</p></Link>
         <Link to ="/detail/7" className={styles.question2}><p>Why my website is slow?</p></Link>
+        <Link to="/cards" className={styles.question2}><p>Show all</p></Link>
         </div>
 
         <div>

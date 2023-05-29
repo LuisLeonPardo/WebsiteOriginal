@@ -4,7 +4,6 @@ import Footer from "../Landing/Footer/Footer";
 import styles from "./SupportCenter.module.scss";
 import {Link} from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
-import Cards from "../Cards/Cards";
 import { useState } from "react";
 
 export default function SupportCenter() {
@@ -32,6 +31,9 @@ export default function SupportCenter() {
           </Link>
           <Link to="/detail/7" className={styles.question2}>
             <p>Why is my website slow?</p>
+          </Link>
+          <Link to="/cards" className={styles.question2}>
+            <p>Show all</p>
           </Link>
         </div>
        

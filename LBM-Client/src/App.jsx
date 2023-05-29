@@ -36,7 +36,7 @@ import { getAdminByWallet, getUnapprovedProjects } from "../redux/actions";
 import { setIsAdmin } from "../redux/reducer";
 import SupportCenter from "./components/SupportCenter/SupportCenter";
 import DetailSupport from "./components/DetailSupport/DetailSupport";
-
+import Cards from '../src/components/Cards/Cards'
 
 function App() {
   const dispatch = useDispatch();
@@ -168,7 +168,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/support" element={<SupportCenter />} />
         <Route path="/detail/:id" element={<DetailSupport/>} />
-            
+        <Route path="/cards" element={<Cards/>} />
       </Routes>
     </div>
   );
