@@ -368,7 +368,7 @@ $breakpoints: (
   }
   .dividerLeft {
     margin: 24px 0px;
-    z-index: 9999;
+
     @include media-down(xs) {
       margin-top: 48px;
     }
@@ -813,6 +813,7 @@ $breakpoints: (
     justify-items: center;
     align-items: center;
     padding-top: 12px;
+    padding-bottom: 12px;
     width: 80%;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
@@ -897,14 +898,5 @@ $breakpoints: (
     @include media-up(sm) {
       display: none;
     }
-    // .prueba {
-    //   padding: 100px 5px;
-    //   position: absolute;
-    //   input {
-    //     appearance: none;
-    //     background-color: transparent;
-    //     scale: 1.1;
-    //   }
-    // }
   }
 }
