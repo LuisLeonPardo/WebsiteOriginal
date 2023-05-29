@@ -98,7 +98,7 @@ function App() {
             path={"/realestate/:id"}
             element={
               <div className="Page">
-                <RealEstates />
+                <RealEstateDetail />
               </div>
             }
           />

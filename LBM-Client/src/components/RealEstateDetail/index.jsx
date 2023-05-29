@@ -1,197 +1,130 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
-import logo from '../../../public/icons/Logo.svg';
-import { useParams } from 'react-router-dom';
-// import './index.scss';
-import './RealEstateDetail.scss';
-import { SlRefresh } from 'react-icons/sl';
-import { AiOutlineHeart } from 'react-icons/ai';
-import { FiShare, FiEye } from 'react-icons/fi';
-import { BsArrowUpRight, BsThreeDots } from 'react-icons/bs';
-import db from '../RealEstates/fakedb/db.json';
-import CardPreview from '../RealEstates/CardPreview';
-import { Link } from 'react-router-dom';
-import Selector from './Selector';
-import Modal from './Modal';
-import { useModal } from '../../helpers/useModal/useModal';
-//<RealEstateDetail/> es el componente que muestra los detalles del land, es importado en el index.jsx de la carpeta RealEstates
-function RealEstateDetail() {
-	//Necesito acceder a un div que tiene un overflow para poder manejar el scroll con una funcioanlidad, por eso uso useRef
-	const div = useRef()
-	//accedo al id mediante useParamans
-	const { id } = useParams();
-	//Al final del componente, se renderizan 5 recomendaciones de estates, utilizo start para hacer un recorte de 5 lands a la base de datos y asi renderizar, uso un Math.random para que no siempre sean los mismos 5
-	const start = useMemo(() => Math.floor(Math.random() * db.length), [id]);
-	//aqui abajo se hace el recorte
-	const splicedb = db.slice(start > 11 ? 11 : start, start + 5);
-	//showMore sirve para mostrar mas o menos texto en la descripcion del detalle
-	const [showMore, setShowMore] = useState(false);
-	//con land encuentro el estate que se selecciono y guardo sus detalles alli
-	const land = db.find((e) => e.number === id);
-	//nuevamente el hook para abrir <Modal />
-	const [isOpenModal, openModal, closeModal] = useModal();
-	//este useEffect lo utilizo para scrollear automaticamente hacie arriba en ciertas situaciones
-	useEffect(() => {
-		window.scroll(0,0)
-		div.current.scrollTo({ top: div.current.scrollTop = 5, behavior: 'smooth' });
-	}, [id])
-	
-	return (
-		<div ref={div} className="realEstateDetail">
-			<Modal
-				number={land.number}
-				isOpen={isOpenModal}
-				closeModal={closeModal}
-			/>
-			{/* Aqui abajo se encuentra la imagen del detalle del estate */}
-			<figure className="figure">
-				<img src={land.image} alt="Land" className="figure__image" />
-			</figure>
-			{/* Dentro del tag <aside> se encuentran todo lo que esta a la derecha de la imagen en la ruta /realestate/:id */}
-			<aside className="aside">
-				<h1
-					id="land"
-					className="aside__text aside__text--bold aside__text--large "
-				>
-					Land #{land.number}
-				</h1>
-				<section className="aside__section">
-					<figure className="aside__figure">
-						<img src={logo} alt="Logo" />
-					</figure>
-					<div className="aside__div">
-						<small className="aside__text aside__text--gray aside__text--semibold display--none">
-							Current owner
-						</small>
-						<h4 className="aside__text aside__text--bold">Libertum</h4>
-					</div>
-				</section>
-				<div className="sectionActions">
-					<hr className="hr" />
-					<div className="actions">
-						<div className="actions__div">
-							<AiOutlineHeart className="aside__text--gray" />
-							<span className="actions_span aside__text--gray aside__text--bold">
-								0
-							</span>
-						</div>
-						<div className="actions__div">
-							<FiShare className="aside__text--gray" />
-							<span className="actions_span aside__text--gray aside__text--bold">
-								Share
-							</span>
-						</div>
-						<div className="actions__div">
-							<SlRefresh className="aside__text--gray" />
-							<span className="actions_span aside__text--gray aside__text--bold">
-								Refresh
-							</span>
-						</div>
-						<button className="config">
-							{' '}
-							<BsThreeDots className="icon" />{' '}
-						</button>
-					</div>
-				</div>
-				<div className="cardBid">
-					<div className="cardBid__div">
-						<small className="aside__text aside__text--gray aside__text--semibold">
-							Price
-						</small>
-						<span className="aside__text aside__text--bold">{land.price} LUSD</span>
-					</div>
-					<button className="cardBid__button">
-						Buy now
-					</button>
-					{/* Cuando le das click al boton de aqui abajo se abre el modal */}
-					<button
-						className="cardBid__button cardBid__button--bg-transparent"
-						onClick={() => openModal()}
-					>
-						Place a bid
-					</button>
-					<p className="aside__text aside__text--semibold end_date">
-						Sale ends in: 25d 15h32m 15s
-					</p>
-				</div>
-			</aside>
-			{/* En el tag se <section> abarca todo lo que esta debajo de la imagen hasta el h1 que dice "More from this collection" (sin incluir) */}
-			<section className="section">
-				<Selector />
-				<div className="section__div section--flex--column">
-					<h2 className="aside__text aside__text--medium">Description</h2>
-					<p
-						className={`section__p aside__text aside__text--gray section__text--justify ${
-							showMore ? null : 'showMore'
-						}`}
-					>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora
-						accusamus eos ducimus, quae veritatis a animi natus, voluptas,
-						debitis sit cupiditate aperiam tempore ipsum. Laborum, commodi
-						consequuntur. Voluptatum, iste ullam. Lorem ipsum dolor sit amet
-						consectetur adipisicing elit. Adipisci cum nam explicabo nobis
-						voluptatum nihil a sunt quaerat odio consequatur! Magnam magni vitae
-						asperiores vel dignissimos recusandae. Libero, nam tempore?
-					</p>
-					<hr className="section__hr" />
-					<small
-						className="section__small aside__text aside__text--bold"
-						onClick={() => setShowMore(!showMore)}
-					>
-						{showMore ? 'Show less' : 'Show more'}
-					</small>
-				</div>
-				<div className="section__div section--flex--column">
-					<h2 className="aside__text aside__text--medium">Latest Bids</h2>
-					<div className="section__div section__p aside__text aside__text--gray border">
-						<p>No bids yet. Be the first to place a bid!</p>
-					</div>
-				</div>
-				<div className="section__div section--flex--column">
-					<h2 className="aside__text aside__text--medium">Details</h2>
-					<ul className="ul">
-						<li className="aside_text aside__text--semibold aside__text--gray-darker ul__li">
-							<img
-								src="https://res.cloudinary.com/dd7pglmrp/image/upload/v1674229299/Binance_zawmhn.svg"
-								alt="Binance"
-							/>{' '}
-							Example ()
-						</li>
-						<li className="aside_text aside__text--semibold aside__text--gray-darker ul__li">
-							<img
-								src="https://res.cloudinary.com/dd7pglmrp/image/upload/v1674229299/BinanceFill_hbsntv.svg"
-								alt="Binance"
-							/>{' '}
-							View on Example <BsArrowUpRight />{' '}
-						</li>
-						<li className="aside_text aside__text--semibold aside__text--gray-darker ul__li">
-							<FiEye /> Open original <BsArrowUpRight />
-						</li>
-						<hr className="section__hr" />
-						<li className="aside_text aside__text--semibold aside__text--gray-darker ul__li">
-							<SlRefresh /> Refresh Metadata
-						</li>
-					</ul>
-				</div>
-			</section>
-			{/* En el tag <footer> se encuentra el h1 nombrado anteriormente y las 5 cards de estates recomendadas */}
-			<footer className="cards">
-				<h2 className="h2">More from this collection</h2>
-				<div className='gridCards'>
-					{splicedb.map((e) => (
-						<Link to={`/realestate/${e.number}`} className="link" key={e.id} >
-							<CardPreview
-								key={e.id}
-								image={e.image}
-								number={e.number}
-								fiveColumn={true}
-								price={e.price}
-							/>
-						</Link>
-					))}
-				</div>
-			</footer>
-		</div>
-	);
-}
+import css from "./index.module.scss";
+import { useParams, useNavigate } from "react-router-dom";
+import db from "../RealEstates/fakedb/db.json";
+import heartMobile from "../../assets/heart--movile.svg";
+import shareIcon from "../../assets/share.svg";
+import backIcon from "../../assets/vector.svg";
+import starIcon from "../../assets/star.svg";
+import avatar from "../../assets/avatar.svg";
+import right from "../../assets/right.svg";
+import sharePC from "../../assets/share--pc.svg";
+import save from "../../assets/save.svg";
+import showAll from "../../assets/showAll.svg";
+import ModalFilter from "../MarketPlace/ModalFilter/ModalFilter.jsx";
+import CardPreview from "./CardPreviewDetails.jsx";
+import Footer from "../RealEstates/Footer/Footer.jsx";
 
-export default RealEstateDetail;
+const Index = () => {
+  const navigate = useNavigate();
+  const number = useParams();
+  const land = db.find((item) => item.number === number.id);
+
+  return (
+    <div className={css.details}>
+      <img src={land.image} alt="Land" className={css.detailsImage} />
+      <div className={css.navMobile}>
+        <img
+          src={backIcon}
+          alt="back icon"
+          onClick={() => navigate("/realestate")}
+        />
+        <div className={css.navMobileItems}>
+          <div>
+            <img src={shareIcon} alt="Share" />
+            <p>Share</p>
+          </div>
+          <div>
+            <img src={heartMobile} alt="Heart" />
+            <p>Like</p>
+          </div>
+        </div>
+      </div>
+
+      <header className={css.header}>
+        <h2>Bordeaux Getaway</h2>
+        <div className={css.headerText}>
+          <p>Bordeaux, Dubai</p>
+          <i>
+            <b>{land.review}</b>
+            <img src={starIcon} alt="Star" />
+          </i>
+
+          <div className={css.headerBtns}>
+            <img src={sharePC} alt="share" />
+            <img src={save} alt="save" />
+          </div>
+        </div>
+        <img src={avatar} alt="Person" className={css.avatar} />
+      </header>
+
+      <section className={css.mosaic}>
+        <img src={land.image} alt="" />
+        <div className={css.otherImages}>
+          <img src={land.image} alt="Land" />
+          <img src={land.image} alt="Land" />
+          <img src={land.image} alt="Land" />
+          <img src={land.image} alt="Land" />
+        </div>
+          <img src={showAll} alt="btn" className={css.showAll} />
+      </section>
+
+      <div className={css.info}>
+        <h2>Entire rental unit hosted by Ghazal</h2>
+        <div className={css.features}>
+          <p>
+            {land.guests} guests · {land.rooms}
+          </p>
+        </div>
+        <p className={css.description}>
+          Come and stay in this superb duplex T2, in the heart of the historic
+          center of Bordeaux. Spacious and bright, in a real Bordeaux building
+          in exposed stone, you will enjoy all the charms of the city thanks to
+          its ideal location. Close to many shops, bars and restaurants, you can
+          access the apartment by tram A and C and bus routes 27 and 44. <br />{" "}
+          ...
+        </p>
+        <p className={css.showMore}>
+          Show more <img src={right} alt="right" />
+        </p>
+      </div>
+
+      <div className={css.filtersContainer}>
+        <h2>Tokenization Part</h2>
+        <div className={css.filters}>
+          <div className={css.filtersSelect}>
+            <select>
+              <option hidden value="">
+                Status
+              </option>
+              <option className={css.option}>Buy now</option>
+              <option>Not for sale</option>
+            </select>
+          </div>
+          <ModalFilter />
+        </div>
+      </div>
+      <section className={css.relatedLands}>
+        {db.length
+          ? db.map((land) => (
+              <CardPreview
+                image={land.image}
+                key={land.number}
+                number={land.number}
+                price={land.price}
+                review={land.review}
+                totalReviews={land.totalreviews}
+                amenities={land.amenities}
+                rooms={land.rooms}
+                guests={land.guests}
+                type={land.type}
+              />
+            ))
+          : null}
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Index;
