@@ -8,9 +8,9 @@ import { networks } from "../../Landing/networks";
 const Footer = () => {
   return (
     <footer className={css.footer}>
-      <img src={logo} alt="Libertum" className={ css.image}/>
-      <div className={css.text}>
-        <p>
+      {/* <img src={logo} alt="Libertum" className={ css.image}/> */}
+      {/* <div className={css.text}> */}
+        {/* <p>
           Libertum is a decentralized finance algorithmic money market protocol
           that seeks to make DeFi adoption more friendly with real collaterals.
         </p>
@@ -37,7 +37,7 @@ const Footer = () => {
           >
             I WANT TO BE PART
           </a>
-        </div>
+        </div> */}
         <div className={css.socialmedia}>
           {networks.map(({ net, href }, index) => (
             <a
@@ -46,11 +46,14 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={net} />
+              <img src={net} className={css.whiteImage}/>
             </a>
           ))}
         </div>
-      </div>
+        <div>
+          <p>© 2023 ENVWISE. All Rights Reserved, ENVWISE</p>
+        </div>
+      {/* </div> */}
     </footer>
   );
 };

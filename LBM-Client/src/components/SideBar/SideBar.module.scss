@@ -67,7 +67,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    color: #F4911A;
+    color: rgb(72, 179, 67);
     gap: 2em;
     font-family: 'Inter';
 font-style: normal;
@@ -101,7 +101,7 @@ cursor: pointer;
 .Icons:hover{
     $color1: #e27625;
     $color2: #f8630a;
-    color:#F4911A;
+    color:rgb(72, 179, 67);
     transition: all 0s;
 }
 .Icons:hover  p{
@@ -119,7 +119,7 @@ cursor: pointer;
 .Icons:hover{
     $color1: #e27625;
     $color2: #f8630a;
-    color:#F4911A;
+    color:rgb(72, 179, 67);
     transition: all 0s;
 }
 .Icons:hover  p{
@@ -257,10 +257,10 @@ transition: font-size 1s;
     justify-content: center;
     width: 60px;
     height: 38px;
-    background-color: #F4911A;
+    background-color: rgb(72, 179, 67);
     border-radius: 6px;
     visibility: hidden;
-    color: #F4911A;
+    color: rgb(72, 179, 67);
     transition: color 3s, width .5s;
     pointer-events: none;
 }
@@ -281,7 +281,7 @@ transition: font-size 1s;
     width: 184.8px;
     cursor: pointer;
     color: white;
-    background-color: #F4911A;
+    background-color: rgb(72, 179, 67);
     line-height: 0;
     transition: color 4s, width 1s;
 }
@@ -305,7 +305,7 @@ transition: font-size 1s;
     flex-direction: row;
     justify-content: center;
     height: 38px;
-    background-color: #F4911A;
+    background-color: rgb(72, 179, 67);
     overflow: hidden;
     width: 184.8px;
     color: white;
@@ -318,7 +318,7 @@ transition: font-size 1s;
     flex-direction: row;
     justify-content: center;
     height: 38px;
-    background-color: #F4911A;
+    background-color: rgb(72, 179, 67);
     overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;

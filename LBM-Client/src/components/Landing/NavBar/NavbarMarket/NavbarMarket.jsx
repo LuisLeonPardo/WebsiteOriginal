@@ -1,9 +1,9 @@
 import React, { useState, useMemo, useEffect } from "react";
 import style from "./NavbarMarket.module.scss";
 import { useSelector } from "react-redux";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { NavLink } from "react-router-dom";
-import CustomConnectButtom from "../../../SideBar/CustomConnectButtom";
+// import { ConnectButton } from "@rainbow-me/rainbowkit";
+// import { NavLink } from "react-router-dom";
+// import CustomConnectButtom from "../../../SideBar/CustomConnectButtom";
 import {
   IoChevronDownOutline,
   IoGlobeOutline,
@@ -17,6 +17,9 @@ import { useAccountModal } from "@rainbow-me/rainbowkit";
 import PopUpLanguage from "./PopUp/PopUpLanguage";
 import MobileMenu from "./MobileMenu/MobileMenu";
 import { Divide as Hamburger } from "hamburger-react";
+import Account from "../../../MarketPlace/assets/Account.svg";
+
+
 
 function NavbarMarket() {
   const { openAccountModal } = useAccountModal();
@@ -59,27 +62,28 @@ function NavbarMarket() {
   }, []);
   return (
     <div>
-      {screenWidth > 600 ? (
+      {screenWidth > 1000 ? (
         <div className={style.container}>
           <div className={style.flexContainer}>
             <a href="/" className={style.icon}>
-              <img src="../icons/Logo.svg"></img>
-              <img src="../icons/Logo Cherryswap.svg"></img>
+              <img src="/public/icons/Envwise.png"></img>
+              {/* <img src="../icons/Logo Cherryswap.svg"></img> */}
             </a>
-            <div className={style.buttons}>
+            <div className={style.buttons} >
               <div
                 data-dropdown-button
                 onClick={() => setActive(!active)}
                 className={active ? style.button2 : style.button}
               >
-                <p>MARKETPLACE</p>
+                <p>CHAT BOT</p>
                 <IoChevronDownOutline />
               </div>
               <p>ABOUT US</p>
               <p>SUPPORT</p>
             </div>
+            
             <div className={style.buttons2}>
-              <div className={style.language}>
+              {/* <div className={style.language}>
                 <div
                   className={style.languageButton}
                   data-dropdown-language
@@ -89,14 +93,42 @@ function NavbarMarket() {
                   <p>{currency}</p>
                 </div>
                 {activeLanguage ? <PopUpLanguage data-language /> : null}
-              </div>
+              </div> */}
               <div className={openAccountModal ? style.user : style.user1}>
                 <div
                   data-dropdown-menu
                   className={style.hamburger}
                   onClick={() => setActiveMenu(!activeMenu)}
                 >
-                  <Hamburger size={18} toggled={activeMenu} />
+                <div
+              toggled={activeMenu} 
+              variant="none"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                background: "#48b343",
+                padding: "11px 24px",
+                borderRadius: "9999px",
+                gap: "12px",
+                cursor: "pointer",
+                width: "90%"
+              }}
+            >
+              <img src={Account} />
+              <h2
+                style={{
+                  margin: "0",
+                  fontFamily: "Inter",
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "14px",
+                  lineHeight: "18px",
+                  color: "#fcfcfd",
+                }}
+              >
+                My Account
+              </h2>
+            </div>
                 </div>
                 {openAccountModal && (
                   <div onClick={openAccountModal} className={style.account}>
@@ -130,8 +162,8 @@ function NavbarMarket() {
               />
             </div>
             <a href="/" className={openAccountModal ? style.icon : style.icon2}>
-              <img src="../icons/Logo.svg"></img>
-              <img src="../icons/Logo Cherryswap.svg"></img>
+            <img src="/public/icons/Envwise.png"></img>
+              {/* <img src="../icons/Logo Cherryswap.svg"></img> */}
             </a>
             {openAccountModal && (
               <div onClick={openAccountModal} className={style.accountIcon}>

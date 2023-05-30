@@ -69,7 +69,7 @@ export default function CustomizedDialogs(props) {
         style={{
           display: "flex",
           alignItems: "center",
-          background: "#f7931a",
+          background: "#48b343",
           padding: "11px 24px",
           borderRadius: "9999px",
           gap: "12px",

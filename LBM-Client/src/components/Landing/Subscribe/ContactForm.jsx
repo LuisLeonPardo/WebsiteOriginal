@@ -63,7 +63,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Bounce, Flip } from "react-awesome-reveal";
-import { BsCheckAll, FaHourglassEnd } from "react-icons/all";
+// import { BsCheckAll, FaHourglassEnd } from "react-icons/all";
 
 export default function ContactForm() {
   const [success, setSuccess] = useState(false);
