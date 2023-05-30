@@ -34,6 +34,9 @@ import AdminMenu from "./components/Admin/AdminMenu/AdminMenu";
 import { useAccount } from "wagmi";
 import { getAdminByWallet, getUnapprovedProjects } from "../redux/actions";
 import { setIsAdmin } from "../redux/reducer";
+import ChatBot from "./components/ChatBot/ChatBot"
+import Recommendations from "./components/ChatBot/Recommendations";
+import { useMediaQuery } from 'react-responsive';
 function App() {
   const dispatch = useDispatch();
   const [stateModal, setStateModal] = useState(false);
@@ -42,6 +45,7 @@ function App() {
   const { selectedIcon, walletPopUp, adminWallet, isAdmin } = useSelector(
     (state) => state.reducerCompleto
   );
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const AppLayout = () => (
     <>
       {/* <div className="bgImage">
@@ -106,6 +110,17 @@ function App() {
             element={
               <div className="Page" style={{ flexDirection: "column" }}>
                 <Details />
+              </div>
+            }
+          />
+            <Route
+            path={"/chatbot"}
+            element={
+              <div className="conteinerChatBot"
+              style={{ display: "flex"}}
+              >
+                <ChatBot />
+                <Recommendations/>
               </div>
             }
           />

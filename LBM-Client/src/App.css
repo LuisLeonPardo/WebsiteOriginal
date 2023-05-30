@@ -52,6 +52,22 @@
   padding: 2em;
 }
 
+.conteinerChatBot{
+align-items: flex-start;
+justify-content: center;
+width: 100%;
+margin-top: 8rem;
+gap: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .conteinerChatBot {
+    flex-direction: column;
+    min-width: 340px;
+    max-width: 100%;
+    /* min-height: 340px; */
+  }
+}
 @media screen and (max-width: 900px) {
   .Page {
     margin-top: 5em;
