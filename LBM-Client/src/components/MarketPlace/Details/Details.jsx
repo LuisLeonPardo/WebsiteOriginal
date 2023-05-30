@@ -171,30 +171,6 @@ export default function Details() {
                 <h1 className="equiv">= 0.04800000 ETH</h1>
               </div>
               <Slider openModal={openModal} className="sliderMobile" />
-              {/* <a
-                onTouchEndCapture={changeBid}
-                href="#"
-                id="ko"
-                className={bid ? "sliderBtn" : "sliderBtn2"}
-              >
-                {bid ? (
-                  <>
-                    <input type="text" placeholder="Place a bid" />
-                    <div className="subslide">
-                      <img src={verticalRectangle} alt="bar img" />
-                      <img src={yellowFlash} alt="flash img" />
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <h1>Buy Now</h1>
-                    <div className="subslide">
-                      <img src={whiteflash} alt="flash img" />
-                      <img src={whiteRectangle} alt="bar img" />
-                    </div>
-                  </>
-                )}
-              </a> */}
             </div>
             <div className="showMore">
               <h1>Show more</h1>
