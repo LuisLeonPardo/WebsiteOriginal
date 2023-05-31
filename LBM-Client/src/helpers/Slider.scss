@@ -1,0 +1,165 @@
+$breakpoints: (
+  mobile: 540px,
+  xs: 740px,
+  sm: 852px,
+  div: 940px,
+  md: 1200px,
+  l: 1420px,
+  lg: 1600px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 161px;
+  height: 44px;
+  background-color: orange;
+  overflow: hidden;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 0.5s;
+  @include media-up(sm) {
+    display: none;
+  }
+}
+
+.sliderBid {
+  position: relative;
+  width: 161px;
+  height: 44px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.5px solid rgb(139, 139, 139);
+  transition: all 0.5s;
+}
+
+.slider-icon,
+.sliderBid-icon {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  border-radius: 25px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+}
+
+.slider-icon span,
+.sliderBid-icon span {
+  width: 1px;
+  height: 50%;
+  background-color: white;
+}
+
+.sliderBid-icon {
+  flex-direction: row-reverse;
+}
+
+.sliderBid-icon span {
+  background-color: black;
+}
+
+.slider-icon svg {
+  width: 70%;
+  height: 70%;
+  color: white;
+}
+
+.sliderBid-icon svg {
+  width: 70%;
+  height: 70%;
+  color: orange;
+}
+
+.slider-text {
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+  text-align: center;
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  z-index: 0;
+}
+
+.buy {
+  position: absolute;
+  font-size: 1.1em;
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+.buy button {
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.bid button {
+  color: black;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.bid {
+  position: absolute;
+  font-size: 1.1em;
+  transition: all 0.5s;
+}
+
+.buyClose {
+  position: absolute;
+  right: 3em;
+  font-size: 1.1em;
+  color: aliceblue;
+  transition: all 0.5s;
+  opacity: 0;
+  transform: translateX(2em);
+  pointer-events: none;
+}
+
+.bidClose {
+  position: absolute;
+  right: 3em;
+  font-size: 1.1em;
+  color: aliceblue;
+  transition: all 0.5s;
+  opacity: 0;
+  transform: translateX(-2em);
+  pointer-events: none;
+}

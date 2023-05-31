@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./Slider.css";
+import "./Slider.scss";
 import { HiLightningBolt } from "react-icons/hi";
 
-const Slider = () => {
+const Slider = ({ openModal }) => {
   const [sliderWidth, setSliderWidth] = useState(0);
   const [sliderOffsetLeft, setSliderOffsetLeft] = useState(0);
   const [iconWidth, setIconWidth] = useState(0);
@@ -56,7 +56,7 @@ const Slider = () => {
         <button>Buy now</button>
       </div>
       <div className={text === "bid" ? "bid" : "bidClose"}>
-        <button>Place Bid</button>
+        <button onClick={openModal}>Place Bid</button>
       </div>
     </div>
   );

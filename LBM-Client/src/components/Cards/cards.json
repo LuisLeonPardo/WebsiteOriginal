@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "title": "Registration and Authentication",
+    "questions": [
+      {
+        "id": 1,
+        "question": "How can I create an account on the platform?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 2,
+        "question": "How can I reset my password if I forgot it?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+        },      
+        
+      {
+        "id": 3,
+        "question": "Can I use my account on multiple devices?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+        },      {
+        "id": 4,
+        "question": "What security measures does the platform have to protect my data?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Real Estate Tokenization",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is real estate tokenization?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+        },      {
+        "id": 2,
+        "question": "How is a property valued before tokenization?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+        },      {
+        "id": 3,
+        "question": "What is a real estate token and how does it work?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 4,
+        "question": "How are real estate tokens issued?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 5,
+        "question": "How can I buy real estate tokens on the platform?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "NFT Buying and Selling",
+    "questions": [
+      {
+        "id": 1,
+        "question": "How can I buy real estate NFT on the platform?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 2,
+        "question": "How can I sell my real estate NFT?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 3,
+        "question": "How are real estate NFT transferred between users?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 4,
+        "question": "What are the fees associated with buying and selling NFT?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 5,
+        "question": "Can I cancel a NFT buying or selling transaction?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Launchpad IDO",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is Launchpad IDO and how does it work?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 2,
+        "question": "How can I participate in an initial token sale?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 3,
+        "question": "How is the price of tokens determined during an initial sale?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 4,
+        "question": "What are the requirements for participating in an initial sale?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 5,
+        "question": "How many tokens do I need to buy to participate in an initial sale?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Real Estate Marketplace",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the NFT real estate marketplace and how does it work?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 2,
+        "question": "How can I search for properties in the marketplace?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 3,
+        "question": "How can I buy a property in the marketplace?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 4,
+        "question": "How is the authenticity of the property ensured in the marketplace?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 5,
+        "question": "What happens if there is a problem with the transaction in the marketplace?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Technical Support",
+    "questions": [
+      {
+        "id": 1,
+        "question": "How can I contact the technical support team?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 2,
+        "question": "What do I do if I have a technical problem on the platform?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 3,
+        "question": "How can I receive updates about the platform?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 4,
+        "question": "How can I report an error or problem on the platform?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 5,
+        "question": "How long does technical support take to respond to my help request?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      },
+      {
+        "id": 6,
+        "question": "What is hosting?",
+          "content": "Web hosting is a service that allows individuals and organizations to make their website accessible via the internet. When you create a website, you need somewhere to store all of the files that make up your website, such as the HTML, CSS, and JavaScript files, as well as any images, videos, or other media. Web hosting provides a space on a server, a physical computer that is connected to the internet, where you can store these files and make them available to be viewed by others.\nThere are different types of web hosting available, including shared hosting, virtual private server (VPS) hosting, dedicated hosting, and cloud hosting. Shared hosting is the most affordable option, but it also has the most limited resources. With shared hosting, your website shares a server with other websites, so you have less control over the server's resources and are more vulnerable to the performance of other websites on the same server. VPS hosting provides more resources and more control, but it is still shared with other websites. Dedicated hosting gives you an entire server to yourself, which is the most expensive option but also provides the most resources and control. Cloud hosting is a newer option that uses a network of servers to host websites, providing a scalable and reliable solution.\nWhen choosing a web hosting provider, it's important to consider factors such as the type of hosting that is best suited to your needs, the level of support and resources provided, and the price. It's also important to consider the uptime and load time of the hosting provider, as these can impact the performance and availability of your website.\nIn summary, web hosting is a service that enables you to store and make your website available to others via the internet. It's important to choose a hosting provider that meets your needs and budget and provides reliable performance for your website."
+       },
+      {
+        "id": 7,
+        "question": "Why my website is slow?",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque vitae velit varius, consequat justo vel, fringilla neque.Nulla at mi ut mauris hendrerit elementum sed sed odio.Curabitur laoreet elit sed efficitur posuere.Nullam pharetra, felis nec faucibus venenatis, justo ipsum sagittis mauris, vel rhoncus tortor lacus in nisl.Sed eget semper tortor.Morbi tristique enim nunc, eget faucibus justo feugiat sit amet.\nPellentesque rhoncus posuere semper.Duis luctus massa eu turpis fermentum rutrum.Nullam quis justo a magna sollicitudin aliquet.Maecenas ullamcorper velit sit amet risus fermentum, nec tincidunt eros viverra.Suspendisse dignissim massa eu tincidunt tempor.\nProin id nisl rutrum, semper orci nec, suscipit tortor.Ut auctor commodo elit sed aliquam.Fusce bibendum lorem in congue semper.Vestibulum tincidunt aliquam tortor, eget placerat ipsum gravida ac.Sed vulputate turpis ut mauris feugiat, nec mattis arcu malesuada.Mauris vulputate arcu quis massa dapibus, sit amet auctor enim condimentum.Suspendisse aliquet hendrerit ultricies."
+      }
+    ]
+  }
+]

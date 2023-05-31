@@ -1,45 +1,45 @@
-import React from 'react';
-import './index.scss';
-import { BsThreeDots } from 'react-icons/bs';
-import ModalBuy from './ModalBuy';
-import { Link } from 'react-router-dom';
-import { useModal } from '../../../helpers/useModal/useModal';
-function CardPreview({ image, number, fiveColumn, price }) {
-	//En este componente de renderiza la imagen y el numero de la land pasadas por props
-	//recibe por props image (imagen de la land), number (numero de la land) y fiveColumn que es un booleando. Para hacer un filtrado por precio deberia recibir tambien el precio por propiedades
-	//Aclaracion: de momento todo esto es un maquetado, posiblemente mas adelante sea necesario hacer modificaciones para las variables dinamicas que podamos recibir
-	//Utilizamos nuevamente el hook personalizado para abrir el modal <ModalBuy />
-	const [isOpenModal, openModal, closeModal] = useModal();
-	const handleClick = () => {
-		isOpenModal ? closeModal() : openModal();
-	};
-	return (
-		<div
-			//Aqui utilizamos fiveColumn para el manejo de estilos a traves de un ternario
-			className={`${
-				fiveColumn ? 'cardPreviewFiveColumns' : 'cardPreviewFourColumns'
-			}`}
-		>
-			<Link to={`/realestate/${number}`} className="linkImg">
-				<img src={image} alt="imagen preview" className="imgCardPreview" />
-			</Link>
-			<div className="bottomCard">
-				<Link to={`/realestate/${number}`} className="linkLand">
-					<h5 className="land">Land #{number}</h5>
-				</Link>
+import css from "./index.module.scss";
+import starICon from "../../../assets/star.svg";
+import heartIconMobile from "../../../assets/heart--movile.svg";
+import heartIconPc from "../../../assets/heart--pc.svg";
+import { Link } from "react-router-dom";
 
-				<div className="price">
-					<span className="priceLabel">Price: </span>
-					<span className='value'>{price}</span>
-				</div>
-				{/* El boton de aqui abajo abre y cierra el modal <ModalBuy /> que es importado de ./ModalBuy */}
-				<button className="threeDots" onClick={handleClick}>
-					<BsThreeDots  />
-				</button>
-				<ModalBuy isOpen={isOpenModal} close={closeModal} number={number}/>
-			</div>
-		</div>
-	);
-}
+const index = (props) => {
+  return (
+    <div className={css.card}>
+      <Link to={`/realestate/${props.number}`}>
+        <img src={props.image} alt="" />
+      </Link>
+      <div className={css.info}>
+        <div className={css.title}>
+          <h3>Bordeaux Getaway</h3>
+          <p>{props.type} in Bordeaux</p>
+        </div>
 
-export default CardPreview;
+        <div className={css.description}>
+          <p>
+            {props.guests} guests · {props.type} · {props.rooms} ·{" "}
+            {props.amenities}
+          </p>
+        </div>
+        <div className={css.rating}>
+          <img src={starICon} alt="" />
+          <p>{props.review}</p>
+          <span>({props.totalReviews} Reviews)</span>
+        </div>
+      </div>
+      <div className={css.price}>
+        <p>Min. Investment</p>
+        <i>${props.price}</i>
+      </div>
+      <i className={css.heartIconMobile}>
+        <img src={heartIconMobile} alt="heart" />
+      </i>
+      <i className={css.heartIconPc}>
+        <img src={heartIconPc} alt="heart" />
+      </i>
+    </div>
+  );
+};
+
+export default index;
