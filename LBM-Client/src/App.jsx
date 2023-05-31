@@ -29,7 +29,7 @@ import Marketplace from "./components/MarketPlace/Marketplace";
 import Details from "./components/MarketPlace/Details/Details";
 import NavbarMarket from "./components/Landing/NavBar/NavbarMarket/NavbarMarket";
 import { useModal } from "./helpers/useModal/useModal";
-import WarningBuilding from "./components/WarningBuilding";
+//import WarningBuilding from "./components/WarningBuilding";
 import AdminMenu from "./components/Admin/AdminMenu/AdminMenu";
 import { useAccount } from "wagmi";
 import { getAdminByWallet, getUnapprovedProjects } from "../redux/actions";
@@ -52,7 +52,7 @@ function App() {
       {/* <div className="bgImage">
         <img src="./icons/Background.svg" />
       </div> */}
-      <WarningBuilding isOpen={isOpenModal} closeModal={closeModal} />
+      {/* <WarningBuilding isOpen={isOpenModal} closeModal={closeModal} /> */}
       <Modals state={stateModal} setStateModal={setStateModal} />
 
       <div className="SideBar">
