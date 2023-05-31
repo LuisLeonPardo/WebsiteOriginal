@@ -709,7 +709,7 @@ $breakpoints: (
       width: 100%;
       padding-top: 17px;
       .buyBtn {
-        background: #f7931a;
+        background: #2EA828;
         border-radius: 8px;
         padding: 16px 24px;
         color: #ffffff;
@@ -720,7 +720,7 @@ $breakpoints: (
         line-height: 19px;
         &:hover {
           background: #f9f9f9;
-          color: #f7931a;
+          color: #2EA828;
         }
       }
       .bidear {
@@ -735,7 +735,7 @@ $breakpoints: (
         cursor: pointer;
         &:hover {
           background: #f9f9f9;
-          color: #f7931a;
+          color: #2EA828;
         }
       }
     }
@@ -867,7 +867,7 @@ $breakpoints: (
     .sliderBtn2 {
       display: flex;
       border: none;
-      background-color: #f7931a;
+      background-color: #2EA828;
       flex-direction: row-reverse;
       align-items: center;
       justify-content: space-between;
