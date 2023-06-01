@@ -12,8 +12,8 @@ export default function Footer() {
     <main className="footer_items">
       <Slide direction={"up"} delay={-300} triggerOnce={"true"}>
         <section className="footer_section">
-          {/* <div className="footer_company"> */}
-            {/* <img src={logo} />
+          <div className="footer_company">
+            <img src={logo} />
             <div>
               <p>
                  {/* I would remove this text from the footer  */}
@@ -82,7 +82,7 @@ export default function Footer() {
                   Join Libertum 
                 </a>
               </li>
-            </ul> */}
+            </ul>
             <div className="footer_network">
               {networks.map(({ net, href }, index) => (
                 <a
@@ -96,9 +96,9 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-          {/* </div> */}
+          </div>
         </section>
       </Slide>
-    </main>
-  );
+    </main>
+  );
 }

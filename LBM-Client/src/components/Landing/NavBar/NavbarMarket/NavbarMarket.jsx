@@ -1,9 +1,9 @@
 import React, { useState, useMemo, useEffect } from "react";
 import style from "./NavbarMarket.module.scss";
 import { useSelector } from "react-redux";
-// import { ConnectButton } from "@rainbow-me/rainbowkit";
-// import { NavLink } from "react-router-dom";
-// import CustomConnectButtom from "../../../SideBar/CustomConnectButtom";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { NavLink } from "react-router-dom";
+import CustomConnectButtom from "../../../SideBar/CustomConnectButtom";
 import {
   IoChevronDownOutline,
   IoGlobeOutline,
@@ -18,6 +18,7 @@ import PopUpLanguage from "./PopUp/PopUpLanguage";
 import MobileMenu from "./MobileMenu/MobileMenu";
 import { Divide as Hamburger } from "hamburger-react";
 import Account from "../../../MarketPlace/assets/Account.svg";
+
 
 
 

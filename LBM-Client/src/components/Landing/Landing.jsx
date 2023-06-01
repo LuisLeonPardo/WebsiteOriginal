@@ -4,9 +4,9 @@ import Protocol from "./Protocol/Protocol";
 import Services from "./Services/Services";
 import Value from "./Value/Value";
 import Subscribe from "./Subscribe/Subscribe";
-import Footer from "./Footer/Footer";
 import divider from "./assets/divider.png";
 import "./Landing.scss";
+import Footer from "./Footer/Footer"
 
 export default function Landing() {
   return (
