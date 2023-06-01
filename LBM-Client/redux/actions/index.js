@@ -36,7 +36,7 @@ export const getAdminByWallet = createAsyncThunk(
       let metaData = await axios.get(`/libertum/users/admin/${address}`);
       thunkAPI.dispatch(setAdminWallet(metaData.data));
     } catch (err) {
-      alert("Ups! Something went wrong...");
+      // alert("Ups! Something went wrong...");
       return err.response.data;
     }
   }

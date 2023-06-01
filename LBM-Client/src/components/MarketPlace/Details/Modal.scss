@@ -187,6 +187,9 @@ $breakpoints: (
           color: #717171;
           padding-left: -20px;
         }
+        input:focus::-webkit-input-placeholder {
+          border: none;
+        }
       }
       .bidExp {
         border: 1px solid #b0b0b0;
@@ -212,6 +215,9 @@ $breakpoints: (
           line-height: 19px;
           color: #717171;
           padding-left: -20px;
+          input:focus::-webkit-input-placeholder {
+            border: none;
+          }
         }
       }
     }

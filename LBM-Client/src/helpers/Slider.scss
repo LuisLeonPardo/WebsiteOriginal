@@ -1,14 +1,45 @@
+$breakpoints: (
+  mobile: 540px,
+  xs: 740px,
+  sm: 852px,
+  div: 940px,
+  md: 1200px,
+  l: 1420px,
+  lg: 1600px,
+);
+
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin height-down($breakpoint) {
+  @media screen and (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
 .slider {
   position: relative;
   width: 161px;
   height: 44px;
-  background-color: orange;
+  background-color: #48b343;
   overflow: hidden;
   display: flex;
   border-radius: 8px;
   align-items: center;
   justify-content: flex-end;
   transition: all 0.5s;
+  @include media-up(sm) {
+    display: none;
+  }
 }
 
 .sliderBid {
@@ -63,7 +94,7 @@
 .sliderBid-icon svg {
   width: 70%;
   height: 70%;
-  color: orange;
+  color: #48b343;
 }
 
 .slider-text {

@@ -17,8 +17,6 @@ import avatar from "../assets/Avatar.png";
 import divider from "../assets/Divider.svg";
 import chevron from "../assets/chevron-right.svg";
 import goBack from "../assets/goBack.svg";
-import yellowFlash from "../assets/yellowFlash.svg";
-import whiteflash from "../assets/whiteflash.svg";
 import verticalRectangle from "../assets/VerticalRectangle.svg";
 import whiteRectangle from "../assets/WhiteRectangle.svg";
 import { useTable } from "react-table";
@@ -32,6 +30,8 @@ import Classes from "../Classes/Classes";
 import MobileCarousel from "./MobileCarousel";
 import { info, column, dataReducer, columnsReducer } from "./data.js";
 import Slider from "../../../helpers/Silder";
+import Footer from "../../RealEstates/Footer/Footer";
+
 export default function Details() {
   const width = window.innerWidth;
   const breakpoint = 540;
@@ -123,7 +123,7 @@ export default function Details() {
               </div>
             </div>
           </div>
-          <div className="carousel">
+          <div>
             <Carousel
               slides={slides}
               isOpen={isOpenGallery}
@@ -172,31 +172,7 @@ export default function Details() {
                 <h1>500.000 USDT</h1>
                 <h1 className="equiv">= 0.04800000 ETH</h1>
               </div>
-              <Slider className="sliderMobile" />
-              {/* <a
-                onTouchEndCapture={changeBid}
-                href="#"
-                id="ko"
-                className={bid ? "sliderBtn" : "sliderBtn2"}
-              >
-                {bid ? (
-                  <>
-                    <input type="text" placeholder="Place a bid" />
-                    <div className="subslide">
-                      <img src={verticalRectangle} alt="bar img" />
-                      <img src={yellowFlash} alt="flash img" />
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <h1>Buy Now</h1>
-                    <div className="subslide">
-                      <img src={whiteflash} alt="flash img" />
-                      <img src={whiteRectangle} alt="bar img" />
-                    </div>
-                  </>
-                )}
-              </a> */}
+              <Slider openModal={openModal} className="sliderMobile" />
             </div>
             <div className="showMore">
               <h1>Show more</h1>
@@ -300,37 +276,14 @@ export default function Details() {
             <div className="bidTablet">
               <h1>500.000 USDT</h1>
               <h1 className="equiv">= 0.04800000 ETH</h1>
-              <a
-                onTouchMove={changeBid}
-                href="#"
-                id="ko"
-                className={bid ? "sliderBtn" : "sliderBtn2"}
-              >
-                {bid ? (
-                  <>
-                    <input type="text" placeholder="Place a bid" />
-                    <div className="subslide">
-                      <img src={verticalRectangle} alt="bar img" />
-                      <img src={yellowFlash} alt="flash img" />
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <h1>Buy Now</h1>
-                    <div className="subslide">
-                      {/* <img src={whiteFlash} alt="flash img" /> */}
-                      <img src={whiteRectangle} alt="bar img" />
-                    </div>
-                  </>
-                )}
-              </a>
-              {/* <div className="prueba">
-                <input type="range" />
-              </div> */}
             </div>
+            <Slider openModal={openModal} className="sliderMobile" />
           </div>
         </div>
       </div>
+      <d className="foot">
+        <Footer />
+      </d>
     </div>
   );
 }
