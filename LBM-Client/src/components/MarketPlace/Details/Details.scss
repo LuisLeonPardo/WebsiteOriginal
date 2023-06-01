@@ -39,6 +39,9 @@ $breakpoints: (
     height: 100vh;
   }
 }
+.foot {
+  width: 100%;
+}
 
 .detailClasses {
   width: 100vw;
@@ -709,7 +712,7 @@ $breakpoints: (
       width: 100%;
       padding-top: 17px;
       .buyBtn {
-        background: #f7931a;
+        background: #48b343;
         border-radius: 8px;
         padding: 16px 24px;
         color: #ffffff;
@@ -720,7 +723,7 @@ $breakpoints: (
         line-height: 19px;
         &:hover {
           background: #f9f9f9;
-          color: #f7931a;
+          color: #48b343;
         }
       }
       .bidear {
@@ -735,7 +738,7 @@ $breakpoints: (
         cursor: pointer;
         &:hover {
           background: #f9f9f9;
-          color: #f7931a;
+          color: #48b343;
         }
       }
     }

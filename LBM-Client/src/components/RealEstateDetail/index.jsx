@@ -65,7 +65,7 @@ const Index = () => {
           <img src={land.image} alt="Land" />
           <img src={land.image} alt="Land" />
         </div>
-          <img src={showAll} alt="btn" className={css.showAll} />
+        <img src={showAll} alt="btn" className={css.showAll} />
       </section>
 
       <div className={css.info}>
