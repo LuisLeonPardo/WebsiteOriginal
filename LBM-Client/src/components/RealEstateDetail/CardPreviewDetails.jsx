@@ -8,7 +8,7 @@ const CardPreviewDetails = (props) => {
   return (
     <div className={css.card}>
       <Link to={`/marketplace/${props.number}`}>
-        <img src={props.image} alt="Land" className={css.landImage} />
+        <img src={props.image} alt="Land" className={css.landImage}/>
       </Link>
       <div className={css.info}>
         <div className={css.title}>

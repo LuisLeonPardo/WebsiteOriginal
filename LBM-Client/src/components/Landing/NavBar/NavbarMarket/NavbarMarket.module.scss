@@ -1,5 +1,5 @@
-.container{
-    width: 100%;
+.container {
+    width: 90%;
     height: 5em;
     background-color: white;
     display: -webkit-box;
@@ -17,6 +17,7 @@ font-size: 14px;
 line-height: 18px;
 text-align: center;
 color: #000000;
+padding-top: 1.5%;
 }
 
 .flexContainer {
@@ -62,6 +63,9 @@ color: #000000;
   -ms-flex-pack: center;
   justify-content: center;
 }
+// .chat {
+//   color: rgb(72, 179, 67)
+// }
 
 .button,
 .button2 {
@@ -80,6 +84,8 @@ color: #000000;
   justify-content: center;
   gap: 10px;
   cursor: pointer;
+  color: rgb(72, 179, 67);
+  
 }
 
 .button svg {
@@ -112,7 +118,7 @@ color: #000000;
 .button:hover,
 .button2:hover,
 .user svg:hover {
-  color: #f7931a;
+  color: rgb(72, 179, 67);
 }
 
 .buttons2 {
@@ -148,7 +154,7 @@ color: #000000;
 .languageButton:hover {
   svg,
   p {
-    color: #f7931a;
+    color: rgb(72, 179, 67);
   }
 }
 
@@ -213,7 +219,7 @@ color: #000000;
 }
 
 .hamburger:hover {
-  color: #f7931a;
+  color: rgb(72, 179, 67);
 }
 
 .account{

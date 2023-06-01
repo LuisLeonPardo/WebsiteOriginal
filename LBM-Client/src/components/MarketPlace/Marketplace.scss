@@ -1,8 +1,13 @@
 .marketplace-container {
   width: 100vw;
+  .navbar {
+    height: 71px;
+    background: red;
+  }
   .marketplace-content {
-    width: 69.68%;
+    width: 90%; 
     margin: 0 auto;
+    padding: 3rem;
     .marketplace-title {
       height: 50px;
       margin-top: 20px;
@@ -69,7 +74,7 @@
         .div-filter {
           display: flex;
           align-items: center;
-          background: #f7931a;
+          background: #2EA828;
           padding: 11px 24px;
           border-radius: 9999px;
           gap: 12px;

@@ -99,6 +99,6 @@ export default function Footer() {
           </div>
         </section>
       </Slide>
-    </main>
-  );
+    </main>
+  );
 }

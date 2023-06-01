@@ -113,7 +113,7 @@
     transition: 0.2s;
   }
   .understood {
-    background-color: var(--orange-darker);
+    background-color:rgb(72, 179, 67);
     color: var(--white-color);
     grid-column-start: 3;
     grid-column-end: 4;
@@ -123,7 +123,7 @@
     transition: 0.2s;
   }
   .understood:hover {
-    background-color: var(--orange-hover);
+    background-color:rgb(72, 179, 67);
   }
   .information:hover {
     background-color: var(--modern-white);

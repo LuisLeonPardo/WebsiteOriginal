@@ -8,7 +8,8 @@
 	--orange-background: #fff1f2;
 	--orange-darker: #f7931a;
 	--orange-hover: #c77715;
-	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+	font-family: Verdana, Geneva, sans-serif;
+	/* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;

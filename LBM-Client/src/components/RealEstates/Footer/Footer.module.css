@@ -1,12 +1,15 @@
 .footer {
   align-items: center;
-  background: rgba(34, 34, 34, 0.03);
-  padding: 2rem 1rem;
-  display: flex;
+  /* background: rgba(34, 34, 34, 0.03); */
+  background-color:#48B343;
+  padding: 1rem 1rem;
+  display: block;
   justify-content: center;
   flex-direction: column;
   gap: 1.2rem;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
+  color: white;
+  height: 70px;
 }
 
 .image {
@@ -16,6 +19,7 @@
 
 .text {
   align-items: center;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,14 +27,16 @@
   order: 3;
 }
 
-.text p,
+.text p {
+  font-size: 14px;
+}
 .text i {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #222222;
+  color: white;
   opacity: 0.3;
   margin: 0;
 }
@@ -58,13 +64,16 @@
   font-weight: 600;
   font-size: 11px;
   line-height: 20px;
-  color: #222222;
+  color: white;
 }
 
 .socialmedia {
   display: flex;
   gap: 1.2rem;
   justify-content: center;
+}
+.whiteImage {
+  filter: brightness(100); /* Ajusta el valor de brillo según lo necesites */
 }
 
 @media (min-width: 740px) {
