@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const index = (props) => {
   return (
     <div className={css.card}>
-      <Link to={`/realestate/${props.number}`}>
+      <Link className={css.link} to={`/realestate/${props.number}`}>
         <img src={props.image} alt="" />
       </Link>
       <div className={css.info}>

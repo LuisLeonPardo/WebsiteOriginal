@@ -30,6 +30,8 @@ import Classes from "../Classes/Classes";
 import MobileCarousel from "./MobileCarousel";
 import { info, column, dataReducer, columnsReducer } from "./data.js";
 import Slider from "../../../helpers/Silder";
+import Footer from "../../RealEstates/Footer/Footer";
+
 export default function Details() {
   const width = window.innerWidth;
   const breakpoint = 540;
@@ -279,6 +281,9 @@ export default function Details() {
           </div>
         </div>
       </div>
+      <d className="foot">
+        <Footer />
+      </d>
     </div>
   );
 }

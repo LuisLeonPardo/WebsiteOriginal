@@ -4,6 +4,7 @@ import "./Marketplace.scss";
 //import image from "./assets/image.png";
 import ModalFilter from "./ModalFilter/ModalFilter";
 import Classes from "./Classes/Classes";
+import Footer from "../RealEstates/Footer/Footer";
 
 function Marketplace() {
   return (
@@ -48,6 +49,7 @@ function Marketplace() {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

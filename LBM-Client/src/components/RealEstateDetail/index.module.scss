@@ -214,6 +214,10 @@
   display: none;
 }
 
+.linked {
+  z-index: 9999;
+}
+
 @media screen and (min-width: 740px) {
   .detailsImage,
   .navMobile,
@@ -356,11 +360,13 @@
 }
 
 @media (min-width: 980px) {
-
   .details {
     width: 100%;
   }
-  .mosaic, .info, .header, .filtersContainer {
+  .mosaic,
+  .info,
+  .header,
+  .filtersContainer {
     margin: 0 auto;
     max-width: 1280px;
   }
@@ -379,4 +385,3 @@
     margin: 0 auto;
   }
 }
-
