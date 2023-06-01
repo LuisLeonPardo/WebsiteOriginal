@@ -7,6 +7,7 @@ import image1 from "../assets/Image2.png";
 import image2 from "../assets/Image3.png";
 import image3 from "../assets/Image4.png";
 import image4 from "../assets/Image5.png";
+import { Link } from "react-router-dom";
 
 const images = [image1, image2, image3, image4];
 
@@ -78,7 +79,10 @@ function CardImages({ img }) {
               id={`slide${index + 1}`}
               className={selectedImageIndex === index ? "active" : ""}
             >
-              <img src={image} alt={`Slide ${index + 1}`} />
+
+              <Link to={`/marketplace/${index}`}>
+                <img src={image} alt={`Slide ${index + 1}`} />
+              </Link>
             </li>
           ))}
         </ul>

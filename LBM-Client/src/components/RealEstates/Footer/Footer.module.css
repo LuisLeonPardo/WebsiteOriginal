@@ -2,13 +2,14 @@
   align-items: center;
   /* background: rgba(34, 34, 34, 0.03); */
   background-color:#48B343;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   display: block;
   justify-content: center;
   flex-direction: column;
   gap: 1.2rem;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   color: white;
+  height: 70px;
 }
 
 .image {
@@ -26,7 +27,9 @@
   order: 3;
 }
 
-.text p
+.text p {
+  font-size: 14px;
+}
 .text i {
   font-family: "Raleway";
   font-style: normal;
