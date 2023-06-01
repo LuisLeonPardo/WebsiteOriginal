@@ -44,7 +44,7 @@ export default function Services() {
               </h3>
               <p>
                 One of the first real estate marketplaces where you can buy, sell, trade and
-                invest in crypto or fiat-currency backed by real estate collatoral
+                invest in crypto or fiat-currency backed by real estate collateral
               </p>
               <div></div>
             </div>
