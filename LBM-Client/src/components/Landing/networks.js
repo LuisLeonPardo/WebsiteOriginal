@@ -15,5 +15,5 @@ export const networks = [
     net: linkedin,
     href: "https://www.linkedin.com/company/libertum-project/",
   },
-  { net: tiktok, href: "" },
+  // { net: tiktok, href: "" },
 ];

@@ -76,12 +76,15 @@ function NavbarMarket() {
                 onClick={() => setActive(!active)}
                 className={active ? style.button2 : style.button}
               >
-                <p>CHAT BOT</p>
+                <p>MARKETPLACE</p>
                 <IoChevronDownOutline />
               </div>
               <p>ABOUT US</p>
               <NavLink to ="/support">
               <p>SUPPORT</p>
+              </NavLink>
+              <NavLink to="/XXXX-CHATBOT???????-XXXXXX">
+              <p>CHAT BOT</p>
               </NavLink>
             </div>
             
@@ -104,35 +107,35 @@ function NavbarMarket() {
                   onClick={() => setActiveMenu(!activeMenu)}
                 >
                 <div
-              toggled={activeMenu} 
-              variant="none"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                background: "#48b343",
-                padding: "11px 24px",
-                borderRadius: "9999px",
-                gap: "12px",
-                cursor: "pointer",
-                width: "90%"
-              }}
-            >
-              <img src={Account} />
-              <h2
-                style={{
-                  margin: "0",
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  fontSize: "14px",
-                  lineHeight: "18px",
-                  color: "#fcfcfd",
-                }}
-              >
-                My Account
-              </h2>
-            </div>
-                </div>
+                  toggled={activeMenu} 
+                  variant="none"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    background: "#48b343",
+                    padding: "11px 24px",
+                    borderRadius: "9999px",
+                    gap: "12px",
+                    cursor: "pointer",
+                    width: "90%"
+                  }}
+                >
+                    <img src={Account} />
+                    <h2
+                      style={{
+                        margin: "0",
+                        fontFamily: "Inter",
+                        fontStyle: "normal",
+                        fontWeight: "500",
+                        fontSize: "14px",
+                        lineHeight: "18px",
+                        color: "#fcfcfd",
+                      }}
+                    >
+                      My Account
+                    </h2>
+                  </div>
+              </div>
                 {openAccountModal && (
                   <div onClick={openAccountModal} className={style.account}>
                     <IoPerson />
