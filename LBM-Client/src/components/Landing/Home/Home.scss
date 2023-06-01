@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
+  
   .home_section {
     text-align: start;
     max-width: 1183px;
@@ -37,11 +38,13 @@
       font-size: 24px;
       line-height: 38px;
       width: 470px;
-      height: 114px;
+      // height: 114px;
+      // margin: top 1px;
     }
     .home_links {
       width: max-content;
-      margin-top: 80px;
+      margin-top: 10px;
+      
       display: flex;
       gap: 18px;
       align-items: center;
@@ -105,6 +108,7 @@
       .home_links {
         margin: 0 auto;
         margin-top: 60px;
+        
       }
     }
   }

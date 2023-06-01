@@ -13,13 +13,12 @@ export default function CoomingSoon() {
     <main className="cs_items">
       <section className="cs_section">
         <div className="cs_text">
-          <h1>Cooming Soon</h1>
+          <h1>coming soon</h1>
           <div>
-            <h3>Developing Page</h3>
+            <h3>Something awesome is coming!</h3>
             <p>
-              We are currently working on our new website. We'll be here soon.
-              <br></br>
-              Sign up to receive notifications and prepare for the big day.
+
+              Kindly provide us with your email address to receive notifications as soon as it becomes accessible.
             </p>
           </div>
         </div>
