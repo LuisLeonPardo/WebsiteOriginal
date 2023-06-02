@@ -1,0 +1,246 @@
+*{background: #FFFFFF;}
+
+.home-container {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+  }
+  
+  .home-container img {
+    flex: 1;
+    object-fit: cover;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .container {
+    margin-left: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  .asad {
+font-size: 36px;
+text-align: center;
+font-family: 'Inter';
+    
+  }
+
+  .adas {
+    font-size: 20px;
+    font-family: 'Inter';
+    text-align: center;
+    width: 470px;
+    color: #000000;
+  }
+  
+  
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 100px;
+    margin: 0 20px;
+    box-sizing: border-box;
+}
+  
+  
+ .text-box, .connect-button {
+    margin-bottom: 20px;
+  }
+  
+  .text-box {
+    text-align: center;
+    margin-bottom: 27px;
+    margin-top: 29px;
+  }
+  
+  .connect-button {
+    width: 325px;
+    height: 54px;
+    background: #F7931A;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 740px) {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    
+    .home-container {
+      display: flex;
+      align-items: stretch;
+      height: 100vh;
+      background-image: url('https://res.cloudinary.com/ds8n6d63e/image/upload/v1684800473/Imagen_de_WhatsApp_2023-05-22_a_las_21.06.22_mnifzt.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .home-container img {
+      display: none; /* Oculta la imagen en dispositivos móviles */
+    }
+    
+    .container {
+      margin: auto;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+    
+    .asad {
+      font-size: 37px;
+      font-family: 'Inter';
+      margin-bottom: 20px;
+      line-height: 46px;
+      background: space;
+      color: white;
+    }
+    
+    .adas {
+      font-size: 25px;
+      font-family: 'Inter';
+    text-align: center;
+    max-width: 725px;
+    
+    color: white;
+    margin: 0 auto 20px;
+    margin-bottom: 132px;
+    background: space;
+     /* Cambia el color de fondo a un valor rgba con transparencia */
+    }
+  
+    
+    .home-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      color: white;
+      background: space;
+    }
+    
+    .text-box,
+    .connect-button {
+      margin-bottom: 20px;
+    }
+    
+    .text-box {
+      text-align: center;
+      background:space;
+    }
+    
+    .connect-button {
+      width: 100%;
+      max-width: 325px;
+      height: 54px;
+      background: #F7931A;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  @media (max-width: 340px) {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .home-container {
+      display: flex;
+      align-items: stretch;
+      height: 100vh;
+      background-image: url('https://res.cloudinary.com/ds8n6d63e/image/upload/v1684800473/Imagen_de_WhatsApp_2023-05-22_a_las_21.06.22_mnifzt.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% 100%; /* Ajusta el tamaño de la imagen para ocupar todo el contenedor */
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  
+  
+    .home-container img {
+      display: none; /* Oculta la imagen en dispositivos móviles */
+    }
+  
+    .container {
+      margin: auto;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+  
+    .asad {
+      font-size: 24px;
+      font-family: 'Inter';
+      line-height: 23px;
+      margin-bottom: 10px;
+      background: space;
+      color: white;
+    }
+  
+    .adas {
+      font-size: 10px;
+      font-family: 'Inter';
+      text-align: center;
+      max-width: 312px;
+      color: white;
+      margin: 0 auto 40px -31px;
+      background: space;
+      line-height: 1.5;
+    }
+  
+    .home-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      color: white;
+      background: space;
+    }
+  
+    .text-box,
+    .connect-button {
+      margin-bottom: 10px;
+    }
+  
+    .text-box {
+      text-align: center;
+      background: space;
+    }
+  
+    .connect-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 24px;
+      gap: 10px;
+      width: 147px;
+      height: 29px;
+      background: #F7931A;
+      border-radius: 8px;
+      margin-top: 52px;
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+      font-size: 10px;
+      font-family: sans-serif;
+    }
+  }
+  
+  

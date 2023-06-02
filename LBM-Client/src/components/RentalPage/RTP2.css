@@ -1,0 +1,403 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: #FFFFFF;
+  }
+  
+  .rtp-container {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+  }
+  
+  .rtp-image {
+    flex: 1;
+    object-fit: cover;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .rtp-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 100px;
+    box-sizing: border-box;
+    background:space;
+  }
+  
+  .rtp-title {
+    font-size: 38px;
+    font-family: 'Inter';
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: 600;
+}
+  
+  .rtp-text-box {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .rtp-description {
+    font-size: 24.2px;
+    font-family: 'Inter';
+    text-align: center;
+    width: 648px;
+    color: #000000;
+  }
+  
+  .rtp-slider {
+    position: relative;
+    width: 443px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    cursor: grab;
+}
+  
+  .rtp-slider-inner {
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    transition: transform 0.3s ease;
+  }
+  
+  .rtp-slider-button {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 121px;
+
+position: absolute;
+width: 575px;
+height: 1080px;
+left: calc(50% - 575px/2 + 0.5px);
+top: calc(50% - 1080px/2 - 0.5px);
+  }
+  
+  .rtp-slider-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .rtp-connect-button {
+    width: 325px;
+    height: 54px;
+    background: #F7931A;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+
+  .rtp-slider-button img {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    left: -47px;
+    top: -55px;
+}
+
+  .rtp-slider-button p {
+    position: relative;
+    /* height: 20px; */
+    text-align: initial;
+    top: 44px;
+
+  }
+
+  @media (max-width: 740px) {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .rtp-content {
+      margin: 132px;
+    }
+    
+    .rtp-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+    
+    .rtp-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    
+    .rtp-title {
+      font-size: 36px;
+      font-family: 'Inter';
+      line-height: 48px;
+      margin-bottom: 20px;
+      width: 441px;
+      font-weight: 600;
+      text-align: center;
+      background: space;
+      color: #FFFFFF;
+    }
+    
+    .rtp-text-box {
+      margin-bottom: 20px;
+      background: space;
+    }
+    
+    .rtp-description {
+      font-size: 24.2px;
+      font-family: 'Inter';
+      max-width: 100%;
+      color: #FFFFFF;
+      background: space;
+    }
+    
+    .rtp-slider {
+      position: relative;
+      width: 283%;
+      max-width: 602px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      overflow-anchor: visible;
+      cursor: grab;
+      background: space;
+    }
+    
+    .rtp-slider-inner {
+      display: flex;
+      margin-top: 70px;
+      margin-bottom: 70px;
+      background: space;
+      transition: transform 0.3s ease;
+    }
+    
+    .rtp-slider-button {
+      box-sizing: border-box;
+      width: 147.68px;
+      height: 136px;
+      background: #FFFFFF;
+      border: 4px solid rgba(176, 176, 176, 0.5);
+      border-radius: 16px;
+      flex: none;
+      margin-left: 10px;
+      order: 1;
+      flex-grow: 0;
+      transition: transform 0.3s ease;
+    }
+    
+    .rtp-slider-button:hover {
+      transform: scale(1.1);
+    }
+    
+    .rtp-connect-button {
+      width: 294px;
+    max-width: 325px;
+    height: 58px;
+    background: #F7931A;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    }
+    
+    .rtp-slider-button img {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      left: -47px;
+      top: -55px;
+    }
+    
+    .rtp-slider-button p {
+      position: relative;
+      text-align: initial;
+      top: 44px;
+    }
+  }
+  
+  @media (max-width: 340px) {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  
+    body {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+  
+    .rtp-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+  
+    .rtp-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  
+    .rtp-title {
+      font-size: 28px;
+    margin-bottom: 15px;
+    width: 300px;
+    font-weight: 600;
+    text-align: center;
+    background: space;
+    color: #FFFFFF;
+  }
+  
+    .rtp-text-box {
+      margin-bottom: 15px;
+      background: space;
+      text-align: center;
+    }
+  
+    .rtp-description {
+      font-size: 14px;
+      max-width: 50%;
+      color: #FFFFFF;
+      background: space;
+      margin-left: 168px;
+      width: 500px;
+      margin-right: auto;
+  }
+  
+    .rtp-slider {
+      position: relative;
+    width: 212%;
+    max-width: 239px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    overflow-anchor: visible;
+    cursor: grab;
+    background: space;
+    margin-left: 163px;
+    margin-right: auto;
+      
+  }
+  
+    .rtp-slider-inner {
+      display: flex;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      background: space;
+      transition: transform 0.3s ease;
+      justify-content: center; /* Añadido */
+    }
+     .rtp-slider {
+    /* Ajusta el ancho del contenedor y su margen para que quepa en la pantalla */
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .rtp-slider-inner {
+    /* Ajusta el margen para centrar los elementos internos */
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+    .rtp-slider-button {
+      box-sizing: border-box;
+      width: 115.84px;
+      height: 106px;
+      background: #FFFFFF;
+      border: 4px solid rgba(176, 176, 176, 0.5);
+      border-radius: 16px;
+      flex: none;
+      margin-left: 8px;
+      order: 1;
+      flex-grow: 0;
+      transition: transform 0.3s ease;
+    }
+  
+    .rtp-slider-button:hover {
+      transform: scale(1.1);
+    }
+  
+    .rtp-connect-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 24px;
+      gap: 10px;
+      width: 147px;
+      height: 29px;
+      background: #F7931A;
+      border-radius: 8px;
+      margin-top: 52px;
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+      font-size: 10px;
+      font-family: sans-serif;
+  }
+  
+    .rtp-slider-button img {
+      position: relative;
+      width: 26px;
+      height: 26px;
+      left: -38px;
+      top: -45px;
+    }
+  
+    .rtp-slider-button p {
+      position: relative;
+      text-align: center;
+      top: 12px;
+    }
+  }
+  

@@ -13,6 +13,8 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import Home from "./components/Landing/Home/Home";
 import Dash from "./components/Dashboards/Dash/Dash";
+import RTP1 from "./components/RentalPage/RTP1"
+import RTP2 from "./components/RentalPage/RTP2"
 import RealEstates from "./components/RealEstates";
 import React, { useEffect, useState } from "react";
 import Modals from "./components/Dashboards/Modals/Modals";
@@ -170,6 +172,8 @@ function App() {
         <Route path="/support" element={<SupportCenter />} />
         <Route path="/detail/:id" element={<DetailSupport />} />
         <Route path="/cards" element={<Cards />} />
+        <Route path="/RTP1" element={<RTP1 />} />
+        <Route path="/RTP2" element={<RTP2 />} />
       </Routes>
     </div>
   );
